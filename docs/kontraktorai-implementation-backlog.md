@@ -226,6 +226,41 @@ metodologi, dan nama portal yang digunakan adalah **KontraktorAI**.
   ketiga, keamanan, ekspor/portabilitas data, pemantauan biaya API, dokumentasi,
   dan pemulihan menjadi syarat pengembangan produk.
 
+## Keputusan strategis Bagian 08
+
+- Status Bagian 08: **FINAL**. Gustafta diposisikan sebagai Collaborative
+  Business Ecosystem dan operator **managed marketplace**, bukan sekadar direktori
+  atau perantara kontak.
+- Delapan keputusan final: layanan marketplace dikelola manual lebih dulu;
+  jaringan ahli/perusahaan/peluang dibangun bertahap dan terintegrasi; pendaftaran
+  basic gratis dan layanan premium berbayar; monetisasi menggabungkan komisi,
+  membership, consulting, dan facilitation fee; proyek/tender mencakup informasi,
+  matching, konsultasi, dan fasilitasi; kemitraan bersifat hybrid; managed
+  marketplace berkembang menjadi digital marketplace; tahun pertama menargetkan
+  proyek, tender, dan transaksi awal.
+- Enam modul jangka panjang: Experts Network, Company Network, Project Hub,
+  Tender Hub, Partnership Hub, dan Transaction Hub. Pada fase awal semuanya
+  dikelola dengan proses dan sistem internal sederhana, bukan enam aplikasi.
+- Prioritas pendapatan tahap awal adalah consulting dan facilitation; komisi dan
+  membership diuji setelah kontribusi, manfaat, proses, serta transaksi terbukti.
+  Rentang harga dan target jumlah jaringan pada dokumen sumber tetap hipotesis
+  internal, bukan harga publik, anggota aktual, atau kewajiban hasil.
+- Roadmap marketplace: managed/manual → digital/self-service → intelligent/AI.
+  Fitur digital lanjutan hanya dibangun setelah aktivitas, kebutuhan berulang,
+  data, cashflow, dan kapasitas operasional membenarkan investasi.
+- Verifikasi ahli/perusahaan harus berbasis bukti, bukan pembayaran. Status premium
+  tidak sama dengan verified dan tidak berarti Gustafta menjamin semua pekerjaan.
+- Tender wajib mencantumkan sumber resmi, waktu pemeriksaan, tenggat, dan tautan.
+  Jangan menyatakan proyek/tender aktif tanpa verifikasi, menjanjikan kemenangan,
+  atau memfasilitasi praktik pengadaan yang tidak etis.
+- Data pribadi, kredensial, dokumen proyek/tender, dan kontrak memerlukan
+  persetujuan, pembatasan akses, serta perlindungan. Biaya, komisi, peran,
+  konflik kepentingan, kontrak, dan penanganan sengketa harus terdokumentasi.
+- Gunakan penyedia pembayaran yang sesuai regulasi; jangan menahan dana pihak
+  ketiga atau membuat escrow sendiri tanpa dasar dan kepatuhan yang sesuai.
+- Target jaringan, pendapatan, transaksi, dan roadmap 12 bulan dari blueprint
+  adalah sasaran validasi yang dapat disesuaikan, bukan bukti atau jaminan.
+
 ## Prioritas pelaksanaan
 
 Gelombang berikut adalah urutan awal, bukan komitmen durasi. Pekerjaan tata
@@ -497,12 +532,31 @@ dan transaksi yang sesuai.
 - Alur permintaan konsultasi dan rujukan ahli.
 - Papan peluang proyek/tender dan kebutuhan kemitraan.
 - Rancangan marketplace, aturan mitra, biaya, dan penyelesaian sengketa.
+- Managed marketplace manual untuk fase awal dengan Experts Network, Company
+  Network, Project Hub, Tender Hub, Partnership Hub, dan Transaction Hub.
+- SOP pendaftaran, verifikasi, screening, matching, proposal, kemitraan,
+  transaksi, pembayaran, evaluasi, keluhan, dan sengketa.
+- Model membership basic gratis dan premium berbayar; alur pendapatan awal
+  consulting/facilitation, kemudian komisi dan membership saat terbukti.
+- Roadmap managed → digital → intelligent marketplace dengan validasi aktivitas
+  dan cashflow sebagai gate sebelum investasi platform.
+- Tata kelola proyek/tender, profil publik, dokumen privat, konflik kepentingan,
+  kontrak, pembayaran, dan pembagian komisi.
 
 **Kriteria penerimaan**
 - Profil dan listing memiliki mekanisme verifikasi serta pelaporan.
 - Biaya, komisi, peran, dan tanggung jawab pihak yang terlibat transparan.
 - Transaksi tidak diaktifkan sebelum kebijakan, dukungan, dan pemrosesan pembayaran
   siap.
+- Profil ahli/perusahaan, listing proyek, dan tender tidak ditampilkan sebagai
+  aktif sebelum verifikasi; sumber dan waktu pemeriksaan peluang bisa ditelusuri.
+- Status premium tidak menyiratkan verifikasi, sertifikasi, atau jaminan kualitas.
+- Tidak ada janji kemenangan tender; konflik kepentingan, pembagian pendapatan,
+  tanggung jawab, dan penyelesaian sengketa dicatat tertulis.
+- Data identitas, dokumen proyek, dan transaksi memiliki persetujuan serta kontrol
+  akses yang sesuai; pembayaran/escrow menggunakan penyedia yang sah dan sesuai.
+- Angka harga, anggota, peluang, dan transaksi tetap berlabel hipotesis/target
+  internal sampai ada validasi; tidak dipublikasikan sebagai fakta.
 
 ### 09 — Academy, Kompetensi, dan Layanan Profesional
 
@@ -591,6 +645,9 @@ hasil setiap paket.
 - Target angka ditetapkan setelah baseline tersedia.
 - Baseline awal dikumpulkan sebelum target numerik bisnis ditetapkan; sasaran
   simulasi tidak diperlakukan sebagai komitmen kinerja.
+- Target jaringan, peluang, matching, dan transaksi Bagian 08 ditinjau setelah
+  baseline serta kapasitas founder tersedia; jangan mengejar angka anggota tanpa
+  aktivitas dan hasil bisnis yang berkualitas.
 - Perubahan lingkup, risiko, biaya, dan keputusan dicatat serta ditinjau berkala.
 - Perekrutan atau peningkatan biaya tetap hanya dipertimbangkan saat kebutuhan
   berulang, kapasitas, dan sumber pendanaan dapat dijelaskan.

@@ -75,7 +75,24 @@ For Part 07, the user finalized:
 - The proposed product, SaaS, and sales targets are strategic planning aims, not
   proof of availability or guaranteed outcomes.
 
-**Why:** the user confirmed the Part 02–07 business choices and the Part 03
+For Part 08, the user finalized:
+
+- Gustafta will operate a managed marketplace, starting manually; the first-year
+  target is initial projects, tenders, matching, and transactions, not a full
+  self-service platform.
+- Build expert, company, project/tender, partnership, and transaction networks
+  gradually and together. Basic membership is free; premium is paid.
+- Monetize through consulting, facilitation, commissions, and memberships, with
+  early cashflow from consulting and facilitation.
+- Provide tender/project information, matching, consultation, and facilitation;
+  use referral, project-based, and strategic partnerships.
+- Verify credentials based on evidence, protect private documents, cite dated
+  official tender sources, avoid guarantees of tender wins, and use compliant
+  payment providers rather than holding third-party funds without authority.
+- Prices and network/KPI quantities in the blueprint remain hypotheses and
+  planning targets, not public prices or achieved results.
+
+**Why:** the user confirmed the Part 02–08 business choices and the Part 03
 endorsed-brand architecture and market approach.
 
 **How to apply:** use these priorities in Gustafta and KontraktorAI business
@@ -91,3 +108,6 @@ and customer acceptance have been checked. Treat 40 hours per week as the
 founder's current estimate, not proof that any particular sales target or project
 volume is feasible. Apply Part 07 as a gated product path: validate a reusable
 digital product before committing to SaaS scope or launch timing.
+Apply Part 08 as a managed, human-led marketplace until repeated verified
+activity supports digital self-service; treat network and pricing targets as
+assumptions until baseline evidence exists.

@@ -332,6 +332,32 @@ function BusinessModel() {
     'Uji kualitas AI dan sumber jawaban; minta tinjauan ahli untuk keputusan teknis atau keselamatan yang kritis.',
     'Nama platform dan vendor pada blueprint adalah kandidat, bukan keputusan langganan atau implementasi.',
   ];
+  const marketplacePillars = [
+    { title: 'Experts Network', detail: 'Jaringan ahli independen; status terdaftar, terverifikasi, premium, dan mitra strategis harus dibedakan.' },
+    { title: 'Company Network', detail: 'Profil perusahaan dan kebutuhan kolaborasi; kelayakan dan dokumen diperiksa sesuai risiko.' },
+    { title: 'Project Hub', detail: 'Penyaringan kebutuhan, pencocokan penyedia, proposal, kesepakatan, koordinasi, dan evaluasi.' },
+    { title: 'Tender Hub', detail: 'Informasi bersumber resmi dengan tanggal pemeriksaan, tenggat, kriteria, dan tautan sumber.' },
+    { title: 'Partnership Hub', detail: 'Kolaborasi referral, berbasis proyek, dan strategis dengan peran serta pembagian kerja tertulis.' },
+    { title: 'Transaction Hub', detail: 'Permintaan, penawaran, kesepakatan, pembayaran, delivery, penyelesaian, dan review.' },
+  ];
+  const marketplaceStages = [
+    { title: 'Managed marketplace', label: 'AWAL · MANUAL', detail: 'Founder mengelola database, verifikasi, matching, komunikasi, dokumen, dan pencatatan transaksi.' },
+    { title: 'Digital marketplace', label: 'SETELAH VALIDASI', detail: 'Registrasi mandiri, direktori, listing peluang, proposal, dan dashboard ketika aktivitas membenarkannya.' },
+    { title: 'Intelligent marketplace', label: 'JANGKA PANJANG', detail: 'AI matching dan intelijen tender setelah data, tata kelola, dan volume interaksi memadai.' },
+  ];
+  const marketplaceRevenue = [
+    { title: 'Consulting', detail: 'Pendapatan jasa langsung untuk konsultasi bisnis, teknologi, tender, dan kebutuhan industri.' },
+    { title: 'Facilitation', detail: 'Biaya matching, koordinasi, atau success fee sesuai kontribusi dan kesepakatan tertulis.' },
+    { title: 'Commission', detail: 'Komisi transaksi setelah sumber nilai, dasar hitung, dan tanggung jawab transparan.' },
+    { title: 'Membership', detail: 'Basic gratis; fitur premium berbayar hanya setelah manfaat dan dukungan siap diuji.' },
+  ];
+  const marketplaceSafeguards = [
+    'Verifikasi ahli dan perusahaan berdasarkan bukti; biaya keanggotaan tidak membeli status terverifikasi.',
+    'Data identitas, kredensial, tender, kontrak, dan dokumen proyek dibatasi sesuai persetujuan dan hak akses.',
+    'Cantumkan sumber dan tanggal pemeriksaan peluang; jangan menyajikan tender lama sebagai peluang terbuka atau menjanjikan kemenangan.',
+    'Ungkap biaya, komisi, peran, konflik kepentingan, dan penanganan sengketa secara tertulis.',
+    'Gunakan penyedia pembayaran yang sesuai aturan; jangan menahan dana pihak ketiga sendiri tanpa dasar dan kepatuhan yang sesuai.',
+  ];
   return <section id="model-bisnis" className="relative overflow-hidden border-y border-white/[.08] bg-[#111c23] py-20 md:py-28">
     <div className="absolute right-[-180px] top-[-180px] h-[500px] w-[500px] rounded-full border border-[#8bdcff]/[.08]" />
     <div className="container-wide relative">
@@ -592,6 +618,49 @@ function BusinessModel() {
           <ul className="grid gap-2 sm:grid-cols-2">{saasGovernance.map((rule, index) => <li key={rule} className="flex gap-2 border border-white/[.08] bg-white/[.02] p-3 text-[10px] leading-5 text-[#a5b3ba]" data-testid={`saas-governance-${index + 1}`}><Check size={13} className="mt-0.5 shrink-0 text-[#8bdcff]" />{rule}</li>)}</ul>
         </div>
         <p className="mt-5 border-l border-[#8bdcff]/50 pl-3 text-[9px] leading-5 text-[#758792]" data-testid="part07-validation-note">Gate rilis: validasi masalah dan kesediaan membayar → prototype/MVP → pilot 3–5 pengguna sebagai sasaran uji → standardisasi, dokumentasi, keamanan, biaya, dan dukungan. Angka pilot adalah target rencana, bukan pengguna yang sudah ada.</p>
+      </div>
+      <div id="bagian-08" className="mt-14 border-t border-white/10 pt-10" data-testid="consulting-collaboration-marketplace">
+        <div className="grid gap-5 md:grid-cols-[.78fr_1.22fr] md:items-end">
+          <div><div className="eyebrow">BAGIAN 08 · CONSULTING, COLLABORATION & MARKETPLACE</div><h3 className="display-font mt-3 max-w-[520px] text-3xl font-semibold leading-tight text-[#e6eef1] md:text-4xl">Jaringan dahulu.<br /><span className="text-[#8bdcff]">Marketplace bertahap.</span></h3></div>
+          <div>
+            <span className="inline-flex items-center gap-2 border border-[#8bdcff]/25 bg-[#8bdcff]/[.06] px-3 py-1.5 font-mono text-[9px] tracking-[.1em] text-[#9eddf2]">KEPUTUSAN FINAL · MANAGED MARKETPLACE</span>
+            <p className="mt-3 max-w-[630px] text-[12px] leading-6 text-[#a7b5bc]">Gustafta menghubungkan ahli, perusahaan, proyek, tender, kemitraan, dan transaksi. Tahun pertama dimulai dengan proses manual yang dikelola founder untuk membuktikan aktivitas bisnis sebelum membangun platform self-service.</p>
+          </div>
+        </div>
+        <div className="mt-6 grid gap-px border border-white/[.09] bg-white/[.09] sm:grid-cols-2 xl:grid-cols-3" data-testid="marketplace-pillars">
+          {marketplacePillars.map((pillar, index) => <article key={pillar.title} className="min-h-[130px] bg-[#121e26] p-4" data-testid={`marketplace-pillar-${index + 1}`}>
+            <span className="font-mono text-[9px] tracking-[.1em] text-[#8bdcff]">JARINGAN 0{index + 1}</span>
+            <h4 className="mt-2 text-[12px] font-semibold text-[#e5edf0]">{pillar.title}</h4>
+            <p className="mt-1.5 text-[10px] leading-5 text-[#91a0a8]">{pillar.detail}</p>
+          </article>)}
+        </div>
+        <div className="mt-8">
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <div><div className="eyebrow">ROADMAP PLATFORM</div><h4 className="display-font mt-2 text-2xl font-semibold text-[#e6eef1]">Manual → digital → intelligent.</h4></div>
+            <p className="max-w-[460px] text-[10px] leading-5 text-[#8798a1]">Prioritas tahun pertama adalah managed marketplace dengan proyek, tender, matching, dan transaksi awal sebagai sasaran uji, bukan klaim aktivitas yang sudah berjalan.</p>
+          </div>
+          <div className="mt-4 grid gap-2 md:grid-cols-3" data-testid="marketplace-stages">
+            {marketplaceStages.map((stage, index) => <article key={stage.title} className="border border-white/[.1] bg-white/[.025] p-4" data-testid={`marketplace-stage-${index + 1}`}>
+              <span className="font-mono text-[9px] tracking-[.1em] text-[#8bdcff]">{stage.label}</span>
+              <h5 className="mt-2 text-[12px] font-semibold text-[#e5edf0]">{stage.title}</h5>
+              <p className="mt-2 text-[10px] leading-5 text-[#91a0a8]">{stage.detail}</p>
+            </article>)}
+          </div>
+        </div>
+        <div className="mt-8 grid gap-5 lg:grid-cols-[.66fr_1.34fr]">
+          <div><div className="eyebrow">MODEL PENDAPATAN</div><h4 className="display-font mt-2 text-2xl font-semibold text-[#e6eef1]">Mulai dari layanan.</h4><p className="mt-2 text-[10px] leading-5 text-[#8798a1]">Konsultasi dan fasilitasi menjadi jalur awal; keanggotaan premium dan komisi diuji setelah ada manfaat, proses, dan transaksi yang dapat dibuktikan.</p></div>
+          <div className="grid gap-2 sm:grid-cols-2" data-testid="marketplace-revenue-models">
+            {marketplaceRevenue.map((item, index) => <article key={item.title} className="border border-white/[.1] bg-white/[.025] p-3" data-testid={`marketplace-revenue-${index + 1}`}>
+              <h5 className="text-[11px] font-semibold text-[#e5edf0]">{item.title}</h5>
+              <p className="mt-1 text-[10px] leading-5 text-[#91a0a8]">{item.detail}</p>
+            </article>)}
+          </div>
+        </div>
+        <div className="mt-6 border border-[#8bdcff]/20 bg-[#8bdcff]/[.04] p-4" data-testid="marketplace-governance">
+          <div className="eyebrow">KEPERCAYAAN · TRANSPARANSI · PERLINDUNGAN</div>
+          <ul className="mt-3 grid gap-2 sm:grid-cols-2">{marketplaceSafeguards.map((rule, index) => <li key={rule} className="flex gap-2 text-[10px] leading-5 text-[#a5b3ba]" data-testid={`marketplace-safeguard-${index + 1}`}><Check size={13} className="mt-0.5 shrink-0 text-[#8bdcff]" />{rule}</li>)}</ul>
+        </div>
+        <p className="mt-4 text-[9px] leading-5 text-[#758792]" data-testid="marketplace-availability-note">Rencana ekosistem ini bukan direktori, proyek, tender, atau layanan transaksi yang sudah aktif. Informasi peluang hanya boleh dipublikasikan setelah diverifikasi dan ditautkan ke sumber yang sah.</p>
       </div>
       <p className="mt-5 flex items-start gap-2 text-[10px] leading-5 text-[#778991]" data-testid="text-business-model-caveat"><Check size={13} className="mt-0.5 shrink-0 text-[#70bfdc]" />Enam unit bisnis dan tiga level penawaran adalah kerangka strategis, bukan katalog atau klaim ketersediaan. Harga, margin, dan proyeksi tetap perlu divalidasi.</p>
     </div>

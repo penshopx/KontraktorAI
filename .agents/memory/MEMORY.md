@@ -1,2 +1,2 @@
 - [KontraktorAI brand and focus](kontraktorai-brand-name.md) — KontraktorAI is Gustafta's endorsed industry brand, with five sectors entered in phases.
-- [KontraktorAI business model](kontraktorai-business-model.md) — Use digital products to validate demand before expanding into SaaS; plan around bootstrap cashflow and founder capacity.
+- [KontraktorAI business model](kontraktorai-business-model.md) — Validate digital products and run a managed marketplace before investing in SaaS or self-service platforms.
