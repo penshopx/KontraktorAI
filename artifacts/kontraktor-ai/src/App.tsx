@@ -4,12 +4,13 @@ import { ErrorBoundary } from '@/components/error-boundary';
 import { Toaster } from '@/components/ui/toaster';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import NotFound from '@/pages/not-found';
+import { NewsArticle, NewsLanding } from '@/pages/news';
 import {
   ArrowDown, ArrowRight, ArrowUpRight, BookOpen, Check, ClipboardCheck,
   Compass, HardHat, Leaf, Menu, MessagesSquare, Search, ShieldCheck, Sparkles, X,
   BriefcaseBusiness, Calculator, GraduationCap, FileCheck2, UsersRound, Wrench,
 } from 'lucide-react';
-import { Route, Switch, useLocation, Router as WouterRouter } from 'wouter';
+import { Link, Route, Switch, useLocation, Router as WouterRouter } from 'wouter';
 
 const queryClient = new QueryClient();
 
@@ -37,20 +38,20 @@ const solutions: Solution[] = [
 const categories = ['Semua solusi', 'AI & konsultasi', 'Kolaborasi', 'Alat digital', 'Manajemen proyek', 'Tender & kepatuhan', 'HSE & keberlanjutan', 'Akademi & kompetensi', 'Bisnis & legalitas', 'Solusi industri'];
 
 function Brand({ light = false }: { light?: boolean }) {
-  return <a href="#beranda" data-testid="link-brand-home" className={`brand-lockup ${light ? 'text-[#e9f3f7]' : ''}`}>
+  return <Link href="/" data-testid="link-brand-home" className={`brand-lockup ${light ? 'text-[#e9f3f7]' : ''}`}>
     <span className="brand-mark"><span /><span /><span /></span>
     <span className="font-semibold tracking-[-.04em]">Kontraktor<span className="text-[#8bdcff]">AI</span></span>
-  </a>;
+  </Link>;
 }
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const links = [['Solusi', '#solusi'], ['Cara kerja', '#cara-kerja'], ['Wawasan', '#wawasan'], ['Tentang', '#tentang']];
+  const links = [['Solusi', '#solusi'], ['Cara kerja', '#cara-kerja'], ['Wawasan', '#wawasan'], ['News', '/news'], ['Tentang', '#tentang']];
   return <header className="sticky top-0 z-30 border-b border-white/[.08] bg-[#101820]/90 backdrop-blur-xl">
     <div className="container-wide flex h-[74px] items-center justify-between">
       <Brand />
       <nav aria-label="Navigasi utama" className="hidden items-center gap-8 md:flex">
-        {links.map(([label, href]) => <a key={label} href={href} className="nav-link text-[13px]" data-testid={`link-nav-${label.toLowerCase().replaceAll(' ', '-')}`}>{label}</a>)}
+        {links.map(([label, href]) => href === '/news' ? <Link key={label} href={href} className="nav-link text-[13px]" data-testid="link-nav-news">{label}</Link> : <a key={label} href={href} className="nav-link text-[13px]" data-testid={`link-nav-${label.toLowerCase().replaceAll(' ', '-')}`}>{label}</a>)}
       </nav>
       <div className="hidden items-center gap-3 md:flex">
         <a href="#solusi" className="nav-link px-3 py-2 text-[13px]" data-testid="link-nav-jelajahi">Jelajahi</a>
@@ -181,7 +182,7 @@ function HowItWorks() {
     <div className="container-wide">
       <div className="grid gap-10 md:grid-cols-[.82fr_1.18fr]">
         <div><div className="eyebrow">SEBUAH CARA YANG LEBIH JELAS</div><h2 className="display-font mt-4 max-w-[430px] text-[clamp(2.6rem,4.5vw,4rem)] font-semibold leading-[1.02]">Dari persoalan,<br /><span className="text-[#8bdcff]">ke langkah nyata.</span></h2><p className="mt-5 max-w-[400px] text-[14px] leading-7 text-[#9baab2]">KontraktorAI menyatukan berbagai pintu masuk ekosistem konstruksi. Bukan untuk menggantikan keahlian Anda—melainkan membantu melihat pilihan dengan lebih terang.</p>
-          <a href="#wawasan" className="mt-7 inline-flex items-center gap-2 text-[12px] font-semibold text-[#8bdcff] hover:gap-3" data-testid="link-how-insights">Lihat wawasan terbaru <ArrowRight size={14} /></a>
+          <Link href="/news" className="mt-7 inline-flex items-center gap-2 text-[12px] font-semibold text-[#8bdcff] hover:gap-3" data-testid="link-how-insights">Lihat intelijen industri <ArrowRight size={14} /></Link>
         </div>
         <div className="divide-y divide-white/[.1] border-y border-white/[.1]">
           {steps.map(step => {
@@ -236,14 +237,14 @@ function Insights() {
     <div className="container-wide">
       <div className="mb-9 flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
         <div><div className="eyebrow">WAWASAN UNTUK KERJA SEHARI-HARI</div><h2 className="display-font mt-3 text-4xl font-semibold tracking-[-.06em] text-[#eaf1f3] md:text-5xl">Baca. Pahami. Terapkan.</h2></div>
-        <a href="#solusi" className="inline-flex items-center gap-2 text-[12px] font-semibold text-[#8bdcff] hover:gap-3" data-testid="link-insights-all">Jelajahi semua topik <ArrowRight size={14} /></a>
+        <Link href="/news" className="inline-flex items-center gap-2 text-[12px] font-semibold text-[#8bdcff] hover:gap-3" data-testid="link-insights-all">Jelajahi News & intelijen <ArrowRight size={14} /></Link>
       </div>
       <div className="grid gap-3 md:grid-cols-3">
-        {items.map(item => <a key={item.number} href="#solusi" className="group flex min-h-[222px] flex-col border border-white/10 bg-[#111c23] p-5 transition hover:border-[#8bdcff]/45" data-testid={`card-insight-${item.number}`}>
+        {items.map(item => <Link key={item.number} href="/news" className="group flex min-h-[222px] flex-col border border-white/10 bg-[#111c23] p-5 transition hover:border-[#8bdcff]/45" data-testid={`card-insight-${item.number}`}>
           <div className="flex items-center justify-between"><span className="eyebrow !text-[9px]">{item.type}</span><span className="font-mono text-[10px] text-[#61747e]">{item.number}</span></div>
           <h3 className="mt-8 max-w-[320px] text-[17px] font-semibold leading-[1.35] tracking-[-.02em] text-[#e0e9ec] group-hover:text-[#8bdcff]">{item.title}</h3>
           <div className="mt-auto flex items-center justify-between pt-6 text-[10px] text-[#8c9ba3]"><span>{item.meta}</span><ArrowUpRight size={14} className="text-[#8bdcff]" /></div>
-        </a>)}
+        </Link>)}
       </div>
       <p className="mt-4 text-[10px] text-[#73838b]">Contoh topik pengetahuan yang dapat dijelajahi di portal. Materi spesifik mengikuti ketersediaan konten.</p>
     </div>
@@ -292,7 +293,7 @@ function Home() {
 
 function Router() {
   const [location] = useLocation();
-  return <ErrorBoundary resetKey={location}><Switch><Route path="/" component={Home} /><Route component={NotFound} /></Switch></ErrorBoundary>;
+  return <ErrorBoundary resetKey={location}><Switch><Route path="/" component={Home} /><Route path="/news" component={NewsLanding} /><Route path="/news/:slug" component={NewsArticle} /><Route component={NotFound} /></Switch></ErrorBoundary>;
 }
 
 function App() {

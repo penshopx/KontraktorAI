@@ -1,0 +1,16 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "l_3tSh3u4FRzhIWTY8RLB"
+uri = "file://docs/kontraktorai-implementation-backlog.md"
+type = "text"
+title = "Backlog Implementasi KontraktorAI"
+description = "Rencana 12 paket kerja dengan urutan, dependensi, hasil kerja, dan kriteria penerimaan."
+logical_id = "3f930218-1eed-4998-8f81-87dac625b17c"
+content_hash = "sha256:ee687191ccf48b57f4318d434a114cfe4a2748f8073534df00feb644d4f0d832"
+size = 11276
+mtime_ms = 1794588013933
+storage_uri = "gcs://replit-rams-assets-sisko/rams/assets/repl:1d6e4513-210d-416c-882c-38020398995c/3f930218-1eed-4998-8f81-87dac625b17c/16d914b9-237f-436e-8736-7721283f62b6"
+storage_version_token = "1794588250078768"
+content_type = "text/markdown"
