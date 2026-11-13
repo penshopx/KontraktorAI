@@ -1,6 +1,6 @@
 ---
 name: KontraktorAI business model
-description: User-confirmed initial business model, customer segment, and 12-month revenue priority.
+description: User-confirmed business model, customer segments, product approach, and technology choices.
 ---
 
 The user approved these Part 02 recommendations:
@@ -22,14 +22,22 @@ The user also confirmed the Part 03 strategy:
 - Validate customer problems and paid demand before standardizing and
   productizing solutions.
 
+The user confirmed these Part 04 choices:
+
+- Balance services and product development, keeping services as the near-term
+  cash-flow path while building digital products and SaaS gradually.
+- Choose between no-code, low-code, and custom development according to the
+  need rather than following a single fixed implementation method.
+- Combine Gustafta-owned products with third-party technology integrations.
+
 Prices, margins, revenue projections, and product readiness remain subject to
 market and cost validation; do not present them as final or guaranteed.
 
-**Why:** the user confirmed the Part 02 recommendations and attached a Part 03
-strategy that identifies the endorsed-brand architecture and market approach as
-final decisions.
+**Why:** the user confirmed the Part 02 and Part 04 business choices and the
+Part 03 endorsed-brand architecture and market approach.
 
 **How to apply:** use these priorities in Gustafta and KontraktorAI business
-planning, portal messaging, and future product decisions. Keep pricing and
-financial targets labeled as assumptions until validated; do not call a product
-ready until the market, operational, and technical checks are complete.
+planning, portal messaging, and future product decisions. Choose implementation
+methods and vendors by fit, security, licensing, cost, and maintainability. Keep
+pricing and financial targets labeled as assumptions until validated; do not call
+a product ready until the market, operational, and technical checks are complete.

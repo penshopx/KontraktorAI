@@ -3,7 +3,7 @@
 ## Tujuan
 
 Menerjemahkan Master Blueprint menjadi 12 paket kerja yang dapat ditugaskan,
-diurutkan, dan dinilai hasilnya. Dokumen ini berangkat dari tiga lampiran
+diurutkan, dan dinilai hasilnya. Dokumen ini berangkat dari lampiran-lampiran
 blueprint yang diberikan dan mempertahankan prinsip:
 
 **Informasi → Pengetahuan → Dialog → Solusi → Kolaborasi → Kreasi → Transaksi.**
@@ -52,6 +52,37 @@ metodologi, dan nama portal yang digunakan adalah **KontraktorAI**.
   digunakan bersama.
 - Target KPI numerik ditetapkan setelah baseline tersedia; pengukuran brand,
   pasar, pelanggan, dan pendapatan ditinjau bulanan/kuartalan.
+
+## Keputusan strategis Bagian 04
+
+- Portofolio berjalan seimbang antara jasa dan produk. Jasa menjadi jalur awal
+  arus kas; produk digital dan SaaS dikembangkan bertahap.
+- Empat kategori portofolio adalah Professional Services, Productized Services,
+  Digital Products, serta SaaS & AI Products. Ini berbeda dari enam unit bisnis
+  Bagian 02 dan tiga level penawaran Bagian 03.
+- Produk Gustafta sendiri akan dikembangkan bersama peluang integrasi teknologi
+  pihak ketiga. Setiap integrasi tetap memerlukan pemeriksaan lisensi, biaya,
+  keamanan data, dan ketergantungan vendor.
+- Strategi teknologi bersifat hybrid: pilih no-code, low-code, atau custom
+  development sesuai kebutuhan, risiko, biaya, dan kesiapan operasi.
+- Productization mengikuti alur custom service → repeated solution →
+  standardized package → digital product → SaaS; pengembangan melalui discovery,
+  validation, MVP, market testing, standardization, lalu commercial scaling.
+- Kandidat prioritas P0: website/landing page, AI Business Assistant setup, dan
+  business automation. P1: maintenance website, business dashboard, digital
+  templates, serta AI customer service. P2: AI document assistant dan industrial
+  knowledge assistant. P3: industrial SaaS. P0–P3 adalah prioritas perencanaan,
+  bukan status ketersediaan atau kesiapan jual.
+- Sumber pendapatan yang direncanakan meliputi proyek, subscription, lisensi,
+  konsultasi, produk digital, dan kemitraan. Struktur harga Entry, Business,
+  serta Professional/Enterprise belum memiliki angka final.
+- Roadmap 12 bulan adalah urutan sementara: fondasi cashflow, productization,
+  pengembangan produk, lalu ekspansi komersial. Jadwal dan hasilnya perlu
+  disesuaikan dengan validasi pasar, kapasitas, biaya, dan risiko.
+- Teknologi dirancang modular, API-first, reusable, aman, fleksibel terhadap
+  vendor, efisien, dan dapat dipelihara.
+- KPI mencakup performa komersial, produk, recurring revenue, operasional, dan
+  keuangan; target numerik ditentukan setelah baseline tersedia.
 
 ## Prioritas pelaksanaan
 
@@ -110,12 +141,13 @@ mitra, dan komunitas.
 
 **Tujuan:** menentukan pelanggan, penawaran, harga, serta kelayakan ekonomi.
 
-**Keputusan pengguna:** model hybrid layanan dan produk; UMKM sebagai pasar
-utama Gustafta; dan pendapatan 12 bulan pertama dimulai dari jasa/konsultasi
-sambil membangun SaaS bertahap. Untuk portal industri KontraktorAI, fokus awal
-tetap pada UMKM kontraktor dan profesional industri. Harga, margin, proyeksi,
-dan kelayakan tiap penawaran tetap harus divalidasi sebelum menjadi kebijakan
-komersial.
+**Keputusan pengguna:** model seimbang antara jasa dan produk; jasa tetap
+diprioritaskan untuk arus kas tahun pertama sambil membangun SaaS bertahap.
+Gustafta melayani UMKM secara luas, sedangkan portal industri KontraktorAI
+berfokus pada UMKM kontraktor dan profesional industri. Pengembangan teknologi
+bersifat hybrid sesuai kebutuhan, dan portofolio menggabungkan produk sendiri
+dengan integrasi pihak ketiga. Harga, margin, proyeksi, dan kelayakan tiap
+penawaran tetap harus divalidasi sebelum menjadi kebijakan komersial.
 
 **Hasil kerja**
 - Model hybrid Gustafta dengan enam unit: Digital Development; SaaS & AI
@@ -158,7 +190,12 @@ berdasarkan kebutuhan pasar, arus kas, dan peluang pendapatan berulang.
 - Pemetaan dua jalur: produk UMKM di bawah Gustafta dan solusi industri melalui
   KontraktorAI.
 - Pengelompokan produk ke Entry Products, Business Solutions, dan Recurring
-  Products.
+  Products, sambil membedakan empat kategori Bagian 04: Professional Services,
+  Productized Services, Digital Products, dan SaaS & AI Products.
+- Matriks kandidat P0–P3 terpisah dari status teknis dan status penawaran.
+- Pemetaan kepemilikan produk sendiri, integrasi/lisensi pihak ketiga, serta
+  risiko dan dependensi vendor.
+- Peta arus pendapatan dan tahapan productization dari layanan ke SaaS.
 - Klasifikasi strategis Core Product, Supporting Product, Experimental Product,
   atau Legacy / Review.
 - Penilaian status Concept, Prototype, Beta, Production, atau Commercial Ready.
@@ -177,6 +214,7 @@ berdasarkan kebutuhan pasar, arus kas, dan peluang pendapatan berulang.
   fungsi, keamanan, kepemilikan, dan operasional.
 - Produk yang belum divalidasi pasar tidak diprioritaskan hanya karena
   menggunakan teknologi baru atau menarik secara teknis.
+- Prioritas P0–P3 tidak diartikan sebagai bukti produk siap dijual.
 
 ### 04 — Arsitektur Portal dan UI/UX
 
@@ -190,6 +228,8 @@ berdasarkan kebutuhan pasar, arus kas, dan peluang pendapatan berulang.
   UMKM Gustafta dari jalur spesialis industri KontraktorAI.
 - Pesan value proposition, kebutuhan pelanggan, dan status penawaran yang
   konsisten pada setiap jalur.
+- Arsitektur portofolio Bagian 04 menjelaskan kategori jasa/produk dan prioritas
+  kandidat tanpa menyamarkannya sebagai katalog aktif.
 - UI responsif serta sistem visual untuk portal.
 
 **Kriteria penerimaan**
@@ -251,12 +291,18 @@ lolos audit secara bertahap.
 **Hasil kerja**
 - Spesifikasi katalog dengan nama, fungsi, target pengguna, kategori, status,
   harga, tautan, dan panduan.
+- Pemisahan empat kategori portofolio serta penandaan produk milik Gustafta
+  versus integrasi/lisensi pihak ketiga.
+- Tingkat harga Entry, Business, dan Professional/Enterprise sebagai kerangka
+  tanpa angka sampai biaya dan kesediaan membayar tervalidasi.
 - Peta integrasi API, identitas, hak akses, dan notifikasi.
 - Rencana akun terpadu/SSO bertahap serta subscription.
 - Prioritas aplikasi yang akan dihubungkan terlebih dahulu.
 
 **Kriteria penerimaan**
 - Katalog membedakan produk aktif, demo, beta, dan rencana.
+- Kandidat strategis P0–P3 tidak ditampilkan sebagai produk aktif; harga dan
+  klaim kesiapan hanya muncul setelah verifikasi.
 - Setiap integrasi memiliki pemilik, kontrak data, kontrol akses, serta jalur
   kegagalan yang terdokumentasi.
 - Migrasi aplikasi lama dilakukan hanya bila ada alasan bisnis dan teknis.
@@ -298,6 +344,10 @@ dan transaksi yang sesuai.
 
 **Hasil kerja**
 - Arsitektur aplikasi, layanan, API, database, dan penyimpanan.
+- Pedoman pemilihan no-code, low-code, atau custom development sesuai kebutuhan.
+- Tata kelola produk sendiri dan integrasi pihak ketiga, termasuk pemeriksaan
+  lisensi, biaya, keamanan data, dan ketergantungan vendor.
+- Prinsip modular, API-first, reusable, fleksibel, efisien, dan mudah dipelihara.
 - Model data untuk produk, News, pengguna/perusahaan, dan aktivitas yang relevan.
 - Kebijakan autentikasi, otorisasi, audit, privasi, retensi, dan pemulihan.
 - Tata kelola hak cipta, lisensi, sumber berita, serta penggunaan AI.
@@ -305,6 +355,8 @@ dan transaksi yang sesuai.
 **Kriteria penerimaan**
 - Data sensitif memiliki kontrol akses dan tujuan pemrosesan yang jelas.
 - Endpoint dan integrasi didokumentasikan serta diuji untuk akses yang tidak sah.
+- Setiap teknologi dan vendor memiliki alasan pemilihan, pemilik, dependensi,
+  biaya, status lisensi, dan mitigasi risiko yang terdokumentasi.
 - Proses rilis, pemantauan, pencadangan, dan pemulihan ditetapkan sebelum operasi
   produksi.
 
@@ -340,7 +392,10 @@ hasil setiap paket.
 - Penanggung jawab dan dependensi untuk setiap butir.
 - KPI untuk leads berkualitas, konversi, pelanggan berbayar, pendapatan rata-rata
   per pelanggan, pendapatan berulang, retensi, akuisisi/brand, layanan, academy,
-  keuangan, News, kolaborasi, dan dampak.
+  adopsi/penggunaan produk, churn, kinerja operasional, keuangan, News,
+  kolaborasi, dan dampak.
+- Roadmap strategis 12 bulan dengan empat fase; periode dan hasilnya ditinjau
+  berkala dan bukan jaminan target atau tanggal rilis.
 - Ritme tinjauan bulanan dan kuartalan serta pencatatan keputusan.
 
 **Kriteria penerimaan**

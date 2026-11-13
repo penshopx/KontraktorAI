@@ -9,7 +9,7 @@ import {
   ArrowDown, ArrowRight, ArrowUpRight, BookOpen, Check, ClipboardCheck,
   Compass, HardHat, Leaf, Menu, MessagesSquare, Search, ShieldCheck, Sparkles, X,
   BriefcaseBusiness, Calculator, GraduationCap, FileCheck2, UsersRound, Wrench,
-  Layers3,
+  Layers3, PackageOpen, Workflow, Code2, PlugZap, Route as RouteIcon, CircleDollarSign, Blocks,
 } from 'lucide-react';
 import { Link, Route, Switch, useLocation, Router as WouterRouter } from 'wouter';
 
@@ -223,6 +223,26 @@ function BusinessModel() {
     { id: '01', title: 'Arus kas tahun pertama: layanan', items: 'Jasa dan pendampingan berbasis kebutuhan yang tervalidasi', note: 'Pendekatan awal untuk melayani kebutuhan pelanggan sekaligus belajar langsung; bukan klaim ketersediaan penawaran tertentu.' },
     { id: '02', title: 'Bangun SaaS secara bertahap', items: 'Produk digital dan SaaS setelah pola solusi berulang terlihat', note: 'Dikembangkan seiring validasi masalah, solusi, kesediaan membayar, dan kesiapan standardisasi.' },
   ];
+  const portfolio = [
+    { id: '01', title: 'Professional services', text: 'Layanan profesional dan pendampingan untuk memahami konteks, merancang pendekatan, dan membantu perubahan kerja.', icon: BriefcaseBusiness },
+    { id: '02', title: 'Productized services', text: 'Metode layanan yang ruang lingkup dan alurnya dapat distandarkan ketika kebutuhan serupa mulai berulang.', icon: Workflow },
+    { id: '03', title: 'Digital products', text: 'Aset dan perangkat digital yang dapat membantu pekerjaan spesifik; bentuk dan prioritasnya perlu diuji.', icon: PackageOpen },
+    { id: '04', title: 'SaaS & AI products', text: 'Produk berulang yang dipertimbangkan setelah masalah, penggunaan, dan model operasinya tervalidasi.', icon: Blocks },
+  ];
+  const opportunities = [
+    { priority: 'P0', title: 'Validasi awal', items: ['Website / landing pages', 'Setup asisten bisnis AI', 'Otomasi bisnis'] },
+    { priority: 'P1', title: 'Kebutuhan berulang', items: ['Pemeliharaan website', 'Dashboard bisnis', 'Template digital', 'Layanan pelanggan AI'] },
+    { priority: 'P2', title: 'Pengetahuan terapan', items: ['Asisten dokumen AI', 'Asisten pengetahuan industri'] },
+    { priority: 'P3', title: 'Peluang industri', items: ['SaaS industri'] },
+  ];
+  const revenueStreams = [
+    { title: 'Proyek', detail: 'Pendapatan implementasi website, aplikasi, otomasi, dan solusi digital yang kebutuhan serta ruang lingkupnya telah dipetakan.' },
+    { title: 'Konsultasi', detail: 'Pendampingan profesional untuk analisis kebutuhan dan perencanaan transformasi digital.' },
+    { title: 'Subscription & managed service', detail: 'Model berulang untuk dukungan atau produk setelah manfaat dan kebutuhan operasional tervalidasi.' },
+    { title: 'Lisensi', detail: 'Lisensi penggunaan produk digital atau perangkat lunak dengan hak dan batasan yang jelas.' },
+    { title: 'Produk digital', detail: 'Potensi transaksi dari aset digital yang relevansi dan kebutuhan pelanggannya telah diuji.' },
+    { title: 'Kemitraan & integrasi', detail: 'Pendapatan dari implementasi, distribusi, integrasi, atau pengembangan bersama mitra.' },
+  ];
   return <section id="model-bisnis" className="relative overflow-hidden border-y border-white/[.08] bg-[#111c23] py-20 md:py-28">
     <div className="absolute right-[-180px] top-[-180px] h-[500px] w-[500px] rounded-full border border-[#8bdcff]/[.08]" />
     <div className="container-wide relative">
@@ -244,6 +264,26 @@ function BusinessModel() {
           </article>;
         })}
       </div>
+      <div className="mt-12 border-t border-white/10 pt-9" data-testid="portfolio-architecture">
+        <div className="grid gap-5 md:grid-cols-[.8fr_1.2fr] md:items-end">
+          <div><div className="eyebrow">PART 04 · ARSITEKTUR PORTOFOLIO</div><h3 className="display-font mt-3 max-w-[460px] text-3xl font-semibold leading-tight text-[#e6eef1] md:text-4xl">Empat bentuk nilai.<br /><span className="text-[#8bdcff]">Satu jalur belajar.</span></h3></div>
+          <p className="max-w-[560px] text-[12px] leading-6 text-[#9baab2]">Portofolio direncanakan seimbang antara jasa dan produk. Layanan dapat menjadi sumber arus kas tahun pertama sekaligus ruang belajar; produk digital dan SaaS dikembangkan bertahap dari pola kebutuhan yang berulang.</p>
+        </div>
+        <div className="mt-6 grid gap-px border border-white/[.09] bg-white/[.09] sm:grid-cols-2 xl:grid-cols-4">
+          {portfolio.map(item => {
+            const Icon = item.icon;
+            return <article key={item.id} className="min-h-[190px] bg-[#121e26] p-5" data-testid={`portfolio-category-${item.id}`}>
+              <div className="flex items-center justify-between"><span className="font-mono text-[10px] text-[#78c9e8]">0{item.id} / 04</span><Icon size={18} className="text-[#8bdcff]" /></div>
+              <h4 className="mt-6 text-[14px] font-semibold text-[#e5edf0]">{item.title}</h4>
+              <p className="mt-2 text-[11px] leading-5 text-[#91a0a8]">{item.text}</p>
+            </article>;
+          })}
+        </div>
+        <div className="mt-4 grid gap-3 border border-[#8bdcff]/20 bg-[#8bdcff]/[.045] p-4 md:grid-cols-2" data-testid="delivery-model">
+          <div className="flex gap-3"><Code2 size={17} className="mt-0.5 shrink-0 text-[#8bdcff]" /><p className="text-[11px] leading-5 text-[#c0cdd3]"><strong className="font-semibold text-[#e4eef2]">Pilih cara membangun menurut use case.</strong> No-code, low-code, atau pengembangan khusus dipilih berdasarkan kebutuhan, kompleksitas, dan keberlanjutan solusi.</p></div>
+          <div className="flex gap-3"><PlugZap size={17} className="mt-0.5 shrink-0 text-[#8bdcff]" /><p className="text-[11px] leading-5 text-[#c0cdd3]"><strong className="font-semibold text-[#e4eef2]">Rangkai ekosistem yang tepat.</strong> Produk milik Gustafta dapat dipadukan dengan integrasi pihak ketiga bila sesuai dengan kebutuhan dan konteks kerja.</p></div>
+        </div>
+      </div>
       <div className="mt-10" data-testid="product-level-taxonomy">
         <div className="eyebrow">TAKSONOMI PENAWARAN · RENCANA STRATEGIS</div>
         <div className="mt-4 grid gap-2 md:grid-cols-3">
@@ -263,6 +303,34 @@ function BusinessModel() {
               <p className="mt-2 text-[12px] leading-5 text-[#c2d0d6]">{phase.items}</p><p className="mt-1 text-[10px] leading-5 text-[#8798a1]">{phase.note}</p></div>
           </article>)}
         </div>
+      </div>
+      <div className="mt-14 grid gap-8 border-t border-white/10 pt-10 lg:grid-cols-[.72fr_1.28fr]" data-testid="revenue-planning">
+        <div><div className="eyebrow">PETA PENDAPATAN · PERENCANAAN</div><h3 className="display-font mt-3 max-w-[360px] text-3xl font-semibold leading-tight text-[#e6eef1]">Layanan membiayai pembelajaran.</h3><p className="mt-4 max-w-[360px] text-[12px] leading-6 text-[#91a0a8]">Sumber pendapatan di bawah adalah arah yang perlu diuji, bukan proyeksi, kontrak, atau jaminan hasil.</p></div>
+        <div className="grid gap-2 sm:grid-cols-2" data-testid="revenue-streams">
+          {revenueStreams.map((stream, index) => <article key={stream.title} className="border border-white/[.1] bg-white/[.025] p-4" data-testid={`revenue-stream-${index + 1}`}>
+            <div className="flex items-center gap-2"><CircleDollarSign size={15} className="text-[#8bdcff]" /><h4 className="text-[12px] font-semibold text-[#e5edf0]">{stream.title}</h4></div>
+            <p className="mt-2 text-[10px] leading-5 text-[#91a0a8]">{stream.detail}</p>
+          </article>)}
+        </div>
+      </div>
+      <div className="mt-14 border-t border-white/10 pt-9" data-testid="opportunity-priorities">
+        <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
+          <div><div className="eyebrow">OPPORTUNITY BACKLOG · P0–P3</div><h3 className="display-font mt-3 text-3xl font-semibold text-[#e6eef1] md:text-4xl">Prioritas untuk diuji.</h3></div>
+          <p className="max-w-[480px] text-[11px] leading-5 text-[#91a0a8]">Urutan sementara dari blueprint strategis, bukan komitmen roadmap, penawaran aktif, atau produk yang siap dijual.</p>
+        </div>
+        <div className="mt-6 grid gap-2 sm:grid-cols-2 xl:grid-cols-4">
+          {opportunities.map(group => <article key={group.priority} className="border border-white/[.1] bg-[#121e26] p-4" data-testid={`priority-${group.priority.toLowerCase()}`}>
+            <div className="flex items-baseline justify-between"><span className="font-mono text-[11px] font-medium text-[#8bdcff]">{group.priority}</span><span className="text-[9px] text-[#71838d]">USULAN STRATEGIS</span></div>
+            <h4 className="mt-3 text-[13px] font-semibold text-[#e4edf0]">{group.title}</h4>
+            <ul className="mt-3 space-y-2">
+              {group.items.map(item => <li key={item} className="flex gap-2 text-[10px] leading-5 text-[#a5b3ba]"><span className="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-[#8bdcff]" />{item}</li>)}
+            </ul>
+          </article>)}
+        </div>
+      </div>
+      <div className="mt-8 flex gap-3 border-l-2 border-[#8bdcff] bg-[#8bdcff]/[.045] px-4 py-3" data-testid="provisional-roadmap-note">
+        <RouteIcon size={16} className="mt-0.5 shrink-0 text-[#8bdcff]" />
+        <p className="text-[10px] leading-5 text-[#a9b8bf]"><strong className="text-[#dce8ed]">Roadmap provisional.</strong> Tahapannya merupakan kerangka perencanaan: pelajari kebutuhan, uji solusi layanan, standardisasi pola yang berulang, lalu pertimbangkan produk digital atau SaaS. Prioritas dapat berubah mengikuti validasi dan kapasitas.</p>
       </div>
       <p className="mt-5 flex items-start gap-2 text-[10px] leading-5 text-[#778991]" data-testid="text-business-model-caveat"><Check size={13} className="mt-0.5 shrink-0 text-[#70bfdc]" />Enam unit bisnis dan tiga level penawaran adalah kerangka strategis, bukan katalog atau klaim ketersediaan. Harga, margin, dan proyeksi tetap perlu divalidasi.</p>
     </div>
