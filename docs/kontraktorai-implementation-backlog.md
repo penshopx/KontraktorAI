@@ -351,6 +351,33 @@ metodologi, dan nama portal yang digunakan adalah **KontraktorAI**.
   ditetapkan oleh keputusan final; rekomendasi dalam draft tetap asumsi dan tidak
   boleh dipresentasikan sebagai komitmen atau hasil.
 
+## Status penyusunan Bagian 12
+
+- Bagian 12 diterapkan sebagai **kerangka usulan yang menunggu input operasional**,
+  bukan keputusan final yang terkunci. Prinsip cashflow-first, founder-led,
+  AI-assisted, dan revenue-oriented menjadi arah kerja.
+- Roadmap 12 bulan memakai empat fase relatif: Foundation/Build & Sell,
+  Validation/Deliver, Growth/Integrate, dan Optimization/Focus. Bulan dan
+  milestone dapat digeser berdasarkan baseline, kapasitas, serta cashflow.
+- Backlog menggunakan alur Backlog → Ready → In Progress → Review → Done, dengan
+  Blocked dan On Hold sebagai status tambahan. Prioritas mempertimbangkan
+  pendapatan, kebutuhan pasar, keselarasan strategi, kecepatan hasil, kesiapan,
+  recurring revenue, dan efisiensi sumber daya. Bobot skor belum dikunci.
+- Anggaran dirancang cashflow-first. Modal awal diketahui bootstrap/terbatas
+  tanpa nominal; biaya rutin dan kapasitas pembiayaan bulanan belum tersedia.
+  Tidak ada alokasi persentase dari draft yang diadopsi sebagai keputusan.
+- Kapasitas founder menjadi batas pengelolaan proyek. Portfolio perlu menjaga
+  status tiap item (aktif/demo/beta/rencana) dan audit aset sebelum pengembangan
+  ulang.
+- Target bisnis numerik, budget, bobot prioritas, dan vendor/tools operasional
+  belum dikunci. KPI dan OKR disusun sebagai kategori/tema; angka baru ditetapkan
+  sesudah baseline aktual diukur.
+- Ritme evaluasi usulan: review proyek mingguan, review bisnis bulanan, dan
+  review strategis kuartalan. Dashboard KPI tetap rencana sampai data operasional
+  yang konsisten tersedia.
+- Kerangka ini tidak menyatakan target produk, pelanggan, pendapatan, proyek,
+  integrasi, atau sistem keuangan telah tercapai atau berjalan.
+
 ## Prioritas pelaksanaan
 
 Gelombang berikut adalah urutan awal, bukan komitmen durasi. Pekerjaan tata
@@ -773,10 +800,22 @@ hasil setiap paket.
 **Hasil kerja**
 - Project charter, backlog fitur, jadwal, estimasi biaya, dan daftar risiko.
 - Penanggung jawab dan dependensi untuk setiap butir.
+- Satu master backlog lintas portfolio, status pekerjaan, pengelompokan proyek,
+  alur lifecycle, risiko, dan dokumentasi keputusan.
+- Metode prioritisasi yang mempertimbangkan revenue, demand, strategi,
+  time-to-value, kesiapan, recurring revenue, dan efisiensi; bobot ditetapkan
+  setelah disepakati.
+- Roadmap 12 bulan empat fase sebagai urutan relatif dengan milestone yang dapat
+  disesuaikan setelah audit aset, biaya, dan kapasitas.
+- Kontrol budget per proyek: budget disetujui, estimasi, aktual, revenue, biaya
+  langsung, gross profit, variance, serta ROI jika relevan.
 - KPI untuk leads berkualitas, konversi, pelanggan berbayar, pendapatan rata-rata
   per pelanggan, pendapatan berulang, retensi, akuisisi/brand, layanan, academy,
   adopsi/penggunaan produk, churn, kinerja operasional, keuangan, News,
   kolaborasi, dan dampak.
+- Empat tema OKR: mesin pendapatan berkelanjutan, produk digital tervalidasi,
+  kehadiran pasar, dan sistem operasi yang efisien; target numerik menunggu
+  baseline.
 - Roadmap strategis 12 bulan dengan empat fase; periode dan hasilnya ditinjau
   berkala dan bukan jaminan target atau tanggal rilis.
 - Rencana operasi Bagian 05 memuat sistem founder-led, lima fungsi, model
@@ -784,6 +823,8 @@ hasil setiap paket.
 - Ritme tinjauan bulanan dan kuartalan serta pencatatan keputusan.
 - Baseline keuangan Gustafta direview bulanan, termasuk net cashflow, saldo kas,
   piutang/hutang, biaya subscription, margin proyek, dan kapasitas founder.
+- Kategori tools untuk backlog, dokumen, komunikasi, file, keuangan, CRM,
+  otomasi, dan analytics; tidak ada vendor yang dipilih sebelum evaluasi.
 
 **Kriteria penerimaan**
 - Setiap butir backlog memiliki tujuan, prioritas, estimasi, dependensi, pemilik,
@@ -794,6 +835,13 @@ hasil setiap paket.
 - Target jaringan, peluang, matching, dan transaksi Bagian 08 ditinjau setelah
   baseline serta kapasitas founder tersedia; jangan mengejar angka anggota tanpa
   aktivitas dan hasil bisnis yang berkualitas.
+- Target revenue, pelanggan, proyek, produk, dan KPI baru disetujui setelah
+  baseline serta kapasitas diukur; rekomendasi angka atau alokasi pada blueprint
+  tidak otomatis menjadi target.
+- Tahapan roadmap dapat direvisi; selesai/tidaknya pekerjaan dinilai dari kriteria
+  penerimaan dan hasil aktual, bukan label periode.
+- Sistem pengelolaan proyek dan dashboard membedakan rencana, pekerjaan berjalan,
+  hasil selesai, dan item terhambat.
 - Perubahan lingkup, risiko, biaya, dan keputusan dicatat serta ditinjau berkala.
 - Perekrutan atau peningkatan biaya tetap hanya dipertimbangkan saat kebutuhan
   berulang, kapasitas, dan sumber pendanaan dapat dijelaskan.

@@ -421,6 +421,26 @@ function BusinessModel() {
     'Jangan menyalin artikel eksternal secara utuh; lakukan pemeriksaan kualitas sebelum publikasi.',
     'Ukur konten dari prospek dan hasil bisnis, bukan trafik atau jumlah pengikut saja.',
   ];
+  const executionPhases = [
+    { period: 'BULAN 1–3', title: 'Foundation · Build & Sell', detail: 'Satukan backlog, audit aset, siapkan SOP dan penawaran, lalu utamakan pelanggan serta proyek awal.' },
+    { period: 'BULAN 4–6', title: 'Validation · Deliver', detail: 'Validasi layanan dan kebutuhan produk; dokumentasikan proyek, studi kasus, biaya, dan proses delivery.' },
+    { period: 'BULAN 7–9', title: 'Growth · Integrate', detail: 'Perluas yang tervalidasi melalui integrasi, distribusi, kemitraan, dan uji pendapatan berulang.' },
+    { period: 'BULAN 10–12', title: 'Optimization · Focus', detail: 'Tinjau portfolio; optimalkan yang bernilai, tunda yang belum terbukti, dan siapkan roadmap berikutnya.' },
+  ];
+  const priorityCriteria = [
+    'Potensi pendapatan',
+    'Kebutuhan dan urgensi pasar',
+    'Kesesuaian strategi',
+    'Kecepatan menuju hasil',
+    'Kesiapan teknologi',
+    'Potensi pendapatan berulang',
+    'Efisiensi waktu dan sumber daya',
+  ];
+  const executionReviews = [
+    { title: 'Mingguan', detail: 'Progres, hambatan, anggaran, peluang pendapatan, dan tiga prioritas berikutnya.' },
+    { title: 'Bulanan', detail: 'Revenue, cashflow, margin proyek, pipeline, marketing, produk, dan beban founder.' },
+    { title: 'Kuartalan', detail: 'Portfolio, anggaran, risiko, OKR, serta keputusan continue, improve, hold, atau stop.' },
+  ];
   return <section id="model-bisnis" className="relative overflow-hidden border-y border-white/[.08] bg-[#111c23] py-20 md:py-28">
     <div className="absolute right-[-180px] top-[-180px] h-[500px] w-[500px] rounded-full border border-[#8bdcff]/[.08]" />
     <div className="container-wide relative">
@@ -862,6 +882,72 @@ function BusinessModel() {
         <div className="mt-6 flex flex-col gap-3 border border-[#8bdcff]/20 bg-[#8bdcff]/[.04] p-4 md:flex-row md:items-center md:justify-between" data-testid="growth-kpi-priority">
           <div><div className="eyebrow">KPI PRIORITAS · TANPA TARGET ANGKA FIKTIF</div><p className="mt-1 text-[10px] leading-5 text-[#c1d0d6]">Pendapatan & cashflow → pelanggan berbayar → qualified leads → proyek berhasil → repeat customers → recurring revenue → organic traffic → komunitas.</p></div>
           <p className="max-w-[340px] text-[9px] leading-5 text-[#8798a1]">Target numerik ditetapkan setelah kapasitas, harga, dan baseline terukur. Trafik atau pengikut bukan indikator keberhasilan bila tidak berkontribusi ke prospek dan pendapatan.</p>
+        </div>
+      </div>
+      <div id="bagian-12" className="mt-14 border-t border-white/10 pt-10" data-testid="project-management-roadmap-kpi">
+        <div className="grid gap-5 md:grid-cols-[.78fr_1.22fr] md:items-end">
+          <div><div className="eyebrow">BAGIAN 12 · PROJECT MANAGEMENT, ROADMAP & KPI</div><h3 className="display-font mt-3 max-w-[520px] text-3xl font-semibold leading-tight text-[#e6eef1] md:text-4xl">Dari strategi<br /><span className="text-[#8bdcff]">ke eksekusi terukur.</span></h3></div>
+          <div>
+            <span className="inline-flex items-center gap-2 border border-amber-300/25 bg-amber-300/[.06] px-3 py-1.5 font-mono text-[9px] tracking-[.1em] text-amber-100">KERANGKA USULAN · MENUNGGU INPUT OPERASIONAL</span>
+            <p className="mt-3 max-w-[630px] text-[12px] leading-6 text-[#a7b5bc]">Bagian 12 menghubungkan keputusan sebelumnya ke satu sistem kerja yang lean, founder-led, AI-assisted, dan cashflow-oriented. Roadmap dan KPI di bawah adalah kerangka perencanaan, bukan janji tanggal maupun pencapaian.</p>
+          </div>
+        </div>
+        <div className="mt-6 grid gap-2 sm:grid-cols-2 xl:grid-cols-4" data-testid="execution-roadmap-phases">
+          {executionPhases.map((phase, index) => <article key={phase.period} className="border border-white/[.1] bg-white/[.025] p-4" data-testid={`execution-phase-${index + 1}`}>
+            <span className="font-mono text-[9px] text-[#8bdcff]">{phase.period}</span>
+            <h4 className="mt-2 text-[11px] font-semibold text-[#e5edf0]">{phase.title}</h4>
+            <p className="mt-1.5 text-[10px] leading-5 text-[#91a0a8]">{phase.detail}</p>
+          </article>)}
+        </div>
+        <div className="mt-8 grid gap-5 lg:grid-cols-[.62fr_1.38fr]">
+          <div><div className="eyebrow">SATU MASTER BACKLOG</div><h4 className="display-font mt-2 text-2xl font-semibold text-[#e6eef1]">Batasi pekerjaan. Tinjau status.</h4><p className="mt-2 text-[10px] leading-5 text-[#8798a1]">Kelola layanan, produk, platform, academy, media, pemasaran, dan infrastruktur dalam satu portfolio. Audit produk/aset yang sudah ada sebelum membangun ulang.</p></div>
+          <div>
+            <div className="flex flex-wrap gap-2" data-testid="project-lifecycle">
+              {['Backlog', 'Ready', 'In Progress', 'Review', 'Done'].map(status => <span key={status} className="border border-white/10 bg-white/[.03] px-3 py-1.5 font-mono text-[9px] text-[#bdcbd1]">{status}</span>)}
+              {['Blocked', 'On Hold'].map(status => <span key={status} className="border border-amber-200/20 bg-amber-200/[.04] px-3 py-1.5 font-mono text-[9px] text-amber-100">{status}</span>)}
+            </div>
+            <h5 className="mt-5 text-[10px] font-semibold text-[#dce8ed]">Prioritaskan berdasarkan:</h5>
+            <div className="mt-2 grid gap-2 sm:grid-cols-2 xl:grid-cols-4" data-testid="project-priority-criteria">
+              {priorityCriteria.map((criterion, index) => <div key={criterion} className="border border-white/[.08] bg-white/[.02] p-2.5 text-[9px] leading-4 text-[#a5b3ba]" data-testid={`priority-criterion-${index + 1}`}>{criterion}</div>)}
+            </div>
+            <p className="mt-2 text-[9px] leading-5 text-[#758792]">Bobot penilaian, batas jumlah proyek aktif, dan keputusan portfolio belum dikunci; nilai dengan data sebelum menetapkan prioritas.</p>
+          </div>
+        </div>
+        <div className="mt-8 grid gap-5 lg:grid-cols-[.62fr_1.38fr]">
+          <div><div className="eyebrow">FINANCIAL PLANNING · CASHFLOW FIRST</div><h4 className="display-font mt-2 text-2xl font-semibold text-[#e6eef1]">Anggaran mengikuti kemampuan.</h4><p className="mt-2 text-[10px] leading-5 text-[#8798a1]">Gunakan pendekatan bootstrap dan jadikan kapasitas founder sebagai batas. Nominal modal dan baseline biaya belum tersedia; jangan menetapkan alokasi persentase, target pendapatan, atau komitmen belanja sebelum data aktual diperiksa.</p></div>
+          <div className="grid gap-2 sm:grid-cols-2" data-testid="project-financial-controls">
+            <article className="border border-white/[.1] bg-white/[.025] p-3"><h5 className="text-[10px] font-semibold text-[#e5edf0]">Setiap proyek mencatat</h5><p className="mt-1 text-[9px] leading-5 text-[#91a0a8]">Budget yang disetujui, estimasi dan biaya aktual, revenue, biaya langsung, gross profit, serta variance; ROI jika relevan.</p></article>
+            <article className="border border-white/[.1] bg-white/[.025] p-3"><h5 className="text-[10px] font-semibold text-[#e5edf0]">Empat tema OKR usulan</h5><p className="mt-1 text-[9px] leading-5 text-[#91a0a8]">Mesin pendapatan berkelanjutan · produk digital tervalidasi · kehadiran pasar · sistem operasi efisien.</p></article>
+          </div>
+        </div>
+        <div className="mt-8">
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <div><div className="eyebrow">EXECUTIVE KPI DASHBOARD · RENCANA</div><h4 className="display-font mt-2 text-2xl font-semibold text-[#e6eef1]">Ukur hasil di lima area.</h4></div>
+            <p className="max-w-[450px] text-[10px] leading-5 text-[#8798a1]">Dashboard dibangun setelah data operasional tersedia. KPI mengukur kinerja nyata; target numerik ditetapkan setelah baseline, kapasitas, harga, dan anggaran disepakati.</p>
+          </div>
+          <div className="mt-4 grid gap-2 sm:grid-cols-2 xl:grid-cols-5" data-testid="executive-kpi-areas">
+            {[
+              { title: 'Finance', detail: 'Revenue, operating cashflow, gross margin, budget variance.' },
+              { title: 'Sales', detail: 'Qualified leads, conversion, paying customers, repeat customers.' },
+              { title: 'Projects', detail: 'Progress, deadline, cost, on-time delivery, satisfaction.' },
+              { title: 'Products', detail: 'Adoption, paying users, quality, uptime, critical issues.' },
+              { title: 'Growth & ecosystem', detail: 'Organic leads, community, partnerships, recurring revenue.' },
+            ].map((area, index) => <article key={area.title} className="border border-white/[.1] bg-white/[.025] p-3" data-testid={`kpi-area-${index + 1}`}>
+              <h5 className="text-[10px] font-semibold text-[#e5edf0]">{area.title}</h5>
+              <p className="mt-1 text-[9px] leading-5 text-[#91a0a8]">{area.detail}</p>
+            </article>)}
+          </div>
+        </div>
+        <div className="mt-6 grid gap-2 sm:grid-cols-3" data-testid="execution-review-cadence">
+          {executionReviews.map((review, index) => <article key={review.title} className="border border-white/[.1] bg-white/[.025] p-3" data-testid={`execution-review-${index + 1}`}>
+            <span className="font-mono text-[9px] text-[#8bdcff]">TINJAUAN {review.title.toUpperCase()}</span>
+            <p className="mt-2 text-[9px] leading-5 text-[#a5b3ba]">{review.detail}</p>
+          </article>)}
+        </div>
+        <div className="mt-6 border border-amber-200/15 bg-amber-200/[.03] p-4" data-testid="part12-open-inputs">
+          <div className="eyebrow text-amber-100/90">INPUT YANG MASIH TERBUKA SEBELUM DIKUNCI</div>
+          <p className="mt-2 text-[10px] leading-5 text-[#aebbc0]">Jumlah modal dan biaya rutin aktual, status tiap produk/aset, target revenue/pelanggan/proyek, pilihan tools operasional, serta pembobotan prioritas masih perlu dikonfirmasi atau diaudit. Kapasitas founder harus membatasi scope; target numerik belum ditetapkan.</p>
+          <p className="mt-2 text-[9px] leading-5 text-[#758792]">Kategori tools ditentukan, tetapi vendor belum dipilih. Fase bulan 1–12 adalah rencana relatif dan dapat diubah berdasarkan baseline, cashflow, serta kapasitas.</p>
         </div>
       </div>
       <p className="mt-5 flex items-start gap-2 text-[10px] leading-5 text-[#778991]" data-testid="text-business-model-caveat"><Check size={13} className="mt-0.5 shrink-0 text-[#70bfdc]" />Enam unit bisnis dan tiga level penawaran adalah kerangka strategis, bukan katalog atau klaim ketersediaan. Harga, margin, dan proyeksi tetap perlu divalidasi.</p>
