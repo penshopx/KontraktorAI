@@ -169,8 +169,62 @@ metodologi, dan nama portal yang digunakan adalah **KontraktorAI**.
   belum menjadi keputusan pengguna. Tahan publikasi dan proyeksi target sampai
   jam kerja mingguan founder, pipeline, biaya aktual, dan asumsi konversi
   dikonfirmasi.
-- Langkah berikut sebelum target volume penjualan: tetapkan jam kerja founder
-  per minggu agar kapasitas proyek dan delivery dapat dihitung realistis.
+- Kapasitas founder yang dikonfirmasi: **40 jam per minggu** untuk Gustafta.
+  Sebagai titik awal perencanaan saja, pembagian waktu rekomendasi Bagian 05
+  setara dengan Business Development 14 jam, Project Delivery 12 jam, Product
+  Development 8 jam, Finance & Administration 4 jam, dan Research & Innovation
+  2 jam per minggu. Alokasi ini perlu diuji terhadap beban nyata dan dapat
+  diubah; bukan jadwal kerja final.
+- Lampiran menyarankan funnel awal 30–40 prospek per bulan, 8–12 percakapan
+  bermakna, 5–8 discovery, 3–5 proposal, dan 1–2 proyek berbayar. Ini adalah
+  hipotesis kerja untuk diuji, bukan komitmen. Kelayakan perlu ditinjau terhadap
+  waktu penjualan, scope, jam delivery per proyek, dan tingkat konversi aktual.
+- Lampiran juga memberikan target omzet bulanan indikatif: bulan 1–3 Rp3–8 juta,
+  bulan 4–6 Rp6–12 juta, bulan 7–9 Rp8–15 juta, dan bulan 10–12 Rp10–20 juta.
+  Angka tersebut tetap **hipotesis sumber**, bukan target yang disahkan atau
+  proyeksi tervalidasi; jangan ditampilkan sebagai hasil atau janji publik.
+- Harga tiga paket awal—Digital Starter Rp2,5–4,5 juta, Business Automation
+  Starter Rp3,5–7,5 juta, dan AI Customer Assistant Starter Rp4–8 juta—
+  merupakan rentang uji internal yang harus diperiksa terhadap scope, biaya,
+  waktu founder, risiko, dan penerimaan pelanggan.
+- Sebelum menyusun proyeksi numerik, kumpulkan biaya rutin dan biaya per proyek,
+  harga yang disetujui untuk diuji, paket yang mungkin dijual, pipeline aktual,
+  serta kapasitas delivery per penawaran.
+
+## Keputusan strategis Bagian 07
+
+- Status strategi Bagian 07: **FINAL**. Produk digital menjadi pintu masuk
+  pelanggan dan validasi; kebutuhan yang berulang dapat distandardisasi dan
+  berkembang menjadi SaaS.
+- Portofolio tahun pertama dibatasi sebagai target perencanaan maksimum 2–3
+  produk digital dan satu SaaS MVP. Urutan rilis tidak otomatis; validasi pasar,
+  cashflow bootstrap, beban founder, dan dukungan pelanggan menjadi gate.
+- Produk prioritas pertama adalah **KontraktorAI Productivity Toolkit**,
+  kandidat aset digital untuk kontraktor UMKM dan profesional industri.
+- Kandidat produk selanjutnya: **KontraktorAI Document & Reporting Kit**
+  (dibentuk dari masukan penggunaan Toolkit) dan **KontraktorAI Automation
+  Toolkit** (dibentuk dari workflow berulang).
+- Kandidat SaaS MVP adalah **KontraktorAI Productivity Platform** untuk
+  kebutuhan konstruksi. Tiga fungsi awal yang diusulkan untuk diuji: manajemen
+  dokumen proyek, AI document assistant, dan pembuatan laporan. Fungsi lain
+  seperti akun/workspace, subscription, dan integrasi menjadi pendukung sesuai
+  kebutuhan MVP.
+- Pendekatan teknologi: **hybrid, Integrate First → Customize Second → Build
+  Core Last**. Vendor yang dicontohkan di blueprint adalah kandidat, bukan
+  persetujuan membeli, berlangganan, atau memilih penyedia tertentu.
+- Model monetisasi: kombinasi one-time purchase, subscription, dan
+  implementation/integration. Harga SaaS dan digital product dari blueprint
+  tetap hipotesis uji internal, bukan harga publik atau hasil survei.
+- Target market produk digital dan SaaS adalah UMKM serta profesional industri;
+  KontraktorAI masuk melalui konstruksi terlebih dahulu dan memperluas sektor
+  secara bertahap.
+- Validasi produk mengikuti problem discovery → validasi kebutuhan/kesediaan
+  membayar → MVP → pilot → standardisasi → komersialisasi. Sasaran 3–5 pengguna
+  pilot dan target pelanggan kumulatif adalah target perencanaan saja, bukan
+  pelanggan yang sudah ada atau hasil yang dijamin.
+- Aset reusable, sumber data yang sah, hak cipta, kode sumber, lisensi pihak
+  ketiga, keamanan, ekspor/portabilitas data, pemantauan biaya API, dokumentasi,
+  dan pemulihan menjadi syarat pengembangan produk.
 
 ## Prioritas pelaksanaan
 
@@ -299,6 +353,8 @@ berdasarkan kebutuhan pasar, arus kas, dan peluang pendapatan berulang.
 - Pemetaan kepemilikan produk sendiri, integrasi/lisensi pihak ketiga, serta
   risiko dan dependensi vendor.
 - Peta arus pendapatan dan tahapan productization dari layanan ke SaaS.
+- Roadmap Bagian 07: KontraktorAI Productivity Toolkit terlebih dahulu,
+  disusul kandidat produk dokumentasi/otomasi dan satu SaaS MVP secara bertahap.
 - Klasifikasi strategis Core Product, Supporting Product, Experimental Product,
   atau Legacy / Review.
 - Penilaian status Concept, Prototype, Beta, Production, atau Commercial Ready.
@@ -318,6 +374,8 @@ berdasarkan kebutuhan pasar, arus kas, dan peluang pendapatan berulang.
 - Produk yang belum divalidasi pasar tidak diprioritaskan hanya karena
   menggunakan teknologi baru atau menarik secara teknis.
 - Prioritas P0–P3 tidak diartikan sebagai bukti produk siap dijual.
+- Target portofolio 2–3 produk digital dan satu SaaS MVP diperlakukan sebagai
+  batas rencana, bukan kewajiban rilis tanpa validasi atau kapasitas.
 
 ### 04 — Arsitektur Portal dan UI/UX
 
@@ -403,6 +461,15 @@ lolos audit secara bertahap.
   versus integrasi/lisensi pihak ketiga.
 - Tingkat harga Entry, Business, dan Professional/Enterprise sebagai kerangka
   tanpa angka sampai biaya dan kesediaan membayar tervalidasi.
+- Strategi final digital products → workflows/tools → SaaS MVP →
+  implementation/industry solutions.
+- Rancangan tiga produk digital konstruksi dan SaaS MVP KontraktorAI
+  Productivity Platform; setiap entri mencatat tahap, pemilik, hak, biaya,
+  dependensi, risiko, validasi, dan langkah berikutnya.
+- Model monetisasi gabungan: one-time purchase, subscription, dan
+  implementation/integration.
+- Arsitektur hybrid untuk integrasi SaaS serta pengembangan kemampuan inti
+  secara bertahap.
 - Peta integrasi API, identitas, hak akses, dan notifikasi.
 - Rencana akun terpadu/SSO bertahap serta subscription.
 - Prioritas aplikasi yang akan dihubungkan terlebih dahulu.
@@ -411,6 +478,11 @@ lolos audit secara bertahap.
 - Katalog membedakan produk aktif, demo, beta, dan rencana.
 - Kandidat strategis P0–P3 tidak ditampilkan sebagai produk aktif; harga dan
   klaim kesiapan hanya muncul setelah verifikasi.
+- Produk toolkit, kit dokumentasi/otomasi, dan SaaS MVP dibedakan sebagai
+  rencana/kandidat sampai uji fungsi, pilot, biaya, lisensi, dukungan, dan
+  validasi pasar selesai.
+- Contoh vendor dan harga dari blueprint tidak diperlakukan sebagai pilihan
+  penyedia, langganan aktif, atau harga publik.
 - Setiap integrasi memiliki pemilik, kontrak data, kontrol akses, serta jalur
   kegagalan yang terdokumentasi.
 - Migrasi aplikasi lama dilakukan hanya bila ada alasan bisnis dan teknis.
@@ -456,6 +528,9 @@ dan transaksi yang sesuai.
 - Tata kelola produk sendiri dan integrasi pihak ketiga, termasuk pemeriksaan
   lisensi, biaya, keamanan data, dan ketergantungan vendor.
 - Prinsip modular, API-first, reusable, fleksibel, efisien, dan mudah dipelihara.
+- Kontrol produk SaaS mencakup akses berbasis peran, pengelolaan secrets, audit
+  log, backup/pemulihan, pembatasan penggunaan API, penilaian output AI, dan
+  portabilitas data.
 - Model data untuk produk, News, pengguna/perusahaan, dan aktivitas yang relevan.
 - Kebijakan autentikasi, otorisasi, audit, privasi, retensi, dan pemulihan.
 - Tata kelola hak cipta, lisensi, sumber berita, serta penggunaan AI.

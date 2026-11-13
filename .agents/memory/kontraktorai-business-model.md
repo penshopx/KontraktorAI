@@ -59,7 +59,23 @@ Suggested package prices are only market-test hypotheses, not approved public
 prices. Wait for founder weekly capacity before treating suggested sales-volume
 targets as realistic.
 
-**Why:** the user confirmed the Part 02–06 business choices and the Part 03
+The founder estimates 40 working hours per week are available for Gustafta.
+Any allocation across sales, delivery, product, finance, and research remains a
+planning starting point that should be adjusted to actual workload.
+
+For Part 07, the user finalized:
+
+- Digital products are the entry point toward SaaS; the first proposed product
+  is the KontraktorAI Productivity Toolkit.
+- Use hybrid SaaS integration plus development of Gustafta-owned core capabilities.
+- Target UMKM and industry professionals, entering through construction first.
+- Monetize through one-time purchases, subscriptions, and implementation.
+- Plan for 2–3 digital products and one SaaS MVP in year one, conditional on
+  demand, bootstrap cashflow, founder capacity, and product-readiness checks.
+- The proposed product, SaaS, and sales targets are strategic planning aims, not
+  proof of availability or guaranteed outcomes.
+
+**Why:** the user confirmed the Part 02–07 business choices and the Part 03
 endorsed-brand architecture and market approach.
 
 **How to apply:** use these priorities in Gustafta and KontraktorAI business
@@ -71,4 +87,7 @@ Represent the founder-led structure as the current operating decision, not as
 evidence that all planned SOPs, integrations, or hiring stages are already live.
 Treat bootstrap as a capital category only, not as a known rupiah budget. Keep
 proposed prices private and provisional until the scope, costs, founder capacity,
-and customer acceptance have been checked.
+and customer acceptance have been checked. Treat 40 hours per week as the
+founder's current estimate, not proof that any particular sales target or project
+volume is feasible. Apply Part 07 as a gated product path: validate a reusable
+digital product before committing to SaaS scope or launch timing.

@@ -309,6 +309,29 @@ function BusinessModel() {
     { period: 'Bulan 7–9', title: 'Uji pendapatan berulang', detail: 'Validasi produk digital atau subscription secara terbatas.' },
     { period: 'Bulan 10–12', title: 'Optimalkan keuangan', detail: 'Tinjau margin, retensi, portofolio, dan kapasitas.' },
   ];
+  const digitalProductCandidates = [
+    { number: '01', status: 'PRIORITAS PERTAMA', title: 'KontraktorAI Productivity Toolkit', detail: 'Kandidat produk digital awal: prompt AI, template BOQ/RAB, laporan proyek, SOP, dokumen, dan panduan workflow.', model: 'Pembelian sekali · bundle · implementasi' },
+    { number: '02', status: 'BERDASARKAN MASUKAN PENGGUNA', title: 'KontraktorAI Document & Reporting Kit', detail: 'Template dokumentasi dan laporan proyek, checklist, serta alur ringkasan dokumen yang dibentuk dari kebutuhan pengguna.', model: 'Produk digital · implementasi' },
+    { number: '03', status: 'KANDIDAT LANJUTAN', title: 'KontraktorAI Automation Toolkit', detail: 'Paket workflow untuk laporan, dokumen, notifikasi, dan integrasi spreadsheet atau database setelah pola berulang terbukti.', model: 'Produk digital · implementasi' },
+  ];
+  const saasCoreFeatures = [
+    'Manajemen dokumen proyek',
+    'AI document assistant',
+    'Pembuatan laporan',
+  ];
+  const productGrowthStages = [
+    { title: 'Validasi & toolkit', detail: 'Temukan masalah konstruksi yang berulang dan uji produk pertama dengan pengguna.' },
+    { title: 'Produk digital lanjutan', detail: 'Kembangkan toolkit dokumentasi atau otomasi dari bukti penggunaan, bukan asumsi.' },
+    { title: 'SaaS MVP', detail: 'Uji tiga fungsi inti dengan pilot; tambah akun, workspace, dan fungsi lain sesuai kebutuhan.' },
+    { title: 'Komersialisasi bertahap', detail: 'Tinjau penggunaan, biaya AI/infrastruktur, dukungan, dan retensi sebelum memperluas.' },
+  ];
+  const saasGovernance = [
+    'Integrasikan layanan umum lebih dulu; bangun komponen inti sendiri saat kebutuhan dan nilai pembeda terbukti.',
+    'Jaga kendali atas data, logika bisnis, aset produk, dan jalur ekspor agar tidak terkunci pada vendor.',
+    'Siapkan autentikasi, akses berbasis peran, logging, backup, pembatasan penggunaan API, dan pemulihan.',
+    'Uji kualitas AI dan sumber jawaban; minta tinjauan ahli untuk keputusan teknis atau keselamatan yang kritis.',
+    'Nama platform dan vendor pada blueprint adalah kandidat, bukan keputusan langganan atau implementasi.',
+  ];
   return <section id="model-bisnis" className="relative overflow-hidden border-y border-white/[.08] bg-[#111c23] py-20 md:py-28">
     <div className="absolute right-[-180px] top-[-180px] h-[500px] w-[500px] rounded-full border border-[#8bdcff]/[.08]" />
     <div className="container-wide relative">
@@ -519,6 +542,56 @@ function BusinessModel() {
             </article>)}
           </div>
         </div>
+      </div>
+      <div id="bagian-07" className="mt-14 border-t border-white/10 pt-10" data-testid="digital-products-saas-strategy">
+        <div className="grid gap-5 md:grid-cols-[.78fr_1.22fr] md:items-end">
+          <div><div className="eyebrow">BAGIAN 07 · PRODUK DIGITAL & SAAS</div><h3 className="display-font mt-3 max-w-[500px] text-3xl font-semibold leading-tight text-[#e6eef1] md:text-4xl">Produk digital<br /><span className="text-[#8bdcff]">membuka jalan ke SaaS.</span></h3></div>
+          <div>
+            <span className="inline-flex items-center gap-2 border border-[#8bdcff]/25 bg-[#8bdcff]/[.06] px-3 py-1.5 font-mono text-[9px] tracking-[.1em] text-[#9eddf2]">KEPUTUSAN FINAL · PORTOFOLIO DIGITAL-FIRST</span>
+            <p className="mt-3 max-w-[620px] text-[12px] leading-6 text-[#a7b5bc]">Digital products menjadi pintu masuk untuk akuisisi dan validasi; kebutuhan berulang dapat berkembang menjadi SaaS. Strategi teknologinya hybrid—mengintegrasikan layanan yang sesuai sambil membangun kemampuan inti sendiri secara bertahap.</p>
+          </div>
+        </div>
+        <div className="mt-6 grid gap-2 md:grid-cols-4" data-testid="product-growth-path">
+          {productGrowthStages.map((stage, index) => <article key={stage.title} className="border border-white/[.1] bg-white/[.025] p-4" data-testid={`product-stage-${index + 1}`}>
+            <span className="font-mono text-[9px] text-[#8bdcff]">TAHAP 0{index + 1}</span>
+            <h4 className="mt-2 text-[12px] font-semibold text-[#e5edf0]">{stage.title}</h4>
+            <p className="mt-2 text-[10px] leading-5 text-[#91a0a8]">{stage.detail}</p>
+          </article>)}
+        </div>
+        <div className="mt-8 flex flex-wrap items-end justify-between gap-4">
+          <div><div className="eyebrow">PRODUK DIGITAL · RENCANA, BELUM KATALOG AKTIF</div><h4 className="display-font mt-2 text-2xl font-semibold text-[#e6eef1]">Mulai dari kebutuhan konstruksi.</h4></div>
+          <p className="max-w-[480px] text-[10px] leading-5 text-[#8798a1]">Batas rencana awal: 2–3 produk digital dan satu SaaS MVP; urutan dan jumlah bergantung pada validasi, cashflow, serta kapasitas founder.</p>
+        </div>
+        <div className="mt-4 grid gap-px border border-white/[.09] bg-white/[.09] md:grid-cols-3" data-testid="digital-product-candidates">
+          {digitalProductCandidates.map(item => <article key={item.number} className="min-h-[190px] bg-[#121e26] p-4" data-testid={`digital-product-candidate-${item.number}`}>
+            <span className="font-mono text-[9px] tracking-[.08em] text-[#8bdcff]">{item.number} · {item.status}</span>
+            <h5 className="mt-3 text-[12px] font-semibold leading-5 text-[#e5edf0]">{item.title}</h5>
+            <p className="mt-2 text-[10px] leading-5 text-[#91a0a8]">{item.detail}</p>
+            <p className="mt-3 border-t border-white/10 pt-2 text-[9px] text-[#a7b5bc]">MODEL · {item.model}</p>
+          </article>)}
+        </div>
+        <div className="mt-4 grid gap-5 border border-[#8bdcff]/20 bg-[#8bdcff]/[.045] p-5 md:grid-cols-[.72fr_1.28fr]" data-testid="construction-saas-mvp">
+          <div>
+            <span className="font-mono text-[9px] tracking-[.1em] text-[#8bdcff]">KANDIDAT SAAS MVP · KONTRAKTORAI</span>
+            <h4 className="display-font mt-3 text-2xl font-semibold text-[#e6eef1]">KontraktorAI Productivity Platform</h4>
+            <p className="mt-2 text-[10px] leading-5 text-[#9eacb4]">Rencana platform berlangganan untuk kebutuhan yang berulang. Ini belum menandakan MVP tersedia atau jadwal peluncuran telah dijanjikan.</p>
+          </div>
+          <div>
+            <h5 className="text-[11px] font-semibold text-[#dce8ed]">Tiga fungsi inti untuk diuji</h5>
+            <div className="mt-3 grid gap-2 sm:grid-cols-3">
+              {saasCoreFeatures.map((feature, index) => <div key={feature} className="border border-white/10 bg-[#111c23]/70 p-3" data-testid={`saas-core-feature-${index + 1}`}>
+                <span className="font-mono text-[9px] text-[#8bdcff]">0{index + 1}</span>
+                <p className="mt-2 text-[10px] leading-5 text-[#c0cdd3]">{feature}</p>
+              </div>)}
+            </div>
+            <p className="mt-3 text-[9px] leading-5 text-[#8798a1]">Akun pengguna, workspace, integrasi AI, dan subscription menjadi komponen pendukung; ruang lingkup MVP harus tetap dibatasi dan diuji bersama pengguna.</p>
+          </div>
+        </div>
+        <div className="mt-6 grid gap-5 md:grid-cols-[.55fr_1.45fr]" data-testid="saas-integration-governance">
+          <div><div className="eyebrow">INTEGRATE FIRST · BUILD CORE LAST</div><h4 className="display-font mt-2 text-2xl font-semibold text-[#e6eef1]">Modular, aman, dapat dipindahkan.</h4><p className="mt-2 text-[10px] leading-5 text-[#8798a1]">Pilihan platform ditentukan per kebutuhan, lisensi, biaya, keamanan, dan kemampuan pemeliharaan.</p></div>
+          <ul className="grid gap-2 sm:grid-cols-2">{saasGovernance.map((rule, index) => <li key={rule} className="flex gap-2 border border-white/[.08] bg-white/[.02] p-3 text-[10px] leading-5 text-[#a5b3ba]" data-testid={`saas-governance-${index + 1}`}><Check size={13} className="mt-0.5 shrink-0 text-[#8bdcff]" />{rule}</li>)}</ul>
+        </div>
+        <p className="mt-5 border-l border-[#8bdcff]/50 pl-3 text-[9px] leading-5 text-[#758792]" data-testid="part07-validation-note">Gate rilis: validasi masalah dan kesediaan membayar → prototype/MVP → pilot 3–5 pengguna sebagai sasaran uji → standardisasi, dokumentasi, keamanan, biaya, dan dukungan. Angka pilot adalah target rencana, bukan pengguna yang sudah ada.</p>
       </div>
       <p className="mt-5 flex items-start gap-2 text-[10px] leading-5 text-[#778991]" data-testid="text-business-model-caveat"><Check size={13} className="mt-0.5 shrink-0 text-[#70bfdc]" />Enam unit bisnis dan tiga level penawaran adalah kerangka strategis, bukan katalog atau klaim ketersediaan. Harga, margin, dan proyeksi tetap perlu divalidasi.</p>
     </div>
