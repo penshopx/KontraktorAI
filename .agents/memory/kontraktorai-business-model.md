@@ -1,6 +1,6 @@
 ---
 name: KontraktorAI business model
-description: User-confirmed business model, customer segments, product approach, and technology choices.
+description: User-confirmed business, product, operating, and financial-planning decisions.
 ---
 
 The user approved these Part 02 recommendations:
@@ -44,7 +44,12 @@ The user also finalized Part 05 as a founder-led organization:
 - Treat the operating roadmap as conditional on workload, pipeline, and cashflow,
   not as a promise to hire or achieve milestones on fixed dates.
 
-**Why:** the user confirmed the Part 02–05 business choices and the Part 03
+For Part 06, the user selected bootstrap / very limited starting capital, without
+providing a nominal amount. Keep the financial plan cashflow-first and do not
+invent capital, revenue, price, cost, margin, break-even, runway, or forecast
+figures. Use formulas and labeled assumptions until actual data is available.
+
+**Why:** the user confirmed the Part 02–06 business choices and the Part 03
 endorsed-brand architecture and market approach.
 
 **How to apply:** use these priorities in Gustafta and KontraktorAI business
@@ -54,3 +59,4 @@ pricing and financial targets labeled as assumptions until validated; do not cal
 a product ready until the market, operational, and technical checks are complete.
 Represent the founder-led structure as the current operating decision, not as
 evidence that all planned SOPs, integrations, or hiring stages are already live.
+Treat bootstrap as a capital category only, not as a known rupiah budget.

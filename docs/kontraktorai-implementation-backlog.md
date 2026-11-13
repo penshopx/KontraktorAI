@@ -122,6 +122,38 @@ metodologi, dan nama portal yang digunakan adalah **KontraktorAI**.
   dengan evaluasi biaya, keamanan, integrasi, pemeliharaan, portabilitas data,
   dan ketergantungan vendor.
 
+## Keputusan strategis Bagian 06
+
+- Model Gustafta tetap hybrid: jasa profesional dan productized services,
+  produk digital, SaaS/AI, serta integrasi dan kemitraan.
+- Prioritas finansial adalah cashflow: layanan dan proyek tervalidasi menjadi
+  jalur awal, recurring revenue dibangun setelah kapasitas support dan biaya
+  terukur, kemudian aset digital/SaaS dikembangkan setelah kebutuhan pasar
+  terbukti.
+- Kondisi modal awal yang dipilih adalah **bootstrap / sangat terbatas**.
+  Nominal modal belum ditetapkan; jangan mengasumsikan jumlah modal, target
+  pendapatan, harga, biaya, margin, BEP, runway, atau proyeksi rupiah.
+- Kebijakan bootstrap: utamakan sumber daya yang sudah tersedia, kendalikan
+  langganan dan biaya tetap, gunakan pembayaran awal/termin sesuai kontrak,
+  libatkan spesialis eksternal jika pekerjaan dan anggarannya jelas, catat
+  keuangan bisnis terpisah, serta tinjau kas dan komitmen biaya rutin.
+- Business Model Canvas harus membedakan Gustafta (pasar UMKM luas) dan
+  KontraktorAI (spesialisasi industri dengan fokus awal konstruksi dan perluasan
+  bertahap), serta menandai kanal dan penawaran sebagai rencana bila belum
+  tervalidasi atau tersedia.
+- Harga dirancang dengan pertimbangan nilai pelanggan dan pemeriksaan biaya
+  langsung, waktu founder, lisensi, risiko, dukungan, serta kapasitas. Formula
+  dan definisi unit economics boleh disajikan, tetapi bukan hasil aktual.
+- Laporan keuangan minimum mencakup pendapatan/biaya, arus kas, piutang/hutang,
+  biaya dan profitabilitas proyek, recurring revenue, pengeluaran produk, dan
+  tinjauan subscription.
+- Roadmap finansial 12 bulan mengikuti fase cashflow foundation, revenue
+  stabilization, recurring revenue development, dan financial optimization.
+  Fase merupakan kerangka tinjauan, bukan janji hasil atau tanggal.
+- Skenario conservative/base/growth dan KPI finansial digunakan sebagai
+  kerangka analisis; angka target ditentukan setelah modal, biaya, harga,
+  kapasitas, pipeline, dan baseline aktual diketahui.
+
 ## Prioritas pelaksanaan
 
 Gelombang berikut adalah urutan awal, bukan komitmen durasi. Pekerjaan tata
@@ -204,6 +236,12 @@ penawaran tetap harus divalidasi sebelum menjadi kebijakan komersial.
   ekosistem enterprise.
 - Estimasi biaya operasional, infrastruktur, AI, dukungan, dan akuisisi.
 - Asumsi unit economics, KPI, dan proyeksi pendapatan yang dapat diuji.
+- Business Model Canvas Gustafta yang membedakan pasar utama UMKM dan
+  spesialisasi KontraktorAI.
+- Kebijakan bootstrap, cashflow-first, model harga, serta formula unit
+  economics tanpa mengarang nominal sebelum data tersedia.
+- Peta fixed/variable costs, financial reporting minimum, cashflow forecast,
+  skenario, break-even, dan roadmap finansial 12 bulan.
 
 **Kriteria penerimaan**
 - Keputusan yang telah dipilih tercatat terpisah dari asumsi yang masih menunggu
@@ -216,6 +254,10 @@ penawaran tetap harus divalidasi sebelum menjadi kebijakan komersial.
   layanan yang benar-benar siap digunakan.
 - Keputusan harga mempertimbangkan biaya AI, infrastruktur, dukungan, kapasitas
   penggunaan, dan hasil validasi pelanggan.
+- Status modal awal bootstrap dicatat tanpa menciptakan nominal atau target
+  finansial yang tidak diberikan.
+- Proyeksi numerik baru diterbitkan setelah sumber data modal, biaya aktual,
+  harga, kapasitas, dan pipeline pelanggan dikumpulkan; asumsi diberi label.
 
 ### 03 — Portofolio Produk dan Pemetaan Aplikasi
 
@@ -442,6 +484,8 @@ hasil setiap paket.
 - Rencana operasi Bagian 05 memuat sistem founder-led, lima fungsi, model
   founder + AI + spesialis eksternal, SOP minimum, dan pemicu ekspansi tim.
 - Ritme tinjauan bulanan dan kuartalan serta pencatatan keputusan.
+- Baseline keuangan Gustafta direview bulanan, termasuk net cashflow, saldo kas,
+  piutang/hutang, biaya subscription, margin proyek, dan kapasitas founder.
 
 **Kriteria penerimaan**
 - Setiap butir backlog memiliki tujuan, prioritas, estimasi, dependensi, pemilik,

@@ -263,6 +263,44 @@ function BusinessModel() {
     { period: 'Bulan 7–9', title: 'Optimasi', detail: 'Otomasi, standardisasi layanan, dan perbaikan sistem kerja.' },
     { period: 'Bulan 10–12', title: 'Evaluasi kapasitas', detail: 'Tinjau kebutuhan kolaborator berdasarkan beban kerja dan cashflow.' },
   ];
+  const canvasBlocks = [
+    { title: 'Segmen pelanggan', detail: 'UMKM sebagai pasar utama Gustafta; KontraktorAI fokus pada kebutuhan konstruksi lebih dulu, lalu sektor industri lain bertahap.' },
+    { title: 'Proposisi nilai', detail: 'Penerapan AI dan digitalisasi yang praktis, relevan dengan proses kerja, serta didukung kolaborasi dan pengetahuan.' },
+    { title: 'Saluran', detail: 'Portal, kanal digital, edukasi, komunitas, penjualan langsung, dan mitra merupakan jalur yang direncanakan untuk diuji.' },
+    { title: 'Hubungan pelanggan', detail: 'Konsultatif, berbasis proyek, retainer, subscription, serta komunitas dan edukasi sesuai kesiapan penawaran.' },
+    { title: 'Sumber pendapatan', detail: 'Jasa konsultasi dan implementasi lebih dahulu; retainer, maintenance, produk digital, subscription, pelatihan, dan kemitraan menyusul setelah validasi.' },
+    { title: 'Aktivitas utama', detail: 'Pengembangan bisnis, konsultasi, implementasi AI, integrasi teknologi, pengembangan produk, konten, dukungan, dan dokumentasi.' },
+    { title: 'Sumber daya', detail: 'Founder, brand Gustafta dan KontraktorAI, keahlian, perangkat digital, infrastruktur, aset pengetahuan, pelanggan, serta spesialis eksternal.' },
+    { title: 'Mitra utama', detail: 'Penyedia AI, cloud dan software, freelancer, konsultan teknis, profesional industri, komunitas UMKM, dan mitra bisnis.' },
+    { title: 'Struktur biaya', detail: 'Langganan teknologi, API/cloud, biaya proyek, pemasaran, spesialis eksternal, pengembangan produk, administrasi, dan kepatuhan.' },
+  ];
+  const financialHorizons = [
+    { number: '01', title: 'Cashflow dari jasa', detail: 'Proyek, konsultasi, implementasi, dan integrasi dengan ruang lingkup serta pembayaran yang jelas.' },
+    { number: '02', title: 'Pendapatan berulang', detail: 'Maintenance, retainer, managed service, atau subscription setelah kapasitas support dan biaya terukur.' },
+    { number: '03', title: 'Aset digital', detail: 'Template, workflow, dan SaaS dikembangkan bertahap setelah kebutuhan dan minat berbayar divalidasi.' },
+  ];
+  const bootstrapRules = [
+    'Utamakan sumber daya dan perangkat yang sudah tersedia; tinjau langganan rutin.',
+    'Hindari biaya tetap baru sebelum ada kebutuhan dan sumber dana yang jelas.',
+    'Gunakan uang muka atau pembayaran bertahap sesuai ruang lingkup dan kontrak.',
+    'Libatkan spesialis eksternal bila biayanya tercakup dalam pekerjaan atau anggaran.',
+    'Catat pemasukan, pengeluaran, piutang, biaya proyek, dan kas bisnis terpisah.',
+    'Tinjau arus kas bergulir dan komitmen biaya secara rutin.',
+  ];
+  const unitEconomics = [
+    { title: 'Laba kotor proyek', formula: 'Pendapatan proyek − biaya langsung' },
+    { title: 'Margin kotor', formula: 'Laba kotor ÷ pendapatan × 100%' },
+    { title: 'MRR', formula: 'Pelanggan aktif × pendapatan bulanan rata-rata' },
+    { title: 'CAC', formula: 'Biaya akuisisi ÷ pelanggan baru' },
+    { title: 'LTV', formula: 'Laba kotor bulanan per pelanggan × masa aktif rata-rata' },
+    { title: 'Titik impas', formula: 'Biaya tetap ÷ rasio margin kontribusi' },
+  ];
+  const financePhases = [
+    { period: 'Bulan 1–3', title: 'Bangun arus kas', detail: 'Uji penawaran jasa, catat biaya, dan ketahui margin proyek.' },
+    { period: 'Bulan 4–6', title: 'Stabilkan pendapatan', detail: 'Rapikan layanan dan uji maintenance atau retainer.' },
+    { period: 'Bulan 7–9', title: 'Uji pendapatan berulang', detail: 'Validasi produk digital atau subscription secara terbatas.' },
+    { period: 'Bulan 10–12', title: 'Optimalkan keuangan', detail: 'Tinjau margin, retensi, portofolio, dan kapasitas.' },
+  ];
   return <section id="model-bisnis" className="relative overflow-hidden border-y border-white/[.08] bg-[#111c23] py-20 md:py-28">
     <div className="absolute right-[-180px] top-[-180px] h-[500px] w-[500px] rounded-full border border-[#8bdcff]/[.08]" />
     <div className="container-wide relative">
@@ -392,6 +430,66 @@ function BusinessModel() {
           </div>
           <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
             {operatingPhases.map((phase, index) => <article key={phase.period} className="border-l border-[#8bdcff]/40 pl-3" data-testid={`operational-phase-${index + 1}`}>
+              <span className="font-mono text-[9px] text-[#8bdcff]">{phase.period}</span>
+              <h5 className="mt-1 text-[11px] font-semibold text-[#dce8ed]">{phase.title}</h5>
+              <p className="mt-1 text-[9px] leading-4 text-[#8798a1]">{phase.detail}</p>
+            </article>)}
+          </div>
+        </div>
+      </div>
+      <div className="mt-14 border-t border-white/10 pt-10" data-testid="financial-architecture">
+        <div className="grid gap-5 md:grid-cols-[.8fr_1.2fr] md:items-end">
+          <div><div className="eyebrow">BAGIAN 06 · MODEL & ARSITEKTUR KEUANGAN</div><h3 className="display-font mt-3 max-w-[500px] text-3xl font-semibold leading-tight text-[#e6eef1] md:text-4xl">Cashflow lebih dulu.<br /><span className="text-[#8bdcff]">Angka harus terbukti.</span></h3></div>
+          <div>
+            <span className="inline-flex items-center gap-2 border border-[#8bdcff]/25 bg-[#8bdcff]/[.06] px-3 py-1.5 font-mono text-[9px] tracking-[.1em] text-[#9eddf2]">MODAL AWAL · BOOTSTRAP</span>
+            <p className="mt-3 max-w-[600px] text-[12px] leading-6 text-[#a7b5bc]">Model keuangan disusun untuk Gustafta yang founder-led dengan modal sangat terbatas. Nominal modal dan target pendapatan belum ditetapkan; tidak ada proyeksi rupiah, harga, atau margin yang diasumsikan.</p>
+          </div>
+        </div>
+        <div className="mt-6 grid gap-px border border-white/[.09] bg-white/[.09] sm:grid-cols-2 xl:grid-cols-3" data-testid="business-model-canvas">
+          {canvasBlocks.map((block, index) => <article key={block.title} className="min-h-[126px] bg-[#121e26] p-4" data-testid={`canvas-block-${index + 1}`}>
+            <span className="font-mono text-[9px] tracking-[.1em] text-[#8bdcff]">BMC · 0{index + 1}</span>
+            <h4 className="mt-2 text-[12px] font-semibold text-[#e5edf0]">{block.title}</h4>
+            <p className="mt-1.5 text-[10px] leading-5 text-[#91a0a8]">{block.detail}</p>
+          </article>)}
+        </div>
+        <div className="mt-10">
+          <div className="flex flex-wrap items-end justify-between gap-3">
+            <div><div className="eyebrow">ARSITEKTUR PENDAPATAN</div><h4 className="display-font mt-2 text-2xl font-semibold text-[#e6eef1]">Jasa membiayai tahap berikutnya.</h4></div>
+            <p className="max-w-[430px] text-[10px] leading-5 text-[#8798a1]">Arah cashflow-first: jual layanan yang tervalidasi, bangun recurring revenue jika dukungan dapat dipenuhi, lalu skala aset digital setelah ada bukti pasar.</p>
+          </div>
+          <div className="mt-4 grid gap-2 md:grid-cols-3">
+            {financialHorizons.map(item => <article key={item.number} className="border border-white/[.1] bg-white/[.025] p-4" data-testid={`revenue-horizon-${item.number}`}>
+              <span className="font-mono text-[10px] text-[#8bdcff]">HORIZON {item.number}</span>
+              <h5 className="mt-2 text-[13px] font-semibold text-[#e5edf0]">{item.title}</h5>
+              <p className="mt-2 text-[10px] leading-5 text-[#91a0a8]">{item.detail}</p>
+            </article>)}
+          </div>
+        </div>
+        <div className="mt-10 grid gap-8 lg:grid-cols-[.7fr_1.3fr]">
+          <div>
+            <div className="eyebrow">KEBIJAKAN MODAL TERBATAS</div>
+            <h4 className="display-font mt-2 text-2xl font-semibold text-[#e6eef1]">Jaga biaya tetap ringan.</h4>
+            <p className="mt-2 text-[10px] leading-5 text-[#8798a1]">Pedoman awal untuk pilihan bootstrap; nominal dan persentase anggaran akan diisi setelah biaya serta kapasitas aktual diketahui.</p>
+            <ul className="mt-4 space-y-3">{bootstrapRules.map((rule, index) => <li key={rule} className="flex gap-2 text-[10px] leading-5 text-[#a5b3ba]" data-testid={`bootstrap-rule-${index + 1}`}><Check size={13} className="mt-0.5 shrink-0 text-[#8bdcff]" />{rule}</li>)}</ul>
+          </div>
+          <div>
+            <div className="flex items-center gap-2"><Calculator size={16} className="text-[#8bdcff]" /><div className="eyebrow">UNIT ECONOMICS · RUMUS, BUKAN HASIL AKTUAL</div></div>
+            <div className="mt-3 grid gap-2 sm:grid-cols-2" data-testid="unit-economics-formulas">
+              {unitEconomics.map((metric, index) => <article key={metric.title} className="border border-white/[.1] bg-white/[.025] p-3" data-testid={`unit-economics-${index + 1}`}>
+                <h5 className="text-[11px] font-semibold text-[#e5edf0]">{metric.title}</h5>
+                <p className="mt-1 text-[10px] leading-5 text-[#91a0a8]">{metric.formula}</p>
+              </article>)}
+            </div>
+            <p className="mt-3 border-l border-[#8bdcff]/50 pl-3 text-[10px] leading-5 text-[#8798a1]">Harga berbasis nilai tetap diuji terhadap biaya langsung, waktu founder, lisensi, risiko, dukungan, dan kapasitas. Jangan menetapkan rasio LTV/CAC sebelum data nyata tersedia.</p>
+          </div>
+        </div>
+        <div className="mt-10 border border-white/[.09] bg-white/[.02] p-5" data-testid="financial-roadmap">
+          <div className="grid gap-4 md:grid-cols-[.55fr_1.45fr] md:items-end">
+            <div><div className="eyebrow">KERANGKA KEUANGAN · 12 BULAN</div><h4 className="display-font mt-2 text-2xl font-semibold text-[#e6eef1]">Tinjau per fase.</h4></div>
+            <p className="text-[10px] leading-5 text-[#8798a1]">Tahapan dan KPI bersifat rancangan, bukan target tanggal atau jaminan hasil. Pendapatan, margin, BEP, runway, dan biaya diisi dari catatan aktual setelah baseline terbentuk.</p>
+          </div>
+          <div className="mt-5 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+            {financePhases.map((phase, index) => <article key={phase.period} className="border-l border-[#8bdcff]/40 pl-3" data-testid={`financial-phase-${index + 1}`}>
               <span className="font-mono text-[9px] text-[#8bdcff]">{phase.period}</span>
               <h5 className="mt-1 text-[11px] font-semibold text-[#dce8ed]">{phase.title}</h5>
               <p className="mt-1 text-[9px] leading-4 text-[#8798a1]">{phase.detail}</p>
