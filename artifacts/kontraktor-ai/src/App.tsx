@@ -399,6 +399,28 @@ function BusinessModel() {
     'Sediakan backup berkala, uji pemulihan, pencatatan insiden, dan prosedur kesinambungan sesuai tingkat kritikalitas.',
     'Nilai biaya, lokasi pemrosesan, lisensi, privasi, portabilitas, dan rencana keluar sebelum memilih vendor.',
   ];
+  const growthDecisions = [
+    { title: 'Hybrid ecosystem positioning', detail: 'Pasarkan Gustafta sebagai ekosistem bisnis, teknologi, industri, dan kolaborasi.' },
+    { title: 'Hybrid marketing channels', detail: 'Satukan website, SEO, media sosial, WhatsApp, email, direct selling, dan partnership.' },
+    { title: 'Hybrid SEO & content', detail: 'Bangun visibilitas organik jangka panjang dan distribusikan materi lintas kanal.' },
+    { title: 'Hybrid news & editorial', detail: 'Gabungkan kurasi terverifikasi, ringkasan, analisis, dan editorial original.' },
+    { title: 'Hybrid community ecosystem', detail: 'Bangun ruang komunitas untuk interaksi, berbagi pengetahuan, dan kolaborasi profesional.' },
+    { title: 'Hybrid customer acquisition', detail: 'Gabungkan jalur organik, referral, kemitraan, penjualan langsung, dan kanal berbayar secara terukur.' },
+    { title: 'Hybrid partnership & distribution', detail: 'Gabungkan mitra teknologi, industri, pengetahuan, referral, proyek, dan kemitraan strategis.' },
+    { title: 'Cashflow & service acquisition first', detail: 'Prioritaskan pendapatan jasa/proyek sebelum ekspansi audiens atau platform secara agresif.' },
+  ];
+  const growthPhases = [
+    { period: 'BULAN 1–3', title: 'Fondasi & penjualan awal', detail: 'Website, positioning, penawaran jasa, dan pelanggan awal.' },
+    { period: 'BULAN 4–6', title: 'Validasi pasar', detail: 'Proyek, studi kasus, SEO, prospek, dan produk awal.' },
+    { period: 'BULAN 7–9', title: 'Pertumbuhan & distribusi', detail: 'Partnership, komunitas, dan pendapatan berulang.' },
+    { period: 'BULAN 10–12', title: 'Optimasi', detail: 'Tingkatkan pendapatan, retensi, dan produk digital sesuai kapasitas.' },
+  ];
+  const growthEditorialRules = [
+    'Cantumkan sumber asli, tautan, dan tanggal; periksa apakah informasi masih berlaku.',
+    'Pisahkan fakta dari opini dan transparan bila AI membantu penyusunan.',
+    'Jangan menyalin artikel eksternal secara utuh; lakukan pemeriksaan kualitas sebelum publikasi.',
+    'Ukur konten dari prospek dan hasil bisnis, bukan trafik atau jumlah pengikut saja.',
+  ];
   return <section id="model-bisnis" className="relative overflow-hidden border-y border-white/[.08] bg-[#111c23] py-20 md:py-28">
     <div className="absolute right-[-180px] top-[-180px] h-[500px] w-[500px] rounded-full border border-[#8bdcff]/[.08]" />
     <div className="container-wide relative">
@@ -782,6 +804,64 @@ function BusinessModel() {
         <div className="mt-6 flex flex-col gap-3 border border-white/[.1] bg-white/[.025] p-4 md:flex-row md:items-center md:justify-between" data-testid="technology-stack-status">
           <div><div className="eyebrow">PRINSIP IMPLEMENTASI</div><p className="mt-1 text-[11px] leading-5 text-[#c2d0d6]">Cloud-first · modular · integrate first · satu sumber data utama per domain · portabilitas · biaya terkendali</p></div>
           <p className="max-w-[410px] text-[9px] leading-5 text-[#8798a1]">Vendor, produk, anggaran, dan spesifikasi teknis belum dikunci. Kedelapan keputusan menetapkan arah, bukan bukti bahwa seluruh kontrol keamanan atau integrasi sudah diterapkan.</p>
+        </div>
+      </div>
+      <div id="bagian-11" className="mt-14 border-t border-white/10 pt-10" data-testid="marketing-growth-partnership">
+        <div className="grid gap-5 md:grid-cols-[.78fr_1.22fr] md:items-end">
+          <div><div className="eyebrow">BAGIAN 11 · MARKETING, MEDIA, COMMUNITY & GROWTH</div><h3 className="display-font mt-3 max-w-[520px] text-3xl font-semibold leading-tight text-[#e6eef1] md:text-4xl">Tumbuh lewat konten,<br /><span className="text-[#8bdcff]">relasi, dan pendapatan.</span></h3></div>
+          <div>
+            <span className="inline-flex items-center gap-2 border border-[#8bdcff]/25 bg-[#8bdcff]/[.06] px-3 py-1.5 font-mono text-[9px] tracking-[.1em] text-[#9eddf2]">FINAL & LOCKED · CASHFLOW FIRST</span>
+            <p className="mt-3 max-w-[630px] text-[12px] leading-6 text-[#a7b5bc]">Gustafta memasarkan diri sebagai ekosistem hybrid. Tahun pertama, akuisisi pelanggan jasa dan proyek menjadi prioritas; SEO, konten, News, komunitas, partnership, produk digital, dan pendapatan berulang dibangun bertahap.</p>
+          </div>
+        </div>
+        <div className="mt-6 grid gap-px border border-white/[.09] bg-white/[.09] sm:grid-cols-2 xl:grid-cols-4" data-testid="growth-decisions">
+          {growthDecisions.map((decision, index) => <article key={decision.title} className="min-h-[130px] bg-[#121e26] p-4" data-testid={`growth-decision-${index + 1}`}>
+            <span className="font-mono text-[9px] tracking-[.1em] text-[#8bdcff]">ARAH 0{index + 1}</span>
+            <h4 className="mt-2 text-[11px] font-semibold leading-5 text-[#e5edf0]">{decision.title}</h4>
+            <p className="mt-1.5 text-[10px] leading-5 text-[#91a0a8]">{decision.detail}</p>
+          </article>)}
+        </div>
+        <div className="mt-8 grid gap-5 lg:grid-cols-[.62fr_1.38fr]">
+          <div><div className="eyebrow">OMNICHANNEL · WEBSITE AS THE HUB</div><h4 className="display-font mt-2 text-2xl font-semibold text-[#e6eef1]">Kanal yang saling mengarahkan.</h4><p className="mt-2 text-[10px] leading-5 text-[#8798a1]">Website menjadi pusat informasi dan konversi; kanal distribusi memperluas jangkauan, menjaga hubungan, dan membawa calon pelanggan ke langkah berikutnya.</p></div>
+          <div className="grid gap-2 sm:grid-cols-2 xl:grid-cols-4" data-testid="growth-channels">
+            <article className="border border-white/[.1] bg-white/[.025] p-3"><h5 className="text-[11px] font-semibold text-[#e5edf0]">Website & SEO</h5><p className="mt-1 text-[10px] leading-5 text-[#91a0a8]">Pusat ekosistem, penemuan organik, intent pencarian, topical content, internal links, dan konversi.</p></article>
+            <article className="border border-white/[.1] bg-white/[.025] p-3"><h5 className="text-[11px] font-semibold text-[#e5edf0]">Konten & media</h5><p className="mt-1 text-[10px] leading-5 text-[#91a0a8]">Artikel, News, insight industri, edukasi, dan distribusi lintas platform.</p></article>
+            <article className="border border-white/[.1] bg-white/[.025] p-3"><h5 className="text-[11px] font-semibold text-[#e5edf0]">Komunitas & pesan</h5><p className="mt-1 text-[10px] leading-5 text-[#91a0a8]">Interaksi melalui komunitas, WhatsApp, email, dan kanal profesional.</p></article>
+            <article className="border border-white/[.1] bg-white/[.025] p-3"><h5 className="text-[11px] font-semibold text-[#e5edf0]">Sales & partnership</h5><p className="mt-1 text-[10px] leading-5 text-[#91a0a8]">Direct selling, referral, distribusi mitra, dan kolaborasi proyek.</p></article>
+          </div>
+        </div>
+        <div className="mt-8">
+          <div><div className="eyebrow">CUSTOMER JOURNEY</div><h4 className="display-font mt-2 text-2xl font-semibold text-[#e6eef1]">Dari ditemukan hingga kembali.</h4></div>
+          <div className="mt-4 grid gap-2 sm:grid-cols-2 xl:grid-cols-5" data-testid="growth-funnel">
+            <article className="border border-white/[.1] bg-white/[.025] p-3" data-testid="growth-funnel-step-1"><span className="font-mono text-[9px] text-[#8bdcff]">01 · AWARENESS</span><p className="mt-2 text-[10px] leading-5 text-[#a5b3ba]">SEO, News, konten, sosial, dan mitra mengenalkan solusi.</p></article>
+            <article className="border border-white/[.1] bg-white/[.025] p-3" data-testid="growth-funnel-step-2"><span className="font-mono text-[9px] text-[#8bdcff]">02 · ENGAGEMENT</span><p className="mt-2 text-[10px] leading-5 text-[#a5b3ba]">Insight dan komunitas membantu audiens memahami kebutuhan.</p></article>
+            <article className="border border-white/[.1] bg-white/[.025] p-3" data-testid="growth-funnel-step-3"><span className="font-mono text-[9px] text-[#8bdcff]">03 · QUALIFIED LEAD</span><p className="mt-2 text-[10px] leading-5 text-[#a5b3ba]">Inquiry melalui website, WhatsApp, email, atau referral dinilai sesuai kebutuhan.</p></article>
+            <article className="border border-white/[.1] bg-white/[.025] p-3" data-testid="growth-funnel-step-4"><span className="font-mono text-[9px] text-[#8bdcff]">04 · CUSTOMER</span><p className="mt-2 text-[10px] leading-5 text-[#a5b3ba]">Penawaran jasa atau proyek disepakati dengan ruang lingkup yang jelas.</p></article>
+            <article className="border border-white/[.1] bg-white/[.025] p-3" data-testid="growth-funnel-step-5"><span className="font-mono text-[9px] text-[#8bdcff]">05 · RETENTION</span><p className="mt-2 text-[10px] leading-5 text-[#a5b3ba]">Pengalaman baik mendorong layanan berulang dan rekomendasi.</p></article>
+          </div>
+        </div>
+        <div className="mt-8 grid gap-5 md:grid-cols-[.58fr_1.42fr]">
+          <div><div className="eyebrow">HYBRID NEWS & EDITORIAL</div><h4 className="display-font mt-2 text-2xl font-semibold text-[#e6eef1]">Distribusi informasi dengan standar.</h4><p className="mt-2 text-[10px] leading-5 text-[#8798a1]">Gabungkan kurasi, ringkasan, analisis, dan editorial original untuk mendukung pengetahuan, SEO, serta akuisisi tanpa mengorbankan akurasi.</p></div>
+          <ul className="grid gap-2 sm:grid-cols-2" data-testid="growth-editorial-rules">
+            {growthEditorialRules.map((rule, index) => <li key={rule} className="flex gap-2 border border-white/[.08] bg-white/[.02] p-3 text-[10px] leading-5 text-[#a5b3ba]" data-testid={`growth-editorial-rule-${index + 1}`}><Check size={13} className="mt-0.5 shrink-0 text-[#8bdcff]" />{rule}</li>)}
+          </ul>
+        </div>
+        <div className="mt-8">
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <div><div className="eyebrow">GROWTH ROADMAP · 12 BULAN</div><h4 className="display-font mt-2 text-2xl font-semibold text-[#e6eef1]">Validasi sebelum memperbesar.</h4></div>
+            <p className="max-w-[440px] text-[10px] leading-5 text-[#8798a1]">Tahapan mengikuti kapasitas founder dan kondisi cashflow; periode ini adalah kerangka, bukan jaminan tanggal atau hasil.</p>
+          </div>
+          <div className="mt-4 grid gap-2 sm:grid-cols-2 xl:grid-cols-4" data-testid="growth-roadmap">
+            {growthPhases.map((phase, index) => <article key={phase.period} className="border border-white/[.1] bg-white/[.025] p-4" data-testid={`growth-phase-${index + 1}`}>
+              <span className="font-mono text-[9px] text-[#8bdcff]">{phase.period}</span>
+              <h5 className="mt-2 text-[11px] font-semibold text-[#e5edf0]">{phase.title}</h5>
+              <p className="mt-1.5 text-[10px] leading-5 text-[#91a0a8]">{phase.detail}</p>
+            </article>)}
+          </div>
+        </div>
+        <div className="mt-6 flex flex-col gap-3 border border-[#8bdcff]/20 bg-[#8bdcff]/[.04] p-4 md:flex-row md:items-center md:justify-between" data-testid="growth-kpi-priority">
+          <div><div className="eyebrow">KPI PRIORITAS · TANPA TARGET ANGKA FIKTIF</div><p className="mt-1 text-[10px] leading-5 text-[#c1d0d6]">Pendapatan & cashflow → pelanggan berbayar → qualified leads → proyek berhasil → repeat customers → recurring revenue → organic traffic → komunitas.</p></div>
+          <p className="max-w-[340px] text-[9px] leading-5 text-[#8798a1]">Target numerik ditetapkan setelah kapasitas, harga, dan baseline terukur. Trafik atau pengikut bukan indikator keberhasilan bila tidak berkontribusi ke prospek dan pendapatan.</p>
         </div>
       </div>
       <p className="mt-5 flex items-start gap-2 text-[10px] leading-5 text-[#778991]" data-testid="text-business-model-caveat"><Check size={13} className="mt-0.5 shrink-0 text-[#70bfdc]" />Enam unit bisnis dan tiga level penawaran adalah kerangka strategis, bukan katalog atau klaim ketersediaan. Harga, margin, dan proyeksi tetap perlu divalidasi.</p>

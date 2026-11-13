@@ -320,6 +320,37 @@ metodologi, dan nama portal yang digunakan adalah **KontraktorAI**.
   karakteristik layanan, kewajiban hukum yang berlaku, serta kemampuan operasional;
   roadmap tidak menyatakan bahwa kontrol tersebut sudah diimplementasikan.
 
+## Keputusan strategis Bagian 11
+
+- Status Bagian 11: **FINAL & LOCKED**. Delapan keputusan final menggunakan
+  pendekatan hybrid ecosystem: positioning, kanal pemasaran, SEO/konten,
+  News/editorial, komunitas, akuisisi pelanggan, partnership/distribusi, serta
+  prioritas cashflow dan akuisisi jasa.
+- Website menjadi pusat informasi dan konversi. Kanal terintegrasi mencakup
+  website/SEO, media sosial dan konten, News, WhatsApp/email, direct selling,
+  referral, partnership, dan komunitas.
+- Content-led growth menggabungkan SEO jangka panjang dengan distribusi
+  multi-platform; satu materi utama dapat diadaptasi ke format berbeda.
+- News menggabungkan kurasi, ringkasan, analisis, dan editorial original.
+  Publikasi wajib mencantumkan sumber asli/tautan/tanggal, memisahkan fakta dan
+  opini, mengungkap bantuan AI, menghindari salin-tempel penuh, dan menjalani
+  pemeriksaan editorial.
+- Akuisisi pelanggan menggabungkan kanal organik dan komersial. Tahun pertama
+  memprioritaskan pelanggan jasa/proyek dan cashflow, sebelum ekspansi agresif
+  audiens, platform, atau recurring revenue.
+- Partnership menjadi jalur distribusi dan pertumbuhan; komunitas menjadi ruang
+  interaksi, pengetahuan, dan kolaborasi.
+- Growth roadmap 12 bulan: fondasi/penjualan awal → validasi pasar →
+  pertumbuhan/distribusi → optimasi. Tahapan tunduk pada kapasitas founder dan
+  kondisi cashflow.
+- Urutan KPI: revenue/cashflow, pelanggan berbayar, qualified leads, proyek yang
+  diperoleh, repeat customers, recurring revenue, organic traffic, lalu audiens
+  dan komunitas. Target numerik ditetapkan setelah baseline; trafik/pengikut
+  bukan ukuran utama jika tidak menghasilkan prospek dan pendapatan.
+- Anggaran marketing, kuantitas KPI, jumlah konten, serta target kanal belum
+  ditetapkan oleh keputusan final; rekomendasi dalam draft tetap asumsi dan tidak
+  boleh dipresentasikan sebagai komitmen atau hasil.
+
 ## Prioritas pelaksanaan
 
 Gelombang berikut adalah urutan awal, bukan komitmen durasi. Pekerjaan tata
@@ -701,6 +732,19 @@ penggunaan solusi serta kemitraan.
 - Strategi SEO dan distribusi News.
 - Kalender editorial dan newsletter.
 - Rencana webinar, komunitas, kemitraan asosiasi, dan rujukan.
+- Strategi marketing hybrid ecosystem dengan website sebagai pusat informasi
+  dan konversi serta integrasi kanal organik, sosial, pesan, direct selling,
+  referral, komunitas, dan partnership.
+- Content-led growth: SEO, topical content, multi-format distribution, dan
+  rencana konversi konten menjadi leads serta pendapatan.
+- Standar News/editorial untuk sumber, tautan, tanggal, pemisahan fakta/opini,
+  transparansi AI, non-plagiarisme, dan quality review.
+- Customer acquisition funnel dan lifecycle dari awareness hingga retention,
+  repeat customers, referral, dan recurring revenue.
+- Prioritas revenue-first: akuisisi jasa/proyek lebih dulu sambil membangun
+  audiens, produk digital, komunitas, dan recurring revenue bertahap.
+- Roadmap growth 12 bulan berdasarkan fase fondasi, validasi, distribusi, dan
+  optimasi; pemilik dan indikator setiap kanal/kampanye.
 - Jalur go-to-market Gustafta untuk UMKM dan jalur spesialis industri
   KontraktorAI memiliki pesan, kanal, dan proses penjualan yang dibedakan.
 - Jalur kolaborasi untuk mitra teknologi, bisnis, pendidikan, dan komunitas
@@ -713,6 +757,13 @@ penggunaan solusi serta kemitraan.
 - Kanal dan kampanye memiliki audiens, tujuan, pemilik, dan indikator.
 - Newsletter dan promosi hanya dikirim dengan persetujuan yang sesuai.
 - Kinerja diukur dengan kualitas keterlibatan dan konversi, bukan traffic saja.
+- Semua kanal memiliki audiens, tujuan, pemilik, dan cara ukur yang jelas;
+  angka target baru ditetapkan setelah baseline dan kapasitas diketahui.
+- Kinerja marketing ditinjau berdasarkan pendapatan/cashflow, pelanggan,
+  prospek berkualitas, proyek, repeat business, dan recurring revenue sebelum
+  trafik atau jumlah pengikut.
+- News tidak menampilkan konten tanpa sumber, tanggal, pemeriksaan editorial,
+  dan transparansi yang diperlukan.
 
 ### 12 — Manajemen Proyek, Roadmap, dan KPI
 

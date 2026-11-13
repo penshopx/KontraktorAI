@@ -118,7 +118,19 @@ specific vendors, products, budgets, or implementation specifications:
 - Prefer cloud-first, modular, portable systems and one source of truth per data
   domain; integrate before customizing or building core components.
 
-**Why:** the user confirmed the Part 02–10 business choices and the Part 03
+For Part 11, the user finalized a hybrid marketing and growth ecosystem:
+
+- Integrate website/SEO, content, News/editorial, community, social channels,
+  messaging, direct sales, referrals, and partnerships.
+- Prioritize customer and service/project acquisition for cashflow before
+  aggressive audience or platform growth.
+- Use editorial standards for sourcing, dates, fact/opinion separation, AI
+  transparency, and review.
+- Do not set marketing KPI numbers or budgets until business and capacity
+  baselines are measured; prioritize revenue, customers, qualified leads,
+  projects, repeat business, and recurring revenue over reach alone.
+
+**Why:** the user confirmed the Part 02–11 business choices and the Part 03
 endorsed-brand architecture and market approach.
 
 **How to apply:** use these priorities in Gustafta and KontraktorAI business
@@ -143,3 +155,5 @@ and treat Academy program counts as unachieved planning targets.
 Apply Part 10 as strategic direction rather than evidence that vendors are chosen
 or security controls are already implemented; evaluate providers, controls, and
 compliance against actual data, risk, cost, and operational needs.
+Apply Part 11 as a revenue-first channel strategy; do not turn draft budget
+allocations or KPI quantities into commitments without an agreed baseline.
