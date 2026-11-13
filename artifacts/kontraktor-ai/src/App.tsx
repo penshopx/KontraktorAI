@@ -75,7 +75,7 @@ function Hero() {
     <div className="absolute -right-8 top-[-50px] -z-10 h-[420px] w-[420px] rounded-full border border-[#8bdcff]/10" />
     <div className="container-wide grid min-h-[635px] items-center gap-12 py-16 md:grid-cols-[1.02fr_.98fr] md:py-20">
       <div className="reveal">
-        <div className="eyebrow mb-7 flex items-center gap-3"><span className="h-px w-8 bg-[#8bdcff]" />EKOSISTEM DIGITAL KONSTRUKSI INDONESIA</div>
+        <div className="eyebrow mb-7 flex items-center gap-3"><span className="h-px w-8 bg-[#8bdcff]" />GUSTAFTA · IMPLEMENTASI INDUSTRI PERTAMA</div>
         <h1 className="display-font max-w-[730px] text-[clamp(3.3rem,7.2vw,6.65rem)] font-semibold leading-[.98] text-[#edf3f5]">
           Pekerjaan<br />konstruksi punya<br /><span className="text-[#8bdcff]">banyak jalan.</span>
         </h1>
@@ -208,12 +208,50 @@ function Ecosystem() {
     { icon: BookOpen, name: 'Akademi & kompetensi', detail: 'Materi belajar dan pengembangan kapasitas bagi profesional konstruksi.' },
     { icon: UsersRound, name: 'Kolaborasi & jejaring', detail: 'Ruang untuk mengenal kebutuhan, bertukar wawasan, dan membuka peluang kerja sama.' },
   ];
+  const marketWaves = [
+    { number: '01', title: 'Konstruksi', detail: 'Pasar awal untuk memvalidasi kebutuhan, produk prioritas, dan model bisnis.' },
+    { number: '02', title: 'Energi & ketenagalistrikan', detail: 'Perluasan bertahap ke kebutuhan yang beririsan dengan proyek konstruksi.' },
+    { number: '03', title: 'Pertambangan & lingkungan', detail: 'Pengembangan berikutnya setelah model awal terbukti berjalan.' },
+  ];
   return <section id="tentang" className="bg-[#0e171d] py-20 md:py-28">
     <div className="container-wide">
       <div className="flex flex-col justify-between gap-6 border-b border-white/10 pb-8 md:flex-row md:items-end">
-        <div><div className="eyebrow">SATU EKOSISTEM, BANYAK KEBUTUHAN</div><h2 className="display-font mt-4 max-w-[700px] text-[clamp(2.7rem,5vw,4.6rem)] font-semibold leading-[.98]">Tempat yang tepat untuk<br />berbagai urusan konstruksi.</h2></div>
-        <p className="max-w-[340px] text-[13px] leading-6 text-[#9ba9b1]">Mulai dari kebutuhan UMKM kontraktor hingga spesialisasi tenaga ahli. Jelajahi jalur yang paling dekat dengan pekerjaan Anda.</p>
+        <div><div className="eyebrow">GUSTAFTA · TRILOGI GUSTAFTA · KONTRAKTORAI</div><h2 className="display-font mt-4 max-w-[700px] text-[clamp(2.7rem,5vw,4.6rem)] font-semibold leading-[.98]">Satu manifesto.<br />Solusi untuk industri.</h2></div>
+        <p className="max-w-[380px] text-[13px] leading-6 text-[#9ba9b1]">Gustafta adalah brand induk. Trilogi Gustafta menjadi manifesto dan metodologi; KontraktorAI menerapkannya sebagai ekosistem industri pertama.</p>
       </div>
+      <div className="grid border-b border-white/10 py-7 md:grid-cols-3">
+        <article className="border-b border-white/[.09] py-5 md:border-b-0 md:border-r md:pr-7" data-testid="brand-gustafta">
+          <div className="font-mono text-[10px] tracking-[.12em] text-[#8bdcff]">BRAND INDUK</div>
+          <h3 className="mt-3 text-lg font-semibold text-[#e7eef1]">Gustafta</h3>
+          <p className="mt-2 text-[12px] leading-5 text-[#91a0a8]">Ekosistem bisnis dan inovasi berbasis pengetahuan, kolaborasi, dan AI.</p>
+          <p className="mt-4 text-[11px] font-medium text-[#c5d5dc]">Knowledge, Collaboration &amp; Creation through AI</p>
+        </article>
+        <article className="border-b border-white/[.09] py-5 md:border-b-0 md:border-r md:px-7" data-testid="brand-trilogi">
+          <div className="font-mono text-[10px] tracking-[.12em] text-[#8bdcff]">MANIFESTO &amp; METODOLOGI</div>
+          <h3 className="mt-3 text-lg font-semibold text-[#e7eef1]">Trilogi Gustafta</h3>
+          <p className="mt-2 text-[12px] leading-6 text-[#91a0a8]">Dari Monolog ke Dialog.<br />Dari Dialog ke Kolaborasi.<br />Dari Dialog ke Kreasi.</p>
+        </article>
+        <article className="py-5 md:pl-7" data-testid="brand-kontraktorai">
+          <div className="font-mono text-[10px] tracking-[.12em] text-[#8bdcff]">EKOSISTEM INDUSTRI PERTAMA</div>
+          <h3 className="mt-3 text-lg font-semibold text-[#e7eef1]">KontraktorAI</h3>
+          <p className="mt-2 text-[12px] leading-5 text-[#91a0a8]">Penerapan Trilogi Gustafta untuk pasar konstruksi, energi, ketenagalistrikan, pertambangan, dan lingkungan.</p>
+        </article>
+      </div>
+      <div className="py-8" data-testid="market-entry-waves">
+        <div className="flex flex-col justify-between gap-3 sm:flex-row sm:items-end">
+          <div><div className="eyebrow">FOKUS PASAR AWAL</div><h3 className="display-font mt-3 text-3xl font-semibold text-[#e7eef1] md:text-4xl">Bertahap, bukan serentak.</h3></div>
+          <p className="max-w-[390px] text-[12px] leading-5 text-[#91a0a8]">Lima sektor membentuk satu ekosistem industri yang saling beririsan. Pemasaran dimulai dari konstruksi, lalu berkembang setelah model awal terbukti.</p>
+        </div>
+        <div className="mt-5 grid gap-2 md:grid-cols-3">
+          {marketWaves.map((wave) => <article key={wave.number} className="border border-white/[.1] bg-white/[.025] p-4" data-testid={`market-wave-${wave.number}`}>
+            <div className="font-mono text-[10px] text-[#8bdcff]">GELOMBANG {wave.number}</div>
+            <h4 className="mt-2 text-[14px] font-semibold text-[#e1eaed]">{wave.title}</h4>
+            <p className="mt-2 text-[11px] leading-5 text-[#91a0a8]">{wave.detail}</p>
+          </article>)}
+        </div>
+      </div>
+      <div className="border-t border-white/10 pt-8">
+        <div className="eyebrow">SOLUSI DI DALAM EKOSISTEM</div>
       <div className="mt-2 grid md:grid-cols-2">
         {tracks.map((track, i) => {
           const Icon = track.icon;
@@ -222,6 +260,7 @@ function Ecosystem() {
             <span className="flex-1"><span className="flex items-center justify-between"><strong className="text-[14px] font-semibold text-[#e2eaed]">{track.name}</strong><ArrowUpRight size={15} className="text-[#7f929c] transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[#8bdcff]" /></span><span className="mt-1.5 block max-w-[420px] text-[12px] leading-5 text-[#91a0a8]">{track.detail}</span></span>
           </a>;
         })}
+      </div>
       </div>
     </div>
   </section>;

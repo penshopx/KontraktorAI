@@ -1,10 +1,26 @@
 ---
-name: KontraktorAI brand name
-description: Project-specific naming rule for the portal brand.
+name: KontraktorAI brand and focus
+description: Project-specific portal naming, brand architecture, and initial market focus.
 ---
 
 Always use **KontraktorAI** as the portal's product name, replacing **KonstruksiAI** wherever it is used as a brand name.
 
-**Why:** the user explicitly asked that future references use KontraktorAI instead of KonstruksiAI.
+The user confirmed this initial business structure:
 
-**How to apply:** use KontraktorAI in the portal's UI, copy, metadata, and future project materials. Keep generic references to the construction industry unchanged.
+- Gustafta is the parent brand.
+- Trilogi Gustafta is the manifesto and methodology; its manifesto is the primary
+  communication identity, while “Knowledge, Collaboration & Creation through AI”
+  is supporting English positioning.
+- KontraktorAI is the first industry ecosystem.
+- Initial market focus is construction, energy, electricity, mining, and
+  environment. Enter construction first, then energy and electricity, then
+  mining and environment; broader expansion follows validation of the initial
+  business, products, and operations.
+
+**Why:** the user explicitly requested the KontraktorAI name and chose to apply
+the attached strategic decisions to the portal and implementation backlog.
+
+**How to apply:** use KontraktorAI in portal branding, copy, metadata, and project
+materials. Keep generic references to the construction industry unchanged.
+Maintain the parent/manifesto/industry-ecosystem distinction and phased market
+focus in future product and marketing decisions.

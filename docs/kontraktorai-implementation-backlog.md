@@ -11,6 +11,23 @@ blueprint yang diberikan dan mempertahankan prinsip:
 Brand induk tetap Gustafta, Trilogi Gustafta tetap menjadi manifesto dan
 metodologi, dan nama portal yang digunakan adalah **KontraktorAI**.
 
+## Keputusan strategis Bagian 01
+
+- **Gustafta** adalah brand induk.
+- **Trilogi Gustafta** adalah manifesto dan metodologi: “Dari Monolog ke Dialog,
+  Dari Dialog ke Kolaborasi, Dari Dialog ke Kreasi.”
+- **Knowledge, Collaboration & Creation through AI** adalah deskripsi positioning
+  berbahasa Inggris bagi pendekatan bisnis Gustafta; manifesto tetap menjadi
+  identitas komunikasi utama.
+- **KontraktorAI** adalah ekosistem industri pertama, bukan nama pengganti Gustafta.
+- Fokus pasar awal mencakup lima sektor yang saling beririsan: konstruksi, energi,
+  ketenagalistrikan, pertambangan, dan lingkungan.
+- Penetrasi pasar dilakukan berurutan: konstruksi; energi dan ketenagalistrikan;
+  lalu pertambangan dan lingkungan. Ekspansi lebih luas menunggu validasi model
+  bisnis, produk, dan operasional pada fokus awal.
+- Teknologi umum boleh dibangun jika penerapan dan pemasarannya lebih dahulu
+  memprioritaskan lima sektor tersebut.
+
 ## Prioritas pelaksanaan
 
 Gelombang berikut adalah urutan awal, bukan komitmen durasi. Pekerjaan tata
@@ -21,8 +38,8 @@ kelola proyek, keamanan, dan pengukuran berjalan lintas gelombang.
 | 1. Fondasi | Brand, model bisnis, audit portofolio, tata kelola | 01, 02, 03, 12 |
 | 2. Portal dan konten | Pengalaman portal, News, infrastruktur awal | 04, 05, 10 |
 | 3. Integrasi kecerdasan | AI Concierge, basis pengetahuan, katalog dan integrasi aplikasi | 06, 07 |
-| 4. Layanan dan pertumbuhan | Konsultasi, kolaborasi, academy, pemasaran | 08, 09, 11 |
-| 5. Ekspansi | Monetisasi lanjutan, solusi sektor, enterprise, evaluasi KPI | Lanjutan seluruh paket |
+| 4. Layanan dan pertumbuhan | Konsultasi, kolaborasi, academy, pemasaran pada pasar prioritas | 08, 09, 11 |
+| 5. Validasi dan ekspansi | Buktikan model pada konstruksi; perluas bertahap ke empat sektor lain | Lanjutan seluruh paket |
 
 ### Dependensi lintas paket
 
@@ -47,13 +64,19 @@ kelola proyek, keamanan, dan pengukuran berjalan lintas gelombang.
 mitra, dan komunitas.
 
 **Hasil kerja**
-- Dokumen arsitektur brand dan positioning.
+- Dokumen arsitektur brand dan positioning Gustafta, Trilogi Gustafta, dan
+  KontraktorAI.
 - Visi, misi, manifesto, ruang lingkup, dan proposisi nilai.
 - Definisi segmen utama dan masalah yang dilayani.
+- Brand guideline yang menetapkan manifesto utama dan positioning pendukung.
 
 **Kriteria penerimaan**
 - Materi publik dan tim menggunakan nama **KontraktorAI** untuk portal.
 - Peran brand induk dan Trilogi Gustafta dibedakan secara konsisten.
+- Manifesto Trilogi menjadi identitas komunikasi utama; positioning Inggris
+  menjelaskan pendekatan bisnis, bukan menggantikan manifesto.
+- Lima sektor awal dan urutan masuk pasar terdokumentasi: konstruksi; energi dan
+  ketenagalistrikan; pertambangan dan lingkungan.
 - Proposisi nilai menjelaskan hubungan informasi, dialog, kolaborasi, dan kreasi.
 
 ### 02 — Model Bisnis dan Monetisasi
@@ -80,12 +103,16 @@ memuat status kesiapan dan keputusan tindak lanjut.
 **Hasil kerja**
 - Master Product Inventory dan matriks audit aplikasi.
 - Pemetaan ke delapan pilar KontraktorAI.
+- Klasifikasi strategis Core Product, Supporting Product, Experimental Product,
+  atau Legacy / Review.
 - Penilaian status Concept, Prototype, Beta, Production, atau Commercial Ready.
 - Keputusan integrasikan, kembangkan, konsolidasikan, tunda, atau hentikan.
 
 **Kriteria penerimaan**
 - Setiap entri memiliki pemilik/kontak yang perlu dikonfirmasi, fungsi, status,
   teknologi, dependensi, lisensi, risiko, dan langkah berikutnya.
+- Kategori strategis produk dibedakan dari status kesiapan teknis; keduanya
+  tercatat agar produk eksperimen tidak disalahartikan sebagai siap komersial.
 - Tidak ada produk yang disebut siap produksi atau siap dijual sebelum audit
   fungsi, keamanan, kepemilikan, dan operasional.
 
@@ -112,6 +139,8 @@ pengetahuan serta solusi.
 
 **Hasil kerja**
 - Spesifikasi beranda News, kanal, daftar artikel, dan detail artikel.
+- Cakupan editorial mendukung lima sektor prioritas; kanal tematik lintas sektor
+  tidak mengubah urutan fokus pasar.
 - Delapan kanal: Construction, Energy, Electricity, Mining, Environment,
   Business & Tender, Regulation & Professional, Technology & AI.
 - Model sumber, artikel, penulis, kategori, tanggal, status editorial, dan
@@ -221,6 +250,8 @@ penggunaan solusi serta kemitraan.
 - Kalender editorial dan newsletter.
 - Rencana webinar, komunitas, kemitraan asosiasi, dan rujukan.
 - Rencana pengukuran konversi dari artikel ke layanan/produk.
+- Strategi akuisisi berfokus pada konstruksi lebih dahulu; pemasaran energi dan
+  ketenagalistrikan menyusul, kemudian pertambangan dan lingkungan.
 
 **Kriteria penerimaan**
 - Kanal dan kampanye memiliki audiens, tujuan, pemilik, dan indikator.
@@ -254,6 +285,8 @@ hasil setiap paket.
    aplikasi yang telah diaudit (paket 06, 07).
 4. **Pertumbuhan:** perluas konsultasi, kompetensi, kolaborasi, dan pemasaran
    setelah layanan siap dijalankan (paket 08, 09, 11).
+5. **Urutan pasar:** validasi pada konstruksi, lanjutkan ke energi dan
+   ketenagalistrikan, lalu pertambangan dan lingkungan.
 
 Dokumen ini adalah backlog strategis awal, bukan klaim bahwa seluruh layanan,
 berita, integrasi, atau aplikasi sudah tersedia. Estimasi waktu, biaya, pemilik,

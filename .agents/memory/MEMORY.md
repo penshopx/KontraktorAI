@@ -1,1 +1,1 @@
-- [KontraktorAI brand name](kontraktorai-brand-name.md) — Use KontraktorAI instead of KonstruksiAI as the product name.
+- [KontraktorAI brand and focus](kontraktorai-brand-name.md) — Use KontraktorAI and prioritize the five initial industry sectors in phased market entry.
