@@ -9,6 +9,7 @@ import {
   ArrowDown, ArrowRight, ArrowUpRight, BookOpen, Check, ClipboardCheck,
   Compass, HardHat, Leaf, Menu, MessagesSquare, Search, ShieldCheck, Sparkles, X,
   BriefcaseBusiness, Calculator, GraduationCap, FileCheck2, UsersRound, Wrench,
+  Layers3,
 } from 'lucide-react';
 import { Link, Route, Switch, useLocation, Router as WouterRouter } from 'wouter';
 
@@ -46,7 +47,7 @@ function Brand({ light = false }: { light?: boolean }) {
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const links = [['Solusi', '#solusi'], ['Cara kerja', '#cara-kerja'], ['Wawasan', '#wawasan'], ['News', '/news'], ['Tentang', '#tentang']];
+  const links = [['Solusi', '#solusi'], ['Model bisnis', '#model-bisnis'], ['Cara kerja', '#cara-kerja'], ['Wawasan', '#wawasan'], ['News', '/news'], ['Tentang', '#tentang']];
   return <header className="sticky top-0 z-30 border-b border-white/[.08] bg-[#101820]/90 backdrop-blur-xl">
     <div className="container-wide flex h-[74px] items-center justify-between">
       <Brand />
@@ -77,9 +78,9 @@ function Hero() {
       <div className="reveal">
         <div className="eyebrow mb-7 flex items-center gap-3"><span className="h-px w-8 bg-[#8bdcff]" />GUSTAFTA · IMPLEMENTASI INDUSTRI PERTAMA</div>
         <h1 className="display-font max-w-[730px] text-[clamp(3.3rem,7.2vw,6.65rem)] font-semibold leading-[.98] text-[#edf3f5]">
-          Pekerjaan<br />konstruksi punya<br /><span className="text-[#8bdcff]">banyak jalan.</span>
+          Industri konstruksi<br />bergerak lebih jauh<br /><span className="text-[#8bdcff]">bersama.</span>
         </h1>
-        <p className="mt-7 max-w-[490px] text-[16px] leading-7 text-[#a8b6c0] md:text-[17px]">Saat ada yang menghambat usaha atau proyek Anda, temukan arah berikutnya—mulai dari alat kerja, pengetahuan, sampai dukungan profesional.</p>
+        <p className="mt-7 max-w-[510px] text-[16px] leading-7 text-[#a8b6c0] md:text-[17px]">KontraktorAI adalah ekosistem industri pertama Gustafta. Kami membantu bisnis dan profesional konstruksi Indonesia bergerak dari informasi menuju solusi praktis melalui AI, pengetahuan, dan kolaborasi.</p>
         <div className="mt-9 flex flex-wrap gap-3">
           <a href="#solusi" className="btn-primary inline-flex items-center gap-2 rounded-md px-5 py-3.5 text-sm font-semibold" data-testid="link-hero-explore">Jelajahi solusi <ArrowRight size={16} /></a>
           <a href="#cara-kerja" className="btn-outline inline-flex items-center gap-2 rounded-md px-5 py-3.5 text-sm font-medium" data-testid="link-hero-how">Lihat cara kerja <ArrowDown size={15} /></a>
@@ -88,7 +89,7 @@ function Hero() {
           <span className="flex -space-x-2">
             {['UK','KM','AH'].map((item, i) => <span key={item} className={`grid h-8 w-8 place-items-center rounded-full border-2 border-[#111a20] text-[9px] font-semibold ${i === 0 ? 'bg-[#c7e5eb] text-[#17313b]' : i === 1 ? 'bg-[#b2c8e2] text-[#202c42]' : 'bg-[#d9c7a9] text-[#34291b]'}`} data-testid={`avatar-persona-${i}`}>{item}</span>)}
           </span>
-          <span>Untuk pelaku usaha, konsultan, dan tenaga ahli konstruksi</span>
+           <span>Dimulai bersama kontraktor UMKM dan profesional industri</span>
         </div>
       </div>
       <div className="reveal reveal-delay-2 relative mx-auto w-full max-w-[510px]">
@@ -110,7 +111,7 @@ function Hero() {
               <span className="flex items-center gap-3"><span className="grid h-9 w-9 place-items-center border border-white/10 text-[#a4b5bf]"><Sparkles size={17} /></span><span><strong className="block text-[13px] font-medium text-[#dce5e9]">Menguatkan keahlian</strong><small className="mt-1 block text-[11px] text-[#84939c]">Belajar, berbagi, berkolaborasi</small></span></span><ArrowUpRight className="text-[#91a2ad]" size={16} />
             </a>
           </div>
-          <div className="flex items-center justify-between border-t border-white/[.08] px-5 py-3 text-[10px] text-[#71818b]"><span>Jelajahi konten dan alat yang tersedia</span><span className="flex items-center gap-1 font-mono"><span className="h-1.5 w-1.5 rounded-full bg-[#8bdcff]" /> PORTAL TERBUKA</span></div>
+          <div className="flex items-center justify-between border-t border-white/[.08] px-5 py-3 text-[10px] text-[#71818b]"><span>Informasi menuju langkah yang dapat diterapkan</span><span className="flex items-center gap-1 font-mono"><span className="h-1.5 w-1.5 rounded-full bg-[#8bdcff]" /> EKOSISTEM</span></div>
         </div>
         <div className="absolute -bottom-7 -left-8 hidden border border-[#53636b] bg-[#111a20] px-4 py-3 md:block">
           <div className="eyebrow !text-[9px]">FOKUS KAMI</div><div className="mt-1 text-[12px] text-[#d7e1e5]">Dari masalah nyata, ke langkah yang relevan.</div>
@@ -118,7 +119,7 @@ function Hero() {
       </div>
     </div>
     <div className="container-wide flex items-center justify-between border-t border-white/[.08] py-4 text-[10px] text-[#77858d]">
-      <span className="font-mono tracking-[.1em]">DIBANGUN UNTUK EKOSISTEM KONSTRUKSI INDONESIA</span><a href="#solusi" className="inline-flex items-center gap-2 text-[#aebbc3] hover:text-[#8bdcff]" data-testid="link-hero-scroll">Lihat yang bisa Anda temukan <ArrowDown size={13} /></a>
+       <span className="font-mono tracking-[.1em]">GUSTAFTA · EKOSISTEM INDUSTRI PERTAMA</span><a href="#solusi" className="inline-flex items-center gap-2 text-[#aebbc3] hover:text-[#8bdcff]" data-testid="link-hero-scroll">Lihat jalur eksplorasi <ArrowDown size={13} /></a>
     </div>
   </section>;
 }
@@ -199,6 +200,58 @@ function HowItWorks() {
   </section>;
 }
 
+function BusinessModel() {
+  const units = [
+    { no: '01', title: 'Digital Development', text: 'Pengembangan digital untuk kebutuhan proses, data, dan cara kerja industri.', icon: Layers3 },
+    { no: '02', title: 'SaaS & AI Products', text: 'Produk perangkat lunak dan kapabilitas AI yang dirancang untuk konteks pekerjaan nyata.', icon: Sparkles },
+    { no: '03', title: 'Consulting & Advisory', text: 'Pendampingan dan perspektif ahli untuk membantu organisasi menentukan langkah.', icon: Compass },
+    { no: '04', title: 'Knowledge & Academy', text: 'Pengetahuan terapan dan pengembangan kompetensi bagi pelaku industri.', icon: BookOpen },
+    { no: '05', title: 'Business Collaboration', text: 'Kolaborasi yang mempertemukan kebutuhan, keahlian, dan peluang yang relevan.', icon: UsersRound },
+    { no: '06', title: 'Industry Solutions', text: 'Solusi lintas bidang yang bertumbuh dari tantangan spesifik sektor.', icon: HardHat },
+  ];
+  const phases = [
+    { id: '01', title: 'Mulai dari pekerjaan nyata', items: 'Project work · Consulting · Training · Produk pengetahuan digital', note: 'Fondasi awal untuk arus kas dan validasi kebutuhan pelanggan.' },
+    { id: '02', title: 'Bangun penggunaan berulang', items: 'SaaS subscription · AI usage credits', note: 'Dikembangkan seiring solusi menemukan kebutuhan dan pola penggunaan yang tepat.' },
+    { id: '03', title: 'Perkuat hubungan pelanggan', items: 'Membership · Enterprise licensing', note: 'Peluang setelah produk, dukungan, dan proposisi nilai siap.' },
+    { id: '04', title: 'Perluas kolaborasi pasar', items: 'Marketplace · Komisi transaksi · Sponsored content', note: 'Bergantung pada mitra, kepercayaan, verifikasi, dan aktivitas transaksi.' },
+    { id: '05', title: 'Kembangkan intelijen industri', items: 'Industry reports · API · Enterprise ecosystem', note: 'Arah lanjutan setelah model dan fondasi data tervalidasi.' },
+  ];
+  return <section id="model-bisnis" className="relative overflow-hidden border-y border-white/[.08] bg-[#111c23] py-20 md:py-28">
+    <div className="absolute right-[-180px] top-[-180px] h-[500px] w-[500px] rounded-full border border-[#8bdcff]/[.08]" />
+    <div className="container-wide relative">
+      <div className="grid gap-8 border-b border-white/10 pb-9 md:grid-cols-[1fr_.72fr] md:items-end">
+        <div><div className="eyebrow">ARAH MODEL BISNIS · USULAN PART 02</div><h2 className="display-font mt-4 max-w-[740px] text-[clamp(2.7rem,5vw,4.8rem)] font-semibold leading-[.98]">Satu ekosistem.<br /><span className="text-[#8bdcff]">Enam cara mencipta nilai.</span></h2></div>
+        <p className="max-w-[470px] text-[13px] leading-6 text-[#a4b2ba]">Arah yang diusulkan: model hibrida yang menghubungkan layanan, produk, pengetahuan, dan kolaborasi—dimulai dari kontraktor UMKM serta profesional industri.</p>
+      </div>
+      <div className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-2 border-l-2 border-[#8bdcff] bg-[#8bdcff]/[.055] px-4 py-3 text-[11px] leading-5 text-[#c4d2d9]" data-testid="status-business-model-recommendation">
+        <span className="font-mono text-[9px] tracking-[.12em] text-[#8bdcff]">REKOMENDASI · MENUNGGU KONFIRMASI</span>
+        <span>Model dan pilihan bisnis masih berupa arah usulan, belum menjadi kebijakan final.</span>
+      </div>
+      <div className="mt-8 grid gap-px border border-white/[.09] bg-white/[.09] sm:grid-cols-2 xl:grid-cols-3">
+        {units.map(unit => {
+          const Icon = unit.icon;
+          return <article key={unit.no} className="group min-h-[166px] bg-[#121e26] p-5 transition-colors hover:bg-[#172832]" data-testid={`business-unit-${unit.no}`}>
+            <div className="flex items-center justify-between"><span className="font-mono text-[10px] text-[#78c9e8]">{unit.no} / 06</span><Icon size={17} className="text-[#83cfe9]" /></div>
+            <h3 className="mt-5 text-[15px] font-semibold tracking-[-.02em] text-[#e5edf0]">{unit.title}</h3>
+            <p className="mt-2 max-w-[330px] text-[11px] leading-5 text-[#93a3ac]">{unit.text}</p>
+          </article>;
+        })}
+      </div>
+      <div className="mt-14 grid gap-8 md:grid-cols-[.72fr_1.28fr]">
+        <div><div className="eyebrow">URUTAN PENGEMBANGAN PENDAPATAN</div><h3 className="display-font mt-3 max-w-[350px] text-3xl font-semibold leading-tight text-[#e6eef1]">Bertumbuh dari layanan ke skala.</h3><p className="mt-4 max-w-[350px] text-[12px] leading-6 text-[#91a0a8]">Urutan hipotesis untuk diuji sesuai kebutuhan pasar, kapasitas, dan kesiapan solusi.</p></div>
+        <div className="divide-y divide-white/[.1] border-y border-white/[.1]">
+          {phases.map(phase => <article key={phase.id} className="grid gap-3 py-5 sm:grid-cols-[44px_1fr]" data-testid={`business-phase-${phase.id}`}>
+            <span className="font-mono text-[11px] text-[#8bdcff]">{phase.id}</span>
+            <div><div className="flex flex-wrap items-center justify-between gap-2"><h4 className="text-[14px] font-semibold text-[#e5edf0]">{phase.title}</h4><span className="font-mono text-[9px] tracking-[.1em] text-[#758792]">TAHAP {phase.id}</span></div>
+              <p className="mt-2 text-[12px] leading-5 text-[#c2d0d6]">{phase.items}</p><p className="mt-1 text-[10px] leading-5 text-[#8798a1]">{phase.note}</p></div>
+          </article>)}
+        </div>
+      </div>
+      <p className="mt-5 flex items-start gap-2 text-[10px] leading-5 text-[#778991]" data-testid="text-business-model-caveat"><Check size={13} className="mt-0.5 shrink-0 text-[#70bfdc]" />Rangkaian ini adalah hipotesis bisnis untuk dibahas dan divalidasi. Tidak menyatakan layanan atau produk tertentu telah tersedia, dan tidak memuat proyeksi harga maupun hasil finansial.</p>
+    </div>
+  </section>;
+}
+
 function Ecosystem() {
   const tracks = [
     { icon: MessagesSquare, name: 'AI & konsultasi', detail: 'Panduan awal dan perspektif ahli untuk membantu memetakan persoalan.' },
@@ -209,9 +262,9 @@ function Ecosystem() {
     { icon: UsersRound, name: 'Kolaborasi & jejaring', detail: 'Ruang untuk mengenal kebutuhan, bertukar wawasan, dan membuka peluang kerja sama.' },
   ];
   const marketWaves = [
-    { number: '01', title: 'Konstruksi', detail: 'Pasar awal untuk memvalidasi kebutuhan, produk prioritas, dan model bisnis.' },
-    { number: '02', title: 'Energi & ketenagalistrikan', detail: 'Perluasan bertahap ke kebutuhan yang beririsan dengan proyek konstruksi.' },
-    { number: '03', title: 'Pertambangan & lingkungan', detail: 'Pengembangan berikutnya setelah model awal terbukti berjalan.' },
+    { number: '01', title: 'Konstruksi', detail: 'Fokus pertama: kontraktor UMKM dan profesional industri.' },
+    { number: '02', title: 'Energi & ketenagalistrikan', detail: 'Ekspansi bersama ke kebutuhan sektor yang beririsan dengan proyek.' },
+    { number: '03', title: 'Pertambangan & lingkungan', detail: 'Perluasan setelah model awal memberi pembelajaran dan terbukti berjalan.' },
   ];
   return <section id="tentang" className="bg-[#0e171d] py-20 md:py-28">
     <div className="container-wide">
@@ -306,7 +359,7 @@ function Footer() {
       <div><Brand light /><p className="mt-4 max-w-[365px] text-[12px] leading-6 text-[#91a0a8]">Ekosistem digital untuk membantu bisnis dan profesional konstruksi Indonesia menemukan pengetahuan, alat, dan dukungan yang relevan.</p></div>
       <div className="grid grid-cols-2 gap-8 sm:grid-cols-3">
         <div><div className="eyebrow !text-[9px]">JELAJAHI</div><a href="#solusi" className="mt-4 block text-[12px] text-[#a9b6bd] hover:text-[#8bdcff]" data-testid="link-footer-solusi">Peta solusi</a><a href="#wawasan" className="mt-3 block text-[12px] text-[#a9b6bd] hover:text-[#8bdcff]" data-testid="link-footer-wawasan">Wawasan</a></div>
-        <div><div className="eyebrow !text-[9px]">EKOSISTEM</div><a href="#tentang" className="mt-4 block text-[12px] text-[#a9b6bd] hover:text-[#8bdcff]" data-testid="link-footer-ekosistem">Tentang portal</a><a href="#cara-kerja" className="mt-3 block text-[12px] text-[#a9b6bd] hover:text-[#8bdcff]" data-testid="link-footer-cara-kerja">Cara kerja</a></div>
+        <div><div className="eyebrow !text-[9px]">EKOSISTEM</div><a href="#tentang" className="mt-4 block text-[12px] text-[#a9b6bd] hover:text-[#8bdcff]" data-testid="link-footer-ekosistem">Tentang portal</a><a href="#model-bisnis" className="mt-3 block text-[12px] text-[#a9b6bd] hover:text-[#8bdcff]" data-testid="link-footer-model-bisnis">Arah model bisnis</a><a href="#cara-kerja" className="mt-3 block text-[12px] text-[#a9b6bd] hover:text-[#8bdcff]" data-testid="link-footer-cara-kerja">Cara kerja</a></div>
         <div className="col-span-2 sm:col-span-1"><div className="eyebrow !text-[9px]">UNTUK SIAPA</div><p className="mt-4 text-[12px] leading-5 text-[#a9b6bd]">Kontraktor UMKM<br />Konsultan konstruksi<br />Tenaga ahli & profesional</p></div>
       </div>
     </div>
@@ -323,6 +376,7 @@ function Home() {
     </div>
     <SolutionCatalog />
     <HowItWorks />
+    <BusinessModel />
     <Ecosystem />
     <Insights />
     <StartBlock />

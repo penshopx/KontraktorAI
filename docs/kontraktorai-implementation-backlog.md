@@ -83,17 +83,40 @@ mitra, dan komunitas.
 
 **Tujuan:** menentukan pelanggan, penawaran, harga, serta kelayakan ekonomi.
 
+**Status keputusan:** Bagian 02 diterima sebagai arah perancangan, tetapi pilihan
+model bisnis utama, segmen utama, dan prioritas pendapatan 12 bulan belum dikunci.
+Rekomendasi di bawah berstatus usulan sampai keputusan tersebut dikonfirmasi dan
+divalidasi.
+
 **Hasil kerja**
-- Matriks segmen dan proposisi nilai per segmen.
-- Model pendapatan dan rancangan paket Explorer, Professional, Business, dan
-  Enterprise.
+- Model hybrid Gustafta dengan enam unit: Digital Development; SaaS & AI
+  Products; Consulting & Advisory; Knowledge & Academy; Business Collaboration;
+  dan Industry Solutions.
+- Matriks segmen dan proposisi nilai per segmen, dengan UMKM kontraktor serta
+  profesional industri sebagai rekomendasi prioritas awal.
+- Peta delapan sumber pendapatan: project-based, SaaS subscription, AI usage /
+  credit, konsultasi, pendidikan/pengetahuan, membership, marketplace/transaksi,
+  serta enterprise licensing/integration.
+- Rancangan paket Starter, Professional, Business, dan Enterprise. Nama dan
+  cakupan paket tetap usulan sampai dikonfirmasi.
+- Urutan monetisasi lima tahap: jasa/proyek, konsultasi, pelatihan dan produk
+  pengetahuan; SaaS dan kredit AI; membership dan lisensi enterprise;
+  marketplace, komisi dan konten sponsor; lalu intelijen industri, API, dan
+  ekosistem enterprise.
 - Estimasi biaya operasional, infrastruktur, AI, dukungan, dan akuisisi.
-- Asumsi unit economics dan proyeksi pendapatan yang dapat diuji.
+- Asumsi unit economics, KPI, dan proyeksi pendapatan yang dapat diuji.
 
 **Kriteria penerimaan**
+- Tiga keputusan yang perlu dikunci—model utama, segmen utama, dan prioritas
+  pendapatan 12 bulan—tercatat sebagai keputusan terpisah sebelum disebut final.
 - Setiap produk prioritas memiliki target pelanggan, model harga, biaya utama,
   dan asumsi pendapatan yang terdokumentasi.
-- Harga dan proyeksi diberi label sebagai asumsi sampai tervalidasi pasar.
+- Contoh harga, margin, proyeksi, serta simulasi pendapatan diberi label sebagai
+  hipotesis; angka tersebut tidak ditampilkan sebagai harga atau hasil aktual.
+- Setiap layanan, produk, dan jalur transaksi dibedakan antara rencana, demo, dan
+  layanan yang benar-benar siap digunakan.
+- Keputusan harga mempertimbangkan biaya AI, infrastruktur, dukungan, kapasitas
+  penggunaan, dan hasil validasi pelanggan.
 
 ### 03 — Portofolio Produk dan Pemetaan Aplikasi
 
@@ -131,6 +154,8 @@ memuat status kesiapan dan keputusan tindak lanjut.
   harus mengetahui nama aplikasi.
 - Navigasi, halaman, dan status kosong/galat terdokumentasi.
 - Fitur yang belum tersedia tidak ditampilkan sebagai layanan aktif.
+- Arsitektur bisnis yang masih berupa rekomendasi ditandai sebagai arah
+  perancangan, bukan daftar layanan aktif atau janji harga.
 
 ### 05 — KontraktorAI News dan Newsroom
 
@@ -266,13 +291,16 @@ hasil setiap paket.
 **Hasil kerja**
 - Project charter, backlog fitur, jadwal, estimasi biaya, dan daftar risiko.
 - Penanggung jawab dan dependensi untuk setiap butir.
-- KPI untuk News, produk, bisnis, kolaborasi, dan dampak.
+- KPI untuk akuisisi, aktivasi, konversi, pendapatan berulang, layanan, academy,
+  retensi, keuangan, News, kolaborasi, dan dampak.
 - Ritme tinjauan bulanan dan pencatatan keputusan.
 
 **Kriteria penerimaan**
 - Setiap butir backlog memiliki tujuan, prioritas, estimasi, dependensi, pemilik,
   dan kriteria penerimaan.
 - Target angka ditetapkan setelah baseline tersedia.
+- Baseline awal dikumpulkan sebelum target numerik bisnis ditetapkan; sasaran
+  simulasi tidak diperlakukan sebagai komitmen kinerja.
 - Perubahan lingkup, risiko, biaya, dan keputusan dicatat serta ditinjau berkala.
 
 ## Tahap MVP yang disarankan
