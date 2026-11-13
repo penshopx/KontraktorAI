@@ -1,1 +1,2 @@
 - [KontraktorAI brand and focus](kontraktorai-brand-name.md) — Use KontraktorAI and prioritize the five initial industry sectors in phased market entry.
+- [KontraktorAI business model](kontraktorai-business-model.md) — The approved direction is hybrid; start with contractor SMEs and professionals, using services cash flow while building SaaS.

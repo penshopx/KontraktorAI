@@ -220,12 +220,12 @@ function BusinessModel() {
     <div className="absolute right-[-180px] top-[-180px] h-[500px] w-[500px] rounded-full border border-[#8bdcff]/[.08]" />
     <div className="container-wide relative">
       <div className="grid gap-8 border-b border-white/10 pb-9 md:grid-cols-[1fr_.72fr] md:items-end">
-        <div><div className="eyebrow">ARAH MODEL BISNIS · USULAN PART 02</div><h2 className="display-font mt-4 max-w-[740px] text-[clamp(2.7rem,5vw,4.8rem)] font-semibold leading-[.98]">Satu ekosistem.<br /><span className="text-[#8bdcff]">Enam cara mencipta nilai.</span></h2></div>
-        <p className="max-w-[470px] text-[13px] leading-6 text-[#a4b2ba]">Arah yang diusulkan: model hibrida yang menghubungkan layanan, produk, pengetahuan, dan kolaborasi—dimulai dari kontraktor UMKM serta profesional industri.</p>
+      <div><div className="eyebrow">ARAH MODEL BISNIS · BAGIAN 02</div><h2 className="display-font mt-4 max-w-[740px] text-[clamp(2.7rem,5vw,4.8rem)] font-semibold leading-[.98]">Satu ekosistem.<br /><span className="text-[#8bdcff]">Enam cara mencipta nilai.</span></h2></div>
+        <p className="max-w-[470px] text-[13px] leading-6 text-[#a4b2ba]">Model hibrida menghubungkan layanan, produk, pengetahuan, dan kolaborasi. Fokus pelanggan awal: UMKM kontraktor serta profesional industri.</p>
       </div>
       <div className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-2 border-l-2 border-[#8bdcff] bg-[#8bdcff]/[.055] px-4 py-3 text-[11px] leading-5 text-[#c4d2d9]" data-testid="status-business-model-recommendation">
-        <span className="font-mono text-[9px] tracking-[.12em] text-[#8bdcff]">REKOMENDASI · MENUNGGU KONFIRMASI</span>
-        <span>Model dan pilihan bisnis masih berupa arah usulan, belum menjadi kebijakan final.</span>
+        <span className="font-mono text-[9px] tracking-[.12em] text-[#8bdcff]">ARAH DISETUJUI · VALIDASI BERLANJUT</span>
+        <span>Model, segmen awal, dan prioritas pendapatan 12 bulan telah dipilih; harga dan unit economics tetap perlu diuji.</span>
       </div>
       <div className="mt-8 grid gap-px border border-white/[.09] bg-white/[.09] sm:grid-cols-2 xl:grid-cols-3">
         {units.map(unit => {
@@ -238,7 +238,7 @@ function BusinessModel() {
         })}
       </div>
       <div className="mt-14 grid gap-8 md:grid-cols-[.72fr_1.28fr]">
-        <div><div className="eyebrow">URUTAN PENGEMBANGAN PENDAPATAN</div><h3 className="display-font mt-3 max-w-[350px] text-3xl font-semibold leading-tight text-[#e6eef1]">Bertumbuh dari layanan ke skala.</h3><p className="mt-4 max-w-[350px] text-[12px] leading-6 text-[#91a0a8]">Urutan hipotesis untuk diuji sesuai kebutuhan pasar, kapasitas, dan kesiapan solusi.</p></div>
+        <div><div className="eyebrow">URUTAN PENGEMBANGAN PENDAPATAN</div><h3 className="display-font mt-3 max-w-[350px] text-3xl font-semibold leading-tight text-[#e6eef1]">Bertumbuh dari layanan ke skala.</h3><p className="mt-4 max-w-[350px] text-[12px] leading-6 text-[#91a0a8]">Prioritas 12 bulan pertama dimulai dari jasa dan konsultasi, sambil mengembangkan SaaS bertahap.</p></div>
         <div className="divide-y divide-white/[.1] border-y border-white/[.1]">
           {phases.map(phase => <article key={phase.id} className="grid gap-3 py-5 sm:grid-cols-[44px_1fr]" data-testid={`business-phase-${phase.id}`}>
             <span className="font-mono text-[11px] text-[#8bdcff]">{phase.id}</span>
@@ -247,7 +247,7 @@ function BusinessModel() {
           </article>)}
         </div>
       </div>
-      <p className="mt-5 flex items-start gap-2 text-[10px] leading-5 text-[#778991]" data-testid="text-business-model-caveat"><Check size={13} className="mt-0.5 shrink-0 text-[#70bfdc]" />Rangkaian ini adalah hipotesis bisnis untuk dibahas dan divalidasi. Tidak menyatakan layanan atau produk tertentu telah tersedia, dan tidak memuat proyeksi harga maupun hasil finansial.</p>
+      <p className="mt-5 flex items-start gap-2 text-[10px] leading-5 text-[#778991]" data-testid="text-business-model-caveat"><Check size={13} className="mt-0.5 shrink-0 text-[#70bfdc]" />Arah bisnis telah disepakati; harga, margin, dan proyeksi tetap perlu divalidasi. Bagian ini tidak menyatakan layanan atau produk tertentu telah tersedia.</p>
     </div>
   </section>;
 }

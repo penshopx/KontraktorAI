@@ -83,10 +83,11 @@ mitra, dan komunitas.
 
 **Tujuan:** menentukan pelanggan, penawaran, harga, serta kelayakan ekonomi.
 
-**Status keputusan:** Bagian 02 diterima sebagai arah perancangan, tetapi pilihan
-model bisnis utama, segmen utama, dan prioritas pendapatan 12 bulan belum dikunci.
-Rekomendasi di bawah berstatus usulan sampai keputusan tersebut dikonfirmasi dan
-divalidasi.
+**Keputusan pengguna:** model hybrid layanan dan produk; prioritas pelanggan
+awal UMKM kontraktor serta profesional industri; dan pendapatan 12 bulan pertama
+dimulai dari jasa/konsultasi sambil membangun SaaS bertahap. Harga, margin,
+proyeksi, dan kelayakan tiap penawaran tetap harus divalidasi sebelum menjadi
+kebijakan komersial.
 
 **Hasil kerja**
 - Model hybrid Gustafta dengan enam unit: Digital Development; SaaS & AI
@@ -98,7 +99,7 @@ divalidasi.
   credit, konsultasi, pendidikan/pengetahuan, membership, marketplace/transaksi,
   serta enterprise licensing/integration.
 - Rancangan paket Starter, Professional, Business, dan Enterprise. Nama dan
-  cakupan paket tetap usulan sampai dikonfirmasi.
+  cakupan paket tetap usulan sampai dikonfirmasi dan diuji.
 - Urutan monetisasi lima tahap: jasa/proyek, konsultasi, pelatihan dan produk
   pengetahuan; SaaS dan kredit AI; membership dan lisensi enterprise;
   marketplace, komisi dan konten sponsor; lalu intelijen industri, API, dan
@@ -107,8 +108,8 @@ divalidasi.
 - Asumsi unit economics, KPI, dan proyeksi pendapatan yang dapat diuji.
 
 **Kriteria penerimaan**
-- Tiga keputusan yang perlu dikunci—model utama, segmen utama, dan prioritas
-  pendapatan 12 bulan—tercatat sebagai keputusan terpisah sebelum disebut final.
+- Keputusan yang telah dipilih tercatat terpisah dari asumsi yang masih menunggu
+  validasi pasar dan perhitungan biaya.
 - Setiap produk prioritas memiliki target pelanggan, model harga, biaya utama,
   dan asumsi pendapatan yang terdokumentasi.
 - Contoh harga, margin, proyeksi, serta simulasi pendapatan diberi label sebagai
