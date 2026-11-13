@@ -126,13 +126,21 @@ metodologi, dan nama portal yang digunakan adalah **KontraktorAI**.
 
 - Model Gustafta tetap hybrid: jasa profesional dan productized services,
   produk digital, SaaS/AI, serta integrasi dan kemitraan.
-- Prioritas finansial adalah cashflow: layanan dan proyek tervalidasi menjadi
-  jalur awal, recurring revenue dibangun setelah kapasitas support dan biaya
-  terukur, kemudian aset digital/SaaS dikembangkan setelah kebutuhan pasar
-  terbukti.
+- Prioritas pendapatan 12 bulan adalah **service-first** dalam model bisnis
+  hybrid: produk tetap dapat dikembangkan bertahap, tetapi layanan menjadi
+  sumber cashflow awal dan validasi pasar.
+- Pilihan layanan final adalah **kombinasi layanan**, dengan peran yang
+  diprioritaskan: AI & Digital Consulting sebagai pintu masuk; Digital
+  Foundation dan Business Automation sebagai mesin cashflow; AI Implementation
+  sebagai pembeda; Managed Technology Services untuk recurring revenue; serta
+  solusi KontraktorAI sebagai spesialisasi industri strategis.
+- Recurring revenue dibangun setelah kapasitas dukungan, batas layanan, biaya,
+  serta permintaan pelanggan terukur. Produk digital/SaaS dikembangkan setelah
+  kebutuhan berulang dan kesediaan membayar terbukti.
 - Kondisi modal awal yang dipilih adalah **bootstrap / sangat terbatas**.
-  Nominal modal belum ditetapkan; jangan mengasumsikan jumlah modal, target
-  pendapatan, harga, biaya, margin, BEP, runway, atau proyeksi rupiah.
+  Nominal modal belum ditetapkan. Jangan menyajikan harga indikatif sebagai
+  harga final atau publik, atau menganggap target pendapatan, biaya, margin,
+  BEP, runway, dan proyeksi sebagai angka aktual.
 - Kebijakan bootstrap: utamakan sumber daya yang sudah tersedia, kendalikan
   langganan dan biaya tetap, gunakan pembayaran awal/termin sesuai kontrak,
   libatkan spesialis eksternal jika pekerjaan dan anggarannya jelas, catat
@@ -153,6 +161,16 @@ metodologi, dan nama portal yang digunakan adalah **KontraktorAI**.
 - Skenario conservative/base/growth dan KPI finansial digunakan sebagai
   kerangka analisis; angka target ditentukan setelah modal, biaya, harga,
   kapasitas, pipeline, dan baseline aktual diketahui.
+- Arsitektur layanan awal dan harga indikatif untuk diuji (bukan harga publik
+  atau komitmen): Digital Starter Rp2,5–4,5 juta; Business Automation Starter
+  Rp3,5–7,5 juta; AI Customer Assistant Starter Rp4–8 juta. Penawaran aktual
+  harus disesuaikan dengan ruang lingkup, biaya teknologi, risiko, dan kapasitas.
+- Dokumen sumber mengusulkan target funnel dan omzet, tetapi angka tersebut
+  belum menjadi keputusan pengguna. Tahan publikasi dan proyeksi target sampai
+  jam kerja mingguan founder, pipeline, biaya aktual, dan asumsi konversi
+  dikonfirmasi.
+- Langkah berikut sebelum target volume penjualan: tetapkan jam kerja founder
+  per minggu agar kapasitas proyek dan delivery dapat dihitung realistis.
 
 ## Prioritas pelaksanaan
 
@@ -238,6 +256,8 @@ penawaran tetap harus divalidasi sebelum menjadi kebijakan komersial.
 - Asumsi unit economics, KPI, dan proyeksi pendapatan yang dapat diuji.
 - Business Model Canvas Gustafta yang membedakan pasar utama UMKM dan
   spesialisasi KontraktorAI.
+- Prioritas lini layanan service-first dan katalog penawaran bertahap; harga
+  indikatif hanya untuk validasi internal.
 - Kebijakan bootstrap, cashflow-first, model harga, serta formula unit
   economics tanpa mengarang nominal sebelum data tersedia.
 - Peta fixed/variable costs, financial reporting minimum, cashflow forecast,
@@ -258,6 +278,9 @@ penawaran tetap harus divalidasi sebelum menjadi kebijakan komersial.
   finansial yang tidak diberikan.
 - Proyeksi numerik baru diterbitkan setelah sumber data modal, biaya aktual,
   harga, kapasitas, dan pipeline pelanggan dikumpulkan; asumsi diberi label.
+- Katalog publik tidak menyiratkan seluruh layanan sudah tersedia dan tidak
+  menampilkan rentang harga indikatif sebelum biaya, kapasitas, dan penerimaan
+  pasar dikonfirmasi.
 
 ### 03 — Portofolio Produk dan Pemetaan Aplikasi
 

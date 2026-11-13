@@ -49,6 +49,16 @@ providing a nominal amount. Keep the financial plan cashflow-first and do not
 invent capital, revenue, price, cost, margin, break-even, runway, or forecast
 figures. Use formulas and labeled assumptions until actual data is available.
 
+The user also finalized a **service-first** revenue priority for the first 12
+months while retaining the hybrid service/product model. The service strategy
+is a combination: AI & Digital Consulting opens the customer relationship;
+Digital Foundation and Business Automation are the cashflow priorities; AI
+Implementation is the differentiator; Managed Technology Services is the
+recurring-revenue path; and KontraktorAI represents the industry specialization.
+Suggested package prices are only market-test hypotheses, not approved public
+prices. Wait for founder weekly capacity before treating suggested sales-volume
+targets as realistic.
+
 **Why:** the user confirmed the Part 02–06 business choices and the Part 03
 endorsed-brand architecture and market approach.
 
@@ -59,4 +69,6 @@ pricing and financial targets labeled as assumptions until validated; do not cal
 a product ready until the market, operational, and technical checks are complete.
 Represent the founder-led structure as the current operating decision, not as
 evidence that all planned SOPs, integrations, or hiring stages are already live.
-Treat bootstrap as a capital category only, not as a known rupiah budget.
+Treat bootstrap as a capital category only, not as a known rupiah budget. Keep
+proposed prices private and provisional until the scope, costs, founder capacity,
+and customer acceptance have been checked.

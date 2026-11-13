@@ -279,6 +279,14 @@ function BusinessModel() {
     { number: '02', title: 'Pendapatan berulang', detail: 'Maintenance, retainer, managed service, atau subscription setelah kapasitas support dan biaya terukur.' },
     { number: '03', title: 'Aset digital', detail: 'Template, workflow, dan SaaS dikembangkan bertahap setelah kebutuhan dan minat berbayar divalidasi.' },
   ];
+  const prioritizedServices = [
+    { role: 'PINTU MASUK', title: 'AI & Digital Consulting', detail: 'Discovery, assessment, dan konsultasi untuk memahami kebutuhan sebelum merancang solusi.', model: 'Per sesi · assessment · proyek' },
+    { role: 'MESIN CASHFLOW', title: 'Digital Foundation', detail: 'Website, landing page, atau fondasi digital dengan ruang lingkup yang disepakati.', model: 'Proyek · opsi maintenance' },
+    { role: 'MESIN CASHFLOW', title: 'Business Automation', detail: 'Pemetaan dan otomasi proses berulang dengan biaya dan deliverable yang terukur.', model: 'Implementasi · maintenance' },
+    { role: 'PEMBEDA', title: 'AI Implementation', detail: 'Penerapan chatbot, assistant, dokumen, atau workflow AI setelah kesesuaian kebutuhan dinilai.', model: 'Setup · dukungan berulang' },
+    { role: 'RECURRING', title: 'Managed Technology Services', detail: 'Maintenance, pemantauan, dukungan, atau perbaikan minor dengan batas layanan yang jelas.', model: 'Retainer · bulanan' },
+    { role: 'SPESIALIS INDUSTRI', title: 'Solusi KontraktorAI', detail: 'Discovery industri dan pilot berscope; fokus pasar masuk bertahap, bukan asumsi proyek siap jual.', model: 'Assessment · pilot sesuai scope' },
+  ];
   const bootstrapRules = [
     'Utamakan sumber daya dan perangkat yang sudah tersedia; tinjau langganan rutin.',
     'Hindari biaya tetap baru sebelum ada kebutuhan dan sumber dana yang jelas.',
@@ -437,7 +445,7 @@ function BusinessModel() {
           </div>
         </div>
       </div>
-      <div className="mt-14 border-t border-white/10 pt-10" data-testid="financial-architecture">
+      <div id="bagian-06" className="mt-14 border-t border-white/10 pt-10" data-testid="financial-architecture">
         <div className="grid gap-5 md:grid-cols-[.8fr_1.2fr] md:items-end">
           <div><div className="eyebrow">BAGIAN 06 · MODEL & ARSITEKTUR KEUANGAN</div><h3 className="display-font mt-3 max-w-[500px] text-3xl font-semibold leading-tight text-[#e6eef1] md:text-4xl">Cashflow lebih dulu.<br /><span className="text-[#8bdcff]">Angka harus terbukti.</span></h3></div>
           <div>
@@ -464,6 +472,21 @@ function BusinessModel() {
               <p className="mt-2 text-[10px] leading-5 text-[#91a0a8]">{item.detail}</p>
             </article>)}
           </div>
+        </div>
+        <div className="mt-10 border-t border-white/10 pt-9" data-testid="service-first-priorities">
+          <div className="grid gap-4 md:grid-cols-[.72fr_1.28fr] md:items-end">
+            <div><div className="eyebrow">KEPUTUSAN PENDAPATAN · SERVICE-FIRST</div><h4 className="display-font mt-2 text-2xl font-semibold text-[#e6eef1]">Kombinasi layanan, prioritas jelas.</h4></div>
+            <p className="max-w-[600px] text-[10px] leading-5 text-[#8798a1]">Dalam 12 bulan pertama, jasa menjadi prioritas pendapatan; produk tetap dibangun bertahap. Lini berikut adalah arsitektur penawaran untuk divalidasi, bukan katalog yang menyatakan semua layanan aktif atau tersedia bersamaan.</p>
+          </div>
+          <div className="mt-5 grid gap-px border border-white/[.09] bg-white/[.09] sm:grid-cols-2 xl:grid-cols-3">
+            {prioritizedServices.map((service, index) => <article key={service.title} className="min-h-[150px] bg-[#121e26] p-4" data-testid={`service-priority-${index + 1}`}>
+              <span className="font-mono text-[9px] tracking-[.1em] text-[#8bdcff]">{service.role}</span>
+              <h5 className="mt-2 text-[12px] font-semibold text-[#e5edf0]">{service.title}</h5>
+              <p className="mt-2 text-[10px] leading-5 text-[#91a0a8]">{service.detail}</p>
+              <p className="mt-3 border-t border-white/10 pt-2 text-[9px] text-[#a7b5bc]">MODEL · {service.model}</p>
+            </article>)}
+          </div>
+          <p className="mt-3 text-[9px] leading-5 text-[#758792]" data-testid="service-price-disclaimer">Rentang harga usulan disimpan sebagai hipotesis uji internal; belum ditampilkan sebagai harga publik karena biaya, scope, kapasitas founder, dan penerimaan pasar perlu dikonfirmasi.</p>
         </div>
         <div className="mt-10 grid gap-8 lg:grid-cols-[.7fr_1.3fr]">
           <div>
