@@ -1,0 +1,1 @@
+- [KontraktorAI brand name](kontraktorai-brand-name.md) — Use KontraktorAI instead of KonstruksiAI as the product name.
