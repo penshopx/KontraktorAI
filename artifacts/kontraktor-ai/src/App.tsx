@@ -25,15 +25,15 @@ type Solution = {
 };
 
 const solutions: Solution[] = [
-  { title: 'Mulai usaha kontraktor', description: 'Pahami langkah awal, legalitas dasar, dan hal yang perlu disiapkan sebelum mengambil pekerjaan.', category: 'Bisnis & legalitas', label: 'PANDUAN PRAKTIS', icon: BriefcaseBusiness, tone: 'blue' },
-  { title: 'Menyiapkan dokumen tender', description: 'Kenali alur administrasi tender dan susun daftar dokumen yang perlu diperiksa.', category: 'Tender & kepatuhan', label: 'CHECKLIST', icon: FileCheck2, tone: 'amber' },
-  { title: 'Mengelola proyek harian', description: 'Bawa jadwal, catatan lapangan, dan progres pekerjaan ke dalam ritme kerja yang lebih rapi.', category: 'Manajemen proyek', label: 'ALAT KERJA', icon: ClipboardCheck, tone: 'mint' },
-  { title: 'Menghitung kebutuhan biaya', description: 'Buat estimasi awal pekerjaan dengan kerangka perhitungan yang mudah ditinjau kembali.', category: 'Alat digital', label: 'KALKULATOR', icon: Calculator, tone: 'violet' },
-  { title: 'Meningkatkan kompetensi tim', description: 'Temukan materi belajar dan arah pengembangan keterampilan untuk peran konstruksi.', category: 'Akademi & kompetensi', label: 'PENGEMBANGAN', icon: GraduationCap, tone: 'blue' },
-  { title: 'Menata keselamatan kerja', description: 'Bangun kebiasaan HSE melalui panduan, pengingat, dan langkah kerja yang lebih sadar risiko.', category: 'HSE & keberlanjutan', label: 'KESELAMATAN', icon: ShieldCheck, tone: 'amber' },
-  { title: 'Mencari rekan kolaborasi', description: 'Jelajahi cara memperluas jaringan profesional dan membangun kerja sama yang relevan.', category: 'Kolaborasi', label: 'JEJARING', icon: UsersRound, tone: 'mint' },
-  { title: 'Bertanya pada ahli', description: 'Petakan persoalan Anda sebelum mencari dukungan dari konsultan atau tenaga ahli.', category: 'AI & konsultasi', label: 'ARAHAN AHLI', icon: MessagesSquare, tone: 'violet' },
-  { title: 'Memahami solusi industri', description: 'Jelajahi pendekatan dan topik khusus untuk tantangan konstruksi yang lebih spesifik.', category: 'Solusi industri', label: 'WAWASAN', icon: HardHat, tone: 'blue' },
+  { title: 'Mulai usaha kontraktor', description: 'Petakan langkah awal, legalitas dasar, dan hal yang perlu disiapkan sebelum mengambil pekerjaan.', category: 'Bisnis & legalitas', label: 'AREA KEBUTUHAN', icon: BriefcaseBusiness, tone: 'blue' },
+  { title: 'Menyiapkan dokumen tender', description: 'Kenali alur administrasi tender dan kebutuhan pemeriksaan dokumen yang relevan.', category: 'Tender & kepatuhan', label: 'TOPIK TENDER', icon: FileCheck2, tone: 'amber' },
+  { title: 'Mengelola proyek harian', description: 'Jelajahi kebutuhan seputar jadwal, catatan lapangan, dan pemantauan progres pekerjaan.', category: 'Manajemen proyek', label: 'AREA PROYEK', icon: ClipboardCheck, tone: 'mint' },
+  { title: 'Menghitung kebutuhan biaya', description: 'Petakan kebutuhan estimasi awal pekerjaan dengan asumsi yang dapat ditinjau kembali.', category: 'Alat digital', label: 'TOPIK ESTIMASI', icon: Calculator, tone: 'violet' },
+  { title: 'Meningkatkan kompetensi tim', description: 'Petakan materi belajar dan arah pengembangan keterampilan untuk peran konstruksi.', category: 'Akademi & kompetensi', label: 'AREA KOMPETENSI', icon: GraduationCap, tone: 'blue' },
+  { title: 'Menata keselamatan kerja', description: 'Pertimbangkan kebutuhan praktik HSE, pengingat, dan langkah kerja yang sadar risiko.', category: 'HSE & keberlanjutan', label: 'AREA KESELAMATAN', icon: ShieldCheck, tone: 'amber' },
+  { title: 'Mencari rekan kolaborasi', description: 'Petakan peluang memperluas jaringan profesional dan kerja sama yang relevan.', category: 'Kolaborasi', label: 'AREA KOLABORASI', icon: UsersRound, tone: 'mint' },
+  { title: 'Bertanya pada ahli', description: 'Tentukan persoalan dan konteks sebelum mempertimbangkan dukungan konsultan atau tenaga ahli.', category: 'AI & konsultasi', label: 'AREA KEAHLIAN', icon: MessagesSquare, tone: 'violet' },
+  { title: 'Memahami solusi industri', description: 'Jelajahi tantangan dan pendekatan yang mungkin relevan untuk kebutuhan konstruksi.', category: 'Solusi industri', label: 'AREA INDUSTRI', icon: HardHat, tone: 'blue' },
 ];
 
 const categories = ['Semua solusi', 'AI & konsultasi', 'Kolaborasi', 'Alat digital', 'Manajemen proyek', 'Tender & kepatuhan', 'HSE & keberlanjutan', 'Akademi & kompetensi', 'Bisnis & legalitas', 'Solusi industri'];
@@ -41,7 +41,10 @@ const categories = ['Semua solusi', 'AI & konsultasi', 'Kolaborasi', 'Alat digit
 function Brand({ light = false }: { light?: boolean }) {
   return <Link href="/" data-testid="link-brand-home" className={`brand-lockup ${light ? 'text-[#e9f3f7]' : ''}`}>
     <span className="brand-mark"><span /><span /><span /></span>
-    <span className="font-semibold tracking-[-.04em]">Kontraktor<span className="text-[#8bdcff]">AI</span></span>
+    <span className="flex flex-col leading-none">
+      <span className="font-semibold tracking-[-.04em]">Kontraktor<span className="text-[#8bdcff]">AI</span></span>
+      <span className="mt-1.5 font-mono text-[8px] tracking-[.13em] text-[#9aabb4]">BY GUSTAFTA</span>
+    </span>
   </Link>;
 }
 
@@ -76,11 +79,11 @@ function Hero() {
     <div className="absolute -right-8 top-[-50px] -z-10 h-[420px] w-[420px] rounded-full border border-[#8bdcff]/10" />
     <div className="container-wide grid min-h-[635px] items-center gap-12 py-16 md:grid-cols-[1.02fr_.98fr] md:py-20">
       <div className="reveal">
-        <div className="eyebrow mb-7 flex items-center gap-3"><span className="h-px w-8 bg-[#8bdcff]" />GUSTAFTA · IMPLEMENTASI INDUSTRI PERTAMA</div>
+        <div className="eyebrow mb-7 flex items-center gap-3"><span className="h-px w-8 bg-[#8bdcff]" />GUSTAFTA · BRAND INDUK <span className="text-[#70848e]">/</span> KONTRAKTORAI · VERTIKAL INDUSTRI</div>
         <h1 className="display-font max-w-[730px] text-[clamp(3.3rem,7.2vw,6.65rem)] font-semibold leading-[.98] text-[#edf3f5]">
           Industri konstruksi<br />bergerak lebih jauh<br /><span className="text-[#8bdcff]">bersama.</span>
         </h1>
-        <p className="mt-7 max-w-[510px] text-[16px] leading-7 text-[#a8b6c0] md:text-[17px]">KontraktorAI adalah ekosistem industri pertama Gustafta. Kami membantu bisnis dan profesional konstruksi Indonesia bergerak dari informasi menuju solusi praktis melalui AI, pengetahuan, dan kolaborasi.</p>
+        <p className="mt-7 max-w-[510px] text-[16px] leading-7 text-[#a8b6c0] md:text-[17px]">KontraktorAI adalah portal solusi digital dan AI untuk UMKM kontraktor serta profesional industri Indonesia. Sebagai brand industri Gustafta, kami berangkat dari kebutuhan nyata—bukan teknologi semata.</p>
         <div className="mt-9 flex flex-wrap gap-3">
           <a href="#solusi" className="btn-primary inline-flex items-center gap-2 rounded-md px-5 py-3.5 text-sm font-semibold" data-testid="link-hero-explore">Jelajahi solusi <ArrowRight size={16} /></a>
           <a href="#cara-kerja" className="btn-outline inline-flex items-center gap-2 rounded-md px-5 py-3.5 text-sm font-medium" data-testid="link-hero-how">Lihat cara kerja <ArrowDown size={15} /></a>
@@ -89,7 +92,7 @@ function Hero() {
           <span className="flex -space-x-2">
             {['UK','KM','AH'].map((item, i) => <span key={item} className={`grid h-8 w-8 place-items-center rounded-full border-2 border-[#111a20] text-[9px] font-semibold ${i === 0 ? 'bg-[#c7e5eb] text-[#17313b]' : i === 1 ? 'bg-[#b2c8e2] text-[#202c42]' : 'bg-[#d9c7a9] text-[#34291b]'}`} data-testid={`avatar-persona-${i}`}>{item}</span>)}
           </span>
-           <span>Dimulai bersama kontraktor UMKM dan profesional industri</span>
+           <span>UMKM sebagai pasar utama Gustafta · profesional sebagai bagian ekosistem</span>
         </div>
       </div>
       <div className="reveal reveal-delay-2 relative mx-auto w-full max-w-[510px]">
@@ -119,7 +122,7 @@ function Hero() {
       </div>
     </div>
     <div className="container-wide flex items-center justify-between border-t border-white/[.08] py-4 text-[10px] text-[#77858d]">
-       <span className="font-mono tracking-[.1em]">GUSTAFTA · EKOSISTEM INDUSTRI PERTAMA</span><a href="#solusi" className="inline-flex items-center gap-2 text-[#aebbc3] hover:text-[#8bdcff]" data-testid="link-hero-scroll">Lihat jalur eksplorasi <ArrowDown size={13} /></a>
+       <span className="font-mono tracking-[.1em]">GUSTAFTA · PASAR UMKM</span><a href="#solusi" className="inline-flex items-center gap-2 text-[#aebbc3] hover:text-[#8bdcff]" data-testid="link-hero-scroll">Lihat jalur eksplorasi <ArrowDown size={13} /></a>
     </div>
   </section>;
 }
@@ -136,8 +139,8 @@ function SolutionCatalog() {
   return <section id="solusi" className="bg-[#e8f0f3] py-20 text-[#15222a] md:py-28">
     <div className="container-wide">
       <div className="mb-12 grid gap-7 md:grid-cols-[.85fr_1.15fr] md:items-end">
-        <div><div className="eyebrow !text-[#347890]">PETA SOLUSI KONTRAKTORAI</div><h2 className="display-font mt-4 text-[clamp(2.8rem,5.2vw,4.7rem)] font-semibold leading-[.98]">Masalah Anda,<br />mulai dari sini.</h2></div>
-        <div className="max-w-[550px] pb-1 md:justify-self-end"><p className="text-[15px] leading-7 text-[#52636d]">Tidak harus tahu nama alatnya. Mulai dari kebutuhan hari ini, lalu jelajahi panduan, alat digital, materi belajar, dan bentuk dukungan yang berkaitan.</p></div>
+        <div><div className="eyebrow !text-[#347890]">PETA KEBUTUHAN · TAKSONOMI STRATEGIS</div><h2 className="display-font mt-4 text-[clamp(2.8rem,5.2vw,4.7rem)] font-semibold leading-[.98]">Masalah Anda,<br />mulai dari sini.</h2></div>
+        <div className="max-w-[550px] pb-1 md:justify-self-end"><p className="text-[15px] leading-7 text-[#52636d]">Mulai dari hasil yang ingin dicapai, bukan nama teknologinya. Topik berikut memetakan kebutuhan yang akan divalidasi—bukan daftar layanan atau produk yang diklaim sudah tersedia.</p></div>
       </div>
       <div className="mb-6 flex flex-col gap-4 border-y border-[#cad7dd] py-4 lg:flex-row lg:items-center lg:justify-between">
         <div className="flex flex-wrap gap-2" role="group" aria-label="Filter kategori solusi">
@@ -168,21 +171,23 @@ function SolutionCatalog() {
         <p className="mx-auto mt-2 max-w-sm text-sm leading-6 text-[#657983]">Coba kata kunci yang lebih umum atau pilih kategori lain. Kebutuhan Anda tetap bisa dimulai dari sini.</p>
         <button onClick={() => { setQuery(''); setCategory('Semua solusi'); }} className="mt-5 rounded-md border border-[#8aa7b3] px-4 py-2 text-xs font-semibold text-[#315d6d] hover:bg-[#e0edf1]" data-testid="button-empty-reset">Tampilkan semua solusi</button>
       </div>}
-      <p className="mt-5 flex items-center gap-2 text-[10px] text-[#788991]"><Check size={13} className="text-[#42869d]" /> Konten yang ditampilkan adalah titik awal eksplorasi, bukan pengganti konsultasi profesional.</p>
+      <p className="mt-5 flex items-center gap-2 text-[10px] text-[#788991]" data-testid="text-catalog-strategy-note"><Check size={13} className="text-[#42869d]" /> Peta kebutuhan strategis, bukan penawaran yang tersedia atau pengganti konsultasi profesional.</p>
     </div>
   </section>;
 }
 
 function HowItWorks() {
   const steps = [
-    { number: '01', title: 'Mulai dari situasi Anda', description: 'Tentukan apa yang sedang ingin dibereskan—bisnis, proyek, kepatuhan, atau pengembangan diri.', icon: Compass },
-    { number: '02', title: 'Temukan jalur yang relevan', description: 'Jelajahi sumber pengetahuan, alat digital, dan dukungan yang berhubungan dengan kebutuhan.', icon: Search },
-    { number: '03', title: 'Ambil langkah berikutnya', description: 'Gunakan materi sebagai panduan untuk berdiskusi, belajar, atau menata cara kerja.', icon: ArrowUpRight },
+    { number: '01', title: 'Validasi masalah nyata', description: 'Dengarkan konteks UMKM dan profesional; pastikan persoalannya penting dan cukup spesifik.', icon: Compass },
+    { number: '02', title: 'Uji solusi yang relevan', description: 'Rancang pendekatan untuk hasil kerja yang dibutuhkan, tanpa mengasumsikan AI selalu menjadi jawabannya.', icon: Search },
+    { number: '03', title: 'Validasi kesediaan membayar', description: 'Uji apakah pihak yang menghadapi masalah bersedia membayar solusi sebelum memperluas investasi.', icon: ShieldCheck },
+    { number: '04', title: 'Standarkan yang berulang', description: 'Rapikan metode yang terbukti dapat diulang lintas kebutuhan serupa dengan mutu yang terjaga.', icon: ClipboardCheck },
+    { number: '05', title: 'Produkkan secara bertahap', description: 'Baru setelah validasi dan standardisasi, pertimbangkan bentuk produk digital atau SaaS.', icon: Layers3 },
   ];
   return <section id="cara-kerja" className="relative border-b border-white/[.08] bg-[#121c23] py-20 md:py-28">
     <div className="container-wide">
       <div className="grid gap-10 md:grid-cols-[.82fr_1.18fr]">
-        <div><div className="eyebrow">SEBUAH CARA YANG LEBIH JELAS</div><h2 className="display-font mt-4 max-w-[430px] text-[clamp(2.6rem,4.5vw,4rem)] font-semibold leading-[1.02]">Dari persoalan,<br /><span className="text-[#8bdcff]">ke langkah nyata.</span></h2><p className="mt-5 max-w-[400px] text-[14px] leading-7 text-[#9baab2]">KontraktorAI menyatukan berbagai pintu masuk ekosistem konstruksi. Bukan untuk menggantikan keahlian Anda—melainkan membantu melihat pilihan dengan lebih terang.</p>
+        <div><div className="eyebrow">DISIPLIN PART 03 · VALIDASI SEBELUM PRODUK</div><h2 className="display-font mt-4 max-w-[430px] text-[clamp(2.6rem,4.5vw,4rem)] font-semibold leading-[1.02]">Dari persoalan,<br /><span className="text-[#8bdcff]">ke solusi teruji.</span></h2><p className="mt-5 max-w-[400px] text-[14px] leading-7 text-[#9baab2]">Nilai hadir saat pekerjaan pelanggan menjadi lebih baik. Teknologi adalah salah satu cara; hasil yang relevan adalah ukurannya.</p>
           <Link href="/news" className="mt-7 inline-flex items-center gap-2 text-[12px] font-semibold text-[#8bdcff] hover:gap-3" data-testid="link-how-insights">Lihat intelijen industri <ArrowRight size={14} /></Link>
         </div>
         <div className="divide-y divide-white/[.1] border-y border-white/[.1]">
@@ -202,32 +207,34 @@ function HowItWorks() {
 
 function BusinessModel() {
   const units = [
-    { no: '01', title: 'Digital Development', text: 'Pengembangan digital untuk kebutuhan proses, data, dan cara kerja industri.', icon: Layers3 },
-    { no: '02', title: 'SaaS & AI Products', text: 'Produk perangkat lunak dan kapabilitas AI yang dirancang untuk konteks pekerjaan nyata.', icon: Sparkles },
-    { no: '03', title: 'Consulting & Advisory', text: 'Pendampingan dan perspektif ahli untuk membantu organisasi menentukan langkah.', icon: Compass },
-    { no: '04', title: 'Knowledge & Academy', text: 'Pengetahuan terapan dan pengembangan kompetensi bagi pelaku industri.', icon: BookOpen },
-    { no: '05', title: 'Business Collaboration', text: 'Kolaborasi yang mempertemukan kebutuhan, keahlian, dan peluang yang relevan.', icon: UsersRound },
-    { no: '06', title: 'Industry Solutions', text: 'Solusi lintas bidang yang bertumbuh dari tantangan spesifik sektor.', icon: HardHat },
+    { no: '01', title: 'Digital Development', text: 'Pengembangan digital untuk kebutuhan proses, data, dan cara kerja.', icon: Layers3 },
+    { no: '02', title: 'SaaS & AI Products', text: 'Produk perangkat lunak dan AI yang dibentuk dari kebutuhan tervalidasi.', icon: Sparkles },
+    { no: '03', title: 'Consulting & Advisory', text: 'Pendampingan untuk membantu organisasi menentukan dan menjalankan langkah.', icon: Compass },
+    { no: '04', title: 'Knowledge & Academy', text: 'Pengetahuan terapan dan pengembangan kompetensi bagi pelaku usaha.', icon: BookOpen },
+    { no: '05', title: 'Business Collaboration', text: 'Kolaborasi yang mempertemukan kebutuhan, keahlian, dan peluang.', icon: UsersRound },
+    { no: '06', title: 'Industry Solutions', text: 'Solusi spesifik untuk tantangan pada sektor industri prioritas.', icon: HardHat },
+  ];
+  const productLevels = [
+    { no: '01', title: 'Entry Products', text: 'Kebutuhan awal dengan ruang lingkup ringkas dan proses implementasi sederhana.' },
+    { no: '02', title: 'Business Solutions', text: 'Kebutuhan proses atau operasional yang memerlukan solusi lebih menyeluruh.' },
+    { no: '03', title: 'Recurring Products', text: 'Produk berulang yang dipertimbangkan setelah kebutuhan dan penggunaan terbukti.' },
   ];
   const phases = [
-    { id: '01', title: 'Mulai dari pekerjaan nyata', items: 'Project work · Consulting · Training · Produk pengetahuan digital', note: 'Fondasi awal untuk arus kas dan validasi kebutuhan pelanggan.' },
-    { id: '02', title: 'Bangun penggunaan berulang', items: 'SaaS subscription · AI usage credits', note: 'Dikembangkan seiring solusi menemukan kebutuhan dan pola penggunaan yang tepat.' },
-    { id: '03', title: 'Perkuat hubungan pelanggan', items: 'Membership · Enterprise licensing', note: 'Peluang setelah produk, dukungan, dan proposisi nilai siap.' },
-    { id: '04', title: 'Perluas kolaborasi pasar', items: 'Marketplace · Komisi transaksi · Sponsored content', note: 'Bergantung pada mitra, kepercayaan, verifikasi, dan aktivitas transaksi.' },
-    { id: '05', title: 'Kembangkan intelijen industri', items: 'Industry reports · API · Enterprise ecosystem', note: 'Arah lanjutan setelah model dan fondasi data tervalidasi.' },
+    { id: '01', title: 'Arus kas tahun pertama: layanan', items: 'Jasa dan pendampingan berbasis kebutuhan yang tervalidasi', note: 'Pendekatan awal untuk melayani kebutuhan pelanggan sekaligus belajar langsung; bukan klaim ketersediaan penawaran tertentu.' },
+    { id: '02', title: 'Bangun SaaS secara bertahap', items: 'Produk digital dan SaaS setelah pola solusi berulang terlihat', note: 'Dikembangkan seiring validasi masalah, solusi, kesediaan membayar, dan kesiapan standardisasi.' },
   ];
   return <section id="model-bisnis" className="relative overflow-hidden border-y border-white/[.08] bg-[#111c23] py-20 md:py-28">
     <div className="absolute right-[-180px] top-[-180px] h-[500px] w-[500px] rounded-full border border-[#8bdcff]/[.08]" />
     <div className="container-wide relative">
       <div className="grid gap-8 border-b border-white/10 pb-9 md:grid-cols-[1fr_.72fr] md:items-end">
-      <div><div className="eyebrow">ARAH MODEL BISNIS · BAGIAN 02</div><h2 className="display-font mt-4 max-w-[740px] text-[clamp(2.7rem,5vw,4.8rem)] font-semibold leading-[.98]">Satu ekosistem.<br /><span className="text-[#8bdcff]">Enam cara mencipta nilai.</span></h2></div>
-        <p className="max-w-[470px] text-[13px] leading-6 text-[#a4b2ba]">Model hibrida menghubungkan layanan, produk, pengetahuan, dan kolaborasi. Fokus pelanggan awal: UMKM kontraktor serta profesional industri.</p>
+      <div><div className="eyebrow">ARAH MODEL BISNIS · BAGIAN 02</div><h2 className="display-font mt-4 max-w-[740px] text-[clamp(2.7rem,5vw,4.8rem)] font-semibold leading-[.98]">Layanan lebih dulu.<br /><span className="text-[#8bdcff]">Produk bertahap.</span></h2></div>
+        <p className="max-w-[470px] text-[13px] leading-6 text-[#a4b2ba]">Model hibrida: layanan membantu arus kas tahun pertama sambil kebutuhan divalidasi, lalu SaaS dibangun bertahap. UMKM adalah fokus utama Gustafta; KontraktorAI mendalami UMKM kontraktor dan profesional industri.</p>
       </div>
       <div className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-2 border-l-2 border-[#8bdcff] bg-[#8bdcff]/[.055] px-4 py-3 text-[11px] leading-5 text-[#c4d2d9]" data-testid="status-business-model-recommendation">
         <span className="font-mono text-[9px] tracking-[.12em] text-[#8bdcff]">ARAH DISETUJUI · VALIDASI BERLANJUT</span>
-        <span>Model, segmen awal, dan prioritas pendapatan 12 bulan telah dipilih; harga dan unit economics tetap perlu diuji.</span>
+        <span>Model hibrida, fokus UMKM, dan prioritas layanan lebih dulu telah dipilih; harga dan unit economics tetap perlu diuji.</span>
       </div>
-      <div className="mt-8 grid gap-px border border-white/[.09] bg-white/[.09] sm:grid-cols-2 xl:grid-cols-3">
+      <div className="mt-8 grid gap-px border border-white/[.09] bg-white/[.09] sm:grid-cols-2 xl:grid-cols-3" data-testid="business-units">
         {units.map(unit => {
           const Icon = unit.icon;
           return <article key={unit.no} className="group min-h-[166px] bg-[#121e26] p-5 transition-colors hover:bg-[#172832]" data-testid={`business-unit-${unit.no}`}>
@@ -237,8 +244,18 @@ function BusinessModel() {
           </article>;
         })}
       </div>
+      <div className="mt-10" data-testid="product-level-taxonomy">
+        <div className="eyebrow">TAKSONOMI PENAWARAN · RENCANA STRATEGIS</div>
+        <div className="mt-4 grid gap-2 md:grid-cols-3">
+          {productLevels.map(level => <article key={level.no} className="border border-white/[.1] bg-white/[.025] p-4" data-testid={`product-level-${level.no}`}>
+            <div className="font-mono text-[10px] text-[#8bdcff]">LEVEL {level.no}</div>
+            <h3 className="mt-2 text-[14px] font-semibold text-[#e5edf0]">{level.title}</h3>
+            <p className="mt-2 text-[11px] leading-5 text-[#91a0a8]">{level.text}</p>
+          </article>)}
+        </div>
+      </div>
       <div className="mt-14 grid gap-8 md:grid-cols-[.72fr_1.28fr]">
-        <div><div className="eyebrow">URUTAN PENGEMBANGAN PENDAPATAN</div><h3 className="display-font mt-3 max-w-[350px] text-3xl font-semibold leading-tight text-[#e6eef1]">Bertumbuh dari layanan ke skala.</h3><p className="mt-4 max-w-[350px] text-[12px] leading-6 text-[#91a0a8]">Prioritas 12 bulan pertama dimulai dari jasa dan konsultasi, sambil mengembangkan SaaS bertahap.</p></div>
+        <div><div className="eyebrow">URUTAN PENGEMBANGAN PENDAPATAN</div><h3 className="display-font mt-3 max-w-[350px] text-3xl font-semibold leading-tight text-[#e6eef1]">Validasi lewat layanan.</h3><p className="mt-4 max-w-[350px] text-[12px] leading-6 text-[#91a0a8]">Prioritas tahun pertama: arus kas dari layanan sambil membangun SaaS bertahap. Tidak ada harga atau klaim produk siap jual.</p></div>
         <div className="divide-y divide-white/[.1] border-y border-white/[.1]">
           {phases.map(phase => <article key={phase.id} className="grid gap-3 py-5 sm:grid-cols-[44px_1fr]" data-testid={`business-phase-${phase.id}`}>
             <span className="font-mono text-[11px] text-[#8bdcff]">{phase.id}</span>
@@ -247,19 +264,19 @@ function BusinessModel() {
           </article>)}
         </div>
       </div>
-      <p className="mt-5 flex items-start gap-2 text-[10px] leading-5 text-[#778991]" data-testid="text-business-model-caveat"><Check size={13} className="mt-0.5 shrink-0 text-[#70bfdc]" />Arah bisnis telah disepakati; harga, margin, dan proyeksi tetap perlu divalidasi. Bagian ini tidak menyatakan layanan atau produk tertentu telah tersedia.</p>
+      <p className="mt-5 flex items-start gap-2 text-[10px] leading-5 text-[#778991]" data-testid="text-business-model-caveat"><Check size={13} className="mt-0.5 shrink-0 text-[#70bfdc]" />Enam unit bisnis dan tiga level penawaran adalah kerangka strategis, bukan katalog atau klaim ketersediaan. Harga, margin, dan proyeksi tetap perlu divalidasi.</p>
     </div>
   </section>;
 }
 
 function Ecosystem() {
   const tracks = [
-    { icon: MessagesSquare, name: 'AI & konsultasi', detail: 'Panduan awal dan perspektif ahli untuk membantu memetakan persoalan.' },
-    { icon: Wrench, name: 'Alat digital & proyek', detail: 'Pendukung kerja untuk perencanaan, administrasi, dan pengelolaan pekerjaan.' },
-    { icon: FileCheck2, name: 'Tender & kepatuhan', detail: 'Wawasan seputar perizinan, tender, dokumen, dan praktik kepatuhan.' },
-    { icon: Leaf, name: 'HSE & keberlanjutan', detail: 'Sumber pengetahuan untuk keselamatan kerja dan praktik yang lebih bertanggung jawab.' },
-    { icon: BookOpen, name: 'Akademi & kompetensi', detail: 'Materi belajar dan pengembangan kapasitas bagi profesional konstruksi.' },
-    { icon: UsersRound, name: 'Kolaborasi & jejaring', detail: 'Ruang untuk mengenal kebutuhan, bertukar wawasan, dan membuka peluang kerja sama.' },
+    { icon: MessagesSquare, name: 'AI & konsultasi', detail: 'Ruang kebutuhan untuk memetakan persoalan dan menentukan kapan keahlian manusia diperlukan.' },
+    { icon: Wrench, name: 'Alat digital & proyek', detail: 'Area eksplorasi kebutuhan perencanaan, administrasi, dan pengelolaan pekerjaan.' },
+    { icon: FileCheck2, name: 'Tender & kepatuhan', detail: 'Topik terkait perizinan, tender, dokumen, dan praktik kepatuhan.' },
+    { icon: Leaf, name: 'HSE & keberlanjutan', detail: 'Kebutuhan pengetahuan untuk keselamatan kerja dan praktik yang bertanggung jawab.' },
+    { icon: BookOpen, name: 'Akademi & kompetensi', detail: 'Area pengembangan kapasitas dan kompetensi profesional industri.' },
+    { icon: UsersRound, name: 'Kolaborasi & jejaring', detail: 'Peluang kebutuhan yang mempertemukan profesional dan mitra yang relevan.' },
   ];
   const marketWaves = [
     { number: '01', title: 'Konstruksi', detail: 'Fokus pertama: kontraktor UMKM dan profesional industri.' },
@@ -269,14 +286,14 @@ function Ecosystem() {
   return <section id="tentang" className="bg-[#0e171d] py-20 md:py-28">
     <div className="container-wide">
       <div className="flex flex-col justify-between gap-6 border-b border-white/10 pb-8 md:flex-row md:items-end">
-        <div><div className="eyebrow">GUSTAFTA · TRILOGI GUSTAFTA · KONTRAKTORAI</div><h2 className="display-font mt-4 max-w-[700px] text-[clamp(2.7rem,5vw,4.6rem)] font-semibold leading-[.98]">Satu manifesto.<br />Solusi untuk industri.</h2></div>
-        <p className="max-w-[380px] text-[13px] leading-6 text-[#9ba9b1]">Gustafta adalah brand induk. Trilogi Gustafta menjadi manifesto dan metodologi; KontraktorAI menerapkannya sebagai ekosistem industri pertama.</p>
+        <div><div className="eyebrow">GUSTAFTA · TRILOGI GUSTAFTA · KONTRAKTORAI</div><h2 className="display-font mt-4 max-w-[700px] text-[clamp(2.7rem,5vw,4.6rem)] font-semibold leading-[.98]">UMKM sebagai pangkal.<br />Industri sebagai fokus.</h2></div>
+        <p className="max-w-[380px] text-[13px] leading-6 text-[#9ba9b1]">Gustafta adalah brand induk dengan pasar utama UMKM. Trilogi Gustafta menjadi manifesto dan metodologi; KontraktorAI adalah brand industri yang didukung Gustafta, dengan fokus pada kebutuhan sektor dan hasil kerja.</p>
       </div>
       <div className="grid border-b border-white/10 py-7 md:grid-cols-3">
         <article className="border-b border-white/[.09] py-5 md:border-b-0 md:border-r md:pr-7" data-testid="brand-gustafta">
           <div className="font-mono text-[10px] tracking-[.12em] text-[#8bdcff]">BRAND INDUK</div>
           <h3 className="mt-3 text-lg font-semibold text-[#e7eef1]">Gustafta</h3>
-          <p className="mt-2 text-[12px] leading-5 text-[#91a0a8]">Ekosistem bisnis dan inovasi berbasis pengetahuan, kolaborasi, dan AI.</p>
+          <p className="mt-2 text-[12px] leading-5 text-[#91a0a8]">Melayani pasar UMKM secara luas melalui pengetahuan, kolaborasi, serta solusi digital dan AI yang berangkat dari kebutuhan nyata.</p>
           <p className="mt-4 text-[11px] font-medium text-[#c5d5dc]">Knowledge, Collaboration &amp; Creation through AI</p>
         </article>
         <article className="border-b border-white/[.09] py-5 md:border-b-0 md:border-r md:px-7" data-testid="brand-trilogi">
@@ -285,15 +302,15 @@ function Ecosystem() {
           <p className="mt-2 text-[12px] leading-6 text-[#91a0a8]">Dari Monolog ke Dialog.<br />Dari Dialog ke Kolaborasi.<br />Dari Dialog ke Kreasi.</p>
         </article>
         <article className="py-5 md:pl-7" data-testid="brand-kontraktorai">
-          <div className="font-mono text-[10px] tracking-[.12em] text-[#8bdcff]">EKOSISTEM INDUSTRI PERTAMA</div>
+          <div className="font-mono text-[10px] tracking-[.12em] text-[#8bdcff]">BRAND INDUSTRI DIDUKUNG GUSTAFTA</div>
           <h3 className="mt-3 text-lg font-semibold text-[#e7eef1]">KontraktorAI</h3>
-          <p className="mt-2 text-[12px] leading-5 text-[#91a0a8]">Penerapan Trilogi Gustafta untuk pasar konstruksi, energi, ketenagalistrikan, pertambangan, dan lingkungan.</p>
+          <p className="mt-2 text-[12px] leading-5 text-[#91a0a8]">Portal solusi digital dan AI yang menghubungkan tantangan industri dengan langkah dan hasil yang relevan—bukan teknologi untuk teknologi.</p>
         </article>
       </div>
       <div className="py-8" data-testid="market-entry-waves">
         <div className="flex flex-col justify-between gap-3 sm:flex-row sm:items-end">
           <div><div className="eyebrow">FOKUS PASAR AWAL</div><h3 className="display-font mt-3 text-3xl font-semibold text-[#e7eef1] md:text-4xl">Bertahap, bukan serentak.</h3></div>
-          <p className="max-w-[390px] text-[12px] leading-5 text-[#91a0a8]">Lima sektor membentuk satu ekosistem industri yang saling beririsan. Pemasaran dimulai dari konstruksi, lalu berkembang setelah model awal terbukti.</p>
+          <p className="max-w-[390px] text-[12px] leading-5 text-[#91a0a8]">Spesialisasi KontraktorAI mencakup lima sektor dalam tiga gelombang. Ekosistem pasarnya juga mencakup profesional serta mitra teknologi dan bisnis.</p>
         </div>
         <div className="mt-5 grid gap-2 md:grid-cols-3">
           {marketWaves.map((wave) => <article key={wave.number} className="border border-white/[.1] bg-white/[.025] p-4" data-testid={`market-wave-${wave.number}`}>
@@ -304,7 +321,7 @@ function Ecosystem() {
         </div>
       </div>
       <div className="border-t border-white/10 pt-8">
-        <div className="eyebrow">SOLUSI DI DALAM EKOSISTEM</div>
+        <div className="eyebrow">RUANG KEBUTUHAN DI DALAM EKOSISTEM</div>
       <div className="mt-2 grid md:grid-cols-2">
         {tracks.map((track, i) => {
           const Icon = track.icon;
@@ -314,6 +331,11 @@ function Ecosystem() {
           </a>;
         })}
       </div>
+      <p className="mt-4 text-[10px] leading-5 text-[#778991]" data-testid="text-ecosystem-tracks-note">Kategori ini memetakan area kebutuhan, bukan pernyataan bahwa layanan atau produk tertentu sudah tersedia.</p>
+        <div className="mt-4 flex flex-col gap-2 border-l-2 border-[#8bdcff] bg-[#8bdcff]/[.055] px-4 py-3 sm:flex-row sm:items-center sm:justify-between" data-testid="market-ecosystem-audience">
+          <span className="font-mono text-[9px] tracking-[.12em] text-[#8bdcff]">PASAR EKOSISTEM</span>
+          <span className="text-[11px] leading-5 text-[#c3d0d6]">Profesional industri · mitra teknologi · mitra bisnis</span>
+        </div>
       </div>
     </div>
   </section>;
@@ -356,14 +378,14 @@ function StartBlock() {
 function Footer() {
   return <footer className="bg-[#0b1217]">
     <div className="container-wide grid gap-10 py-12 md:grid-cols-[1.1fr_.9fr] md:py-16">
-      <div><Brand light /><p className="mt-4 max-w-[365px] text-[12px] leading-6 text-[#91a0a8]">Ekosistem digital untuk membantu bisnis dan profesional konstruksi Indonesia menemukan pengetahuan, alat, dan dukungan yang relevan.</p></div>
+      <div><Brand light /><p className="mt-4 max-w-[365px] text-[12px] leading-6 text-[#91a0a8]">Portal solusi digital dan AI untuk UMKM kontraktor serta profesional industri Indonesia, sebagai brand vertikal Gustafta yang berfokus pada hasil nyata.</p></div>
       <div className="grid grid-cols-2 gap-8 sm:grid-cols-3">
         <div><div className="eyebrow !text-[9px]">JELAJAHI</div><a href="#solusi" className="mt-4 block text-[12px] text-[#a9b6bd] hover:text-[#8bdcff]" data-testid="link-footer-solusi">Peta solusi</a><a href="#wawasan" className="mt-3 block text-[12px] text-[#a9b6bd] hover:text-[#8bdcff]" data-testid="link-footer-wawasan">Wawasan</a></div>
         <div><div className="eyebrow !text-[9px]">EKOSISTEM</div><a href="#tentang" className="mt-4 block text-[12px] text-[#a9b6bd] hover:text-[#8bdcff]" data-testid="link-footer-ekosistem">Tentang portal</a><a href="#model-bisnis" className="mt-3 block text-[12px] text-[#a9b6bd] hover:text-[#8bdcff]" data-testid="link-footer-model-bisnis">Arah model bisnis</a><a href="#cara-kerja" className="mt-3 block text-[12px] text-[#a9b6bd] hover:text-[#8bdcff]" data-testid="link-footer-cara-kerja">Cara kerja</a></div>
         <div className="col-span-2 sm:col-span-1"><div className="eyebrow !text-[9px]">UNTUK SIAPA</div><p className="mt-4 text-[12px] leading-5 text-[#a9b6bd]">Kontraktor UMKM<br />Konsultan konstruksi<br />Tenaga ahli & profesional</p></div>
       </div>
     </div>
-    <div className="container-wide flex flex-col justify-between gap-3 border-t border-white/[.08] py-4 text-[10px] text-[#71818a] sm:flex-row"><span>© KontraktorAI · Ekosistem konstruksi Indonesia</span><span>Konten informatif, bukan pengganti nasihat profesional.</span></div>
+      <div className="container-wide flex flex-col justify-between gap-3 border-t border-white/[.08] py-4 text-[10px] text-[#71818a] sm:flex-row"><span>© Gustafta · KontraktorAI · Portal solusi industri Indonesia</span><span>Konten informatif, bukan pengganti nasihat profesional.</span></div>
   </footer>;
 }
 

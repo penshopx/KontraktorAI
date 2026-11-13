@@ -193,7 +193,10 @@ function NewsHeader() {
     <div className="container-wide flex h-[72px] items-center justify-between">
       <Link href="/" className="brand-lockup flex items-center gap-2.5" data-testid="link-news-brand-home">
         <span className="brand-mark"><span /><span /><span /></span>
-        <span className="font-semibold tracking-[-.04em]">Kontraktor<span className="text-[#8bdcff]">AI</span></span>
+        <span className="flex flex-col leading-none">
+          <span className="font-semibold tracking-[-.04em]">Kontraktor<span className="text-[#8bdcff]">AI</span></span>
+          <span className="mt-1.5 font-mono text-[8px] tracking-[.13em] text-[#9aabb4]">BY GUSTAFTA</span>
+        </span>
       </Link>
       <nav className="hidden items-center gap-7 md:flex" aria-label="Navigasi portal">
         <Link href="/" className="nav-link text-[13px]" data-testid="link-news-home">Beranda</Link>
@@ -224,8 +227,8 @@ export function NewsLanding() {
   const [search, setSearch] = useState('');
   const [activeChannel, setActiveChannel] = useState('Semua kanal');
   usePageMetadata(
-    'News & Intelijen Industri | KontraktorAI',
-    'Contoh format berita dan wawasan industri KontraktorAI. Materi demo, bukan berita terkini atau terverifikasi.',
+    'News & Intelijen Industri | KontraktorAI by Gustafta',
+    'Contoh format editorial untuk portal industri KontraktorAI, brand vertikal Gustafta. Materi demo, bukan berita terkini atau terverifikasi.',
   );
   const filtered = useMemo(() => editorials.filter(item => {
     const matchesChannel = activeChannel === 'Semua kanal' || item.channel === activeChannel;
@@ -239,9 +242,9 @@ export function NewsLanding() {
       <div className="absolute inset-0 -z-10 grid-paper opacity-50" />
       <div className="container-wide grid gap-8 py-14 md:grid-cols-[1.15fr_.85fr] md:items-end md:py-20">
         <div className="reveal">
-          <div className="eyebrow flex items-center gap-3"><span className="h-px w-8 bg-[#8bdcff]" />PUSAT INFORMASI INDUSTRI</div>
+          <div className="eyebrow flex items-center gap-3"><span className="h-px w-8 bg-[#8bdcff]" />GUSTAFTA · BRAND INDUK <span className="text-[#71848d]">/</span> KONTRAKTORAI · NEWS INDUSTRI</div>
           <h1 className="display-font mt-5 max-w-[760px] text-[clamp(3.1rem,7vw,6rem)] font-semibold leading-[.96]">Baca konteks.<br /><span className="text-[#8bdcff]">Pilih langkah.</span></h1>
-          <p className="mt-6 max-w-[580px] text-[15px] leading-7 text-[#a8b6c0]">Intelijen industri yang menghubungkan isu konstruksi, energi, listrik, tambang, dan lingkungan dengan tindakan praktis bagi bisnis dan profesional Indonesia.</p>
+          <p className="mt-6 max-w-[580px] text-[15px] leading-7 text-[#a8b6c0]">KontraktorAI adalah portal solusi digital dan AI Gustafta untuk UMKM kontraktor dan profesional industri. Cakupan lima sektor berkembang bertahap: konstruksi; energi dan ketenagalistrikan; lalu pertambangan dan lingkungan.</p>
         </div>
         <div className="border border-white/10 bg-[#151f26] p-5 md:mb-1" data-testid="panel-news-editorial-status">
           <div className="flex items-center justify-between"><span className="eyebrow !text-[9px]">STATUS MODUL</span><span className="font-mono text-[10px] text-[#f0c77e]">PRATINJAU</span></div>

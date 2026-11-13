@@ -19,7 +19,10 @@ metodologi, dan nama portal yang digunakan adalah **KontraktorAI**.
 - **Knowledge, Collaboration & Creation through AI** adalah deskripsi positioning
   berbahasa Inggris bagi pendekatan bisnis Gustafta; manifesto tetap menjadi
   identitas komunikasi utama.
-- **KontraktorAI** adalah ekosistem industri pertama, bukan nama pengganti Gustafta.
+- Arsitektur merek adalah **endorsed brand**: Gustafta sebagai master brand dan
+  **KontraktorAI** sebagai brand industri yang didukung Gustafta.
+- Pasar utama Gustafta adalah UMKM secara luas; KontraktorAI memusatkan
+  spesialisasi pada UMKM kontraktor dan profesional industri.
 - Fokus pasar awal mencakup lima sektor yang saling beririsan: konstruksi, energi,
   ketenagalistrikan, pertambangan, dan lingkungan.
 - Penetrasi pasar dilakukan berurutan: konstruksi; energi dan ketenagalistrikan;
@@ -27,6 +30,28 @@ metodologi, dan nama portal yang digunakan adalah **KontraktorAI**.
   bisnis, produk, dan operasional pada fokus awal.
 - Teknologi umum boleh dibangun jika penerapan dan pemasarannya lebih dahulu
   memprioritaskan lima sektor tersebut.
+
+## Keputusan strategis Bagian 03
+
+- Strategi pasar: **UMKM-first, industry-specialized**.
+- Segmentasi terdiri dari tiga lapisan: UMKM sebagai pasar utama; lima sektor
+  sebagai pasar spesialis melalui KontraktorAI; serta profesional, mitra
+  teknologi/bisnis, institusi pendidikan, dan komunitas sebagai pasar ekosistem.
+- Proposisi nilai Gustafta berfokus pada peningkatan kemampuan, produktivitas,
+  dan daya saing melalui pengetahuan, kolaborasi, dan kreasi berbasis AI.
+- Proposisi nilai KontraktorAI berfokus pada solusi AI dan digitalisasi yang
+  memahami kebutuhan teknis serta operasional lima sektor.
+- ICP niche UMKM masih perlu disaring berdasarkan masalah nyata, kebutuhan, dan
+  kemampuan membayar; contoh segmen bukan bukti permintaan atau pilihan final.
+- Product-market fit mengikuti urutan: identifikasi masalah, validasi solusi,
+  validasi berbayar, standardisasi, lalu productization.
+- Penawaran dikelompokkan menjadi Entry Products, Business Solutions, dan
+  Recurring Products untuk perencanaan; pengelompokan bukan klaim produk aktif.
+- Jalur pengembangan Bagian 04 dibedakan menjadi jalur UMKM Gustafta dan jalur
+  industri KontraktorAI, dengan teknologi dan kemampuan pengembangan yang dapat
+  digunakan bersama.
+- Target KPI numerik ditetapkan setelah baseline tersedia; pengukuran brand,
+  pasar, pelanggan, dan pendapatan ditinjau bulanan/kuartalan.
 
 ## Prioritas pelaksanaan
 
@@ -72,7 +97,9 @@ mitra, dan komunitas.
 
 **Kriteria penerimaan**
 - Materi publik dan tim menggunakan nama **KontraktorAI** untuk portal.
-- Peran brand induk dan Trilogi Gustafta dibedakan secara konsisten.
+- Gustafta tampil sebagai master brand dan KontraktorAI sebagai endorsed brand,
+  bukan merek industri yang berdiri sendiri.
+- Peran Trilogi Gustafta sebagai manifesto/metodologi dibedakan secara konsisten.
 - Manifesto Trilogi menjadi identitas komunikasi utama; positioning Inggris
   menjelaskan pendekatan bisnis, bukan menggantikan manifesto.
 - Lima sektor awal dan urutan masuk pasar terdokumentasi: konstruksi; energi dan
@@ -83,18 +110,19 @@ mitra, dan komunitas.
 
 **Tujuan:** menentukan pelanggan, penawaran, harga, serta kelayakan ekonomi.
 
-**Keputusan pengguna:** model hybrid layanan dan produk; prioritas pelanggan
-awal UMKM kontraktor serta profesional industri; dan pendapatan 12 bulan pertama
-dimulai dari jasa/konsultasi sambil membangun SaaS bertahap. Harga, margin,
-proyeksi, dan kelayakan tiap penawaran tetap harus divalidasi sebelum menjadi
-kebijakan komersial.
+**Keputusan pengguna:** model hybrid layanan dan produk; UMKM sebagai pasar
+utama Gustafta; dan pendapatan 12 bulan pertama dimulai dari jasa/konsultasi
+sambil membangun SaaS bertahap. Untuk portal industri KontraktorAI, fokus awal
+tetap pada UMKM kontraktor dan profesional industri. Harga, margin, proyeksi,
+dan kelayakan tiap penawaran tetap harus divalidasi sebelum menjadi kebijakan
+komersial.
 
 **Hasil kerja**
 - Model hybrid Gustafta dengan enam unit: Digital Development; SaaS & AI
   Products; Consulting & Advisory; Knowledge & Academy; Business Collaboration;
   dan Industry Solutions.
-- Matriks segmen dan proposisi nilai per segmen, dengan UMKM kontraktor serta
-  profesional industri sebagai rekomendasi prioritas awal.
+- Matriks segmen dan proposisi nilai per segmen, dengan UMKM sebagai pasar utama
+  Gustafta serta kontraktor UMKM/profesional sebagai audiens awal KontraktorAI.
 - Peta delapan sumber pendapatan: project-based, SaaS subscription, AI usage /
   credit, konsultasi, pendidikan/pengetahuan, membership, marketplace/transaksi,
   serta enterprise licensing/integration.
@@ -122,23 +150,33 @@ kebijakan komersial.
 ### 03 — Portofolio Produk dan Pemetaan Aplikasi
 
 **Tujuan:** mengubah daftar aplikasi dan repositori menjadi inventaris yang
-memuat status kesiapan dan keputusan tindak lanjut.
+memuat status kesiapan dan keputusan tindak lanjut, lalu memprioritaskan produk
+berdasarkan kebutuhan pasar, arus kas, dan peluang pendapatan berulang.
 
 **Hasil kerja**
 - Master Product Inventory dan matriks audit aplikasi.
-- Pemetaan ke delapan pilar KontraktorAI.
+- Pemetaan dua jalur: produk UMKM di bawah Gustafta dan solusi industri melalui
+  KontraktorAI.
+- Pengelompokan produk ke Entry Products, Business Solutions, dan Recurring
+  Products.
 - Klasifikasi strategis Core Product, Supporting Product, Experimental Product,
   atau Legacy / Review.
 - Penilaian status Concept, Prototype, Beta, Production, atau Commercial Ready.
 - Keputusan integrasikan, kembangkan, konsolidasikan, tunda, atau hentikan.
+- Skor prioritas berdasarkan masalah pelanggan, permintaan berbayar, kecepatan
+  implementasi, biaya, potensi cashflow, dan kemungkinan standardisasi/SaaS.
 
 **Kriteria penerimaan**
 - Setiap entri memiliki pemilik/kontak yang perlu dikonfirmasi, fungsi, status,
   teknologi, dependensi, lisensi, risiko, dan langkah berikutnya.
 - Kategori strategis produk dibedakan dari status kesiapan teknis; keduanya
   tercatat agar produk eksperimen tidak disalahartikan sebagai siap komersial.
+- Setiap produk memiliki pasar/segmen sasaran, kebutuhan pelanggan, proposisi
+  nilai, jalur merek, biaya, dan peluang pendapatan yang dapat diuji.
 - Tidak ada produk yang disebut siap produksi atau siap dijual sebelum audit
   fungsi, keamanan, kepemilikan, dan operasional.
+- Produk yang belum divalidasi pasar tidak diprioritaskan hanya karena
+  menggunakan teknologi baru atau menarik secara teknis.
 
 ### 04 — Arsitektur Portal dan UI/UX
 
@@ -148,6 +186,10 @@ memuat status kesiapan dan keputusan tindak lanjut.
 - Sitemap dan spesifikasi navigasi portal.
 - Alur pengguna Discover, Connect, dan Create.
 - Spesifikasi beranda, News, solusi, katalog, konsultasi, academy, dan akun.
+- Arsitektur endorsed brand dan pengalaman yang membedakan kebutuhan pasar utama
+  UMKM Gustafta dari jalur spesialis industri KontraktorAI.
+- Pesan value proposition, kebutuhan pelanggan, dan status penawaran yang
+  konsisten pada setiap jalur.
 - UI responsif serta sistem visual untuk portal.
 
 **Kriteria penerimaan**
@@ -275,6 +317,10 @@ penggunaan solusi serta kemitraan.
 - Strategi SEO dan distribusi News.
 - Kalender editorial dan newsletter.
 - Rencana webinar, komunitas, kemitraan asosiasi, dan rujukan.
+- Jalur go-to-market Gustafta untuk UMKM dan jalur spesialis industri
+  KontraktorAI memiliki pesan, kanal, dan proses penjualan yang dibedakan.
+- Jalur kolaborasi untuk mitra teknologi, bisnis, pendidikan, dan komunitas
+  profesional.
 - Rencana pengukuran konversi dari artikel ke layanan/produk.
 - Strategi akuisisi berfokus pada konstruksi lebih dahulu; pemasaran energi dan
   ketenagalistrikan menyusul, kemudian pertambangan dan lingkungan.
@@ -292,9 +338,10 @@ hasil setiap paket.
 **Hasil kerja**
 - Project charter, backlog fitur, jadwal, estimasi biaya, dan daftar risiko.
 - Penanggung jawab dan dependensi untuk setiap butir.
-- KPI untuk akuisisi, aktivasi, konversi, pendapatan berulang, layanan, academy,
-  retensi, keuangan, News, kolaborasi, dan dampak.
-- Ritme tinjauan bulanan dan pencatatan keputusan.
+- KPI untuk leads berkualitas, konversi, pelanggan berbayar, pendapatan rata-rata
+  per pelanggan, pendapatan berulang, retensi, akuisisi/brand, layanan, academy,
+  keuangan, News, kolaborasi, dan dampak.
+- Ritme tinjauan bulanan dan kuartalan serta pencatatan keputusan.
 
 **Kriteria penerimaan**
 - Setiap butir backlog memiliki tujuan, prioritas, estimasi, dependensi, pemilik,
