@@ -107,7 +107,18 @@ professional competency ecosystem:
 - Treat year-one activity and blueprint counts as plans, not proof of current
   programs, partnerships, participants, or results.
 
-**Why:** the user confirmed the Part 02–09 business choices and the Part 03
+For Part 10, the user locked these architectural directions, without locking
+specific vendors, products, budgets, or implementation specifications:
+
+- Hybrid cloud, database, development, and integration.
+- Centralized identity management moving toward SSO when ready.
+- Risk-based security and data-governance-first before expanding AI use.
+- Founder-led hybrid technology management with specialist/vendor support as
+  needed.
+- Prefer cloud-first, modular, portable systems and one source of truth per data
+  domain; integrate before customizing or building core components.
+
+**Why:** the user confirmed the Part 02–10 business choices and the Part 03
 endorsed-brand architecture and market approach.
 
 **How to apply:** use these priorities in Gustafta and KontraktorAI business
@@ -129,3 +140,6 @@ assumptions until baseline evidence exists.
 Apply Part 09 without implying official certification authority: distinguish
 Gustafta program certificates from credentials issued through authorized bodies,
 and treat Academy program counts as unachieved planning targets.
+Apply Part 10 as strategic direction rather than evidence that vendors are chosen
+or security controls are already implemented; evaluate providers, controls, and
+compliance against actual data, risk, cost, and operational needs.

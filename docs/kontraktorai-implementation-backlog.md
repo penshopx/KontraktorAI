@@ -288,6 +288,38 @@ metodologi, dan nama portal yang digunakan adalah **KontraktorAI**.
   dipublikasikan sebagai fakta sebelum produk, instruktur, syarat, biaya, dan
   mitra dikonfirmasi.
 
+## Keputusan strategis Bagian 10
+
+- Status Bagian 10: **FINAL & LOCKED** pada tingkat arah arsitektur. Vendor,
+  produk, anggaran, dan spesifikasi implementasi tetap dapat dievaluasi.
+- Infrastruktur: **Hybrid Cloud**—managed cloud sebagai awal, infrastruktur
+  khusus hanya bila kebutuhan bisnis, performa, keamanan, atau biaya membenarkan.
+- Database: **Hybrid Database**—fondasi data utama bersama dengan database
+  khusus per aplikasi bila diperlukan; konsistensi tetap mengikuti standar bersama.
+- Platform: **Hybrid Development**—no-code, low-code, dan custom dipilih menurut
+  kompleksitas, nilai bisnis, integrasi, dan kemampuan pemeliharaan.
+- Integrasi: **Hybrid Integration**—konektor dan otomasi siap pakai lebih dulu;
+  API, webhook, dan integration layer ditingkatkan seiring kompleksitas.
+- Identitas: pengelolaan terpusat secara bertahap, dengan SSO saat kebutuhan dan
+  kesiapan teknis mendukung.
+- Keamanan: **risk-based** menurut klasifikasi data dan kritikalitas layanan;
+  akun admin, pembayaran, data pelanggan, dan layanan inti mendapat prioritas.
+- Data & AI: **Data Governance First**—kualitas, kepemilikan, klasifikasi, dan
+  perlindungan data dibangun sebelum ekspansi analytics dan penggunaan AI.
+- Operasi teknologi: **Founder-Led Hybrid Management**—founder bertanggung jawab
+  atas arah; pelaksanaan didukung AI, vendor, konsultan, freelancer, dan
+  spesialis eksternal sesuai kebutuhan.
+- Prinsip resmi: cloud-first tanpa vendor lock-in; modular; Integrate First →
+  Customize Second → Build Core Last; satu sumber data utama per domain; API;
+  security by design; identitas konsisten; data governance; portabilitas;
+  efisiensi biaya dan kemudahan operasional.
+- Kandidat stack dalam blueprint bukan pilihan vendor atau komitmen pembelian.
+  Data pelanggan tidak otomatis boleh dipakai untuk AI, analitik lintas
+  pelanggan, publikasi, atau pemasaran.
+- Rincian kontrol dan kepatuhan ditetapkan berdasarkan klasifikasi risiko,
+  karakteristik layanan, kewajiban hukum yang berlaku, serta kemampuan operasional;
+  roadmap tidak menyatakan bahwa kontrol tersebut sudah diimplementasikan.
+
 ## Prioritas pelaksanaan
 
 Gelombang berikut adalah urutan awal, bukan komitmen durasi. Pekerjaan tata
@@ -630,6 +662,16 @@ dan transaksi yang sesuai.
 - Kontrol produk SaaS mencakup akses berbasis peran, pengelolaan secrets, audit
   log, backup/pemulihan, pembatasan penggunaan API, penilaian output AI, dan
   portabilitas data.
+- Delapan keputusan final Bagian 10: hybrid cloud, hybrid database, hybrid
+  development, hybrid integration, centralized identity menuju SSO, risk-based
+  security, data governance first, dan founder-led hybrid management.
+- Arsitektur identitas dan domain data bersama, system of record, integrasi API
+  atau konektor, serta kebijakan penggunaan data untuk analytics dan AI.
+- Standar data classification, persetujuan/dasar penggunaan, akses minimum,
+  retensi, penghapusan, pemisahan environment, credential management, audit,
+  respons insiden, backup, dan uji pemulihan sesuai risiko.
+- Evaluasi vendor mencakup biaya, keamanan, privasi, lokasi pemrosesan, lisensi,
+  dependensi, portabilitas, dan exit plan.
 - Model data untuk produk, News, pengguna/perusahaan, dan aktivitas yang relevan.
 - Kebijakan autentikasi, otorisasi, audit, privasi, retensi, dan pemulihan.
 - Tata kelola hak cipta, lisensi, sumber berita, serta penggunaan AI.
@@ -641,6 +683,14 @@ dan transaksi yang sesuai.
   biaya, status lisensi, dan mitigasi risiko yang terdokumentasi.
 - Proses rilis, pemantauan, pencadangan, dan pemulihan ditetapkan sebelum operasi
   produksi.
+- Keputusan arsitektur tidak dianggap sebagai pemilihan vendor; seluruh layanan,
+  biaya, lokasi data, dan lisensi diverifikasi sebelum penggunaan.
+- Akses dibatasi sesuai peran dan resource; administrator memakai kontrol
+  keamanan lebih tinggi; kredensial tidak ditanam di source code.
+- Data yang dikirim ke AI memiliki tujuan, izin, cakupan akses, dan kebutuhan
+  human review yang jelas; data lintas pelanggan dipisahkan.
+- Backup diuji pemulihannya, dan lingkungan serta perubahan sistem dikelola
+  dengan kontrol yang sesuai risiko.
 
 ### 11 — Marketing, Growth, dan Partnership
 

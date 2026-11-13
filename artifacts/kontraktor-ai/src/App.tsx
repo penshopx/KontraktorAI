@@ -381,6 +381,24 @@ function BusinessModel() {
     { title: 'LMS subscription', detail: 'Dikembangkan seiring pertumbuhan katalog dan peserta.' },
     { title: 'Sertifikasi', detail: 'Persiapan dan kemitraan eksternal sesuai kewenangan.' },
   ];
+  const technologyDecisions = [
+    { title: 'Hybrid cloud', detail: 'Utamakan layanan cloud terkelola; tambah infrastruktur khusus bila kebutuhan dan biaya membenarkannya.' },
+    { title: 'Hybrid database', detail: 'Gunakan fondasi data utama bersama; pisahkan database aplikasi jika perlu dengan standar konsistensi yang jelas.' },
+    { title: 'Hybrid development', detail: 'Pilih no-code, low-code, atau custom berdasarkan kompleksitas, nilai, dan kemampuan pemeliharaan.' },
+    { title: 'Hybrid integration', detail: 'Mulai dari konektor dan otomasi; tingkatkan API, webhook, dan integration layer saat sistem bertambah.' },
+    { title: 'Centralized identity', detail: 'Satukan identitas dan akses secara bertahap; terapkan SSO saat kebutuhan dan kesiapan teknis mendukung.' },
+    { title: 'Risk-based security', detail: 'Prioritaskan kontrol berdasarkan klasifikasi data dan kekritisan layanan, terutama akun admin dan transaksi.' },
+    { title: 'Data governance first', detail: 'Tata kualitas, kepemilikan, klasifikasi, dan perlindungan sebelum memperluas analitik atau penggunaan AI.' },
+    { title: 'Founder-led hybrid management', detail: 'Founder memegang arah; vendor, konsultan, freelancer, dan spesialis mendukung sesuai kebutuhan.' },
+  ];
+  const technologySafeguards = [
+    'Terapkan role dan pembatasan akses sesuai organisasi, kepemilikan, proyek, serta kebutuhan tugas; lindungi akun administrator dengan MFA.',
+    'Klasifikasikan data, tetapkan sumber data utama per domain, minimalkan pengumpulan, dan batasi retensi serta penggunaan lintas pelanggan.',
+    'Kelola kredensial di secret manager, pisahkan development/staging/production, dan catat perubahan penting.',
+    'Amankan integrasi dan penggunaan AI: batasi data yang dikirim, ruang lingkup izin, biaya API, serta tindakan otomatis berisiko.',
+    'Sediakan backup berkala, uji pemulihan, pencatatan insiden, dan prosedur kesinambungan sesuai tingkat kritikalitas.',
+    'Nilai biaya, lokasi pemrosesan, lisensi, privasi, portabilitas, dan rencana keluar sebelum memilih vendor.',
+  ];
   return <section id="model-bisnis" className="relative overflow-hidden border-y border-white/[.08] bg-[#111c23] py-20 md:py-28">
     <div className="absolute right-[-180px] top-[-180px] h-[500px] w-[500px] rounded-full border border-[#8bdcff]/[.08]" />
     <div className="container-wide relative">
@@ -739,6 +757,32 @@ function BusinessModel() {
           </div>
         </div>
         <p className="mt-6 border-l border-[#8bdcff]/50 pl-3 text-[9px] leading-5 text-[#758792]" data-testid="academy-year-one-target">Sasaran perencanaan tahun pertama: Academy aktif dengan LMS awal, pelatihan, konsultasi, dan mitra sertifikasi. Jumlah program, peserta, serta mitra pada blueprint adalah target validasi, bukan capaian saat ini atau jaminan hasil.</p>
+      </div>
+      <div id="bagian-10" className="mt-14 border-t border-white/10 pt-10" data-testid="technology-data-security-architecture">
+        <div className="grid gap-5 md:grid-cols-[.78fr_1.22fr] md:items-end">
+          <div><div className="eyebrow">BAGIAN 10 · TECHNOLOGY, DATA & SECURITY ARCHITECTURE</div><h3 className="display-font mt-3 max-w-[520px] text-3xl font-semibold leading-tight text-[#e6eef1] md:text-4xl">Hybrid, modular,<br /><span className="text-[#8bdcff]">aman sesuai risiko.</span></h3></div>
+          <div>
+            <span className="inline-flex items-center gap-2 border border-[#8bdcff]/25 bg-[#8bdcff]/[.06] px-3 py-1.5 font-mono text-[9px] tracking-[.1em] text-[#9eddf2]">KEPUTUSAN FINAL · 8 ARAH ARSITEKTUR TERKUNCI</span>
+            <p className="mt-3 max-w-[630px] text-[12px] leading-6 text-[#a7b5bc]">Fondasi teknologi Gustafta berkembang mengikuti kebutuhan bisnis dan validasi. Gunakan layanan terkelola dan integrasi lebih dahulu; tingkatkan custom infrastructure serta pengembangan khusus hanya bila layak dari sisi kebutuhan, keamanan, biaya, dan pemeliharaan.</p>
+          </div>
+        </div>
+        <div className="mt-6 grid gap-px border border-white/[.09] bg-white/[.09] sm:grid-cols-2 xl:grid-cols-4" data-testid="technology-decisions">
+          {technologyDecisions.map((decision, index) => <article key={decision.title} className="min-h-[145px] bg-[#121e26] p-4" data-testid={`technology-decision-${index + 1}`}>
+            <span className="font-mono text-[9px] tracking-[.1em] text-[#8bdcff]">ARAH 0{index + 1}</span>
+            <h4 className="mt-2 text-[12px] font-semibold text-[#e5edf0]">{decision.title}</h4>
+            <p className="mt-1.5 text-[10px] leading-5 text-[#91a0a8]">{decision.detail}</p>
+          </article>)}
+        </div>
+        <div className="mt-8 grid gap-5 lg:grid-cols-[.66fr_1.34fr]">
+          <div><div className="eyebrow">DATA GOVERNANCE & SECURITY BY DESIGN</div><h4 className="display-font mt-2 text-2xl font-semibold text-[#e6eef1]">Lindungi data sebelum memperluas penggunaannya.</h4><p className="mt-2 text-[10px] leading-5 text-[#8798a1]">Kontrol diterapkan sebanding dengan klasifikasi data dan tingkat kritikalitas aplikasi. Kepemilikan, tujuan penggunaan, dan hak akses harus jelas—terutama untuk data pelanggan, pembayaran, administrasi, dan AI.</p></div>
+          <ul className="grid gap-2 sm:grid-cols-2" data-testid="technology-safeguards">
+            {technologySafeguards.map((rule, index) => <li key={rule} className="flex gap-2 border border-white/[.08] bg-white/[.02] p-3 text-[10px] leading-5 text-[#a5b3ba]" data-testid={`technology-safeguard-${index + 1}`}><Check size={13} className="mt-0.5 shrink-0 text-[#8bdcff]" />{rule}</li>)}
+          </ul>
+        </div>
+        <div className="mt-6 flex flex-col gap-3 border border-white/[.1] bg-white/[.025] p-4 md:flex-row md:items-center md:justify-between" data-testid="technology-stack-status">
+          <div><div className="eyebrow">PRINSIP IMPLEMENTASI</div><p className="mt-1 text-[11px] leading-5 text-[#c2d0d6]">Cloud-first · modular · integrate first · satu sumber data utama per domain · portabilitas · biaya terkendali</p></div>
+          <p className="max-w-[410px] text-[9px] leading-5 text-[#8798a1]">Vendor, produk, anggaran, dan spesifikasi teknis belum dikunci. Kedelapan keputusan menetapkan arah, bukan bukti bahwa seluruh kontrol keamanan atau integrasi sudah diterapkan.</p>
+        </div>
       </div>
       <p className="mt-5 flex items-start gap-2 text-[10px] leading-5 text-[#778991]" data-testid="text-business-model-caveat"><Check size={13} className="mt-0.5 shrink-0 text-[#70bfdc]" />Enam unit bisnis dan tiga level penawaran adalah kerangka strategis, bukan katalog atau klaim ketersediaan. Harga, margin, dan proyeksi tetap perlu divalidasi.</p>
     </div>
