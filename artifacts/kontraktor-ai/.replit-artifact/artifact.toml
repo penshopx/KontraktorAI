@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "KontraktorAI"
+description = "Portal solusi digital untuk bisnis dan profesional konstruksi, energi, dan lingkungan. Temukan layanan, aplikasi, konsultasi, pelatihan, dan peluang kolaborasi dalam satu tempat."
+version = "1.0.0"
+id = "artifacts/kontraktor-ai"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 22633
+
+[services.development]
+run = "pnpm --filter @workspace/kontraktor-ai run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/kontraktor-ai", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/kontraktor-ai/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "22633"
+BASE_PATH = "/"
