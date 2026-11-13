@@ -92,7 +92,22 @@ For Part 08, the user finalized:
 - Prices and network/KPI quantities in the blueprint remain hypotheses and
   planning targets, not public prices or achieved results.
 
-**Why:** the user confirmed the Part 02–08 business choices and the Part 03
+For Part 09, the user finalized Gustafta Academy as a hybrid learning and
+professional competency ecosystem:
+
+- Serve individuals, professionals, UMKM, and companies through phased programs
+  in industry, AI/digital, and business.
+- Start with a ready-to-use LMS, integrate it over time, and custom-build only
+  when enrollment and repeated needs justify it.
+- Combine founder, network experts, trainers, and partners as instructors.
+- Issue Gustafta program completion certificates with precise descriptions;
+  external competency certification goes through authorized partners.
+- Monetize courses, subscriptions, corporate training, certification, and
+  consulting; prioritize paid courses, corporate training, and consulting first.
+- Treat year-one activity and blueprint counts as plans, not proof of current
+  programs, partnerships, participants, or results.
+
+**Why:** the user confirmed the Part 02–09 business choices and the Part 03
 endorsed-brand architecture and market approach.
 
 **How to apply:** use these priorities in Gustafta and KontraktorAI business
@@ -111,3 +126,6 @@ digital product before committing to SaaS scope or launch timing.
 Apply Part 08 as a managed, human-led marketplace until repeated verified
 activity supports digital self-service; treat network and pricing targets as
 assumptions until baseline evidence exists.
+Apply Part 09 without implying official certification authority: distinguish
+Gustafta program certificates from credentials issued through authorized bodies,
+and treat Academy program counts as unachieved planning targets.

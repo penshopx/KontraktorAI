@@ -261,6 +261,33 @@ metodologi, dan nama portal yang digunakan adalah **KontraktorAI**.
 - Target jaringan, pendapatan, transaksi, dan roadmap 12 bulan dari blueprint
   adalah sasaran validasi yang dapat disesuaikan, bukan bukti atau jaminan.
 
+## Keputusan strategis Bagian 09
+
+- Status Bagian 09: **FINAL**. Gustafta Academy adalah **Hybrid Professional
+  Competency Ecosystem** yang menggabungkan pelatihan, LMS, kompetensi,
+  sertifikasi, dan layanan profesional.
+- Target pasar mencakup individu, profesional, UMKM, dan perusahaan. Program
+  industri/teknis, AI/digital, serta bisnis/profesional dikembangkan bertahap.
+- LMS dimulai dari platform siap pakai, lalu integrasi; custom development hanya
+  dilakukan jika skala peserta dan kebutuhan berulang membenarkan investasi.
+- Model instruktur menggabungkan founder, ahli Experts Network, trainer, dan
+  mitra. Operasi tetap founder-led dan tidak memerlukan organisasi Academy besar
+  pada tahap awal.
+- Sertifikat Gustafta membuktikan keikutsertaan atau penyelesaian program sesuai
+  kriteria yang diumumkan. Asesmen/penerbitan sertifikasi eksternal dilakukan
+  melalui lembaga mitra yang berwenang. Jangan mengklaim kewenangan atau
+  akreditasi yang belum dimiliki.
+- Monetisasi final mencakup kursus, subscription, corporate training,
+  sertifikasi, dan konsultasi. Prioritas komersial tahun pertama adalah kursus
+  berbayar, corporate training, dan konsultasi profesional.
+- Sasaran operasional tahun pertama adalah Academy aktif dengan LMS awal,
+  pelatihan, konsultasi, dan mitra sertifikasi; angka jumlah program, peserta,
+  instruktur, klien, dan mitra dari blueprint merupakan target validasi, bukan
+  capaian saat ini atau jaminan hasil.
+- Harga, klaim sertifikasi, jadwal, katalog, dan ketersediaan program tidak
+  dipublikasikan sebagai fakta sebelum produk, instruktur, syarat, biaya, dan
+  mitra dikonfirmasi.
+
 ## Prioritas pelaksanaan
 
 Gelombang berikut adalah urutan awal, bukan komitmen durasi. Pekerjaan tata
@@ -566,11 +593,29 @@ dan transaksi yang sesuai.
 - Katalog kelas, jadwal, materi, evaluasi, dan riwayat belajar.
 - Peta integrasi LMS, Kompetensi Hub, bimtek, dan layanan profesional.
 - Aturan rujukan sertifikasi dan asesmen ke lembaga yang berwenang.
+- Gustafta Academy hybrid: kursus, LMS, pengembangan kompetensi, kemitraan
+  sertifikasi, dan Professional Services.
+- Peta pasar dan kurikulum bertahap untuk individu/profesional, UMKM/perusahaan,
+  program industri, AI/digital, dan bisnis/profesional.
+- LMS siap pakai, rencana integrasi identitas/CRM/pembayaran/sertifikat, dan
+  kriteria investasi untuk fitur custom.
+- Model instruktur founder + ahli jaringan + trainer + mitra; peran pengajar,
+  kewenangan, materi, dan evaluasi terdokumentasi.
+- Model pendapatan kursus, subscription, corporate training, sertifikasi, dan
+  konsultasi; fokus awal pada kursus berbayar, pelatihan perusahaan, dan
+  konsultasi profesional.
 
 **Kriteria penerimaan**
 - Status pelatihan dan sertifikat dibedakan dari sertifikasi resmi.
 - Informasi penyelenggara, persyaratan, jadwal, dan biaya jelas.
 - Alur peserta dapat ditelusuri dari pendaftaran hingga evaluasi.
+- Sertifikat internal menyebutkan dengan jelas bukti yang diberikan; klaim
+  sertifikasi kompetensi resmi hanya digunakan bila program dijalankan melalui
+  lembaga yang berwenang dan syaratnya dipenuhi.
+- Katalog dan LMS membedakan rencana, pendaftaran terbuka, aktif, dan selesai;
+  jangan tampilkan program atau mitra sebagai aktif tanpa konfirmasi.
+- Harga, jumlah program/peserta, kemitraan, dan target hasil tetap berlabel
+  asumsi atau sasaran internal hingga tervalidasi.
 
 ### 10 — Teknologi, Data, Keamanan, dan Tata Kelola
 

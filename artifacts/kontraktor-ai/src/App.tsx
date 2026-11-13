@@ -358,6 +358,29 @@ function BusinessModel() {
     'Ungkap biaya, komisi, peran, konflik kepentingan, dan penanganan sengketa secara tertulis.',
     'Gunakan penyedia pembayaran yang sesuai aturan; jangan menahan dana pihak ketiga sendiri tanpa dasar dan kepatuhan yang sesuai.',
   ];
+  const academyPillars = [
+    { title: 'Training & Academy', detail: 'Kursus, workshop, dan program pelatihan untuk kebutuhan industri dan bisnis.' },
+    { title: 'LMS & Digital Learning', detail: 'Materi digital, kuis, progres belajar, dan subscription secara bertahap.' },
+    { title: 'Competency & Certification', detail: 'Evaluasi program Gustafta serta kemitraan sertifikasi eksternal yang berwenang.' },
+    { title: 'Professional Services', detail: 'Konsultasi, mentoring, dan pendampingan profesional untuk individu dan organisasi.' },
+  ];
+  const academyProgramTracks = [
+    { title: 'Industri & teknis', detail: 'Konstruksi, energi, kelistrikan, pertambangan, dan lingkungan secara bertahap.' },
+    { title: 'AI & digital', detail: 'Produktivitas AI, otomasi, data, dan transformasi digital.' },
+    { title: 'Bisnis & profesional', detail: 'Manajemen bisnis dan proyek, leadership, serta keterampilan profesional.' },
+  ];
+  const lmsStages = [
+    { title: 'Platform siap pakai', detail: 'Mulai dengan katalog, materi, kuis, peserta, dan progres belajar.' },
+    { title: 'Integrasi', detail: 'Hubungkan website, akun, CRM, pembayaran, sertifikat, dan data peserta sesuai kesiapan.' },
+    { title: 'Pengembangan khusus', detail: 'Bangun fitur sendiri bila skala peserta dan kebutuhan berulang membenarkan investasi.' },
+  ];
+  const academyRevenue = [
+    { title: 'Kursus & pelatihan', detail: 'Kelas dan workshop berbayar menjadi jalur komersial awal.' },
+    { title: 'Corporate training', detail: 'Program pengembangan kapasitas yang disesuaikan untuk perusahaan.' },
+    { title: 'Konsultasi profesional', detail: 'Analisis, rekomendasi, mentoring, dan pendampingan.' },
+    { title: 'LMS subscription', detail: 'Dikembangkan seiring pertumbuhan katalog dan peserta.' },
+    { title: 'Sertifikasi', detail: 'Persiapan dan kemitraan eksternal sesuai kewenangan.' },
+  ];
   return <section id="model-bisnis" className="relative overflow-hidden border-y border-white/[.08] bg-[#111c23] py-20 md:py-28">
     <div className="absolute right-[-180px] top-[-180px] h-[500px] w-[500px] rounded-full border border-[#8bdcff]/[.08]" />
     <div className="container-wide relative">
@@ -661,6 +684,61 @@ function BusinessModel() {
           <ul className="mt-3 grid gap-2 sm:grid-cols-2">{marketplaceSafeguards.map((rule, index) => <li key={rule} className="flex gap-2 text-[10px] leading-5 text-[#a5b3ba]" data-testid={`marketplace-safeguard-${index + 1}`}><Check size={13} className="mt-0.5 shrink-0 text-[#8bdcff]" />{rule}</li>)}</ul>
         </div>
         <p className="mt-4 text-[9px] leading-5 text-[#758792]" data-testid="marketplace-availability-note">Rencana ekosistem ini bukan direktori, proyek, tender, atau layanan transaksi yang sudah aktif. Informasi peluang hanya boleh dipublikasikan setelah diverifikasi dan ditautkan ke sumber yang sah.</p>
+      </div>
+      <div id="bagian-09" className="mt-14 border-t border-white/10 pt-10" data-testid="gustafta-academy">
+        <div className="grid gap-5 md:grid-cols-[.78fr_1.22fr] md:items-end">
+          <div><div className="eyebrow">BAGIAN 09 · ACADEMY, COMPETENCY & PROFESSIONAL SERVICES</div><h3 className="display-font mt-3 max-w-[520px] text-3xl font-semibold leading-tight text-[#e6eef1] md:text-4xl">Belajar, berkembang,<br /><span className="text-[#8bdcff]">menerapkan keahlian.</span></h3></div>
+          <div>
+            <span className="inline-flex items-center gap-2 border border-[#8bdcff]/25 bg-[#8bdcff]/[.06] px-3 py-1.5 font-mono text-[9px] tracking-[.1em] text-[#9eddf2]">KEPUTUSAN FINAL · HYBRID PROFESSIONAL COMPETENCY ECOSYSTEM</span>
+            <p className="mt-3 max-w-[630px] text-[12px] leading-6 text-[#a7b5bc]">Gustafta Academy menggabungkan pelatihan, pembelajaran digital, pengembangan kompetensi, kemitraan sertifikasi, dan layanan profesional. Sasaran mencakup individu, profesional, UMKM, serta perusahaan; program dibangun bertahap sesuai permintaan dan kapasitas instruktur.</p>
+          </div>
+        </div>
+        <div className="mt-6 grid gap-2 sm:grid-cols-2 xl:grid-cols-4" data-testid="academy-pillars">
+          {academyPillars.map((pillar, index) => <article key={pillar.title} className="border border-white/[.1] bg-white/[.025] p-4" data-testid={`academy-pillar-${index + 1}`}>
+            <span className="font-mono text-[9px] tracking-[.1em] text-[#8bdcff]">PILAR 0{index + 1}</span>
+            <h4 className="mt-2 text-[12px] font-semibold text-[#e5edf0]">{pillar.title}</h4>
+            <p className="mt-2 text-[10px] leading-5 text-[#91a0a8]">{pillar.detail}</p>
+          </article>)}
+        </div>
+        <div className="mt-8 grid gap-5 lg:grid-cols-[.64fr_1.36fr]">
+          <div><div className="eyebrow">FOKUS PROGRAM · DIKEMBANGKAN BERTAHAP</div><h4 className="display-font mt-2 text-2xl font-semibold text-[#e6eef1]">Tiga jalur belajar.</h4><p className="mt-2 text-[10px] leading-5 text-[#8798a1]">Instruktur berasal dari founder, ahli Experts Network, trainer, dan mitra; program prioritas dipilih berdasarkan kebutuhan pasar.</p></div>
+          <div className="grid gap-2 sm:grid-cols-3" data-testid="academy-program-tracks">
+            {academyProgramTracks.map((track, index) => <article key={track.title} className="border border-white/[.1] bg-white/[.025] p-3" data-testid={`academy-track-${index + 1}`}>
+              <h5 className="text-[11px] font-semibold text-[#e5edf0]">{track.title}</h5>
+              <p className="mt-1.5 text-[10px] leading-5 text-[#91a0a8]">{track.detail}</p>
+            </article>)}
+          </div>
+        </div>
+        <div className="mt-8">
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <div><div className="eyebrow">LMS · ROADMAP TEKNOLOGI</div><h4 className="display-font mt-2 text-2xl font-semibold text-[#e6eef1]">Pakai dulu. Integrasikan. Kembangkan bila perlu.</h4></div>
+            <p className="max-w-[430px] text-[10px] leading-5 text-[#8798a1]">Keputusan final: mulai dengan platform siap pakai, lalu integrasi dan pengembangan khusus jika skala serta kebutuhan membenarkan investasi.</p>
+          </div>
+          <div className="mt-4 grid gap-2 md:grid-cols-3" data-testid="academy-lms-stages">
+            {lmsStages.map((stage, index) => <article key={stage.title} className="border border-white/[.1] bg-white/[.025] p-4" data-testid={`academy-lms-stage-${index + 1}`}>
+              <span className="font-mono text-[9px] text-[#8bdcff]">TAHAP 0{index + 1}</span>
+              <h5 className="mt-2 text-[11px] font-semibold text-[#e5edf0]">{stage.title}</h5>
+              <p className="mt-1.5 text-[10px] leading-5 text-[#91a0a8]">{stage.detail}</p>
+            </article>)}
+          </div>
+        </div>
+        <div className="mt-6 grid gap-5 border border-[#8bdcff]/20 bg-[#8bdcff]/[.04] p-4 md:grid-cols-[.72fr_1.28fr]" data-testid="academy-certification-policy">
+          <div><div className="eyebrow">SERTIFIKASI · JELAS DAN TEPAT</div><h4 className="display-font mt-2 text-xl font-semibold text-[#e6eef1]">Program Gustafta ≠ sertifikasi resmi.</h4></div>
+          <div className="grid gap-2 sm:grid-cols-2">
+            <p className="border border-white/10 bg-[#111c23]/70 p-3 text-[10px] leading-5 text-[#a5b3ba]"><strong className="text-[#dce8ed]">Sertifikat Gustafta:</strong> bukti keikutsertaan atau penyelesaian program; jenis dan evaluasinya harus dijelaskan.</p>
+            <p className="border border-white/10 bg-[#111c23]/70 p-3 text-[10px] leading-5 text-[#a5b3ba]"><strong className="text-[#dce8ed]">Sertifikasi eksternal:</strong> asesmen dan penerbitan melalui mitra yang berwenang. Gustafta tidak mengklaim kewenangan yang belum dimiliki.</p>
+          </div>
+        </div>
+        <div className="mt-8 grid gap-5 lg:grid-cols-[.64fr_1.36fr]">
+          <div><div className="eyebrow">MONETISASI FINAL</div><h4 className="display-font mt-2 text-2xl font-semibold text-[#e6eef1]">Pendapatan dari belajar dan layanan.</h4><p className="mt-2 text-[10px] leading-5 text-[#8798a1]">Tahun pertama memprioritaskan kursus berbayar, corporate training, dan konsultasi. Subscription serta sertifikasi dikembangkan sejalan dengan katalog, peserta, dan mitra.</p></div>
+          <div className="grid gap-2 sm:grid-cols-2 xl:grid-cols-3" data-testid="academy-revenue-model">
+            {academyRevenue.map((item, index) => <article key={item.title} className="border border-white/[.1] bg-white/[.025] p-3" data-testid={`academy-revenue-${index + 1}`}>
+              <h5 className="text-[11px] font-semibold text-[#e5edf0]">{item.title}</h5>
+              <p className="mt-1.5 text-[10px] leading-5 text-[#91a0a8]">{item.detail}</p>
+            </article>)}
+          </div>
+        </div>
+        <p className="mt-6 border-l border-[#8bdcff]/50 pl-3 text-[9px] leading-5 text-[#758792]" data-testid="academy-year-one-target">Sasaran perencanaan tahun pertama: Academy aktif dengan LMS awal, pelatihan, konsultasi, dan mitra sertifikasi. Jumlah program, peserta, serta mitra pada blueprint adalah target validasi, bukan capaian saat ini atau jaminan hasil.</p>
       </div>
       <p className="mt-5 flex items-start gap-2 text-[10px] leading-5 text-[#778991]" data-testid="text-business-model-caveat"><Check size={13} className="mt-0.5 shrink-0 text-[#70bfdc]" />Enam unit bisnis dan tiga level penawaran adalah kerangka strategis, bukan katalog atau klaim ketersediaan. Harga, margin, dan proyeksi tetap perlu divalidasi.</p>
     </div>
