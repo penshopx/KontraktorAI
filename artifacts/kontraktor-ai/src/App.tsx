@@ -10,6 +10,7 @@ import {
   Compass, HardHat, Leaf, Menu, MessagesSquare, Search, ShieldCheck, Sparkles, X,
   BriefcaseBusiness, Calculator, GraduationCap, FileCheck2, UsersRound, Wrench,
   Layers3, PackageOpen, Workflow, Code2, PlugZap, Route as RouteIcon, CircleDollarSign, Blocks,
+  UserRound, Bot, CalendarDays, ClipboardList,
 } from 'lucide-react';
 import { Link, Route, Switch, useLocation, Router as WouterRouter } from 'wouter';
 
@@ -243,6 +244,25 @@ function BusinessModel() {
     { title: 'Produk digital', detail: 'Potensi transaksi dari aset digital yang relevansi dan kebutuhan pelanggannya telah diuji.' },
     { title: 'Kemitraan & integrasi', detail: 'Pendapatan dari implementasi, distribusi, integrasi, atau pengembangan bersama mitra.' },
   ];
+  const operatingFunctions = [
+    'Business development & marketing',
+    'Product & technology',
+    'Project & service delivery',
+    'Finance & administration',
+    'Knowledge & innovation',
+  ];
+  const operatingSops = [
+    'Lead management', 'Konsultasi pelanggan', 'Proposal & quotation',
+    'Manajemen proyek', 'Delivery proyek', 'Quality assurance',
+    'Invoice & pembayaran', 'Customer support', 'Backup & keamanan data',
+    'Rilis produk',
+  ];
+  const operatingPhases = [
+    { period: 'Bulan 1–3', title: 'Foundation', detail: 'SOP, penjualan, delivery, keuangan, dan dokumentasi dasar.' },
+    { period: 'Bulan 4–6', title: 'Kolaborasi eksternal', detail: 'Libatkan freelancer dan mitra sesuai kebutuhan proyek.' },
+    { period: 'Bulan 7–9', title: 'Optimasi', detail: 'Otomasi, standardisasi layanan, dan perbaikan sistem kerja.' },
+    { period: 'Bulan 10–12', title: 'Evaluasi kapasitas', detail: 'Tinjau kebutuhan kolaborator berdasarkan beban kerja dan cashflow.' },
+  ];
   return <section id="model-bisnis" className="relative overflow-hidden border-y border-white/[.08] bg-[#111c23] py-20 md:py-28">
     <div className="absolute right-[-180px] top-[-180px] h-[500px] w-[500px] rounded-full border border-[#8bdcff]/[.08]" />
     <div className="container-wide relative">
@@ -331,6 +351,53 @@ function BusinessModel() {
       <div className="mt-8 flex gap-3 border-l-2 border-[#8bdcff] bg-[#8bdcff]/[.045] px-4 py-3" data-testid="provisional-roadmap-note">
         <RouteIcon size={16} className="mt-0.5 shrink-0 text-[#8bdcff]" />
         <p className="text-[10px] leading-5 text-[#a9b8bf]"><strong className="text-[#dce8ed]">Roadmap provisional.</strong> Tahapannya merupakan kerangka perencanaan: pelajari kebutuhan, uji solusi layanan, standardisasi pola yang berulang, lalu pertimbangkan produk digital atau SaaS. Prioritas dapat berubah mengikuti validasi dan kapasitas.</p>
+      </div>
+      <div className="mt-14 border-t border-white/10 pt-10" data-testid="founder-led-operating-model">
+        <div className="grid gap-5 md:grid-cols-[.8fr_1.2fr] md:items-end">
+          <div><div className="eyebrow">BAGIAN 05 · MODEL OPERASI</div><h3 className="display-font mt-3 max-w-[480px] text-3xl font-semibold leading-tight text-[#e6eef1] md:text-4xl">Founder-led.<br /><span className="text-[#8bdcff]">Tumbuh sesuai kapasitas.</span></h3></div>
+          <div>
+            <span className="inline-flex items-center gap-2 border border-[#8bdcff]/25 bg-[#8bdcff]/[.06] px-3 py-1.5 font-mono text-[9px] tracking-[.1em] text-[#9eddf2]">KEPUTUSAN FINAL · FOUNDER-LED</span>
+            <p className="mt-3 max-w-[580px] text-[12px] leading-6 text-[#a7b5bc]">Gustafta saat ini dijalankan oleh satu founder, dengan AI sebagai pendukung kerja dan spesialis eksternal saat keahlian, kapasitas, proyek, serta cashflow mendukung. Struktur tim tidak diperbesar sebelum kebutuhan berulang terbukti.</p>
+          </div>
+        </div>
+        <div className="mt-6 grid gap-px border border-white/[.09] bg-white/[.09] md:grid-cols-3">
+          <article className="bg-[#121e26] p-5" data-testid="operating-founder-functions">
+            <div className="flex items-center gap-2 text-[#8bdcff]"><UserRound size={17} /><span className="font-mono text-[9px] tracking-[.1em]">PUSAT TANGGUNG JAWAB</span></div>
+            <h4 className="mt-4 text-[14px] font-semibold text-[#e5edf0]">Founder mengelola lima fungsi</h4>
+            <ul className="mt-3 space-y-2">{operatingFunctions.map(item => <li key={item} className="flex gap-2 text-[10px] leading-5 text-[#9eacb4]"><span className="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-[#8bdcff]" />{item}</li>)}</ul>
+            <p className="mt-3 border-t border-white/10 pt-3 text-[10px] leading-5 text-[#788b95]">Fungsi diprioritaskan menurut dampak; bukan lima pekerjaan harian yang harus dilakukan sekaligus.</p>
+          </article>
+          <article className="bg-[#121e26] p-5" data-testid="operating-workforce">
+            <div className="flex items-center gap-2 text-[#8bdcff]"><Bot size={17} /><span className="font-mono text-[9px] tracking-[.1em]">MODEL SUMBER DAYA</span></div>
+            <h4 className="mt-4 text-[14px] font-semibold text-[#e5edf0]">Founder + AI + spesialis eksternal</h4>
+            <div className="mt-4 space-y-3">
+              <p className="text-[10px] leading-5 text-[#9eacb4]"><strong className="text-[#dce8ed]">AI</strong> membantu riset, konten, proposal, coding, dokumentasi, laporan, dan otomasi.</p>
+              <p className="text-[10px] leading-5 text-[#9eacb4]"><strong className="text-[#dce8ed]">Freelancer / mitra</strong> menambah kapasitas atau keahlian khusus dengan ruang lingkup, biaya, tenggat, dan hak kerja yang jelas.</p>
+              <p className="border-t border-white/10 pt-3 text-[10px] leading-5 text-[#788b95]">AI tidak menggantikan tinjauan manusia untuk keputusan penting, kontrak, keuangan, keamanan, dan kualitas teknis.</p>
+            </div>
+          </article>
+          <article className="bg-[#121e26] p-5" data-testid="operating-standards">
+            <div className="flex items-center gap-2 text-[#8bdcff]"><ClipboardList size={17} /><span className="font-mono text-[9px] tracking-[.1em]">STANDAR MINIMUM</span></div>
+            <h4 className="mt-4 text-[14px] font-semibold text-[#e5edf0]">Digital-first, tercatat, dan terjaga</h4>
+            <p className="mt-2 text-[10px] leading-5 text-[#9eacb4]">SOP praktis menjadi standar untuk alur kerja inti:</p>
+            <div className="mt-3 flex flex-wrap gap-1.5">{operatingSops.map(item => <span key={item} className="border border-white/10 px-2 py-1 text-[9px] text-[#9eacb4]">{item}</span>)}</div>
+            <p className="mt-3 border-t border-white/10 pt-3 text-[10px] leading-5 text-[#788b95]">Pengadaan tenaga dan teknologi mengikuti kebutuhan aktual, keamanan, pemeliharaan, dan kemampuan cashflow.</p>
+          </article>
+        </div>
+        <div className="mt-8 grid gap-6 border border-white/[.09] bg-white/[.02] p-5 md:grid-cols-[.62fr_1.38fr]" data-testid="operational-roadmap">
+          <div>
+            <div className="flex items-center gap-2 text-[#8bdcff]"><CalendarDays size={16} /><span className="font-mono text-[9px] tracking-[.1em]">KERANGKA 12 BULAN</span></div>
+            <h4 className="mt-3 text-[16px] font-semibold text-[#e5edf0]">Ekspansi bukan otomatis.</h4>
+            <p className="mt-2 text-[10px] leading-5 text-[#8798a1]">Tinjau setiap fase berdasarkan cashflow, beban kerja, dan pipeline; periode ini bukan tenggat atau janji perekrutan.</p>
+          </div>
+          <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+            {operatingPhases.map((phase, index) => <article key={phase.period} className="border-l border-[#8bdcff]/40 pl-3" data-testid={`operational-phase-${index + 1}`}>
+              <span className="font-mono text-[9px] text-[#8bdcff]">{phase.period}</span>
+              <h5 className="mt-1 text-[11px] font-semibold text-[#dce8ed]">{phase.title}</h5>
+              <p className="mt-1 text-[9px] leading-4 text-[#8798a1]">{phase.detail}</p>
+            </article>)}
+          </div>
+        </div>
       </div>
       <p className="mt-5 flex items-start gap-2 text-[10px] leading-5 text-[#778991]" data-testid="text-business-model-caveat"><Check size={13} className="mt-0.5 shrink-0 text-[#70bfdc]" />Enam unit bisnis dan tiga level penawaran adalah kerangka strategis, bukan katalog atau klaim ketersediaan. Harga, margin, dan proyeksi tetap perlu divalidasi.</p>
     </div>

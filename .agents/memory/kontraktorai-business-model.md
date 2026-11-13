@@ -33,11 +33,24 @@ The user confirmed these Part 04 choices:
 Prices, margins, revenue projections, and product readiness remain subject to
 market and cost validation; do not present them as final or guaranteed.
 
-**Why:** the user confirmed the Part 02 and Part 04 business choices and the
-Part 03 endorsed-brand architecture and market approach.
+The user also finalized Part 05 as a founder-led organization:
+
+- Gustafta is currently operated by one founder.
+- The initial workforce model is founder + AI + external specialists.
+- Keep operations lean and digital-first; add hiring or fixed costs only when
+  recurring workload, capacity constraints, and cashflow support it.
+- Human oversight remains necessary for consequential financial, contractual,
+  security, and technical-quality decisions.
+- Treat the operating roadmap as conditional on workload, pipeline, and cashflow,
+  not as a promise to hire or achieve milestones on fixed dates.
+
+**Why:** the user confirmed the Part 02–05 business choices and the Part 03
+endorsed-brand architecture and market approach.
 
 **How to apply:** use these priorities in Gustafta and KontraktorAI business
 planning, portal messaging, and future product decisions. Choose implementation
 methods and vendors by fit, security, licensing, cost, and maintainability. Keep
 pricing and financial targets labeled as assumptions until validated; do not call
 a product ready until the market, operational, and technical checks are complete.
+Represent the founder-led structure as the current operating decision, not as
+evidence that all planned SOPs, integrations, or hiring stages are already live.

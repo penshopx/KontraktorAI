@@ -84,6 +84,44 @@ metodologi, dan nama portal yang digunakan adalah **KontraktorAI**.
 - KPI mencakup performa komersial, produk, recurring revenue, operasional, dan
   keuangan; target numerik ditentukan setelah baseline tersedia.
 
+## Keputusan strategis Bagian 05
+
+- Status Bagian 05: **FINAL — Founder-led Organization**. Kondisi saat ini adalah
+  satu founder sebagai pengelola utama; ini bukan gambaran tim yang sudah
+  terbentuk di portal.
+- Model sumber daya awal adalah **solo founder + AI + spesialis eksternal**.
+  Founder memegang keputusan dan lima fungsi: Business Development & Marketing,
+  Product & Technology, Project & Service Delivery, Finance & Administration,
+  serta Knowledge & Innovation.
+- Operasi bersifat lean dan digital-first, dengan pekerjaan dibantu AI serta
+  proses inti didokumentasikan melalui SOP. Keputusan kontrak, keuangan,
+  keamanan, dan kualitas teknis tetap memerlukan pengawasan manusia.
+- Freelancer, konsultan, atau mitra digunakan saat ada kebutuhan keahlian atau
+  kapasitas yang jelas; perekrutan mengikuti bottleneck berulang, beban kerja,
+  dan kemampuan cashflow. Jalur kapasitas: solo founder → freelancer → core
+  collaborator → small core team → functional team. Tidak ada komitmen ekspansi
+  tim otomatis atau penambahan biaya tetap sebelum kebutuhan dan sumber dananya
+  jelas.
+- Sistem operasional mencakup marketing, sales, project management, product
+  management, customer management, serta financial management.
+- Sepuluh SOP minimum meliputi lead management, konsultasi pelanggan, proposal
+  & quotation, project management, project delivery, quality assurance,
+  invoice & payment, customer support, data backup & security, dan product
+  release.
+- Kerangka kerja founder, jadwal mingguan, dan alokasi waktu merupakan panduan
+  fleksibel; prioritas penjualan dan delivery mendukung cashflow tanpa
+  mengesampingkan pengembangan produk.
+- Pembagian waktu awal yang dapat diuji: Business Development 35%, Project
+  Delivery 30%, Product Development 20%, Finance & Administration 10%, Research
+  & Innovation 5%. Jadwal mingguan juga fleksibel dan dapat berubah mengikuti
+  kebutuhan proyek; Minggu menjadi waktu istirahat.
+- Roadmap operasional 12 bulan bergerak dari foundation ke kolaborasi eksternal,
+  optimasi, lalu evaluasi kapasitas. Fase ditinjau menurut cashflow, beban kerja,
+  dan pipeline; bulan tidak menjamin hasil atau perekrutan.
+- Arsitektur teknologi tetap modular dan hybrid sesuai keputusan Bagian 04,
+  dengan evaluasi biaya, keamanan, integrasi, pemeliharaan, portabilitas data,
+  dan ketergantungan vendor.
+
 ## Prioritas pelaksanaan
 
 Gelombang berikut adalah urutan awal, bukan komitmen durasi. Pekerjaan tata
@@ -230,6 +268,8 @@ berdasarkan kebutuhan pasar, arus kas, dan peluang pendapatan berulang.
   konsisten pada setiap jalur.
 - Arsitektur portofolio Bagian 04 menjelaskan kategori jasa/produk dan prioritas
   kandidat tanpa menyamarkannya sebagai katalog aktif.
+- Ringkasan model operasi Bagian 05 menampilkan status founder-led saat ini,
+  model solo founder + AI + spesialis eksternal, dan roadmap sebagai rencana.
 - UI responsif serta sistem visual untuk portal.
 
 **Kriteria penerimaan**
@@ -239,6 +279,9 @@ berdasarkan kebutuhan pasar, arus kas, dan peluang pendapatan berulang.
 - Fitur yang belum tersedia tidak ditampilkan sebagai layanan aktif.
 - Arsitektur bisnis yang masih berupa rekomendasi ditandai sebagai arah
   perancangan, bukan daftar layanan aktif atau janji harga.
+- Status organisasi founder-led, dukungan AI, tenaga eksternal, dan roadmap
+  operasional tidak disajikan sebagai klaim bahwa tim, SOP, atau otomasi sudah
+  berjalan.
 
 ### 05 — KontraktorAI News dan Newsroom
 
@@ -396,6 +439,8 @@ hasil setiap paket.
   kolaborasi, dan dampak.
 - Roadmap strategis 12 bulan dengan empat fase; periode dan hasilnya ditinjau
   berkala dan bukan jaminan target atau tanggal rilis.
+- Rencana operasi Bagian 05 memuat sistem founder-led, lima fungsi, model
+  founder + AI + spesialis eksternal, SOP minimum, dan pemicu ekspansi tim.
 - Ritme tinjauan bulanan dan kuartalan serta pencatatan keputusan.
 
 **Kriteria penerimaan**
@@ -405,6 +450,8 @@ hasil setiap paket.
 - Baseline awal dikumpulkan sebelum target numerik bisnis ditetapkan; sasaran
   simulasi tidak diperlakukan sebagai komitmen kinerja.
 - Perubahan lingkup, risiko, biaya, dan keputusan dicatat serta ditinjau berkala.
+- Perekrutan atau peningkatan biaya tetap hanya dipertimbangkan saat kebutuhan
+  berulang, kapasitas, dan sumber pendanaan dapat dijelaskan.
 
 ## Tahap MVP yang disarankan
 
