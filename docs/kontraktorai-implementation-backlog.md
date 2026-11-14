@@ -53,6 +53,26 @@ metodologi, dan nama portal yang digunakan adalah **KontraktorAI**.
 - Target KPI numerik ditetapkan setelah baseline tersedia; pengukuran brand,
   pasar, pelanggan, dan pendapatan ditinjau bulanan/kuartalan.
 
+### Rekomendasi taksonomi Gustafta — belum final
+
+- Dokumen yang diberikan mengusulkan delapan kategori sebagai taksonomi
+  industri/solusi bersama, bukan delapan brand.
+- **Fokus inti KontraktorAI yang sudah disetujui:** Construction & Infrastructure,
+  Energy & Renewable Energy, Electricity & Power Systems, Mining & Mineral
+  Resources, serta Environment & Sustainability. Konstruksi tetap pintu masuk;
+  empat sektor lain mengikuti urutan validasi bertahap.
+- **Ekspansi yang masih berupa usulan:** Manufacturing & Industrial Technology
+  serta Logistics, Transportation & Supply Chain; tinjau setelah fondasi pasar,
+  produk, mitra, dan operasional awal lebih matang.
+- **Solusi lintas industri yang masih berupa usulan:** Business & Digital
+  Transformation. Dapat melayani UMKM dan profesional lintas sektor tanpa harus
+  menunggu ekspansi vertikal, setelah kebutuhan dan kapasitasnya divalidasi.
+- Pisahkan entitas industri, solusi, produk, dan konten; hubungkan melalui
+  relasi. Contoh solusi/produk dalam dokumen adalah peluang, bukan bukti
+  ketersediaan layanan atau katalog aktif.
+- Jangan mengubah lima sektor fokus KontraktorAI yang telah disepakati atau
+  mengunci kategori 6–8 sebagai keputusan final sampai pengguna menyetujuinya.
+
 ## Keputusan strategis Bagian 04
 
 - Portofolio berjalan seimbang antara jasa dan produk. Jasa menjadi jalur awal
@@ -573,6 +593,9 @@ berdasarkan kebutuhan pasar, arus kas, dan peluang pendapatan berulang.
 - Spesifikasi beranda, News, solusi, katalog, konsultasi, academy, dan akun.
 - Arsitektur endorsed brand dan pengalaman yang membedakan kebutuhan pasar utama
   UMKM Gustafta dari jalur spesialis industri KontraktorAI.
+- Rancangan taksonomi delapan kategori industri/solusi Gustafta yang ditandai
+  sebagai rekomendasi; lima sektor inti KontraktorAI tetap dipisahkan dari dua
+  usulan ekspansi dan satu usulan lintas industri.
 - Pesan value proposition, kebutuhan pelanggan, dan status penawaran yang
   konsisten pada setiap jalur.
 - Arsitektur portofolio Bagian 04 menjelaskan kategori jasa/produk dan prioritas
@@ -902,6 +925,12 @@ AI, kontrol editorial manusia, dan jalur menuju prospek layanan Gustafta.
 - Model artikel terstruktur untuk judul, slug, ringkasan, isi, sektor, kategori,
   tag, media/keterangan, sumber dan URL, tanggal sumber, penulis/editor, jenis
   konten, metadata SEO, status, serta waktu publikasi/pembaruan.
+- Rekomendasi taksonomi CMS membedakan sektor dan kategori editorial serta
+  memodelkan industri, solusi, produk, dan konten sebagai entitas terpisah.
+  Field konsep yang diusulkan meliputi industry group (core/expansion/
+  cross-industry), related solutions/products/content, dan status active/planned.
+  Dukung satu industri utama dan relasi industri tambahan; finalisasi delapan
+  kategori menunggu persetujuan pengguna.
 - Workflow human-in-the-loop: temukan berita → verifikasi sumber/konteks/tanggal
   → bantuan AI untuk ringkasan dan draf → tinjauan fakta, mutu, hak cipta, dan
   risiko oleh manusia → SEO/format → jadwal atau persetujuan khusus → distribusi

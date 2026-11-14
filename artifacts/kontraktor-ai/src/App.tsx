@@ -1080,6 +1080,26 @@ function Ecosystem() {
     { number: '02', title: 'Energi & ketenagalistrikan', detail: 'Ekspansi bersama ke kebutuhan sektor yang beririsan dengan proyek.' },
     { number: '03', title: 'Pertambangan & lingkungan', detail: 'Perluasan setelah model awal memberi pembelajaran dan terbukti berjalan.' },
   ];
+  const taxonomyProposalGroups = [
+    {
+      label: 'FOKUS INTI · SUDAH DISETUJUI',
+      title: 'KontraktorAI · lima sektor',
+      categories: ['Construction & Infrastructure', 'Energy & Renewable Energy', 'Electricity & Power Systems', 'Mining & Mineral Resources', 'Environment & Sustainability'],
+      detail: 'Konstruksi tetap menjadi pintu masuk; empat sektor lain dikembangkan bertahap.',
+    },
+    {
+      label: 'USULAN EKSPANSI · BELUM FINAL',
+      title: 'Industri berikutnya',
+      categories: ['Manufacturing & Industrial Technology', 'Logistics, Transportation & Supply Chain'],
+      detail: 'Pertimbangkan setelah fondasi produk, mitra, dan operasional awal lebih matang.',
+    },
+    {
+      label: 'USULAN LINTAS INDUSTRI · BELUM FINAL',
+      title: 'Business & Digital Transformation',
+      categories: ['Business & Digital Transformation'],
+      detail: 'Melayani kebutuhan UMKM, profesional, dan organisasi lintas sektor; tidak harus menunggu ekspansi vertikal.',
+    },
+  ];
   return <section id="tentang" className="bg-[#0e171d] py-20 md:py-28">
     <div className="container-wide">
       <div className="flex flex-col justify-between gap-6 border-b border-white/10 pb-8 md:flex-row md:items-end">
@@ -1115,6 +1135,23 @@ function Ecosystem() {
             <h4 className="mt-2 text-[14px] font-semibold text-[#e1eaed]">{wave.title}</h4>
             <p className="mt-2 text-[11px] leading-5 text-[#91a0a8]">{wave.detail}</p>
           </article>)}
+        </div>
+      </div>
+      <div className="border-t border-dashed border-white/10 py-7" data-testid="gustafta-industry-taxonomy-proposal">
+        <div className="flex flex-col justify-between gap-3 sm:flex-row sm:items-end">
+          <div><div className="eyebrow text-amber-100/90">TAKSONOMI GUSTAFTA · REKOMENDASI, BELUM FINAL</div><h3 className="display-font mt-3 text-2xl font-semibold text-[#e7eef1] md:text-3xl">Delapan kategori, satu ekosistem.</h3></div>
+          <p className="max-w-[430px] text-[11px] leading-5 text-[#91a0a8]">Dokumen mengusulkan kategori pasar dan solusi yang saling terhubung. Lima sektor KontraktorAI tetap menjadi fokus inti yang sudah disetujui.</p>
+        </div>
+        <div className="mt-5 grid gap-2 lg:grid-cols-3">
+          {taxonomyProposalGroups.map((group, index) => <article key={group.title} className="border border-white/[.1] bg-white/[.025] p-4" data-testid={`taxonomy-proposal-group-${index + 1}`}>
+            <div className="font-mono text-[8px] leading-4 tracking-[.08em] text-[#8bdcff]">{group.label}</div>
+            <h4 className="mt-2 text-[13px] font-semibold text-[#e1eaed]">{group.title}</h4>
+            <div className="mt-3 flex flex-wrap gap-1.5">{group.categories.map(category => <span key={category} className="border border-white/10 bg-[#101920] px-2 py-1 text-[9px] text-[#c2cdd2]">{category}</span>)}</div>
+            <p className="mt-3 text-[10px] leading-5 text-[#91a0a8]">{group.detail}</p>
+          </article>)}
+        </div>
+        <div className="mt-3 border-l-2 border-[#8bdcff]/55 bg-[#8bdcff]/[.04] px-4 py-3 text-[10px] leading-5 text-[#aab9c0]" data-testid="taxonomy-proposal-boundary">
+          Kapabilitas lintas industri yang diusulkan: konsultasi AI, otomasi, AI Assistant/Concierge, pengembangan software, data intelligence, pengelolaan dokumen/knowledge, transformasi digital, dan pelatihan. Industri, solusi, produk, serta konten tetap entitas terpisah yang dihubungkan dalam master matrix; contoh produk bukan klaim ketersediaan.
         </div>
       </div>
       <div className="border-t border-white/10 pt-8">
