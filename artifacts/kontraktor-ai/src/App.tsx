@@ -779,14 +779,14 @@ function BusinessModel() {
           </div>
           <div className="mt-4 grid gap-2 md:grid-cols-3" data-testid="gustafta-account-phases">
             <article className="border border-[#8bdcff]/20 bg-[#8bdcff]/[.035] p-3" data-testid="gustafta-account-p0">
-              <span className="font-mono text-[9px] tracking-[.1em] text-[#8bdcff]">P0 · FONDASI MVP</span>
-              <h5 className="mt-2 text-[11px] font-semibold text-[#e5edf0]">Akun dasar yang aman</h5>
-              <p className="mt-1.5 text-[10px] leading-5 text-[#91a0a8]">Email/password, verifikasi email, reset password, profil dasar, logout, sesi, persetujuan, guest access, serta role dan permission dasar.</p>
+              <span className="font-mono text-[9px] tracking-[.1em] text-[#8bdcff]">P0 · MVP DASHBOARD LENGKAP</span>
+              <h5 className="mt-2 text-[11px] font-semibold text-[#e5edf0]">Akun, workspace, dan keamanan</h5>
+              <p className="mt-1.5 text-[10px] leading-5 text-[#91a0a8]">Email/password, verifikasi, reset, profil dasar, guest access, role, sesi, dan persetujuan; ditambah dashboard overview, edit profil, Concierge, riwayat dasar, saved knowledge, My Requests, pengaturan keamanan, serta tampilan mobile.</p>
             </article>
             <article className="border border-white/[.1] bg-white/[.02] p-3" data-testid="gustafta-account-p1">
               <span className="font-mono text-[9px] tracking-[.1em] text-[#8bdcff]">P1 · SETELAH MVP STABIL</span>
-              <h5 className="mt-2 text-[11px] font-semibold text-[#e5edf0]">Profil dan personalisasi</h5>
-              <p className="mt-1.5 text-[10px] leading-5 text-[#91a0a8]">Profil profesional, preferensi yang dapat diedit, riwayat chat, artikel tersimpan, notifikasi, dan ringkasan permintaan.</p>
+              <h5 className="mt-2 text-[11px] font-semibold text-[#e5edf0]">Personalisasi dan pelacakan lanjutan</h5>
+              <p className="mt-1.5 text-[10px] leading-5 text-[#91a0a8]">Profil profesional, preferensi, pencarian percakapan lanjutan, pelacakan permintaan, notifikasi, akses produk, dan pembelajaran.</p>
             </article>
             <article className="border border-white/[.1] bg-white/[.02] p-3" data-testid="gustafta-account-p2">
               <span className="font-mono text-[9px] tracking-[.1em] text-[#8bdcff]">P2 · EKOSISTEM</span>
@@ -794,10 +794,20 @@ function BusinessModel() {
               <p className="mt-1.5 text-[10px] leading-5 text-[#91a0a8]">SSO, organisasi dan tim, company profile, workspace, serta integrasi Marketplace, Academy, dan Ruang Proyek.</p>
             </article>
           </div>
+          <div className="mt-4 grid gap-3 md:grid-cols-2">
+            <article className="border border-white/[.08] p-3" data-testid="gustafta-dashboard-overview">
+              <div className="eyebrow">OVERVIEW DASHBOARD · P0</div>
+              <p className="mt-2 text-[10px] leading-5 text-[#a5b3ba]">Sapaan dan profil ringkas, kelengkapan profil, akses cepat ke Concierge, percakapan terbaru, knowledge tersimpan, permintaan, serta rekomendasi yang diizinkan. Statistik hanya memakai data nyata; mockup dan angka contoh tidak boleh terlihat sebagai aktivitas akun sungguhan.</p>
+            </article>
+            <article className="border border-white/[.08] p-3" data-testid="gustafta-dashboard-navigation">
+              <div className="eyebrow">NAVIGASI DASHBOARD · RESPONSIF</div>
+              <p className="mt-2 text-[10px] leading-5 text-[#a5b3ba]">P0: Dashboard, My Profile, AI Concierge, Conversations, Saved Knowledge, My Requests, dan Settings; sidebar desktop serta navigasi mobile. Satu kerangka untuk semua tipe pengguna. Menu Collaboration, Products, dan Learning baru muncul jika layanan pendukungnya siap.</p>
+            </article>
+          </div>
           <div className="mt-4 grid gap-4 lg:grid-cols-2">
             <div className="border border-white/[.08] p-3" data-testid="gustafta-account-my-dashboard">
               <div className="eyebrow">AREA PENGGUNA · MY GUSTAFTA</div>
-              <p className="mt-2 text-[10px] leading-5 text-[#a5b3ba]">Profil Saya, AI Concierge dan riwayat, artikel tersimpan, permintaan konsultasi/kolaborasi, preferensi, keamanan, notifikasi, serta pengaturan akun. Halaman dasar cukup untuk MVP; dashboard penuh dapat tumbuh kemudian.</p>
+              <p className="mt-2 text-[10px] leading-5 text-[#a5b3ba]">Ruang kerja P0 mencakup Dashboard, Profil Saya, AI Concierge, percakapan dasar, Tersimpan, My Requests, serta pengaturan keamanan/akun. Kolaborasi, produk, pembelajaran, dan notifikasi menyusul saat sistemnya tersedia.</p>
             </div>
             <div className="border border-white/[.08] p-3" data-testid="gustafta-account-privacy">
               <div className="eyebrow">PEMISAHAN DATA · HAK AKSES</div>
@@ -809,7 +819,7 @@ function BusinessModel() {
         <div className="mt-6 border border-white/[.1] bg-white/[.025] p-4" data-testid="ai-concierge-roadmap">
           <div className="flex flex-wrap items-end justify-between gap-3">
             <div><div className="eyebrow">RENCANA MVP · ESTIMASI 8 MINGGU</div><h4 className="display-font mt-2 text-xl font-semibold text-[#e6eef1]">Rancang, bangun, uji, lalu pilot.</h4></div>
-            <span className="font-mono text-[9px] tracking-[.08em] text-[#8bdcff]">CHECKLIST · 0/37 DIVERIFIKASI</span>
+            <span className="font-mono text-[9px] tracking-[.08em] text-[#8bdcff]">CHECKLIST AI CONCIERGE CORE · 0/37</span>
           </div>
           <div className="mt-4 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
             <div className="border-l border-[#8bdcff]/40 pl-3"><span className="font-mono text-[9px] text-[#8bdcff]">MINGGU 1–2</span><p className="mt-1 text-[10px] leading-5 text-[#a5b3ba]">PRD, user journey, alur percakapan, dan desain UI.</p></div>
@@ -817,7 +827,7 @@ function BusinessModel() {
             <div className="border-l border-[#8bdcff]/40 pl-3"><span className="font-mono text-[9px] text-[#8bdcff]">MINGGU 5–6</span><p className="mt-1 text-[10px] leading-5 text-[#a5b3ba]">Solution finder, lead capture, akses pengguna, dan integrasi dasar.</p></div>
             <div className="border-l border-[#8bdcff]/40 pl-3"><span className="font-mono text-[9px] text-[#8bdcff]">MINGGU 7–8</span><p className="mt-1 text-[10px] leading-5 text-[#a5b3ba]">Evaluasi jawaban, keamanan, uji pilot, dan persiapan peluncuran.</p></div>
           </div>
-          <p className="mt-4 border-t border-white/10 pt-3 text-[9px] leading-5 text-[#8798a1]">Estimasi bukan jaminan jadwal. Pemilihan vendor/platform AI dan CRM belum ditetapkan; WordPress.com Business hanya target CMS News dan situsnya belum aktif. Checklist adalah backlog rencana, bukan pekerjaan yang telah selesai.</p>
+          <p className="mt-4 border-t border-white/10 pt-3 text-[9px] leading-5 text-[#8798a1]">Estimasi bukan jaminan jadwal. Checklist 0/37 menghitung AI Concierge core; backlog dashboard My Gustafta adalah cakupan P0 terpisah. Vendor/platform AI dan CRM belum ditetapkan; WordPress.com Business hanya target CMS News dan situsnya belum aktif. Rancangan akun serta dashboard belum diimplementasikan.</p>
         </div>
       </div>
       <div id="bagian-08" className="mt-14 border-t border-white/10 pt-10" data-testid="consulting-collaboration-marketplace">

@@ -699,16 +699,27 @@ Pendaftaran publik tidak pernah memberikan hak admin.
 - **P0 — MVP:** registrasi email/password, verifikasi email, login/logout, reset
   password, profil dasar yang dapat diedit, guest/registered access, role dan
   permission dasar, sesi, privacy notice/consent, serta relasi identitas dengan
-  percakapan sesuai persetujuan.
-- **P1 — setelah MVP stabil:** profil profesional, preferensi/personalization,
-  riwayat percakapan, artikel/referensi tersimpan, notifikasi, dan dashboard
-  permintaan konsultasi/kolaborasi.
+  percakapan sesuai persetujuan. Tambahkan My Gustafta Dashboard Overview,
+  ringkasan/edit profil, akses AI Concierge, riwayat percakapan dasar, saved
+  knowledge dasar, My Requests dasar, account/security settings, dan layout
+  responsif mobile.
+- **P1 — setelah MVP stabil:** profil profesional dan personalisasi, pencarian
+  percakapan lanjutan, pelacakan permintaan lebih lengkap, notifikasi, akses
+  produk, dan dashboard pembelajaran.
 - **P2 — ekosistem:** SSO lintas produk, organisasi/tim/workspace, company
   profile, portfolio, membership, dan integrasi Marketplace, Academy, serta
   Ruang Proyek.
-- **Area My Gustafta:** Dashboard, Profil Saya, AI Concierge, Riwayat, Tersimpan,
-  Permintaan, Preferensi, Notifikasi, Keamanan, dan Pengaturan Akun. Untuk MVP,
-  halaman sederhana cukup; tidak perlu membuat seluruh dashboard kompleks.
+- **Navigasi P0 My Gustafta:** Dashboard, My Profile, AI Concierge, Conversations,
+  Saved Knowledge, My Requests, Settings. Gunakan sidebar desktop dan navigasi
+  mobile; satu kerangka untuk semua tipe pengguna dengan rekomendasi yang sesuai
+  profil yang diizinkan, bukan aplikasi dashboard terpisah.
+- **Dashboard Overview P0:** sapaan, ringkasan/progress profil, pintasan
+  Concierge, aktivitas/percakapan terbaru, saved knowledge, permintaan, dan
+  rekomendasi yang relevan. Tampilkan hanya data aktual; jangan menyajikan
+  placeholder visual atau angka contoh sebagai aktivitas pengguna.
+- Menu Collaboration, Products, Learning, dan Notifications hanya ditampilkan
+  saat sistem pendukung masing-masing tersedia. Dashboard dan navigasi harus
+  responsif di desktop maupun mobile.
 - **Profil bertahap:** basic profile menyimpan ID, nama, email terverifikasi,
   status, dan waktu pembuatan; foto opsional. Kontak profesional, organisasi,
   profesi, lokasi, bio, dan preferensi diminta hanya saat dibutuhkan.
@@ -736,6 +747,13 @@ Pendaftaran publik tidak pernah memberikan hak admin.
   menjadi prasyarat bagi pengalaman dasar.
 - Pengguna dapat mendaftar, memverifikasi email, login/logout, mereset password,
   dan memperbarui profil dasar; guest tetap dapat memakai Concierge.
+- Dashboard P0 merangkum profil, akses Concierge, riwayat dasar, saved knowledge,
+  dan My Requests; semua hitungan/aktivitas berasal dari data aktual atau empty
+  state yang jelas, bukan placeholder yang menyerupai data nyata.
+- Navigasi P0 berfungsi di desktop dan mobile; modul yang belum didukung tidak
+  ditampilkan sebagai fitur aktif.
+- Pengguna dapat membuka percakapan dasar, menyimpan knowledge, dan melihat
+  permintaan miliknya sendiri; data pengguna lain tetap tertutup.
 - Role internal tidak dapat diberikan lewat pendaftaran publik; sesi dan data
   akun/percakapan terlindungi dari akses pengguna lain.
 - Profil, percakapan, lead, dan consent memiliki batas penggunaan serta akses
@@ -755,7 +773,8 @@ Pendaftaran publik tidak pernah memberikan hak admin.
   backup, biaya, dan latency diuji sebelum pilot.
 - Tidak ada klaim produk telah siap atau terhubung sebelum 37 pekerjaan MVP
   benar-benar diperiksa; evaluasi mencakup relevansi, ketepatan sitasi, akses,
-  keamanan, dan pilot.
+  keamanan, dan pilot. Angka **0/37** menghitung checklist AI Concierge core;
+  pekerjaan dashboard P0 memiliki scope backlog tersendiri dan belum dikerjakan.
 
 ### 07 — Produk Digital, SaaS, dan Integrasi
 

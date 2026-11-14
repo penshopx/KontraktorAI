@@ -175,12 +175,19 @@ Concierge:
 - Use one Gustafta identity across products in stages, starting with the portal
   and AI Concierge; do not require login for guest/public knowledge access.
 - P0 includes email/password registration, email verification, password reset,
-  basic editable profile, sessions, consent, guest/registered distinction, and
-  role/permission controls. Public registration never grants internal admin roles.
-- P1 adds professional profiles, editable preferences, conversation history,
-  saved content, notifications, and request summaries after MVP stability.
+  basic editable profile, sessions, consent, guest/registered distinction,
+  role/permission controls, and the complete basic My Gustafta dashboard:
+  overview, profile, Concierge access/history, saved knowledge, My Requests,
+  account/security settings, and responsive mobile layout. Public registration
+  never grants internal admin roles.
+- P1 adds professional profiles, personalization, advanced conversation search,
+  expanded request tracking, notifications, product access, and learning after
+  MVP stability.
 - P2 expands to SSO, organization/team accounts, workspaces, and cross-product
   links to Marketplace, Academy, and Ruang Proyek.
+- Dashboard cards and counts must use real account activity or clear empty states;
+  hide unsupported navigation modules until their services exist. The AI Concierge
+  0/37 checklist remains separate from the dashboard's added P0 scope.
 - Keep profile, conversation, lead, consent, and session data purpose-limited and
   access-controlled. Do not permanently store conversational inferences as
   profile facts without appropriate basis and consent.
@@ -192,7 +199,10 @@ endorsed-brand architecture and market approach, then confirmed the Part 13
 News/CMS strategy and selected WordPress.com Business as its MVP target. The
 user also approved the AI Concierge strategy while explicitly keeping the
 eight-industry taxonomy as a recommendation, and approved the staged Gustafta
-Account specification.
+Account specification. The user then selected the complete basic My Gustafta
+dashboard scope for P0, moving conversation history, saved knowledge, and basic
+requests into the MVP while keeping advanced personalization and ecosystem
+modules phased.
 
 **How to apply:** use these priorities in Gustafta and KontraktorAI business
 planning, portal messaging, and future product decisions. Choose implementation
@@ -228,4 +238,7 @@ Keep the eight-industry taxonomy provisional, require approved sources and
 citations, and preserve consent, access boundaries, and human handoff. Apply
 Gustafta Account as a staged identity specification: preserve guest access,
 separate internal roles, and do not imply authentication or cross-product SSO is
-already live.
+already live. For P0, include the basic My Gustafta dashboard and responsive
+navigation, but show only supported modules and never use placeholder metrics as
+real user activity. Keep the 0/37 AI Concierge core tracker separate from the
+dashboard backlog.
