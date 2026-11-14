@@ -20,9 +20,13 @@ import type {
 } from '@tanstack/react-query';
 
 import type {
+  AdminConsultationRequest,
   ApiError,
+  ConsultationRequestInput,
+  ConsultationRequestStatusUpdate,
   CurrentUser,
   HealthStatus,
+  MyConsultationRequest,
   UserConsents,
   UserConsentsUpdate
 } from './api.schemas';
@@ -356,5 +360,302 @@ export const useUpdateCurrentUserConsents = <TError = ErrorType<ApiError>,
         TContext
       > => {
       return useMutation(getUpdateCurrentUserConsentsMutationOptions(options));
+    }
+
+export const getListMyConsultationRequestsUrl = () => {
+
+
+
+
+  return `/api/users/me/consultation-requests`
+}
+
+/**
+ * @summary List the signed-in user's consultation requests
+ */
+export const listMyConsultationRequests = async ( options?: Parameters<typeof customFetch>[1]): Promise<MyConsultationRequest[]> => {
+
+  return customFetch<MyConsultationRequest[]>(getListMyConsultationRequestsUrl(),
+  {
+    ...options,
+    method: 'GET'
+
+
+  }
+);}
+
+
+
+
+
+export const getListMyConsultationRequestsQueryKey = () => {
+    return [
+    `/api/users/me/consultation-requests`
+    ] as const;
+    }
+
+
+export const getListMyConsultationRequestsQueryOptions = <TData = Awaited<ReturnType<typeof listMyConsultationRequests>>, TError = ErrorType<ApiError>>( options?: { query?:UseQueryOptions<Awaited<ReturnType<typeof listMyConsultationRequests>>, TError, TData>, request?: SecondParameter<typeof customFetch>}
+) => {
+
+const {query: queryOptions, request: requestOptions} = options ?? {};
+
+  const queryKey =  queryOptions?.queryKey ?? getListMyConsultationRequestsQueryKey();
+
+
+
+    const queryFn: QueryFunction<Awaited<ReturnType<typeof listMyConsultationRequests>>> = ({ signal }) => listMyConsultationRequests({ signal, ...requestOptions });
+
+
+
+
+
+   return  { queryKey, queryFn, ...queryOptions} as UseQueryOptions<Awaited<ReturnType<typeof listMyConsultationRequests>>, TError, TData> & { queryKey: QueryKey }
+}
+
+export type ListMyConsultationRequestsQueryResult = NonNullable<Awaited<ReturnType<typeof listMyConsultationRequests>>>
+export type ListMyConsultationRequestsQueryError = ErrorType<ApiError>
+
+
+/**
+ * @summary List the signed-in user's consultation requests
+ */
+
+export function useListMyConsultationRequests<TData = Awaited<ReturnType<typeof listMyConsultationRequests>>, TError = ErrorType<ApiError>>(
+  options?: { query?:UseQueryOptions<Awaited<ReturnType<typeof listMyConsultationRequests>>, TError, TData>, request?: SecondParameter<typeof customFetch>}
+
+ ):  UseQueryResult<TData, TError> & { queryKey: QueryKey } {
+
+  const queryOptions = getListMyConsultationRequestsQueryOptions(options)
+
+  const query = useQuery(queryOptions) as  UseQueryResult<TData, TError> & { queryKey: QueryKey };
+
+  return withQueryKey(query, queryOptions.queryKey);
+}
+
+
+
+
+
+
+
+export const getCreateMyConsultationRequestUrl = () => {
+
+
+
+
+  return `/api/users/me/consultation-requests`
+}
+
+/**
+ * @summary Submit a consultation request with consent
+ */
+export const createMyConsultationRequest = async (consultationRequestInput: ConsultationRequestInput, options?: Parameters<typeof customFetch>[1]): Promise<MyConsultationRequest> => {
+
+  return customFetch<MyConsultationRequest>(getCreateMyConsultationRequestUrl(),
+  {
+    ...options,
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', ...options?.headers },
+    body: JSON.stringify(consultationRequestInput)
+  }
+);}
+
+
+
+
+
+export const getCreateMyConsultationRequestMutationOptions = <TError = ErrorType<ApiError>,
+    TContext = unknown>(options?: { mutation?:UseMutationOptions<Awaited<ReturnType<typeof createMyConsultationRequest>>, TError,{data: BodyType<ConsultationRequestInput>}, TContext>, request?: SecondParameter<typeof customFetch>}
+): UseMutationOptions<Awaited<ReturnType<typeof createMyConsultationRequest>>, TError,{data: BodyType<ConsultationRequestInput>}, TContext> => {
+
+const mutationKey = ['createMyConsultationRequest'];
+const {mutation: mutationOptions, request: requestOptions} = options ?
+      options.mutation && 'mutationKey' in options.mutation && options.mutation.mutationKey ?
+      options
+      : {...options, mutation: {...options.mutation, mutationKey}}
+      : {mutation: { mutationKey, }, request: undefined};
+
+
+
+
+      const mutationFn: MutationFunction<Awaited<ReturnType<typeof createMyConsultationRequest>>, {data: BodyType<ConsultationRequestInput>}> = (props) => {
+          const {data} = props ?? {};
+
+          return  createMyConsultationRequest(data,requestOptions)
+        }
+
+
+
+
+
+
+  return  { mutationFn, ...mutationOptions }}
+
+    export type CreateMyConsultationRequestMutationResult = NonNullable<Awaited<ReturnType<typeof createMyConsultationRequest>>>
+    export type CreateMyConsultationRequestMutationBody = BodyType<ConsultationRequestInput>
+    export type CreateMyConsultationRequestMutationError = ErrorType<ApiError>
+
+    /**
+ * @summary Submit a consultation request with consent
+ */
+export const useCreateMyConsultationRequest = <TError = ErrorType<ApiError>,
+    TContext = unknown>(options?: { mutation?:UseMutationOptions<Awaited<ReturnType<typeof createMyConsultationRequest>>, TError,{data: BodyType<ConsultationRequestInput>}, TContext>, request?: SecondParameter<typeof customFetch>}
+ ): UseMutationResult<
+        Awaited<ReturnType<typeof createMyConsultationRequest>>,
+        TError,
+        {data: BodyType<ConsultationRequestInput>},
+        TContext
+      > => {
+      return useMutation(getCreateMyConsultationRequestMutationOptions(options));
+    }
+
+export const getListAdminConsultationRequestsUrl = () => {
+
+
+
+
+  return `/api/admin/consultation-requests`
+}
+
+/**
+ * @summary List consultation requests for administrators
+ */
+export const listAdminConsultationRequests = async ( options?: Parameters<typeof customFetch>[1]): Promise<AdminConsultationRequest[]> => {
+
+  return customFetch<AdminConsultationRequest[]>(getListAdminConsultationRequestsUrl(),
+  {
+    ...options,
+    method: 'GET'
+
+
+  }
+);}
+
+
+
+
+
+export const getListAdminConsultationRequestsQueryKey = () => {
+    return [
+    `/api/admin/consultation-requests`
+    ] as const;
+    }
+
+
+export const getListAdminConsultationRequestsQueryOptions = <TData = Awaited<ReturnType<typeof listAdminConsultationRequests>>, TError = ErrorType<ApiError>>( options?: { query?:UseQueryOptions<Awaited<ReturnType<typeof listAdminConsultationRequests>>, TError, TData>, request?: SecondParameter<typeof customFetch>}
+) => {
+
+const {query: queryOptions, request: requestOptions} = options ?? {};
+
+  const queryKey =  queryOptions?.queryKey ?? getListAdminConsultationRequestsQueryKey();
+
+
+
+    const queryFn: QueryFunction<Awaited<ReturnType<typeof listAdminConsultationRequests>>> = ({ signal }) => listAdminConsultationRequests({ signal, ...requestOptions });
+
+
+
+
+
+   return  { queryKey, queryFn, ...queryOptions} as UseQueryOptions<Awaited<ReturnType<typeof listAdminConsultationRequests>>, TError, TData> & { queryKey: QueryKey }
+}
+
+export type ListAdminConsultationRequestsQueryResult = NonNullable<Awaited<ReturnType<typeof listAdminConsultationRequests>>>
+export type ListAdminConsultationRequestsQueryError = ErrorType<ApiError>
+
+
+/**
+ * @summary List consultation requests for administrators
+ */
+
+export function useListAdminConsultationRequests<TData = Awaited<ReturnType<typeof listAdminConsultationRequests>>, TError = ErrorType<ApiError>>(
+  options?: { query?:UseQueryOptions<Awaited<ReturnType<typeof listAdminConsultationRequests>>, TError, TData>, request?: SecondParameter<typeof customFetch>}
+
+ ):  UseQueryResult<TData, TError> & { queryKey: QueryKey } {
+
+  const queryOptions = getListAdminConsultationRequestsQueryOptions(options)
+
+  const query = useQuery(queryOptions) as  UseQueryResult<TData, TError> & { queryKey: QueryKey };
+
+  return withQueryKey(query, queryOptions.queryKey);
+}
+
+
+
+
+
+
+
+export const getUpdateAdminConsultationRequestUrl = (requestId: number,) => {
+
+
+
+
+  return `/api/admin/consultation-requests/${requestId}`
+}
+
+/**
+ * @summary Update a consultation request status
+ */
+export const updateAdminConsultationRequest = async (requestId: number,
+    consultationRequestStatusUpdate: ConsultationRequestStatusUpdate, options?: Parameters<typeof customFetch>[1]): Promise<AdminConsultationRequest> => {
+
+  return customFetch<AdminConsultationRequest>(getUpdateAdminConsultationRequestUrl(requestId),
+  {
+    ...options,
+    method: 'PATCH',
+    headers: { 'Content-Type': 'application/json', ...options?.headers },
+    body: JSON.stringify(consultationRequestStatusUpdate)
+  }
+);}
+
+
+
+
+
+export const getUpdateAdminConsultationRequestMutationOptions = <TError = ErrorType<ApiError>,
+    TContext = unknown>(options?: { mutation?:UseMutationOptions<Awaited<ReturnType<typeof updateAdminConsultationRequest>>, TError,{requestId: number;data: BodyType<ConsultationRequestStatusUpdate>}, TContext>, request?: SecondParameter<typeof customFetch>}
+): UseMutationOptions<Awaited<ReturnType<typeof updateAdminConsultationRequest>>, TError,{requestId: number;data: BodyType<ConsultationRequestStatusUpdate>}, TContext> => {
+
+const mutationKey = ['updateAdminConsultationRequest'];
+const {mutation: mutationOptions, request: requestOptions} = options ?
+      options.mutation && 'mutationKey' in options.mutation && options.mutation.mutationKey ?
+      options
+      : {...options, mutation: {...options.mutation, mutationKey}}
+      : {mutation: { mutationKey, }, request: undefined};
+
+
+
+
+      const mutationFn: MutationFunction<Awaited<ReturnType<typeof updateAdminConsultationRequest>>, {requestId: number;data: BodyType<ConsultationRequestStatusUpdate>}> = (props) => {
+          const {requestId,data} = props ?? {};
+
+          return  updateAdminConsultationRequest(requestId,data,requestOptions)
+        }
+
+
+
+
+
+
+  return  { mutationFn, ...mutationOptions }}
+
+    export type UpdateAdminConsultationRequestMutationResult = NonNullable<Awaited<ReturnType<typeof updateAdminConsultationRequest>>>
+    export type UpdateAdminConsultationRequestMutationBody = BodyType<ConsultationRequestStatusUpdate>
+    export type UpdateAdminConsultationRequestMutationError = ErrorType<ApiError>
+
+    /**
+ * @summary Update a consultation request status
+ */
+export const useUpdateAdminConsultationRequest = <TError = ErrorType<ApiError>,
+    TContext = unknown>(options?: { mutation?:UseMutationOptions<Awaited<ReturnType<typeof updateAdminConsultationRequest>>, TError,{requestId: number;data: BodyType<ConsultationRequestStatusUpdate>}, TContext>, request?: SecondParameter<typeof customFetch>}
+ ): UseMutationResult<
+        Awaited<ReturnType<typeof updateAdminConsultationRequest>>,
+        TError,
+        {requestId: number;data: BodyType<ConsultationRequestStatusUpdate>},
+        TContext
+      > => {
+      return useMutation(getUpdateAdminConsultationRequestMutationOptions(options));
     }
 

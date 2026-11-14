@@ -12,6 +12,8 @@ tags:
     description: Health operations
   - name: users
     description: Authenticated user profile operations
+  - name: consultations
+    description: Consent-based consultation request operations
 paths:
   /healthz:
     get:
@@ -98,6 +100,138 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/ApiError"
+  /users/me/consultation-requests:
+    get:
+      operationId: listMyConsultationRequests
+      tags: [consultations]
+      summary: List the signed-in user's consultation requests
+      security:
+        - clerkSession: []
+      responses:
+        "200":
+          description: Consultation requests owned by the signed-in user
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/MyConsultationRequest"
+        "401":
+          description: Authentication required
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiError"
+    post:
+      operationId: createMyConsultationRequest
+      tags: [consultations]
+      summary: Submit a consultation request with consent
+      security:
+        - clerkSession: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ConsultationRequestInput"
+      responses:
+        "201":
+          description: Consultation request received
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/MyConsultationRequest"
+        "400":
+          description: Invalid request or required consent missing
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiError"
+        "401":
+          description: Authentication required
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiError"
+  /admin/consultation-requests:
+    get:
+      operationId: listAdminConsultationRequests
+      tags: [consultations]
+      summary: List consultation requests for administrators
+      security:
+        - clerkSession: []
+      responses:
+        "200":
+          description: Consultation request queue
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/AdminConsultationRequest"
+        "401":
+          description: Authentication required
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiError"
+        "403":
+          description: Administrator access required
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiError"
+  /admin/consultation-requests/{requestId}:
+    patch:
+      operationId: updateAdminConsultationRequest
+      tags: [consultations]
+      summary: Update a consultation request status
+      security:
+        - clerkSession: []
+      parameters:
+        - name: requestId
+          in: path
+          required: true
+          schema:
+            type: number
+            minimum: 1
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ConsultationRequestStatusUpdate"
+      responses:
+        "200":
+          description: Updated consultation request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AdminConsultationRequest"
+        "400":
+          description: Invalid status or request identifier
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiError"
+        "401":
+          description: Authentication required
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiError"
+        "403":
+          description: Administrator access required
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiError"
+        "404":
+          description: Consultation request not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiError"
 components:
   securitySchemes:
     clerkSession:
@@ -143,6 +277,65 @@ components:
         marketing:
           type: boolean
       required: [analytics, marketing]
+    ConsultationRequestStatus:
+      type: string
+      enum: [received, reviewing, follow_up, closed]
+    ConsultationRequestInput:
+      type: object
+      properties:
+        contactEmail:
+          type: string
+          pattern: '^[^\s@]+@[^\s@]+\.[^\s@]+$'
+          maxLength: 254
+        purpose:
+          type: string
+          minLength: 8
+          maxLength: 120
+        details:
+          type: string
+          minLength: 20
+          maxLength: 2000
+        consent:
+          type: boolean
+      required: [contactEmail, purpose, details, consent]
+    ConsultationRequestStatusUpdate:
+      type: object
+      properties:
+        status:
+          $ref: "#/components/schemas/ConsultationRequestStatus"
+      required: [status]
+    MyConsultationRequest:
+      type: object
+      properties:
+        id:
+          type: number
+        contactEmail:
+          type: string
+          pattern: '^[^\s@]+@[^\s@]+\.[^\s@]+$'
+        purpose:
+          type: string
+        details:
+          type: string
+        status:
+          $ref: "#/components/schemas/ConsultationRequestStatus"
+        consentedAt:
+          type: string
+          format: date-time
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+      required: [id, contactEmail, purpose, details, status, consentedAt, createdAt, updatedAt]
+    AdminConsultationRequest:
+      allOf:
+        - $ref: "#/components/schemas/MyConsultationRequest"
+        - type: object
+          properties:
+            userId:
+              type: string
+          required: [userId]
     ApiError:
       type: object
       properties:

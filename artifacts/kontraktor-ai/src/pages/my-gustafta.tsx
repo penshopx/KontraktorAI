@@ -11,6 +11,7 @@ import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "wouter";
 import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
+import MyGustaftaConsultations from "@/components/my-gustafta-consultations";
 
 type ProfileFields = {
   firstName: string;
@@ -99,6 +100,7 @@ export default function MyGustaftaPage() {
           </Link>
           <nav aria-label="Navigasi akun" className="flex items-center gap-2 sm:gap-3">
             <Link href="/my-gustafta/security" className="inline-flex min-h-10 items-center gap-2 border border-white/15 px-3 text-xs text-[#d4e0e5] transition hover:border-[#8bdcff]/50 hover:text-white" data-testid="link-account-security"><LockKeyhole size={14} /> Keamanan</Link>
+            {currentUserQuery.data?.role === "admin" && <Link href="/admin/consultations" className="inline-flex min-h-10 items-center gap-2 border border-[#8bdcff]/30 bg-[#8bdcff]/[.06] px-3 text-xs text-[#b9eaff] transition hover:border-[#8bdcff]/60 hover:text-white" data-testid="link-admin-consultations">Antrean founder</Link>}
             <Link href="/" className="hidden min-h-10 items-center gap-2 px-3 text-xs text-[#aebdc5] hover:text-[#8bdcff] sm:inline-flex" data-testid="link-return-home">Portal publik <ArrowRight size={14} /></Link>
             <button type="button" onClick={() => void signOut({ redirectUrl: "/" })} className="min-h-10 border border-white/15 px-3 text-xs text-[#d4e0e5] transition hover:border-[#8bdcff]/50 hover:text-white" data-testid="button-sign-out">Keluar</button>
           </nav>
@@ -177,10 +179,12 @@ export default function MyGustaftaPage() {
             <p className="mt-4 text-[11px] leading-5 text-[#9bacb4]">Peran dan tanggal bergabung berasal dari catatan akun Gustafta, bukan dari formulir profil.</p>
             <div className="mt-6 border-t border-white/10 pt-5">
               <p className="eyebrow !text-[9px]">AREA BELUM TERSEDIA</p>
-              <p className="mt-2 text-xs leading-5 text-[#aab8bf]" data-testid="text-unavailable-modules">Riwayat Concierge, pengetahuan tersimpan, dan permintaan belum tersedia di akun ini. Tidak ada aktivitas yang ditampilkan sampai fiturnya siap.</p>
+              <p className="mt-2 text-xs leading-5 text-[#aab8bf]" data-testid="text-unavailable-modules">Riwayat Concierge dan pengetahuan tersimpan belum tersedia. Permintaan konsultasi dikelola terpisah di bagian My Requests.</p>
             </div>
           </section>
         </div>
+
+        <MyGustaftaConsultations email={email} />
 
         <section className="mt-6 border border-[#30434e] bg-[#111c23] p-5 sm:p-7" data-testid="my-gustafta-consent-card">
           <div className="grid gap-6 md:grid-cols-[.8fr_1.2fr]">

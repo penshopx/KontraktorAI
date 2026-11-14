@@ -6,9 +6,14 @@
  * OpenAPI spec version: 0.1.0
  */
 
+export * from './adminConsultationRequest';
 export * from './apiError';
+export * from './consultationRequestInput';
+export * from './consultationRequestStatus';
+export * from './consultationRequestStatusUpdate';
 export * from './currentUser';
 export * from './currentUserRole';
 export * from './healthStatus';
+export * from './myConsultationRequest';
 export * from './userConsents';
 export * from './userConsentsUpdate';

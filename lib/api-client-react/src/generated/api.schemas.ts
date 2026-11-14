@@ -35,6 +35,55 @@ export interface UserConsentsUpdate {
   marketing: boolean;
 }
 
+export type ConsultationRequestStatus = typeof ConsultationRequestStatus[keyof typeof ConsultationRequestStatus];
+
+
+export const ConsultationRequestStatus = {
+  received: 'received',
+  reviewing: 'reviewing',
+  follow_up: 'follow_up',
+  closed: 'closed',
+} as const;
+
+export interface ConsultationRequestInput {
+  /**
+     * @maxLength 254
+     * @pattern ^[^\s@]+@[^\s@]+\.[^\s@]+$
+     */
+  contactEmail: string;
+  /**
+     * @minLength 8
+     * @maxLength 120
+     */
+  purpose: string;
+  /**
+     * @minLength 20
+     * @maxLength 2000
+     */
+  details: string;
+  consent: boolean;
+}
+
+export interface ConsultationRequestStatusUpdate {
+  status: ConsultationRequestStatus;
+}
+
+export interface MyConsultationRequest {
+  id: number;
+  /** @pattern ^[^\s@]+@[^\s@]+\.[^\s@]+$ */
+  contactEmail: string;
+  purpose: string;
+  details: string;
+  status: ConsultationRequestStatus;
+  consentedAt: string;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export type AdminConsultationRequest = MyConsultationRequest & {
+  userId: string;
+};
+
 export interface ApiError {
   error: string;
 }

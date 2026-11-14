@@ -53,3 +53,111 @@ export const UpdateCurrentUserConsentsResponse = zod.object({
 })
 
 
+/**
+ * @summary List the signed-in user's consultation requests
+ */
+export const listMyConsultationRequestsResponseContactEmailRegExp = new RegExp('^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$');
+
+
+export const ListMyConsultationRequestsResponseItem = zod.object({
+  "id": zod.number(),
+  "contactEmail": zod.string().regex(listMyConsultationRequestsResponseContactEmailRegExp),
+  "purpose": zod.string(),
+  "details": zod.string(),
+  "status": zod.enum(['received', 'reviewing', 'follow_up', 'closed']),
+  "consentedAt": zod.coerce.date(),
+  "createdAt": zod.coerce.date(),
+  "updatedAt": zod.coerce.date()
+})
+export const ListMyConsultationRequestsResponse = zod.array(ListMyConsultationRequestsResponseItem)
+
+
+/**
+ * @summary Submit a consultation request with consent
+ */
+export const createMyConsultationRequestBodyContactEmailMax = 254;
+
+
+export const createMyConsultationRequestBodyContactEmailRegExp = new RegExp('^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$');
+export const createMyConsultationRequestBodyPurposeMin = 8;
+export const createMyConsultationRequestBodyPurposeMax = 120;
+
+export const createMyConsultationRequestBodyDetailsMin = 20;
+export const createMyConsultationRequestBodyDetailsMax = 2000;
+
+
+
+export const CreateMyConsultationRequestBody = zod.object({
+  "contactEmail": zod.string().max(createMyConsultationRequestBodyContactEmailMax).regex(createMyConsultationRequestBodyContactEmailRegExp),
+  "purpose": zod.string().min(createMyConsultationRequestBodyPurposeMin).max(createMyConsultationRequestBodyPurposeMax),
+  "details": zod.string().min(createMyConsultationRequestBodyDetailsMin).max(createMyConsultationRequestBodyDetailsMax),
+  "consent": zod.boolean()
+})
+
+export const createMyConsultationRequestResponseContactEmailRegExp = new RegExp('^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$');
+
+
+export const CreateMyConsultationRequestResponse = zod.object({
+  "id": zod.number(),
+  "contactEmail": zod.string().regex(createMyConsultationRequestResponseContactEmailRegExp),
+  "purpose": zod.string(),
+  "details": zod.string(),
+  "status": zod.enum(['received', 'reviewing', 'follow_up', 'closed']),
+  "consentedAt": zod.coerce.date(),
+  "createdAt": zod.coerce.date(),
+  "updatedAt": zod.coerce.date()
+})
+
+
+/**
+ * @summary List consultation requests for administrators
+ */
+export const listAdminConsultationRequestsResponseOneContactEmailRegExp = new RegExp('^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$');
+
+
+export const ListAdminConsultationRequestsResponseItem = zod.object({
+  "id": zod.number(),
+  "contactEmail": zod.string().regex(listAdminConsultationRequestsResponseOneContactEmailRegExp),
+  "purpose": zod.string(),
+  "details": zod.string(),
+  "status": zod.enum(['received', 'reviewing', 'follow_up', 'closed']),
+  "consentedAt": zod.coerce.date(),
+  "createdAt": zod.coerce.date(),
+  "updatedAt": zod.coerce.date()
+}).and(zod.object({
+  "userId": zod.string()
+}))
+export const ListAdminConsultationRequestsResponse = zod.array(ListAdminConsultationRequestsResponseItem)
+
+
+/**
+ * @summary Update a consultation request status
+ */
+
+
+
+export const UpdateAdminConsultationRequestParams = zod.object({
+  "requestId": zod.coerce.number().min(1)
+})
+
+export const UpdateAdminConsultationRequestBody = zod.object({
+  "status": zod.enum(['received', 'reviewing', 'follow_up', 'closed'])
+})
+
+export const updateAdminConsultationRequestResponseOneContactEmailRegExp = new RegExp('^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$');
+
+
+export const UpdateAdminConsultationRequestResponse = zod.object({
+  "id": zod.number(),
+  "contactEmail": zod.string().regex(updateAdminConsultationRequestResponseOneContactEmailRegExp),
+  "purpose": zod.string(),
+  "details": zod.string(),
+  "status": zod.enum(['received', 'reviewing', 'follow_up', 'closed']),
+  "consentedAt": zod.coerce.date(),
+  "createdAt": zod.coerce.date(),
+  "updatedAt": zod.coerce.date()
+}).and(zod.object({
+  "userId": zod.string()
+}))
+
+

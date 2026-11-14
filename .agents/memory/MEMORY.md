@@ -1,3 +1,4 @@
 - [KontraktorAI brand and focus](kontraktorai-brand-name.md) — KontraktorAI is Gustafta's endorsed industry brand, with five sectors entered in phases.
 - [KontraktorAI business model](kontraktorai-business-model.md) — Hybrid revenue-first; AI Concierge is the gateway, while Expert Connect remains a recommendation and the industry taxonomy provisional.
 - [Gustafta Analytics](gustafta-analytics.md) — Comprehensive cross-product analytics is final; vendors, targets, and implementation remain open.
+- [OpenAPI validator compatibility](openapi-zod-compatibility.md) — Avoid OpenAPI integer and email formats that generate unsupported Zod 4 validators here.
