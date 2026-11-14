@@ -441,6 +441,14 @@ function BusinessModel() {
     { title: 'Bulanan', detail: 'Revenue, cashflow, margin proyek, pipeline, marketing, produk, dan beban founder.' },
     { title: 'Kuartalan', detail: 'Portfolio, anggaran, risiko, OKR, serta keputusan continue, improve, hold, atau stop.' },
   ];
+  const newsCmsDecisions = [
+    { number: '01', title: 'Kurasi berita', detail: 'RSS/API, bantuan AI untuk kurasi dan draf, serta input manual terintegrasi.' },
+    { number: '02', title: 'Model CMS', detail: 'Hybrid CMS: mulai dari platform siap pakai, lalu tambahkan modul khusus bertahap.' },
+    { number: '03', title: 'Kebijakan publikasi', detail: 'Artikel rutin dijadwalkan setelah review; konten sensitif memerlukan persetujuan khusus.' },
+    { number: '04', title: 'Cakupan konten', detail: 'Berita, proyek, teknologi, regulasi, analisis, dan pengetahuan industri.' },
+    { number: '05', title: 'Distribusi bertahap', detail: 'Website dan SEO, lalu kanal sosial/WhatsApp serta newsletter dan CRM.' },
+    { number: '06', title: 'Monetisasi awal', detail: 'Utamakan prospek berkualitas untuk layanan Gustafta; bukan iklan sebagai pendapatan utama.' },
+  ];
   return <section id="model-bisnis" className="relative overflow-hidden border-y border-white/[.08] bg-[#111c23] py-20 md:py-28">
     <div className="absolute right-[-180px] top-[-180px] h-[500px] w-[500px] rounded-full border border-[#8bdcff]/[.08]" />
     <div className="container-wide relative">
@@ -948,6 +956,32 @@ function BusinessModel() {
           <div className="eyebrow text-amber-100/90">INPUT YANG MASIH TERBUKA SEBELUM DIKUNCI</div>
           <p className="mt-2 text-[10px] leading-5 text-[#aebbc0]">Jumlah modal dan biaya rutin aktual, status tiap produk/aset, target revenue/pelanggan/proyek, pilihan tools operasional, serta pembobotan prioritas masih perlu dikonfirmasi atau diaudit. Kapasitas founder harus membatasi scope; target numerik belum ditetapkan.</p>
           <p className="mt-2 text-[9px] leading-5 text-[#758792]">Kategori tools ditentukan, tetapi vendor belum dipilih. Fase bulan 1–12 adalah rencana relatif dan dapat diubah berdasarkan baseline, cashflow, serta kapasitas.</p>
+        </div>
+      </div>
+      <div id="bagian-13" className="mt-14 border-t border-white/10 pt-10" data-testid="news-cms-decisions">
+        <div className="grid gap-5 md:grid-cols-[.78fr_1.22fr] md:items-end">
+          <div><div className="eyebrow">BAGIAN 13 · KONTRAKTORAI NEWS & CMS</div><h3 className="display-font mt-3 max-w-[520px] text-3xl font-semibold leading-tight text-[#e6eef1] md:text-4xl">News industri.<br /><span className="text-[#8bdcff]">Editorial tetap manusia.</span></h3></div>
+          <div>
+            <span className="inline-flex items-center gap-2 border border-[#8bdcff]/25 bg-[#8bdcff]/[.06] px-3 py-1.5 font-mono text-[9px] tracking-[.1em] text-[#b9eaff]">KEPUTUSAN STRATEGIS · FINAL & TERKUNCI</span>
+            <p className="mt-3 max-w-[630px] text-[12px] leading-6 text-[#a7b5bc]">KontraktorAI News menggabungkan kurasi, pengetahuan, dan analisis industri. Enam keputusan mengunci arah editorial serta monetisasi awal; ini belum berarti CMS, integrasi, atau otomasi sudah dibangun.</p>
+          </div>
+        </div>
+        <div className="mt-6 grid gap-2 sm:grid-cols-2 xl:grid-cols-3" data-testid="news-cms-decision-cards">
+          {newsCmsDecisions.map((decision, index) => <article key={decision.number} className="border border-white/[.1] bg-white/[.025] p-4" data-testid={`news-cms-decision-${index + 1}`}>
+            <span className="font-mono text-[9px] text-[#8bdcff]">KEPUTUSAN {decision.number}</span>
+            <h4 className="mt-2 text-[11px] font-semibold text-[#e5edf0]">{decision.title}</h4>
+            <p className="mt-1.5 text-[10px] leading-5 text-[#91a0a8]">{decision.detail}</p>
+          </article>)}
+        </div>
+        <div className="mt-5 grid gap-3 md:grid-cols-2">
+          <article className="border border-[#8bdcff]/20 bg-[#8bdcff]/[.04] p-4" data-testid="news-editorial-human-review">
+            <div className="eyebrow">ALUR EDITORIAL WAJIB</div>
+            <p className="mt-2 text-[10px] leading-5 text-[#c1d0d6]">Temukan dan verifikasi sumber → AI membantu ringkasan/draf/SEO → editor memeriksa fakta, konteks, kualitas, dan hak cipta → jadwalkan atau terbitkan setelah review. AI tidak memiliki kewenangan publikasi; konten sensitif memerlukan persetujuan khusus.</p>
+          </article>
+          <article className="border border-white/[.1] bg-white/[.025] p-4" data-testid="news-cms-implementation-boundary">
+            <div className="eyebrow">IMPLEMENTASI BERTAHAP · VENDOR BELUM DIPILIH</div>
+            <p className="mt-2 text-[10px] leading-5 text-[#a5b3ba]">Satu artikel yang disetujui disesuaikan untuk website/SEO, sosial, WhatsApp, lalu newsletter dan CRM. CMS dan distribusi masih menjadi pekerjaan backlog; monetisasi awal berfokus pada prospek layanan Gustafta.</p>
+          </article>
         </div>
       </div>
       <p className="mt-5 flex items-start gap-2 text-[10px] leading-5 text-[#778991]" data-testid="text-business-model-caveat"><Check size={13} className="mt-0.5 shrink-0 text-[#70bfdc]" />Enam unit bisnis dan tiga level penawaran adalah kerangka strategis, bukan katalog atau klaim ketersediaan. Harga, margin, dan proyeksi tetap perlu divalidasi.</p>

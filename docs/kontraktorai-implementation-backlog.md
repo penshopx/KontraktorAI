@@ -378,6 +378,30 @@ metodologi, dan nama portal yang digunakan adalah **KontraktorAI**.
 - Kerangka ini tidak menyatakan target produk, pelanggan, pendapatan, proyek,
   integrasi, atau sistem keuangan telah tercapai atau berjalan.
 
+## Keputusan strategis Bagian 13
+
+- Status Bagian 13: **FINAL & LOCKED**. Produk editorial memakai nama
+  **KontraktorAI News**; semua sebutan brand lama di materi baru dinormalisasi.
+- Model berita: hybrid automation—RSS/API, bantuan AI, dan input manual
+  terintegrasi.
+- Model CMS: hybrid bertahap—gunakan CMS siap pakai lebih dahulu, lalu tambahkan
+  modul khusus bila kebutuhan berulang membenarkannya. Belum ada vendor yang
+  dipilih dan custom CMS penuh tidak menjadi sasaran tahap awal.
+- Kebijakan publikasi: artikel rutin boleh dijadwalkan setelah pemeriksaan editor;
+  konten sensitif memerlukan persetujuan khusus. AI tidak boleh menerbitkan
+  sendiri atau mengubah informasi yang belum diverifikasi menjadi fakta.
+- Cakupan awal meliputi berita, proyek, teknologi, regulasi, analisis, dan
+  pengetahuan industri; tetap mengikuti fokus sektor KontraktorAI secara bertahap.
+- Distribusi dikembangkan secara omnichannel: website/SEO dan kanal sosial serta
+  WhatsApp, lalu newsletter dan CRM. Setiap artikel disetujui dan disesuaikan
+  dengan format kanal sebelum didistribusikan.
+- Monetisasi tahun pertama memprioritaskan prospek berkualitas untuk layanan
+  Gustafta. Iklan, sponsor, listing, dan produk konten berbayar bukan sumber
+  pendapatan utama pada tahap awal.
+- Keputusan strategi tidak menyatakan CMS, RSS/API, AI editorial, analytics,
+  distribusi, atau monetisasi telah tersedia. Jadwal, KPI, vendor, dan biaya
+  implementasi masih harus ditetapkan melalui backlog dan validasi.
+
 ## Prioritas pelaksanaan
 
 Gelombang berikut adalah urutan awal, bukan komitmen durasi. Pekerjaan tata
@@ -386,7 +410,7 @@ kelola proyek, keamanan, dan pengukuran berjalan lintas gelombang.
 | Gelombang | Fokus | Paket |
 | --- | --- | --- |
 | 1. Fondasi | Brand, model bisnis, audit portofolio, tata kelola | 01, 02, 03, 12 |
-| 2. Portal dan konten | Pengalaman portal, News, infrastruktur awal | 04, 05, 10 |
+| 2. Portal dan konten | Pengalaman portal, KontraktorAI News, CMS, infrastruktur awal | 04, 05, 10, 13 |
 | 3. Integrasi kecerdasan | AI Concierge, basis pengetahuan, katalog dan integrasi aplikasi | 06, 07 |
 | 4. Layanan dan pertumbuhan | Konsultasi, kolaborasi, academy, pemasaran pada pasar prioritas | 08, 09, 11 |
 | 5. Validasi dan ekspansi | Buktikan model pada konstruksi; perluas bertahap ke empat sektor lain | Lanjutan seluruh paket |
@@ -397,6 +421,9 @@ kelola proyek, keamanan, dan pengukuran berjalan lintas gelombang.
   dari 03.
 - Paket 05 memerlukan struktur News dari 04 dan fondasi data serta keamanan dari
   10. Publikasi berita wajib melalui pemeriksaan editor.
+- Paket 13 memperinci CMS dan sistem editorial KontraktorAI News; bergantung
+  pada struktur portal/News paket 04–05 serta fondasi data, integrasi, dan
+  keamanan paket 10.
 - Paket 06 bergantung pada inventaris produk 03 serta sumber pengetahuan yang
   diizinkan dan tata kelola informasi dari 05 dan 10.
 - Paket 07 memerlukan keputusan katalog produk dari 03 dan rancangan identitas
@@ -406,7 +433,7 @@ kelola proyek, keamanan, dan pengukuran berjalan lintas gelombang.
 - Paket 11 memanfaatkan News dari 05 dan kanal distribusi yang disetujui.
 - Paket 12 mengelola backlog, risiko, biaya, jadwal, dan indikator seluruh paket.
 
-## 12 paket kerja
+## 13 paket kerja
 
 ### 01 — Strategi Bisnis dan Arsitektur Brand
 
@@ -846,12 +873,61 @@ hasil setiap paket.
 - Perekrutan atau peningkatan biaya tetap hanya dipertimbangkan saat kebutuhan
   berulang, kapasitas, dan sumber pendanaan dapat dijelaskan.
 
+### 13 — KontraktorAI News dan Content Management System
+
+**Tujuan:** mengelola publikasi News industri secara terstruktur dengan bantuan
+AI, kontrol editorial manusia, dan jalur menuju prospek layanan Gustafta.
+
+**Hasil kerja**
+- Sitemap teknis KontraktorAI News, beranda, halaman kanal, daftar artikel,
+  detail artikel, pencarian, dan struktur kategori/sektor.
+- Evaluasi dan pemilihan CMS hybrid yang siap pakai; tambah modul khusus secara
+  bertahap. Vendor dan platform memerlukan evaluasi biaya, keamanan, lisensi,
+  portabilitas, serta kebutuhan operasional sebelum dipilih.
+- Dashboard editorial, editor artikel, pengelolaan sumber, kategori/sektor,
+  tag, media, profil penulis, workflow, SEO, analytics, pengguna, peran, dan
+  pengaturan.
+- Model artikel terstruktur untuk judul, slug, ringkasan, isi, sektor, kategori,
+  tag, media/keterangan, sumber dan URL, tanggal sumber, penulis/editor, jenis
+  konten, metadata SEO, status, serta waktu publikasi/pembaruan.
+- Workflow human-in-the-loop: temukan berita → verifikasi sumber/konteks/tanggal
+  → bantuan AI untuk ringkasan dan draf → tinjauan fakta, mutu, hak cipta, dan
+  risiko oleh manusia → SEO/format → jadwal atau persetujuan khusus → distribusi
+  dan analitik.
+- Fitur AI editorial bertahap: pencarian/kurasi, ringkasan, draf, variasi judul,
+  bantuan SEO, saran tag/kategori, terjemahan, repurposing, pemeriksaan struktur,
+  dan deteksi duplikasi. AI tidak menjadi pengguna dengan hak publikasi.
+- Peran awal founder sebagai Super Admin dan Editor-in-Chief; hak Editor,
+  Author, Contributor, Analyst, dan Viewer disiapkan sesuai kebutuhan, bukan
+  sebagai bukti bahwa tim redaksi telah terbentuk.
+- Distribusi dari satu sumber konten yang disetujui ke website, mesin pencari,
+  sosial, WhatsApp, newsletter, dan knowledge base secara bertahap; format
+  disesuaikan dan konten tidak disalin penuh ke semua kanal.
+- Jalur monetisasi awal dari artikel ke prospek konsultasi dan layanan Gustafta.
+  Target trafik, penerbitan, dan pendapatan belum ditetapkan.
+
+**Kriteria penerimaan**
+- Tidak ada berita atau konten AI yang terbit tanpa review manusia; konten
+  sensitif memerlukan persetujuan khusus.
+- Artikel kurasi mencatat sumber asli, URL, dan tanggal; analisis serta konten
+  orisinal dibedakan dari berita yang diringkas.
+- Sistem tidak mengarang fakta, kutipan, atau data proyek; sumber dan hak
+  penggunaan diperiksa sebelum publikasi.
+- CMS menyediakan status draf, review, terjadwal, terbit, serta pembaruan; akses
+  dan publikasi dibatasi menurut peran.
+- Distribusi otomatis hanya dilakukan untuk konten yang telah disetujui dan
+  disesuaikan untuk kanal terkait.
+- Strategi monetisasi awal berfokus pada prospek layanan; sponsor, listing,
+  iklan, dan premium intelligence memerlukan keputusan dan validasi tersendiri.
+- Rekomendasi tahap MVP, roadmap bulan 1–12, jumlah artikel, trafik, dan KPI
+  diperlakukan sebagai usulan, bukan komitmen atau hasil terukur.
+
 ## Tahap MVP yang disarankan
 
 1. **Fondasi:** selesaikan keputusan brand, segmen, prioritas produk, dan
    tata kelola awal (paket 01, 02, 03, 12).
-2. **Portal dan News:** tetapkan arsitektur pengguna, kanal News, proses editorial,
-   serta model data dan keamanan awal (paket 04, 05, 10).
+2. **Portal dan News:** tetapkan arsitektur pengguna, kanal News, CMS hybrid,
+   proses editorial, serta model data dan keamanan awal (paket 04, 05, 10, 13).
 3. **Solusi terarah:** bangun Concierge dengan sumber terverifikasi dan katalog
    aplikasi yang telah diaudit (paket 06, 07).
 4. **Pertumbuhan:** perluas konsultasi, kompetensi, kolaborasi, dan pemasaran

@@ -130,8 +130,25 @@ For Part 11, the user finalized a hybrid marketing and growth ecosystem:
   baselines are measured; prioritize revenue, customers, qualified leads,
   projects, repeat business, and recurring revenue over reach alone.
 
+For Part 13, the user finalized the KontraktorAI News and CMS strategy:
+
+- Use hybrid news curation across RSS/API, AI assistance, and manual input.
+- Use a ready-to-use CMS with custom modules added gradually; no CMS vendor is
+  selected and a fully custom CMS is not the initial goal.
+- Human review is required before publication. Routine stories may be scheduled
+  after review; sensitive content needs explicit approval. AI has no independent
+  publishing authority.
+- Cover news, projects, technology, regulation, analysis, and industry knowledge.
+- Distribute in stages across the website/SEO, social and WhatsApp, then
+  newsletter and CRM.
+- Prioritize qualified leads for Gustafta services as initial monetization;
+  advertising is not the primary first-year revenue source.
+- These are strategic decisions, not evidence that the CMS, feeds, AI workflow,
+  analytics, or distribution integrations are already implemented.
+
 **Why:** the user confirmed the Part 02–11 business choices and the Part 03
-endorsed-brand architecture and market approach.
+endorsed-brand architecture and market approach, then confirmed the Part 13
+News/CMS strategy.
 
 **How to apply:** use these priorities in Gustafta and KontraktorAI business
 planning, portal messaging, and future product decisions. Choose implementation
@@ -157,3 +174,6 @@ or security controls are already implemented; evaluate providers, controls, and
 compliance against actual data, risk, cost, and operational needs.
 Apply Part 11 as a revenue-first channel strategy; do not turn draft budget
 allocations or KPI quantities into commitments without an agreed baseline.
+Apply Part 13 without implying a CMS or integration is live; preserve human
+review, staged distribution, and service-lead monetization while vendors and
+implementation details remain unselected.
