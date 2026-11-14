@@ -1028,6 +1028,59 @@ function BusinessModel() {
           </div>
           <p className="mt-3 border-l border-[#8bdcff]/50 pl-3 text-[9px] leading-5 text-[#8798a1]" data-testid="integration-vendor-note">Basic login dan pengelolaan identitas P0; SSO lintas produk P2. Dashboard pengguna My Gustafta tetap P0, sedangkan dashboard admin/analytics P1. n8n menjadi salah satu tool target, belum di-host atau dihubungkan. Vendor lain belum dipilih; roadmap adalah rencana relatif, bukan janji tanggal.</p>
         </div>
+        <div className="mt-6 border border-[#8bdcff]/20 bg-[#8bdcff]/[.035] p-4" data-testid="vendor-comparison-shortlist">
+          <div className="grid gap-4 md:grid-cols-[.7fr_1.3fr] md:items-end">
+            <div>
+              <div className="eyebrow">TECHNOLOGY STACK · SHORTLIST</div>
+              <h4 className="display-font mt-2 text-2xl font-semibold text-[#e6eef1]">Bandingkan biaya dan beban operasi.</h4>
+            </div>
+            <div>
+              <span className="inline-flex items-center gap-2 border border-[#8bdcff]/25 bg-[#8bdcff]/[.06] px-3 py-1.5 font-mono text-[9px] tracking-[.1em] text-[#9eddf2]">REKOMENDASI · BELUM ADA VENDOR BARU DIPILIH</span>
+              <p className="mt-2 text-[10px] leading-5 text-[#a5b3ba]">Snapshot harga dari halaman resmi, 14 November 2026. Harga USD/EUR belum termasuk pajak, kurs, biaya pemakaian berlebih, atau penawaran khusus. Evaluasi bukan persetujuan berlangganan.</p>
+            </div>
+          </div>
+          <div className="mt-4 grid gap-px border border-white/[.09] bg-white/[.09] md:grid-cols-2" data-testid="vendor-comparison-p0">
+            <article className="bg-[#111c23] p-3" data-testid="vendor-comparison-ai">
+              <span className="font-mono text-[9px] tracking-[.1em] text-[#8bdcff]">P0 · AI / LLM</span>
+              <h5 className="mt-2 text-[11px] font-semibold text-[#e5edf0]">OpenAI API vs Gemini API</h5>
+              <p className="mt-1.5 text-[10px] leading-5 text-[#91a0a8]">Tarif per 1 juta token: GPT-5 mini US$0,25 input / US$2 output; Gemini 3.8 Flash US$0,75 / US$3,75 sampai 31 Des 2026, lalu US$1,50 / US$7,50 mulai 1 Jan 2027. Contoh 1 juta input + 0,2 juta output: sekitar US$0,65 vs US$1,50, lalu US$3,00. Uji kualitas Bahasa Indonesia, sitasi, latency, dan biaya nyata sebelum memilih.</p>
+              <p className="mt-2 text-[9px] leading-4 text-[#758792]"><a className="text-[#8bdcff] underline" href="https://developers.openai.com/api/docs/pricing" target="_blank" rel="noreferrer">Tarif OpenAI</a><span className="mx-2">·</span><a className="text-[#8bdcff] underline" href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noreferrer">Tarif Gemini</a></p>
+            </article>
+            <article className="bg-[#111c23] p-3" data-testid="vendor-comparison-data">
+              <span className="font-mono text-[9px] tracking-[.1em] text-[#8bdcff]">P0 · DATABASE / AUTH / VECTOR</span>
+              <h5 className="mt-2 text-[11px] font-semibold text-[#e5edf0]">Supabase vs Neon</h5>
+              <p className="mt-1.5 text-[10px] leading-5 text-[#91a0a8]">Supabase menggabungkan Postgres, Auth, Storage, dan Vector; Free US$0 untuk prototipe tetapi proyek gratis berhenti sementara setelah seminggu tanpa aktivitas. Pro mulai US$25/bulan. Neon menawarkan Postgres Free/usage-based serta modul terkait; uji ketersediaan, kuota, dan kematangan Auth, Storage, vector, serta backup sebelum membandingkan totalnya. Shortlist Supabase untuk mengurangi integrasi awal, belum dikunci.</p>
+              <p className="mt-2 text-[9px] leading-4 text-[#758792]"><a className="text-[#8bdcff] underline" href="https://supabase.com/pricing" target="_blank" rel="noreferrer">Harga Supabase</a><span className="mx-2">·</span><a className="text-[#8bdcff] underline" href="https://neon.com/pricing" target="_blank" rel="noreferrer">Harga Neon</a></p>
+            </article>
+            <article className="bg-[#111c23] p-3" data-testid="vendor-comparison-crm">
+              <span className="font-mono text-[9px] tracking-[.1em] text-[#8bdcff]">P0 · CRM / LEADS</span>
+              <h5 className="mt-2 text-[11px] font-semibold text-[#e5edf0]">Zoho Bigin vs HubSpot CRM</h5>
+              <p className="mt-1.5 text-[10px] leading-5 text-[#91a0a8]">Bigin Free untuk satu pengguna dan 500 record; Express US$7/pengguna/bulan dengan tagihan tahunan. HubSpot menyediakan CRM Free; Starter tercantum mulai US$15/seat/bulan. Coba alur lead dan ekspor/API di paket gratis terlebih dahulu; bandingkan batas pengguna, sinkronisasi ke database internal, dan biaya saat naik paket.</p>
+              <p className="mt-2 text-[9px] leading-4 text-[#758792]"><a className="text-[#8bdcff] underline" href="https://www.bigin.com/pricing.html" target="_blank" rel="noreferrer">Harga Bigin</a><span className="mx-2">·</span><a className="text-[#8bdcff] underline" href="https://www.hubspot.com/products/crm" target="_blank" rel="noreferrer">HubSpot CRM</a></p>
+            </article>
+            <article className="bg-[#111c23] p-3" data-testid="vendor-comparison-cms">
+              <span className="font-mono text-[9px] tracking-[.1em] text-[#8bdcff]">P0 · NEWS CMS · TARGET SUDAH DIPILIH</span>
+              <h5 className="mt-2 text-[11px] font-semibold text-[#e5edf0]">WordPress.com Business</h5>
+              <p className="mt-1.5 text-[10px] leading-5 text-[#91a0a8]">Tetap sebagai target News CMS saja; bukan CRM, identity, atau backend AI. Harga resmi AS saat diperiksa: US$40/bulan bila dibayar tahunan, sebelum pajak. Situs belum terkonfirmasi aktif; cek harga checkout lokal, domain, dan kebutuhan plugin sebelum pembayaran.</p>
+              <p className="mt-2 text-[9px] leading-4 text-[#758792]"><a className="text-[#8bdcff] underline" href="https://wordpress.com/pricing/" target="_blank" rel="noreferrer">Harga WordPress.com</a></p>
+            </article>
+          </div>
+          <div className="mt-3 grid gap-px border border-white/[.09] bg-white/[.09] md:grid-cols-2" data-testid="vendor-comparison-p1-p2">
+            <article className="bg-[#111c23] p-3" data-testid="vendor-comparison-automation-email">
+              <span className="font-mono text-[9px] tracking-[.1em] text-[#8bdcff]">P1 · AUTOMATION / EMAIL</span>
+              <h5 className="mt-2 text-[11px] font-semibold text-[#e5edf0]">n8n Cloud atau Community + Resend</h5>
+              <p className="mt-1.5 text-[10px] leading-5 text-[#91a0a8]">n8n Cloud Starter €20/bulan bila ditagih tahunan (2.500 workflow executions); Community self-hosted tidak berlisensi berbayar, tetapi server, backup, patch, dan penjagaan tetap berbiaya. Resend Free 3.000 email/bulan (batas 100/hari); Pro US$20/bulan untuk 50.000. Tunda berlangganan sampai masuk P1 dan volume diketahui.</p>
+              <p className="mt-2 text-[9px] leading-4 text-[#758792]"><a className="text-[#8bdcff] underline" href="https://n8n.io/pricing/" target="_blank" rel="noreferrer">Harga n8n</a><span className="mx-2">·</span><a className="text-[#8bdcff] underline" href="https://resend.com/pricing" target="_blank" rel="noreferrer">Harga Resend</a></p>
+            </article>
+            <article className="bg-[#111c23] p-3" data-testid="vendor-comparison-payments">
+              <span className="font-mono text-[9px] tracking-[.1em] text-[#8bdcff]">P2 · PEMBAYARAN</span>
+              <h5 className="mt-2 text-[11px] font-semibold text-[#e5edf0]">Midtrans vs Xendit · belum dipilih</h5>
+              <p className="mt-1.5 text-[10px] leading-5 text-[#91a0a8]">Daftar Midtrans: VA Rp4.000/transaksi, QRIS 0,7%, GoPay 2%, kartu 2,9% + Rp2.000; pajak dan kategori usaha dapat mengubah biaya. Fee Xendit perlu dikonfirmasi langsung sebelum dibandingkan. Tetap P2; uji settlement, refund, dispute, rekonsiliasi, dan biaya metode pembayaran sebelum keputusan.</p>
+              <p className="mt-2 text-[9px] leading-4 text-[#758792]"><a className="text-[#8bdcff] underline" href="https://midtrans.com/pricing" target="_blank" rel="noreferrer">Harga Midtrans</a><span className="mx-2">·</span><a className="text-[#8bdcff] underline" href="https://www.xendit.co/id/" target="_blank" rel="noreferrer">Xendit Indonesia</a></p>
+            </article>
+          </div>
+          <p className="mt-3 border-l border-[#8bdcff]/50 pl-3 text-[9px] leading-5 text-[#8798a1]" data-testid="vendor-comparison-cost-note">Ilustrasi P0 jika berbayar: WordPress.com Business US$40/bulan (tagihan tahunan) + Supabase Pro mulai US$25/bulan = sekitar US$65/bulan sebelum pajak/kurs, belum termasuk Replit, penggunaan AI, domain, dan layanan lain. Prototipe dapat memakai tingkat gratis; biaya total belum dapat dipastikan karena batas biaya bulanan belum ditentukan. Tidak ada vendor yang diaktifkan oleh perbandingan ini.</p>
+        </div>
         <div className="mt-8 grid gap-5 lg:grid-cols-[.66fr_1.34fr]">
           <div><div className="eyebrow">DATA GOVERNANCE & SECURITY BY DESIGN</div><h4 className="display-font mt-2 text-2xl font-semibold text-[#e6eef1]">Lindungi data sebelum memperluas penggunaannya.</h4><p className="mt-2 text-[10px] leading-5 text-[#8798a1]">Kontrol diterapkan sebanding dengan klasifikasi data dan tingkat kritikalitas aplikasi. Kepemilikan, tujuan penggunaan, dan hak akses harus jelas—terutama untuk data pelanggan, pembayaran, administrasi, dan AI.</p></div>
           <ul className="grid gap-2 sm:grid-cols-2" data-testid="technology-safeguards">

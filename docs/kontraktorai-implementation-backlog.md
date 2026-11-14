@@ -1049,6 +1049,40 @@ menjadi keputusan produk final atau implementasi.
   Qdrant, HubSpot, Midtrans, Xendit, dan vendor lain tetap kandidat evaluasi.
   WordPress.com Business hanya target News CMS, bukan pilihan AI/CRM/identity.
 
+#### Shortlist teknologi dan vendor — rekomendasi, belum final
+
+**Snapshot harga:** 14 November 2026, dari halaman resmi yang ditautkan. Nilai
+USD/EUR sebelum pajak, konversi kurs, biaya berlebih, dan penawaran lokal. Tidak
+ada akun berbayar yang dibuat atau vendor yang diaktifkan. Karena batas anggaran
+bulanan belum ditentukan, angka berikut bukan total biaya operasional final.
+
+| Komponen / fase | Kandidat dan biaya publik | Penilaian untuk Gustafta | Status |
+| --- | --- | --- | --- |
+| AI/LLM — P0 | OpenAI GPT-5 mini: US$0,25 input / US$2 output per 1 juta token. Gemini 3.8 Flash: US$0,75 / US$3,75 sampai 31 Desember 2026; US$1,50 / US$7,50 mulai 1 Januari 2027. | Uji kedua pada set pertanyaan konstruksi berbahasa Indonesia, ukur ketepatan, sitasi, latency, keamanan, dan biaya aktual. Ilustrasi 1 juta input + 0,2 juta output: US$0,65 vs US$1,50 saat ini; tarif Gemini menjadi sekitar US$3 mulai Januari. Model termurah bukan otomatis yang paling akurat. | Kandidat evaluasi; belum dipilih |
+| Database, Auth, Vector — P0 | Supabase Free US$0 (500 MB DB, 50.000 MAU; proyek gratis berhenti sementara setelah 1 minggu tanpa aktivitas); Pro mulai US$25/bulan. Neon menyediakan Free dan compute usage-based; tagihan bergantung pemakaian. | Shortlist Supabase karena Postgres, Auth, Storage, dan vector tooling mengurangi sambungan awal. Untuk produksi, uji Pro dan lokasi data, RLS, backup, restore, export, serta egress. Neon menawarkan modul terkait seperti Better Auth/Object Storage; verifikasi ketersediaan, kuota, kematangan, serta kebutuhan vector dan backup sebelum perbandingan total. | Supabase kandidat utama, bukan keputusan final |
+| CRM dan leads — P0 | Zoho Bigin Free: 1 pengguna, 500 records; Express US$7/pengguna/bulan bila dibayar tahunan. HubSpot menyediakan CRM Free; Starter tercantum mulai US$15/seat/bulan. | Jalankan uji terbatas Bigin dan HubSpot pada pipeline lead yang sama; bandingkan batas kontak/pengguna, API/export, consent, integrasi dengan database internal, dan total biaya saat tim bertambah. Jangan menyinkronkan seluruh database ke CRM tanpa tujuan dan hak akses. | Belum dipilih; uji paket gratis |
+| News CMS — P0 | WordPress.com Business tetap menjadi target yang telah dipilih; harga AS resmi US$40/bulan untuk tagihan tahunan, belum termasuk pajak. | Pertahankan khusus untuk News CMS. Situs WordPress belum dikonfirmasi aktif; cek checkout lokal, domain, akses pengguna, plugin, backup, dan transfer konten sebelum pembelian/peluncuran. Jangan gunakan sebagai sumber identitas atau database AI. | Target sebelumnya; aktivasi belum dikonfirmasi |
+| Automation — P1 | n8n Cloud Starter €20/bulan dengan tagihan tahunan, 2.500 workflow executions/bulan; Community self-hosted tidak memerlukan lisensi berbayar. | Pilih Cloud bila penghematan waktu operasi lebih penting; self-host hanya bila ada pemilik untuk patch, backup, secret, monitoring, dan pemulihan. n8n tetap salah satu target orchestration, bukan layanan yang sudah terhubung. | n8n dipilih sebagai arah; mode hosting belum dipilih |
+| Email — P1 | Resend Free: 3.000 email/bulan dengan batas 100/hari; Pro US$20/bulan untuk 50.000 email/bulan. | Cocok untuk notifikasi transaksional awal bila dibutuhkan; cek verifikasi domain, reputasi pengirim, bounce/complaint handling, batas, serta kebijakan retensi. Tidak perlu langganan sebelum email masuk P1. | Shortlist; belum dipilih |
+| Pembayaran — P2 | Midtrans mencantumkan VA Rp4.000/transaksi, QRIS 0,7%, GoPay 2%, kartu 2,9% + Rp2.000. Fee Xendit harus dikonfirmasi pada penawaran/checkout resmi sebelum perbandingan final. | Tetap P2. Bandingkan fee per metode, pajak, settlement, refund, dispute, rekonsiliasi, dukungan, dan syarat onboarding; tidak ada payment gateway di MVP. | Belum dipilih; tidak diaktifkan |
+| WhatsApp, Partner API — P2; API Gateway, agents, ERP/IoT — P3 | Biaya dan kelayakan bergantung volume, integrasi, serta model penggunaan. | Tunda shortlist vendor rinci sampai kebutuhan/volume P2–P3 diketahui; jangan menambah langganan lebih awal. | Belum dievaluasi |
+
+**Baseline indikatif:** apabila WordPress.com Business dan Supabase Pro sama-sama
+dibayar, biaya tetap publik sekitar US$65/bulan sebelum pajak/kurs. Ini belum
+memasukkan Replit, konsumsi AI, domain, CRM berbayar, email berlebih, atau biaya
+operasional. Untuk prototipe gunakan paket gratis bila sesuai; jangan menganggap
+paket gratis layak untuk produksi tanpa menguji pause, backup, privasi, dan
+perjanjian pemrosesan data.
+
+**Sumber resmi (diakses 14 November 2026):**
+- [OpenAI API pricing](https://developers.openai.com/api/docs/pricing)
+- [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing)
+- [Supabase pricing](https://supabase.com/pricing) · [Neon pricing](https://neon.com/pricing)
+- [Zoho Bigin pricing](https://www.bigin.com/pricing.html) · [HubSpot CRM](https://www.hubspot.com/products/crm)
+- [WordPress.com pricing](https://wordpress.com/pricing/)
+- [n8n pricing](https://n8n.io/pricing/) · [Resend pricing](https://resend.com/pricing)
+- [Midtrans pricing](https://midtrans.com/pricing) · [Xendit Indonesia](https://www.xendit.co/id/)
+
 ### 11 — Marketing, Growth, dan Partnership
 
 **Tujuan:** mendatangkan pengunjung yang relevan dan mengubah keterlibatan menjadi
