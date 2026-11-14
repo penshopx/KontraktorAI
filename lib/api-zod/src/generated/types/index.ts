@@ -10,3 +10,5 @@ export * from './apiError';
 export * from './currentUser';
 export * from './currentUserRole';
 export * from './healthStatus';
+export * from './userConsents';
+export * from './userConsentsUpdate';

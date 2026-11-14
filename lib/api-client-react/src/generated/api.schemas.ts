@@ -23,6 +23,19 @@ export interface CurrentUser {
   createdAt: string;
 }
 
+export interface UserConsents {
+  analytics: boolean;
+  marketing: boolean;
+  /** @nullable */
+  updatedAt: string | null;
+}
+
+export interface UserConsentsUpdate {
+  analytics: boolean;
+  marketing: boolean;
+}
+
 export interface ApiError {
   error: string;
 }
+

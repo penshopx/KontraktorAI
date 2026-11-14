@@ -26,3 +26,30 @@ export const GetCurrentUserResponse = zod.object({
   "role": zod.enum(['member', 'admin']),
   "createdAt": zod.coerce.date()
 })
+
+
+/**
+ * @summary Get the current user's optional consent preferences
+ */
+export const GetCurrentUserConsentsResponse = zod.object({
+  "analytics": zod.boolean(),
+  "marketing": zod.boolean(),
+  "updatedAt": zod.coerce.date().nullable()
+})
+
+
+/**
+ * @summary Update the current user's optional consent preferences
+ */
+export const UpdateCurrentUserConsentsBody = zod.object({
+  "analytics": zod.boolean(),
+  "marketing": zod.boolean()
+})
+
+export const UpdateCurrentUserConsentsResponse = zod.object({
+  "analytics": zod.boolean(),
+  "marketing": zod.boolean(),
+  "updatedAt": zod.coerce.date().nullable()
+})
+
+

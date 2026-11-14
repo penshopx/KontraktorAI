@@ -47,6 +47,57 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/ApiError"
+  /users/me/consents:
+    get:
+      operationId: getCurrentUserConsents
+      tags: [users]
+      summary: Get the current user's optional consent preferences
+      security:
+        - clerkSession: []
+      responses:
+        "200":
+          description: Optional consent preferences
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/UserConsents"
+        "401":
+          description: Authentication required
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiError"
+    put:
+      operationId: updateCurrentUserConsents
+      tags: [users]
+      summary: Update the current user's optional consent preferences
+      security:
+        - clerkSession: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/UserConsentsUpdate"
+      responses:
+        "200":
+          description: Updated optional consent preferences
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/UserConsents"
+        "400":
+          description: Invalid consent preferences
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiError"
+        "401":
+          description: Authentication required
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiError"
 components:
   securitySchemes:
     clerkSession:
@@ -73,6 +124,25 @@ components:
           type: string
           format: date-time
       required: [userId, role, createdAt]
+    UserConsents:
+      type: object
+      properties:
+        analytics:
+          type: boolean
+        marketing:
+          type: boolean
+        updatedAt:
+          type: ["string", "null"]
+          format: date-time
+      required: [analytics, marketing, updatedAt]
+    UserConsentsUpdate:
+      type: object
+      properties:
+        analytics:
+          type: boolean
+        marketing:
+          type: boolean
+      required: [analytics, marketing]
     ApiError:
       type: object
       properties:

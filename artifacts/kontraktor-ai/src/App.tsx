@@ -10,6 +10,7 @@ import { TooltipProvider } from '@/components/ui/tooltip';
 import NotFound from '@/pages/not-found';
 import { NewsArticle, NewsLanding } from '@/pages/news';
 import MyGustaftaPage from '@/pages/my-gustafta';
+import MyGustaftaSecurityPage from '@/pages/my-gustafta-security';
 import {
   ArrowDown, ArrowRight, ArrowUpRight, BookOpen, Check, ClipboardCheck,
   Compass, HardHat, Leaf, Menu, MessagesSquare, Search, ShieldCheck, Sparkles, X,
@@ -1721,6 +1722,13 @@ function MyGustaftaRoute() {
   return <MyGustaftaPage />;
 }
 
+function MyGustaftaSecurityRoute() {
+  const { isLoaded, isSignedIn } = useAuth();
+  if (!isLoaded) return <AuthLoadingScreen />;
+  if (!isSignedIn) return <Redirect to="/" />;
+  return <MyGustaftaSecurityPage />;
+}
+
 function SignInPage() {
   return <main className="min-h-[100dvh] bg-[#101820] px-4 py-10 text-[#edf3f5]">
     <div className="mx-auto mb-8 flex max-w-[440px] items-center justify-between">
@@ -1803,6 +1811,7 @@ function Router() {
         <Route path="/sign-in/*?" component={SignInPage} />
         <Route path="/sign-up/*?" component={SignUpPage} />
         <Route path="/my-gustafta" component={MyGustaftaRoute} />
+        <Route path="/my-gustafta/security" component={MyGustaftaSecurityRoute} />
         <Route path="/news" component={NewsLanding} />
         <Route path="/news/:slug" component={NewsArticle} />
         <Route component={NotFound} />

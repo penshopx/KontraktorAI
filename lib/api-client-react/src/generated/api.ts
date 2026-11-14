@@ -6,11 +6,15 @@
  * OpenAPI spec version: 0.1.0
  */
 import {
+  useMutation,
   useQuery
 } from '@tanstack/react-query';
 import type {
+  MutationFunction,
   QueryFunction,
   QueryKey,
+  UseMutationOptions,
+  UseMutationResult,
   UseQueryOptions,
   UseQueryResult
 } from '@tanstack/react-query';
@@ -18,11 +22,13 @@ import type {
 import type {
   ApiError,
   CurrentUser,
-  HealthStatus
+  HealthStatus,
+  UserConsents,
+  UserConsentsUpdate
 } from './api.schemas';
 
 import { customFetch } from '../custom-fetch';
-import type { ErrorType } from '../custom-fetch';
+import type { ErrorType , BodyType } from '../custom-fetch';
 
 type AwaitedInput<T> = PromiseLike<T> | T;
 
@@ -119,6 +125,13 @@ export function useHealthCheck<TData = Awaited<ReturnType<typeof healthCheck>>, 
 
   return withQueryKey(query, queryOptions.queryKey);
 }
+
+
+
+
+
+
+
 export const getGetCurrentUserUrl = () => {
 
 
@@ -190,3 +203,158 @@ export function useGetCurrentUser<TData = Awaited<ReturnType<typeof getCurrentUs
 
   return withQueryKey(query, queryOptions.queryKey);
 }
+
+
+
+
+
+
+
+export const getGetCurrentUserConsentsUrl = () => {
+
+
+
+
+  return `/api/users/me/consents`
+}
+
+/**
+ * @summary Get the current user's optional consent preferences
+ */
+export const getCurrentUserConsents = async ( options?: Parameters<typeof customFetch>[1]): Promise<UserConsents> => {
+
+  return customFetch<UserConsents>(getGetCurrentUserConsentsUrl(),
+  {
+    ...options,
+    method: 'GET'
+
+
+  }
+);}
+
+
+
+
+
+export const getGetCurrentUserConsentsQueryKey = () => {
+    return [
+    `/api/users/me/consents`
+    ] as const;
+    }
+
+
+export const getGetCurrentUserConsentsQueryOptions = <TData = Awaited<ReturnType<typeof getCurrentUserConsents>>, TError = ErrorType<ApiError>>( options?: { query?:UseQueryOptions<Awaited<ReturnType<typeof getCurrentUserConsents>>, TError, TData>, request?: SecondParameter<typeof customFetch>}
+) => {
+
+const {query: queryOptions, request: requestOptions} = options ?? {};
+
+  const queryKey =  queryOptions?.queryKey ?? getGetCurrentUserConsentsQueryKey();
+
+
+
+    const queryFn: QueryFunction<Awaited<ReturnType<typeof getCurrentUserConsents>>> = ({ signal }) => getCurrentUserConsents({ signal, ...requestOptions });
+
+
+
+
+
+   return  { queryKey, queryFn, ...queryOptions} as UseQueryOptions<Awaited<ReturnType<typeof getCurrentUserConsents>>, TError, TData> & { queryKey: QueryKey }
+}
+
+export type GetCurrentUserConsentsQueryResult = NonNullable<Awaited<ReturnType<typeof getCurrentUserConsents>>>
+export type GetCurrentUserConsentsQueryError = ErrorType<ApiError>
+
+
+/**
+ * @summary Get the current user's optional consent preferences
+ */
+
+export function useGetCurrentUserConsents<TData = Awaited<ReturnType<typeof getCurrentUserConsents>>, TError = ErrorType<ApiError>>(
+  options?: { query?:UseQueryOptions<Awaited<ReturnType<typeof getCurrentUserConsents>>, TError, TData>, request?: SecondParameter<typeof customFetch>}
+
+ ):  UseQueryResult<TData, TError> & { queryKey: QueryKey } {
+
+  const queryOptions = getGetCurrentUserConsentsQueryOptions(options)
+
+  const query = useQuery(queryOptions) as  UseQueryResult<TData, TError> & { queryKey: QueryKey };
+
+  return withQueryKey(query, queryOptions.queryKey);
+}
+
+
+
+
+
+
+
+export const getUpdateCurrentUserConsentsUrl = () => {
+
+
+
+
+  return `/api/users/me/consents`
+}
+
+/**
+ * @summary Update the current user's optional consent preferences
+ */
+export const updateCurrentUserConsents = async (userConsentsUpdate: UserConsentsUpdate, options?: Parameters<typeof customFetch>[1]): Promise<UserConsents> => {
+
+  return customFetch<UserConsents>(getUpdateCurrentUserConsentsUrl(),
+  {
+    ...options,
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json', ...options?.headers },
+    body: JSON.stringify(userConsentsUpdate)
+  }
+);}
+
+
+
+
+
+export const getUpdateCurrentUserConsentsMutationOptions = <TError = ErrorType<ApiError>,
+    TContext = unknown>(options?: { mutation?:UseMutationOptions<Awaited<ReturnType<typeof updateCurrentUserConsents>>, TError,{data: BodyType<UserConsentsUpdate>}, TContext>, request?: SecondParameter<typeof customFetch>}
+): UseMutationOptions<Awaited<ReturnType<typeof updateCurrentUserConsents>>, TError,{data: BodyType<UserConsentsUpdate>}, TContext> => {
+
+const mutationKey = ['updateCurrentUserConsents'];
+const {mutation: mutationOptions, request: requestOptions} = options ?
+      options.mutation && 'mutationKey' in options.mutation && options.mutation.mutationKey ?
+      options
+      : {...options, mutation: {...options.mutation, mutationKey}}
+      : {mutation: { mutationKey, }, request: undefined};
+
+
+
+
+      const mutationFn: MutationFunction<Awaited<ReturnType<typeof updateCurrentUserConsents>>, {data: BodyType<UserConsentsUpdate>}> = (props) => {
+          const {data} = props ?? {};
+
+          return  updateCurrentUserConsents(data,requestOptions)
+        }
+
+
+
+
+
+
+  return  { mutationFn, ...mutationOptions }}
+
+    export type UpdateCurrentUserConsentsMutationResult = NonNullable<Awaited<ReturnType<typeof updateCurrentUserConsents>>>
+    export type UpdateCurrentUserConsentsMutationBody = BodyType<UserConsentsUpdate>
+    export type UpdateCurrentUserConsentsMutationError = ErrorType<ApiError>
+
+    /**
+ * @summary Update the current user's optional consent preferences
+ */
+export const useUpdateCurrentUserConsents = <TError = ErrorType<ApiError>,
+    TContext = unknown>(options?: { mutation?:UseMutationOptions<Awaited<ReturnType<typeof updateCurrentUserConsents>>, TError,{data: BodyType<UserConsentsUpdate>}, TContext>, request?: SecondParameter<typeof customFetch>}
+ ): UseMutationResult<
+        Awaited<ReturnType<typeof updateCurrentUserConsents>>,
+        TError,
+        {data: BodyType<UserConsentsUpdate>},
+        TContext
+      > => {
+      return useMutation(getUpdateCurrentUserConsentsMutationOptions(options));
+    }
+
