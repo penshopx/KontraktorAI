@@ -1474,3 +1474,78 @@ dan implementasi belum dipilih atau dijalankan.
 - Kualitas AI dinilai dengan kriteria evaluasi, sitasi/grounding, feedback,
   latency, errors, biaya, eskalasi, dan dampak bisnis yang dapat diatribusikan.
 - Angka target baru ditetapkan setelah baseline dan kapasitas operasional diukur.
+
+### Gustafta Notification & Communication Center — draft spesifikasi
+
+**Status:** pengguna meminta penyusunan spesifikasi awal setelah dokumen Analytics
+merekomendasikannya sebagai kapabilitas berikutnya. Ini draft untuk review, belum
+keputusan final, vendor terpilih, atau integrasi yang berjalan.
+
+**Tujuan:** menyediakan layanan lintas produk untuk mengatur pesan akun,
+permintaan/layanan, dan komunikasi operasional melalui kanal yang disetujui.
+Pusat notifikasi bukan sekaligus platform kampanye marketing massal.
+
+**Cakupan dan prioritas selaras Bagian 10.X**
+- **P0 — autentikasi:** email verifikasi dan reset password merupakan bagian
+  cakupan identitas P0 dan tetap dikirim oleh penyedia autentikasi; ini tidak
+  berarti Notification Center umum dibangun pada P0.
+- **P1 — in-app + email:** pusat inbox notifikasi, preferensi, email transaksional
+  dan operasional, delivery status, retry/deduplikasi, template, serta audit
+  dasar. Mulai founder-led untuk status permintaan, keamanan akun, dan eskalasi
+  yang benar-benar sudah tersedia.
+- **P2 — WhatsApp Business:** aktif setelah ada consent, template, volume/biaya,
+  prosedur layanan, dan vendor yang disetujui. WhatsApp bukan bagian MVP P0/P1.
+- Newsletter/promosi memiliki scope dan persetujuan marketing terpisah. Push,
+  SMS, kampanye berskala besar, dan routing omnichannel tidak termasuk draft ini.
+
+**Alur dan fungsi yang direkomendasikan**
+- Event bisnis dikirim dengan metadata minimum; sistem memeriksa kategori,
+  kelayakan kanal, preferensi, dan consent sebelum membuat pesan.
+- Template menyimpan kategori, bahasa, kanal, versi, pemilik, status persetujuan,
+  serta tautan aman ke halaman portal. Jangan menaruh detail privat di isi pesan.
+- Delivery lifecycle: `queued` → `sent` → `delivered` atau `failed` → `retry`,
+  `cancelled`, atau `closed`; simpan provider message ID, timestamp, alasan
+  kegagalan, dan audit yang diperlukan.
+- Terapkan idempotency/deduplication, retry terbatas dengan backoff, error
+  handling, serta jalur manual founder/admin untuk kegagalan penting. Jangan
+  mengklaim delivery hanya dari respons permintaan API.
+- Inbox in-app menampilkan kategori, waktu, status read/unread, dan tautan
+  tujuan. Pengguna mengatur kanal/kategori yang dapat dipilih pada profilnya.
+- Pisahkan pesan operasional/transaksional, keamanan, dan marketing. Unsubscribe
+  marketing tidak boleh mematikan pesan keamanan yang wajib. Consent marketing
+  eksplisit, dapat ditarik, serta menyimpan sumber dan timestamp.
+- Contoh event setelah fitur terkait tersedia: `consultation_submitted`,
+  `service_status_changed`, `expert_matched` setelah validasi admin,
+  `ai_handoff_created`, dan `account_security_event`. Jangan memicu pesan untuk
+  fitur yang belum aktif atau mengirim isi percakapan.
+- n8n merupakan kandidat untuk alur asynchronous/internal sesuai roadmap P1,
+  bukan satu-satunya service transaksi atau sumber data utama. Resend tetap
+  kandidat email dari shortlist sebelumnya; platform dan provider WhatsApp belum
+  dipilih.
+- Kandidat metrik: delivery success/failure, latency, retry, biaya per kanal,
+  unsubscribe marketing, dan interaksi agregat. Target numerik ditetapkan setelah
+  baseline.
+
+**Privasi dan keamanan**
+- Jangan mengirim isi AI Concierge, detail konsultasi/proyek, kredensial,
+  password, atau dokumen pribadi melalui email/WhatsApp. Gunakan notifikasi
+  ringkas dengan tautan ke portal berakses terkontrol.
+- Batasi akses template, daftar penerima, log, dan preferensi menurut peran.
+  Hindari mencatat body pesan atau data sensitif pada log operasional.
+- Tetapkan retensi, penghapusan, consent, enkripsi, dan audit sebelum pilot.
+- Sediakan kanal fallback/manual untuk pesan kritis; jangan berasumsi seluruh
+  pesan otomatis dibaca atau diterima.
+
+**Kriteria penerimaan draft**
+- Alur P1 membedakan transactional/security dari marketing dan menghormati
+  preferensi/consent kanal.
+- Status `sent` tidak disamakan dengan `delivered`; kegagalan dan retry dapat
+  diaudit tanpa membocorkan isi sensitif.
+- Pesan tidak terkirim ganda untuk event yang sama; pengguna hanya dapat melihat
+  notifikasi miliknya.
+- Email verifikasi/reset P0 tetap berfungsi walau Notification Center umum belum
+  tersedia.
+- WhatsApp tetap dinonaktifkan sampai vendor, biaya, consent, template, dan
+  kebutuhan operasional disetujui.
+- Template dan metrik tidak mengarang keberhasilan, aktivitas, atau data produk
+  yang belum tersedia.

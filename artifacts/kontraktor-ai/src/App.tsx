@@ -1382,6 +1382,57 @@ function BusinessModel() {
         </div>
         <p className="mt-4 text-[9px] leading-5 text-[#758792]" data-testid="analytics-implementation-boundary">Keputusan dan roadmap ini telah ditetapkan, tetapi belum berarti event tracking, warehouse, dashboard, integrasi vendor, atau pengumpulan data sudah berjalan. Operasi awal founder-led dengan bantuan AI; vendor dan target numerik tetap menunggu evaluasi dan baseline.</p>
       </div>
+      <div id="gustafta-notification-center" className="mt-14 border-t border-white/10 pt-10" data-testid="gustafta-notification-center">
+        <div className="grid gap-5 md:grid-cols-[.78fr_1.22fr] md:items-end">
+          <div>
+            <div className="eyebrow">RANCANGAN KAPABILITAS · COMMUNICATION CENTER</div>
+            <h3 className="display-font mt-3 max-w-[540px] text-3xl font-semibold leading-tight text-[#e6eef1] md:text-4xl">Pesan yang tepat,<br /><span className="text-[#8bdcff]">melalui kanal yang sesuai.</span></h3>
+          </div>
+          <div>
+            <span className="inline-flex items-center gap-2 border border-amber-200/20 bg-amber-200/[.04] px-3 py-1.5 font-mono text-[9px] tracking-[.1em] text-amber-100">DRAFT SPESIFIKASI · BELUM FINAL</span>
+            <p className="mt-3 max-w-[630px] text-[12px] leading-6 text-[#a7b5bc]">Notification &amp; Communication Center diusulkan sebagai layanan lintas produk untuk pembaruan akun, permintaan layanan, dan komunikasi operasional. Prioritas mengikuti Bagian 10.X; ini belum berarti kanal atau pengiriman sudah aktif.</p>
+          </div>
+        </div>
+        <div className="mt-6 grid gap-px border border-white/[.09] bg-white/[.09] md:grid-cols-3" data-testid="notification-channel-priorities">
+          <article className="bg-[#121e26] p-4" data-testid="notification-priority-auth">
+            <span className="font-mono text-[9px] text-[#8bdcff]">P0 · AUTENTIKASI</span>
+            <h4 className="mt-2 text-[11px] font-semibold text-[#e5edf0]">Email verifikasi &amp; pemulihan akun</h4>
+            <p className="mt-1.5 text-[10px] leading-5 text-[#91a0a8]">Tetap dikirim melalui penyedia autentikasi yang dipilih; bukan alasan untuk membangun kanal massal pada P0.</p>
+          </article>
+          <article className="bg-[#121e26] p-4" data-testid="notification-priority-p1">
+            <span className="font-mono text-[9px] text-[#8bdcff]">P1 · IN-APP &amp; EMAIL</span>
+            <h4 className="mt-2 text-[11px] font-semibold text-[#e5edf0]">Pusat notifikasi dan pembaruan layanan</h4>
+            <p className="mt-1.5 text-[10px] leading-5 text-[#91a0a8]">Inbox notifikasi, preferensi pengguna, email transaksional/operasional, status pengiriman, serta audit.</p>
+          </article>
+          <article className="bg-[#121e26] p-4" data-testid="notification-priority-p2">
+            <span className="font-mono text-[9px] text-[#8bdcff]">P2 · WHATSAPP BUSINESS</span>
+            <h4 className="mt-2 text-[11px] font-semibold text-[#e5edf0]">Kanal tambahan setelah kesiapan</h4>
+            <p className="mt-1.5 text-[10px] leading-5 text-[#91a0a8]">Menunggu persetujuan pengguna, template yang sesuai, batas biaya, dan pemilihan provider. Belum termasuk MVP.</p>
+          </article>
+        </div>
+        <div className="mt-6 grid gap-3 lg:grid-cols-2">
+          <article className="border border-white/[.1] bg-white/[.025] p-4" data-testid="notification-workflow">
+            <div className="eyebrow">ALUR PENGIRIMAN YANG DIUSULKAN</div>
+            <p className="mt-2 text-[10px] leading-5 text-[#a5b3ba]">Peristiwa produk → cek kategori, kanal, preferensi, dan consent → pilih template → kirim atau tampilkan di inbox → catat status dan audit → ukur hasil secara agregat.</p>
+            <p className="mt-2 text-[9px] leading-5 text-[#758792]">Status minimum: queued → sent → delivered / failed → retry atau closed. Gunakan deduplikasi dan idempotency agar pengguna tidak menerima pesan ganda.</p>
+          </article>
+          <article className="border border-white/[.1] bg-white/[.025] p-4" data-testid="notification-use-cases">
+            <div className="eyebrow">CONTOH PEMICU · SAAT FITUR TERSEDIA</div>
+            <p className="mt-2 text-[10px] leading-5 text-[#a5b3ba]">Pembaruan status permintaan konsultasi, pencocokan ahli yang sudah divalidasi, tindak lanjut AI yang memerlukan manusia, dan peristiwa keamanan akun. Isi sensitif tidak disalin ke pesan; arahkan ke halaman portal dengan akses yang benar.</p>
+          </article>
+        </div>
+        <div className="mt-3 grid gap-3 lg:grid-cols-2">
+          <article className="border border-[#8bdcff]/20 bg-[#8bdcff]/[.035] p-4" data-testid="notification-consent">
+            <div className="eyebrow">PREFERENSI, CONSENT &amp; AKSES</div>
+            <p className="mt-2 text-[10px] leading-5 text-[#a5b3ba]">Pisahkan pesan transaksi/keamanan dari promosi. Persetujuan marketing harus eksplisit, dapat ditarik, dan dicatat; pesan keamanan wajib tidak ikut terhenti oleh unsubscribe marketing. Preferensi kanal/kategori mengikuti akun dan peran.</p>
+          </article>
+          <article className="border border-[#8bdcff]/20 bg-[#8bdcff]/[.035] p-4" data-testid="notification-privacy">
+            <div className="eyebrow">PRIVASI · KEAMANAN · METRIK</div>
+            <p className="mt-2 text-[10px] leading-5 text-[#a5b3ba]">Jangan kirim isi percakapan, dokumen, kredensial, atau detail proyek privat lewat email/WhatsApp. Ukur delivery, gagal/retry, latency, biaya kanal, unsubscribe, dan interaksi tanpa menyimpan isi pesan lebih lama dari kebutuhan.</p>
+          </article>
+        </div>
+        <p className="mt-4 text-[9px] leading-5 text-[#758792]" data-testid="notification-provider-boundary">n8n tetap kandidat orchestrator P1; Resend masih kandidat email dari perbandingan vendor sebelumnya. Provider WhatsApp dan platform notifikasi belum dipilih. Newsletter/kampanye marketing memerlukan spesifikasi serta consent terpisah; vendor, biaya, retensi, dan target KPI menunggu keputusan.</p>
+      </div>
     </div>
   </section>;
 }
