@@ -769,6 +769,43 @@ function BusinessModel() {
             <p className="mt-2 text-[10px] leading-5 text-[#a5b3ba]">Tidak melakukan transaksi, pembayaran, atau pengelolaan proyek otomatis. Jangan mengarang informasi, mengekspos dokumen internal, atau mengklaim tindakan eksternal berhasil. Terapkan persetujuan, akses minimum, retensi jelas, pemantauan biaya, dan eskalasi manusia.</p>
           </div>
         </div>
+        <div className="mt-6 border border-white/[.1] bg-white/[.025] p-4" data-testid="gustafta-account-spec">
+          <div className="grid gap-4 md:grid-cols-[.7fr_1.3fr] md:items-end">
+            <div>
+              <div className="eyebrow">IDENTITAS PENGGUNA · RANCANGAN BERTAHAP</div>
+              <h4 className="display-font mt-2 text-2xl font-semibold text-[#e6eef1]">Gustafta Account.<br /><span className="text-[#8bdcff]">My Gustafta.</span></h4>
+            </div>
+            <p className="text-[10px] leading-5 text-[#a5b3ba]">Satu identitas untuk ekosistem Gustafta, dimulai dari portal dan AI Concierge. Pengunjung tetap dapat memakai fitur publik tanpa login. SSO lintas produk disiapkan sebagai arah arsitektur dan dibangun setelah tahap awal siap—autentikasi belum diterapkan.</p>
+          </div>
+          <div className="mt-4 grid gap-2 md:grid-cols-3" data-testid="gustafta-account-phases">
+            <article className="border border-[#8bdcff]/20 bg-[#8bdcff]/[.035] p-3" data-testid="gustafta-account-p0">
+              <span className="font-mono text-[9px] tracking-[.1em] text-[#8bdcff]">P0 · FONDASI MVP</span>
+              <h5 className="mt-2 text-[11px] font-semibold text-[#e5edf0]">Akun dasar yang aman</h5>
+              <p className="mt-1.5 text-[10px] leading-5 text-[#91a0a8]">Email/password, verifikasi email, reset password, profil dasar, logout, sesi, persetujuan, guest access, serta role dan permission dasar.</p>
+            </article>
+            <article className="border border-white/[.1] bg-white/[.02] p-3" data-testid="gustafta-account-p1">
+              <span className="font-mono text-[9px] tracking-[.1em] text-[#8bdcff]">P1 · SETELAH MVP STABIL</span>
+              <h5 className="mt-2 text-[11px] font-semibold text-[#e5edf0]">Profil dan personalisasi</h5>
+              <p className="mt-1.5 text-[10px] leading-5 text-[#91a0a8]">Profil profesional, preferensi yang dapat diedit, riwayat chat, artikel tersimpan, notifikasi, dan ringkasan permintaan.</p>
+            </article>
+            <article className="border border-white/[.1] bg-white/[.02] p-3" data-testid="gustafta-account-p2">
+              <span className="font-mono text-[9px] tracking-[.1em] text-[#8bdcff]">P2 · EKOSISTEM</span>
+              <h5 className="mt-2 text-[11px] font-semibold text-[#e5edf0]">Identitas lintas produk</h5>
+              <p className="mt-1.5 text-[10px] leading-5 text-[#91a0a8]">SSO, organisasi dan tim, company profile, workspace, serta integrasi Marketplace, Academy, dan Ruang Proyek.</p>
+            </article>
+          </div>
+          <div className="mt-4 grid gap-4 lg:grid-cols-2">
+            <div className="border border-white/[.08] p-3" data-testid="gustafta-account-my-dashboard">
+              <div className="eyebrow">AREA PENGGUNA · MY GUSTAFTA</div>
+              <p className="mt-2 text-[10px] leading-5 text-[#a5b3ba]">Profil Saya, AI Concierge dan riwayat, artikel tersimpan, permintaan konsultasi/kolaborasi, preferensi, keamanan, notifikasi, serta pengaturan akun. Halaman dasar cukup untuk MVP; dashboard penuh dapat tumbuh kemudian.</p>
+            </div>
+            <div className="border border-white/[.08] p-3" data-testid="gustafta-account-privacy">
+              <div className="eyebrow">PEMISAHAN DATA · HAK AKSES</div>
+              <p className="mt-2 text-[10px] leading-5 text-[#a5b3ba]">Guest, registered user, admin, editor/knowledge manager, dan super admin memiliki batas terpisah; pendaftaran publik tidak memberi hak admin. Data profil, percakapan, lead, dan consent dibedakan; personalisasi yang diinferensikan tidak disimpan permanen tanpa dasar dan persetujuan.</p>
+            </div>
+          </div>
+          <p className="mt-3 border-l border-[#8bdcff]/50 pl-3 text-[9px] leading-5 text-[#8798a1]" data-testid="gustafta-account-security-note">Baseline keamanan rancangan: password di-hash, verifikasi email, token reset yang aman dan kedaluwarsa, sesi dapat dicabut, rate limiting, RBAC, perlindungan data antar pengguna, preferensi persetujuan pemasaran terpisah, serta opsi koreksi dan penghapusan akun.</p>
+        </div>
         <div className="mt-6 border border-white/[.1] bg-white/[.025] p-4" data-testid="ai-concierge-roadmap">
           <div className="flex flex-wrap items-end justify-between gap-3">
             <div><div className="eyebrow">RENCANA MVP · ESTIMASI 8 MINGGU</div><h4 className="display-font mt-2 text-xl font-semibold text-[#e6eef1]">Rancang, bangun, uji, lalu pilot.</h4></div>

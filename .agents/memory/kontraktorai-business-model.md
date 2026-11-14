@@ -169,11 +169,30 @@ The user also approved the final AI Concierge product direction:
   autonomously. Treat the 0/37 checklist and eight-week roadmap as plans until
   implementation and acceptance checks are verified.
 
+The user approved the Gustafta Account & My Gustafta specification for the AI
+Concierge:
+
+- Use one Gustafta identity across products in stages, starting with the portal
+  and AI Concierge; do not require login for guest/public knowledge access.
+- P0 includes email/password registration, email verification, password reset,
+  basic editable profile, sessions, consent, guest/registered distinction, and
+  role/permission controls. Public registration never grants internal admin roles.
+- P1 adds professional profiles, editable preferences, conversation history,
+  saved content, notifications, and request summaries after MVP stability.
+- P2 expands to SSO, organization/team accounts, workspaces, and cross-product
+  links to Marketplace, Academy, and Ruang Proyek.
+- Keep profile, conversation, lead, consent, and session data purpose-limited and
+  access-controlled. Do not permanently store conversational inferences as
+  profile facts without appropriate basis and consent.
+- Treat login/security requirements as a specification only; no authentication
+  provider, service, or deployment has been selected or implemented.
+
 **Why:** the user confirmed the Part 02–11 business choices and the Part 03
 endorsed-brand architecture and market approach, then confirmed the Part 13
 News/CMS strategy and selected WordPress.com Business as its MVP target. The
 user also approved the AI Concierge strategy while explicitly keeping the
-eight-industry taxonomy as a recommendation.
+eight-industry taxonomy as a recommendation, and approved the staged Gustafta
+Account specification.
 
 **How to apply:** use these priorities in Gustafta and KontraktorAI business
 planning, portal messaging, and future product decisions. Choose implementation
@@ -206,4 +225,7 @@ or API connection exists until it is explicitly set up.
 Apply the AI Concierge decisions as product scope, not proof of implementation:
 do not imply an AI provider, CRM, deployment, or RAG pipeline is selected or live.
 Keep the eight-industry taxonomy provisional, require approved sources and
-citations, and preserve consent, access boundaries, and human handoff.
+citations, and preserve consent, access boundaries, and human handoff. Apply
+Gustafta Account as a staged identity specification: preserve guest access,
+separate internal roles, and do not imply authentication or cross-product SSO is
+already live.

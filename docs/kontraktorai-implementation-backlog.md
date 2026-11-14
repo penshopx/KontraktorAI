@@ -688,9 +688,59 @@ backend khusus Gustafta.
   deployment belum dilaksanakan. WordPress.com Business hanya target CMS News
   dan situs WordPress belum aktif.
 
+#### Gustafta Account & My Gustafta
+
+**Keputusan identitas:** satu akun Gustafta dirancang untuk dipakai lintas
+ekosistem, tetapi implementasi awal dibatasi pada portal dan AI Concierge.
+Guest tetap dapat memakai chat umum, knowledge publik, dan rekomendasi dasar.
+Pendaftaran publik tidak pernah memberikan hak admin.
+
+**Prioritas**
+- **P0 — MVP:** registrasi email/password, verifikasi email, login/logout, reset
+  password, profil dasar yang dapat diedit, guest/registered access, role dan
+  permission dasar, sesi, privacy notice/consent, serta relasi identitas dengan
+  percakapan sesuai persetujuan.
+- **P1 — setelah MVP stabil:** profil profesional, preferensi/personalization,
+  riwayat percakapan, artikel/referensi tersimpan, notifikasi, dan dashboard
+  permintaan konsultasi/kolaborasi.
+- **P2 — ekosistem:** SSO lintas produk, organisasi/tim/workspace, company
+  profile, portfolio, membership, dan integrasi Marketplace, Academy, serta
+  Ruang Proyek.
+- **Area My Gustafta:** Dashboard, Profil Saya, AI Concierge, Riwayat, Tersimpan,
+  Permintaan, Preferensi, Notifikasi, Keamanan, dan Pengaturan Akun. Untuk MVP,
+  halaman sederhana cukup; tidak perlu membuat seluruh dashboard kompleks.
+- **Profil bertahap:** basic profile menyimpan ID, nama, email terverifikasi,
+  status, dan waktu pembuatan; foto opsional. Kontak profesional, organisasi,
+  profesi, lokasi, bio, dan preferensi diminta hanya saat dibutuhkan.
+- **Peran:** Guest, Registered User, Admin, Editor/Knowledge Manager, Super
+  Admin; hak internal dipisahkan dari pendaftaran publik dan dibatasi dengan
+  role-based access control.
+- **Pemisahan data:** users/user_profiles/user_preferences/user_industries,
+  roles/sessions, verifications/resets, consents/notifications, dan saved_items.
+  Percakapan tetap dimiliki modul AI Concierge dan ditautkan via user_id;
+  records lead dan consent memiliki tujuan serta akses yang jelas.
+- **Privasi dan keamanan:** password selalu di-hash; verifikasi email; token
+  reset aman dan berumur terbatas; sesi kedaluwarsa/dapat dicabut; rate limiting
+  serta proteksi penyalahgunaan; API secret hanya di backend; akses percakapan
+  antar pengguna dibatasi; consent pemasaran dipisahkan; tersedia proses koreksi
+  dan permintaan penghapusan akun.
+- Preferensi profil harus dapat dilihat dan diubah. Inferensi percakapan tidak
+  otomatis menjadi profil permanen; AI membedakan rekomendasi berbasis profil
+  dari fakta yang diketahui. Persetujuan dan retensi disesuaikan dengan tujuan.
+- Kategori industri pada profil mengikuti daftar delapan kategori yang masih
+  berstatus usulan Gustafta; kategori 6–8 tidak dipromosikan menjadi taksonomi
+  final oleh desain akun atau Concierge.
+
 **Kriteria penerimaan**
 - Pengunjung dapat menggunakan knowledge publik tanpa akun; fitur akun tidak
   menjadi prasyarat bagi pengalaman dasar.
+- Pengguna dapat mendaftar, memverifikasi email, login/logout, mereset password,
+  dan memperbarui profil dasar; guest tetap dapat memakai Concierge.
+- Role internal tidak dapat diberikan lewat pendaftaran publik; sesi dan data
+  akun/percakapan terlindungi dari akses pengguna lain.
+- Profil, percakapan, lead, dan consent memiliki batas penggunaan serta akses
+  yang jelas; preferensi pengguna dapat diubah dan tidak disimpulkan sebagai
+  fakta permanen tanpa persetujuan.
 - Jawaban Gustafta memakai sumber yang disetujui, menampilkan referensi, dan
   menjelaskan ketidakpastian/fallback saat sumber tidak cukup.
 - Dokumen internal tidak muncul ke pengguna publik; sumber memiliki status,
