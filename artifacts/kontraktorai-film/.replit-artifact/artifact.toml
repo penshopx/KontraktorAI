@@ -1,0 +1,29 @@
+kind = "video"
+videoAspectRatio = "16:9"
+previewPath = "/kontraktorai-film/"
+title = "KontraktorAI Film"
+description = "A short animated introduction to KontraktorAI, Gustafta’s endorsed industry brand for contractors and industrial professionals."
+version = "1.0.0"
+id = "artifacts/kontraktorai-film"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/kontraktorai-film/" ]
+localPort = 24159
+
+[services.development]
+run = "pnpm --filter @workspace/kontraktorai-film run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/kontraktorai-film", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/kontraktorai-film/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24159"
+BASE_PATH = "/kontraktorai-film/"

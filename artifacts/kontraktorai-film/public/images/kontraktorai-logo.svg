@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="48" viewBox="0 0 220 48" fill="none">
+  <rect x="1" y="7" width="34" height="34" rx="10" fill="#8bdcff" fill-opacity=".12" stroke="#8bdcff" stroke-opacity=".55"/>
+  <path d="M10 31V17h4v10h12v4H10Z" fill="#8bdcff"/>
+  <path d="M18 17h4v10h-4zM26 17h4v14h-4z" fill="#8bdcff" fill-opacity=".75"/>
+  <text x="46" y="27" fill="#edf3f5" font-family="Arial,sans-serif" font-size="18" font-weight="700">Kontraktor</text>
+  <text x="143" y="27" fill="#8bdcff" font-family="Arial,sans-serif" font-size="18" font-weight="700">AI</text>
+  <text x="47" y="39" fill="#9aabb4" font-family="Arial,sans-serif" font-size="7" letter-spacing="2.2">BY GUSTAFTA</text>
+</svg>
