@@ -1475,11 +1475,11 @@ dan implementasi belum dipilih atau dijalankan.
   latency, errors, biaya, eskalasi, dan dampak bisnis yang dapat diatribusikan.
 - Angka target baru ditetapkan setelah baseline dan kapasitas operasional diukur.
 
-### Gustafta Notification & Communication Center — draft spesifikasi
+### Gustafta Notification & Communication Center — spesifikasi final
 
-**Status:** pengguna meminta penyusunan spesifikasi awal setelah dokumen Analytics
-merekomendasikannya sebagai kapabilitas berikutnya. Ini draft untuk review, belum
-keputusan final, vendor terpilih, atau integrasi yang berjalan.
+**Status:** spesifikasi difinalkan oleh pengguna setelah dokumen Analytics
+merekomendasikannya sebagai kapabilitas berikutnya. Ini persetujuan atas rancangan
+dan prioritas di bawah, bukan pemilihan vendor atau bukti bahwa integrasi berjalan.
 
 **Tujuan:** menyediakan layanan lintas produk untuk mengatur pesan akun,
 permintaan/layanan, dan komunikasi operasional melalui kanal yang disetujui.
@@ -1536,7 +1536,7 @@ Pusat notifikasi bukan sekaligus platform kampanye marketing massal.
 - Sediakan kanal fallback/manual untuk pesan kritis; jangan berasumsi seluruh
   pesan otomatis dibaca atau diterima.
 
-**Kriteria penerimaan draft**
+**Kriteria penerimaan implementasi**
 - Alur P1 membedakan transactional/security dari marketing dan menghormati
   preferensi/consent kanal.
 - Status `sent` tidak disamakan dengan `delivered`; kegagalan dan retry dapat

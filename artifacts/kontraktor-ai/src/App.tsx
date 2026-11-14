@@ -1389,8 +1389,8 @@ function BusinessModel() {
             <h3 className="display-font mt-3 max-w-[540px] text-3xl font-semibold leading-tight text-[#e6eef1] md:text-4xl">Pesan yang tepat,<br /><span className="text-[#8bdcff]">melalui kanal yang sesuai.</span></h3>
           </div>
           <div>
-            <span className="inline-flex items-center gap-2 border border-amber-200/20 bg-amber-200/[.04] px-3 py-1.5 font-mono text-[9px] tracking-[.1em] text-amber-100">DRAFT SPESIFIKASI · BELUM FINAL</span>
-            <p className="mt-3 max-w-[630px] text-[12px] leading-6 text-[#a7b5bc]">Notification &amp; Communication Center diusulkan sebagai layanan lintas produk untuk pembaruan akun, permintaan layanan, dan komunikasi operasional. Prioritas mengikuti Bagian 10.X; ini belum berarti kanal atau pengiriman sudah aktif.</p>
+            <span className="inline-flex items-center gap-2 border border-[#8bdcff]/20 bg-[#8bdcff]/[.04] px-3 py-1.5 font-mono text-[9px] tracking-[.1em] text-[#aee8ff]">SPESIFIKASI FINAL · BELUM DIIMPLEMENTASIKAN</span>
+            <p className="mt-3 max-w-[630px] text-[12px] leading-6 text-[#a7b5bc]">Notification &amp; Communication Center ditetapkan dalam spesifikasi sebagai layanan lintas produk untuk pembaruan akun, permintaan layanan, dan komunikasi operasional. Prioritas mengikuti Bagian 10.X; kanal dan pengiriman belum aktif.</p>
           </div>
         </div>
         <div className="mt-6 grid gap-px border border-white/[.09] bg-white/[.09] md:grid-cols-3" data-testid="notification-channel-priorities">
