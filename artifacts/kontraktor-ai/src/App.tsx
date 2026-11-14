@@ -943,6 +943,36 @@ function BusinessModel() {
             <p className="mt-1.5 text-[10px] leading-5 text-[#91a0a8]">{decision.detail}</p>
           </article>)}
         </div>
+        <div className="mt-8 border border-[#8bdcff]/20 bg-[#8bdcff]/[.035] p-4" data-testid="priority-integration-strategy">
+          <div className="grid gap-4 md:grid-cols-[.68fr_1.32fr] md:items-end">
+            <div>
+              <div className="eyebrow">BAGIAN 10.X · STRATEGI INTEGRASI APLIKASI</div>
+              <h4 className="display-font mt-2 text-2xl font-semibold text-[#e6eef1]">Hybrid. Bertahap. Revenue-first.</h4>
+            </div>
+            <div>
+              <span className="inline-flex items-center gap-2 border border-[#8bdcff]/25 bg-[#8bdcff]/[.06] px-3 py-1.5 font-mono text-[9px] tracking-[.1em] text-[#9eddf2]">KEPUTUSAN FINAL · C-B-B-B · SSO P2</span>
+              <p className="mt-2 text-[10px] leading-5 text-[#a5b3ba]">Hybrid integration; CRM eksternal + database internal Gustafta; otomasi hybrid melalui konektor, otomasi terkelola, dan workflow khusus; mulai dari konektor/no-code lalu bertahap menuju API-first. Pilihan CRM, LLM, dan vendor lain belum dikunci.</p>
+            </div>
+          </div>
+          <div className="mt-4 grid gap-px border border-white/[.09] bg-white/[.09] md:grid-cols-3" data-testid="integration-priorities">
+            <article className="bg-[#111c23] p-3" data-testid="integration-priority-p0">
+              <span className="font-mono text-[9px] tracking-[.1em] text-[#8bdcff]">P0 · MVP</span>
+              <h5 className="mt-2 text-[11px] font-semibold text-[#e5edf0]">Sumber nilai dan operasi inti</h5>
+              <p className="mt-1.5 text-[10px] leading-5 text-[#91a0a8]">AI/LLM, CMS, database, RAG/search, document storage, basic authentication (bukan SSO), CRM/lead management, workflow automation, serta email/notifikasi.</p>
+            </article>
+            <article className="bg-[#111c23] p-3" data-testid="integration-priority-p1">
+              <span className="font-mono text-[9px] tracking-[.1em] text-[#8bdcff]">P1 · SETELAH MVP</span>
+              <h5 className="mt-2 text-[11px] font-semibold text-[#e5edf0]">Komersial dan koordinasi</h5>
+              <p className="mt-1.5 text-[10px] leading-5 text-[#91a0a8]">Payment gateway, subscription, analytics, project management, WhatsApp Business, e-signature, LMS, dan koneksi API tambahan.</p>
+            </article>
+            <article className="bg-[#111c23] p-3" data-testid="integration-priority-p2">
+              <span className="font-mono text-[9px] tracking-[.1em] text-[#8bdcff]">P2 · EKSPANSI EKOSISTEM</span>
+              <h5 className="mt-2 text-[11px] font-semibold text-[#e5edf0]">SSO dan integrasi lanjutan</h5>
+              <p className="mt-1.5 text-[10px] leading-5 text-[#91a0a8]">SSO lintas produk, voice AI, advanced agents, ERP, procurement/tender, GIS, IoT, industry data APIs, dan koneksi mitra.</p>
+            </article>
+          </div>
+          <p className="mt-3 border-l border-[#8bdcff]/50 pl-3 text-[9px] leading-5 text-[#8798a1]" data-testid="integration-vendor-note">Basic login dan pengelolaan identitas berada di P0 sesuai spesifikasi akun; SSO lintas produk tetap P2. Pembayaran tidak masuk MVP. Nama teknologi/vendor dalam blueprint—termasuk CRM, AI, dan automation—adalah kandidat evaluasi, bukan pembelian atau integrasi aktif.</p>
+        </div>
         <div className="mt-8 grid gap-5 lg:grid-cols-[.66fr_1.34fr]">
           <div><div className="eyebrow">DATA GOVERNANCE & SECURITY BY DESIGN</div><h4 className="display-font mt-2 text-2xl font-semibold text-[#e6eef1]">Lindungi data sebelum memperluas penggunaannya.</h4><p className="mt-2 text-[10px] leading-5 text-[#8798a1]">Kontrol diterapkan sebanding dengan klasifikasi data dan tingkat kritikalitas aplikasi. Kepemilikan, tujuan penggunaan, dan hak akses harus jelas—terutama untuk data pelanggan, pembayaran, administrasi, dan AI.</p></div>
           <ul className="grid gap-2 sm:grid-cols-2" data-testid="technology-safeguards">

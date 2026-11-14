@@ -320,8 +320,16 @@ metodologi, dan nama portal yang digunakan adalah **KontraktorAI**.
   kompleksitas, nilai bisnis, integrasi, dan kemampuan pemeliharaan.
 - Integrasi: **Hybrid Integration**—konektor dan otomasi siap pakai lebih dulu;
   API, webhook, dan integration layer ditingkatkan seiring kompleksitas.
+- Strategi integrasi aplikasi 10.X: **C-B-B-B** — hybrid integration; CRM
+  eksternal + database internal Gustafta; otomasi hybrid (konektor/automation
+  tool/workflow khusus); konektor/no-code terlebih dahulu lalu bertahap menuju
+  API-first.
 - Identitas: pengelolaan terpusat secara bertahap, dengan SSO saat kebutuhan dan
   kesiapan teknis mendukung.
+- Prioritas identitas: basic authentication, profil, sesi, dan role berada di
+  P0; **SSO lintas produk tetap P2**, selaras dengan keputusan Gustafta Account.
+- Prioritas komersial: payment gateway dan subscription masuk P1 setelah MVP;
+  transaksi/pembayaran bukan kewenangan AI Concierge MVP.
 - Keamanan: **risk-based** menurut klasifikasi data dan kritikalitas layanan;
   akun admin, pembayaran, data pelanggan, dan layanan inti mendapat prioritas.
 - Data & AI: **Data Governance First**—kualitas, kepemilikan, klasifikasi, dan
@@ -336,6 +344,9 @@ metodologi, dan nama portal yang digunakan adalah **KontraktorAI**.
 - Kandidat stack dalam blueprint bukan pilihan vendor atau komitmen pembelian.
   Data pelanggan tidak otomatis boleh dipakai untuk AI, analitik lintas
   pelanggan, publikasi, atau pemasaran.
+- Model CRM eksternal + database internal telah diputuskan; nama penyedia CRM
+  belum dipilih. Automation memakai model hybrid, tetapi n8n hanya contoh
+  teknologi—belum ada vendor, kontrak, atau koneksi yang dikonfirmasi.
 - Rincian kontrol dan kepatuhan ditetapkan berdasarkan klasifikasi risiko,
   karakteristik layanan, kewajiban hukum yang berlaku, serta kemampuan operasional;
   roadmap tidak menyatakan bahwa kontrol tersebut sudah diimplementasikan.
@@ -924,6 +935,62 @@ dan transaksi yang sesuai.
   human review yang jelas; data lintas pelanggan dipisahkan.
 - Backup diuji pemulihannya, dan lingkungan serta perubahan sistem dikelola
   dengan kontrol yang sesuai risiko.
+
+#### 10.X — Strategi Integrasi Aplikasi Prioritas
+
+**Keputusan final pengguna: C-B-B-B.**
+- **C — Model integrasi:** hybrid antara aplikasi pihak ketiga dan pengembangan
+  custom. Pilih integrasi native, konektor, automation, webhook, atau API sesuai
+  kebutuhan, risiko, biaya, serta kapasitas pemeliharaan.
+- **B — CRM dan leads:** CRM eksternal yang terintegrasi dengan database internal
+  Gustafta. Database internal menjadi sumber data Gustafta sesuai domain;
+  pemilihan vendor CRM dan kontrak data masih terbuka.
+- **B — Automation:** hybrid antara automation tools/konektor dan workflow
+  custom. n8n adalah contoh dalam blueprint, bukan pilihan provider final.
+- **B — API jangka panjang:** mulai dari konektor/no-code; tingkatkan bertahap ke
+  API-first, webhook, dan integration layer ketika jumlah sistem dan kebutuhan
+  membenarkannya.
+
+**Prioritas integrasi**
+- **P0:** AI/LLM provider (kategori, provider belum dipilih), CMS, database,
+  RAG/vector search, document storage, basic authentication/identity, CRM dan
+  lead management, workflow automation, email dan notifikasi.
+- **P1:** payment gateway, subscription management, analytics, project
+  management, WhatsApp Business, e-signature, LMS, dan API integrations tambahan.
+- **P2:** SSO lintas produk, voice AI, advanced agents, ERP, procurement/tender,
+  GIS, IoT, industry data API, dan integrasi sistem mitra.
+- **SSO:** SSO lintas produk tetap **P2**, bukan bagian P0. P0 mencakup autentikasi
+  dasar, profil, sesi, dan kontrol peran; pertahankan akses guest untuk fitur
+  publik. Keputusan ini mengesampingkan rekomendasi SSO-P0 pada tabel blueprint.
+- Pembayaran dan subscription tidak boleh dianggap aktif di MVP atau dilakukan
+  AI secara otonom; evaluasi setelah kesiapan produk, kontrol, dan kebutuhan bisnis.
+
+**Tahapan rencana, bukan jadwal terikat**
+- Tahap 1 (rencana bulan 1–2): database/auth dasar, CMS/knowledge, AI/RAG,
+  document storage, lead capture.
+- Tahap 2 (bulan 3–4): CRM, email/notifikasi, automation, News, collaboration,
+  dan admin dasar.
+- Tahap 3 (bulan 5–8): payment/subscription, WhatsApp, project management,
+  analytics, dan integrasi mitra.
+- Tahap 4 (bulan 9–12): API layer lebih matang, industry data, SaaS, ERP, dan
+  automation/AI tingkat lanjut.
+- Bulan dihitung sebagai estimasi relatif, bukan tanggal peluncuran atau janji
+  delivery. Revenue-first berarti CRM, lead, knowledge, Concierge, dan kolaborasi
+  didahulukan daripada monetisasi transaksi.
+
+**Prinsip untuk seluruh koneksi**
+- AI Concierge bertindak sebagai gateway/orchestrator, bukan tempat seluruh
+  proses bisnis atau sumber data disatukan tanpa batas. Gunakan satu source of
+  truth per domain dan integrasikan melalui API/konektor yang terdokumentasi.
+- Identitas konsisten dan access control terpusat dikembangkan bertahap; akses
+  berdasarkan role/organisasi, kepemilikan data jelas, audit trail tersedia, dan
+  human oversight dipertahankan untuk keputusan bisnis penting.
+- Data tidak boleh digunakan lintas aplikasi, untuk AI, analytics, atau marketing
+  tanpa tujuan, hak akses, dan persetujuan yang sesuai.
+- Daftar WordPress, PostgreSQL/Supabase, OpenAI, Qdrant, n8n, HubSpot, Midtrans,
+  Xendit, dan vendor lain adalah contoh untuk dievaluasi—bukan pemilihan final.
+  WordPress.com Business tetap target khusus News CMS; itu bukan pilihan provider
+  AI, CRM, atau identity.
 
 ### 11 — Marketing, Growth, dan Partnership
 

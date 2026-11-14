@@ -185,6 +185,12 @@ Concierge:
   MVP stability.
 - P2 expands to SSO, organization/team accounts, workspaces, and cross-product
   links to Marketplace, Academy, and Ruang Proyek.
+- For Part 10.X, the user finalized C-B-B-B: hybrid application integration,
+  external CRM plus Gustafta's internal database, hybrid automation, and a phased
+  path from connectors/no-code toward API-first.
+- Basic authentication, profile, sessions, and role controls remain P0; cross-
+  product SSO remains P2. CRM/AI/automation vendors and integrations are not yet
+  selected. Payments and subscriptions remain post-MVP P1.
 - Dashboard cards and counts must use real account activity or clear empty states;
   hide unsupported navigation modules until their services exist. The AI Concierge
   0/37 checklist remains separate from the dashboard's added P0 scope.
@@ -202,7 +208,8 @@ eight-industry taxonomy as a recommendation, and approved the staged Gustafta
 Account specification. The user then selected the complete basic My Gustafta
 dashboard scope for P0, moving conversation history, saved knowledge, and basic
 requests into the MVP while keeping advanced personalization and ecosystem
-modules phased.
+modules phased. The user finalized Part 10.X as C-B-B-B and explicitly kept
+cross-product SSO at P2.
 
 **How to apply:** use these priorities in Gustafta and KontraktorAI business
 planning, portal messaging, and future product decisions. Choose implementation
@@ -240,5 +247,7 @@ Gustafta Account as a staged identity specification: preserve guest access,
 separate internal roles, and do not imply authentication or cross-product SSO is
 already live. For P0, include the basic My Gustafta dashboard and responsive
 navigation, but show only supported modules and never use placeholder metrics as
-real user activity. Keep the 0/37 AI Concierge core tracker separate from the
-dashboard backlog.
+real user activity. Keep basic auth in P0 and cross-product SSO in P2. Apply
+Part 10.X C-B-B-B without implying vendors or integrations are selected; keep
+payments out of the MVP. Keep the 0/37 AI Concierge core tracker separate from
+the dashboard backlog.
