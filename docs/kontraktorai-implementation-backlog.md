@@ -1063,7 +1063,7 @@ bulanan belum ditentukan, angka berikut bukan total biaya operasional final.
 | CRM dan leads — P0 | Zoho Bigin Free: 1 pengguna, 500 records; Express US$7/pengguna/bulan bila dibayar tahunan. HubSpot menyediakan CRM Free; Starter tercantum mulai US$15/seat/bulan. | Jalankan uji terbatas Bigin dan HubSpot pada pipeline lead yang sama; bandingkan batas kontak/pengguna, API/export, consent, integrasi dengan database internal, dan total biaya saat tim bertambah. Jangan menyinkronkan seluruh database ke CRM tanpa tujuan dan hak akses. | Belum dipilih; uji paket gratis |
 | News CMS — P0 | WordPress.com Business tetap menjadi target yang telah dipilih; harga AS resmi US$40/bulan untuk tagihan tahunan, belum termasuk pajak. | Pertahankan khusus untuk News CMS. Situs WordPress belum dikonfirmasi aktif; cek checkout lokal, domain, akses pengguna, plugin, backup, dan transfer konten sebelum pembelian/peluncuran. Jangan gunakan sebagai sumber identitas atau database AI. | Target sebelumnya; aktivasi belum dikonfirmasi |
 | Automation — P1 | n8n Cloud Starter €20/bulan dengan tagihan tahunan, 2.500 workflow executions/bulan; Community self-hosted tidak memerlukan lisensi berbayar. | Pilih Cloud bila penghematan waktu operasi lebih penting; self-host hanya bila ada pemilik untuk patch, backup, secret, monitoring, dan pemulihan. n8n tetap salah satu target orchestration, bukan layanan yang sudah terhubung. | n8n dipilih sebagai arah; mode hosting belum dipilih |
-| Email — P1 | Resend Free: 3.000 email/bulan dengan batas 100/hari; Pro US$20/bulan untuk 50.000 email/bulan. | Rekomendasi utama untuk pilot transaksional berbiaya rendah; cek verifikasi domain, reputasi pengirim, bounce/complaint handling, batas, dan retensi sebelum digunakan. Tidak perlu langganan sebelum email masuk P1. | Rekomendasi; menunggu persetujuan pengguna |
+| Email — P1 | Resend Free: 3.000 email/bulan dengan batas 100/hari; Pro US$20/bulan untuk 50.000 email/bulan. | Vendor terpilih untuk pilot transaksional berbiaya rendah; cek verifikasi domain, reputasi pengirim, bounce/complaint handling, batas, dan retensi sebelum digunakan. Tidak perlu langganan sebelum email masuk P1. | Dipilih pengguna; belum diaktifkan |
 | Pembayaran — P2 | Midtrans mencantumkan VA Rp4.000/transaksi, QRIS 0,7%, GoPay 2%, kartu 2,9% + Rp2.000. Fee Xendit harus dikonfirmasi pada penawaran/checkout resmi sebelum perbandingan final. | Tetap P2. Bandingkan fee per metode, pajak, settlement, refund, dispute, rekonsiliasi, dukungan, dan syarat onboarding; tidak ada payment gateway di MVP. | Belum dipilih; tidak diaktifkan |
 | WhatsApp, Partner API — P2; API Gateway, agents, ERP/IoT — P3 | Biaya dan kelayakan bergantung volume, integrasi, serta model penggunaan. | Tunda shortlist vendor rinci sampai kebutuhan/volume P2–P3 diketahui; jangan menambah langganan lebih awal. | Belum dievaluasi |
 
@@ -1095,19 +1095,18 @@ keputusan pengguna, bukan persetujuan pembelian, akun, atau integrasi aktif.
 | Postmark | Trial gratis 100 email/bulan; Basic US$15/bulan mulai 10.000 email/bulan, overage US$1,80/1.000, retensi data 45 hari. | Kandidat pembanding bila fokus khusus pada email transaksional dan volume menjustifikasi biaya awal. |
 | Brevo | Free sampai 300 email/hari; Starter US$9/bulan mulai 5.000 email/bulan. Halaman Starter menyebut email marketing dan transactional. | Kandidat bila satu platform untuk marketing dan transactional menjadi kebutuhan. Pemisahan kategori, consent, unsubscribe, dan template tetap wajib meski vendor sama. |
 
-**Rekomendasi keputusan:** gunakan Resend Free untuk uji internal/pilot P1,
-setelah domain pengirim tervalidasi dan pemilik menyetujui vendor. Jangan masukkan
-marketing newsletter ke jalur ini. Reconfirm harga dan ketentuan sebelum
-pembelian. Status tetap **menunggu persetujuan pengguna**; tidak ada akun, key,
-domain, atau email yang dikonfigurasi.
+**Keputusan pengguna:** Resend dipilih sebagai provider email transaksional P1.
+Rencana awal memakai Resend Free untuk uji internal/pilot setelah domain
+pengirim tervalidasi. Jangan masukkan marketing newsletter ke jalur ini.
+Konfirmasi ulang harga dan ketentuan sebelum pembelian. Pemilihan vendor tidak
+mengaktifkan akun, key, domain, atau pengiriman email.
 
 **Rencana implementasi P1**
 
-1. **Prasyarat dan keputusan:** pengguna menyetujui atau mengganti rekomendasi
-   Resend; pastikan P0 identity dan database berjalan; pilih domain/subdomain
-   pengiriman yang dimiliki Gustafta; tentukan nama pengirim, consent, retensi,
-   serta siapa yang boleh mengelola template/log. Jangan mengirim email aktual
-   sebelum domain dan kebijakan siap.
+1. **Prasyarat dan keputusan:** Resend sudah dipilih; pastikan P0 identity dan
+   database berjalan; pilih domain/subdomain pengiriman yang dimiliki Gustafta;
+   tentukan nama pengirim, consent, retensi, serta siapa yang boleh mengelola
+   template/log. Jangan mengirim email aktual sebelum domain dan kebijakan siap.
 2. **Fondasi data dan keamanan:** skema database saat ini masih kosong dan API
    server baru menyediakan health-check. Bangun tabel notification, preference,
    template metadata, dan delivery attempt dengan kepemilikan user, status,

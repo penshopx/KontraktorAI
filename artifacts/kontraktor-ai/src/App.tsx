@@ -1431,13 +1431,13 @@ function BusinessModel() {
             <p className="mt-2 text-[10px] leading-5 text-[#a5b3ba]">Jangan kirim isi percakapan, dokumen, kredensial, atau detail proyek privat lewat email/WhatsApp. Ukur delivery, gagal/retry, latency, biaya kanal, unsubscribe, dan interaksi tanpa menyimpan isi pesan lebih lama dari kebutuhan.</p>
           </article>
         </div>
-        <p className="mt-4 text-[9px] leading-5 text-[#758792]" data-testid="notification-provider-boundary">n8n tetap kandidat orchestrator P1, bukan jalur wajib untuk pengiriman langsung. Provider WhatsApp dan platform notifikasi belum dipilih. Newsletter/kampanye marketing tetap memiliki consent dan alur terpisah.</p>
+        <p className="mt-4 text-[9px] leading-5 text-[#758792]" data-testid="notification-provider-boundary">Resend dipilih untuk email transaksional P1, tetapi belum dibuatkan akun atau integrasi. n8n tetap kandidat orchestrator, bukan jalur wajib untuk pengiriman langsung. Provider WhatsApp belum dipilih; newsletter/kampanye marketing tetap memiliki consent dan alur terpisah.</p>
         <div className="mt-3 grid gap-3 lg:grid-cols-2" data-testid="notification-email-vendor-review">
           <article className="border border-[#8bdcff]/30 bg-[#8bdcff]/[.055] p-4" data-testid="notification-email-recommendation">
-            <div className="eyebrow">EMAIL TRANSAKSIONAL · REKOMENDASI UTAMA P1</div>
-            <h4 className="mt-2 text-[13px] font-semibold text-[#e5edf0]">Resend · mulai dari paket gratis</h4>
+            <div className="eyebrow">EMAIL TRANSAKSIONAL · VENDOR TERPILIH P1</div>
+            <h4 className="mt-2 text-[13px] font-semibold text-[#e5edf0]">Resend · rencana mulai dari paket gratis</h4>
             <p className="mt-1.5 text-[10px] leading-5 text-[#a5b3ba]">Harga resmi yang diperiksa 14 Nov 2026: US$0 untuk 3.000 email/bulan dengan batas 100/hari; Pro US$20/bulan untuk 50.000/bulan. Cocok untuk pilot bootstrap yang hanya mengirim email transaksional.</p>
-            <p className="mt-2 text-[9px] leading-4 text-[#758792]">Rekomendasi, belum dipilih/diaktifkan. Validasi ulang harga, domain pengirim, DNS, dan retensi sebelum pilot.</p>
+            <p className="mt-2 text-[9px] leading-4 text-[#758792]">Dipilih pengguna; akun, langganan, domain pengirim, dan koneksi belum diaktifkan. Validasi ulang harga, DNS, serta retensi sebelum pilot.</p>
             <a className="mt-2 inline-block text-[9px] text-[#8bdcff] underline" href="https://resend.com/pricing" target="_blank" rel="noreferrer">Harga Resend</a>
           </article>
           <article className="border border-white/[.1] bg-white/[.025] p-4" data-testid="notification-email-alternatives">
@@ -1451,7 +1451,7 @@ function BusinessModel() {
         <div className="mt-3 border border-white/[.1] bg-white/[.025] p-4" data-testid="notification-p1-implementation-plan">
           <div className="eyebrow">RENCANA IMPLEMENTASI P1 · BERTAHAP</div>
           <div className="mt-3 grid gap-3 sm:grid-cols-2 xl:grid-cols-5">
-            <div><span className="font-mono text-[9px] text-[#8bdcff]">00 · GATE</span><p className="mt-1 text-[9px] leading-4 text-[#91a0a8]">Selesaikan P0 auth/database, pilih domain pengirim, provider, consent, dan retensi.</p></div>
+            <div><span className="font-mono text-[9px] text-[#8bdcff]">00 · GATE</span><p className="mt-1 text-[9px] leading-4 text-[#91a0a8]">Selesaikan P0 auth/database, validasi domain pengirim, consent, retensi, dan Secrets.</p></div>
             <div><span className="font-mono text-[9px] text-[#8bdcff]">01 · DATA</span><p className="mt-1 text-[9px] leading-4 text-[#91a0a8]">Event, inbox, preferensi, template, delivery log, akses per pengguna.</p></div>
             <div><span className="font-mono text-[9px] text-[#8bdcff]">02 · IN-APP</span><p className="mt-1 text-[9px] leading-4 text-[#91a0a8]">Daftar, unread/read, tautan aman, dan pengaturan kategori/kanal.</p></div>
             <div><span className="font-mono text-[9px] text-[#8bdcff]">03 · EMAIL</span><p className="mt-1 text-[9px] leading-4 text-[#91a0a8]">Adapter Resend, template tersaring, domain terautentikasi, webhook bertanda tangan.</p></div>

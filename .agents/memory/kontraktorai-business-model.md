@@ -206,7 +206,8 @@ Concierge:
 - Basic user authentication stays P0, while cross-product SSO stays P2. The
   My Gustafta user dashboard remains P0; admin/analytics dashboards are P1.
 - n8n is designated as one target orchestration tool, but is not hosted or
-  integrated. Other CRM/AI/technology vendors remain unselected.
+  integrated. Resend is selected for P1 transactional email, but is not activated
+  or integrated. Other CRM/AI/technology vendors remain unselected.
 - Dashboard cards and counts must use real account activity or clear empty states;
   hide unsupported navigation modules until their services exist. The AI Concierge
   0/37 checklist remains separate from the dashboard's added P0 scope.
@@ -227,7 +228,8 @@ requests into the MVP while keeping advanced personalization and ecosystem
 modules phased. The user finalized Part 10.X as C-B-B-B and explicitly kept
 cross-product SSO at P2, then adopted the latest 10.X priority roadmap and n8n as
 one orchestration tool in the target design. The user chose to record Expert
-Connect C-B-B-C as a recommendation, not a final decision.
+Connect C-B-B-C as a recommendation, not a final decision, and selected Resend
+for P1 transactional email after reviewing its pricing against Postmark and Brevo.
 
 **How to apply:** use these priorities in Gustafta and KontraktorAI business
 planning, portal messaging, and future product decisions. Choose implementation
@@ -268,5 +270,8 @@ navigation, but show only supported modules and never use placeholder metrics as
 real user activity. Keep basic auth in P0 and cross-product SSO in P2. Apply the
 latest Part 10.X roadmap: automation P1; payment/subscription and partner APIs
 P2; advanced APIs, agents, ERP, IoT, and industry data P3. Treat n8n as a target
-orchestration tool, not a deployed connection; keep other vendor choices open.
+orchestration tool, not a deployed connection. Resend is the selected P1
+transactional email vendor, but do not imply its account, subscription, domain,
+or integration is active; reconfirm current pricing before purchase. Keep other
+vendor choices open.
 Keep the 0/37 AI Concierge core tracker separate from the dashboard backlog.
