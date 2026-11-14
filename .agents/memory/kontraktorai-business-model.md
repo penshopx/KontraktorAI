@@ -146,6 +146,9 @@ For Part 13, the user finalized the KontraktorAI News and CMS strategy:
   advertising is not the primary first-year revenue source.
 - These are strategic decisions, not evidence that the CMS, feeds, AI workflow,
   analytics, or distribution integrations are already implemented.
+- The user confirmed `kontraktorai.wordpress.com` as the intended WordPress site,
+  but said it is not active yet. Its public REST API currently returns
+  `invalid_site` 404; treat the feed as unverified until the site becomes public.
 
 **Why:** the user confirmed the Part 02–11 business choices and the Part 03
 endorsed-brand architecture and market approach, then confirmed the Part 13

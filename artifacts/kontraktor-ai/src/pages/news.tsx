@@ -4,6 +4,11 @@ import {
   ArrowLeft, ArrowRight, ArrowUpRight, BriefcaseBusiness, Building2, Cpu,
   FileCheck2, Leaf, Menu, Search, ShieldCheck, Zap, X, Pickaxe,
 } from 'lucide-react';
+import {
+  fetchPublicWordPressPosts,
+  WordPressSitePendingError,
+  type PublicWordPressPost,
+} from '@/lib/wordpress-news';
 
 export const newsChannels = [
   'Konstruksi',
@@ -215,7 +220,7 @@ function NewsHeader() {
 
 function DemoNotice() {
   return <div className="border-y border-[#e9b96e]/35 bg-[#342718] px-4 py-3 text-[12px] leading-5 text-[#ffe3b4]" role="note" data-testid="notice-demo-content">
-    <strong className="font-semibold">DEMO KONTEN — BUKAN BERITA TERKINI ATAU TERVERIFIKASI.</strong> Contoh editorial untuk menunjukkan cara kerja modul. Belum terhubung ke sumber berita langsung atau proses redaksi.
+    <strong className="font-semibold">CONTOH EDITORIAL — BUKAN BERITA TERVERIFIKASI.</strong> Kartu berlabel demo adalah materi simulasi. Feed WordPress terpisah hanya menampilkan artikel publik dari situs KontraktorAI jika situs sudah aktif.
   </div>;
 }
 
@@ -223,12 +228,90 @@ function ChannelTag({ channel, lightBackground = false }: { channel: string; lig
   return <span className={`inline-flex items-center gap-2 border px-2.5 py-1.5 text-[10px] font-medium ${lightBackground ? 'border-[#81aec0] bg-[#e7f2f6] text-[#24566a]' : 'border-[#8bdcff]/25 bg-[#8bdcff]/[.08] text-[#a6e4fa]'}`} data-testid={`tag-channel-${channel.toLowerCase().replaceAll(/[^a-z0-9]+/g, '-')}`}>{channel}</span>;
 }
 
+type WordPressFeedState =
+  | { status: 'loading' }
+  | { status: 'pending' }
+  | { status: 'error'; message: string }
+  | { status: 'loaded'; posts: PublicWordPressPost[] };
+
+function WordPressPublicFeed({ search }: { search: string }) {
+  const [state, setState] = useState<WordPressFeedState>({ status: 'loading' });
+  const [reloadKey, setReloadKey] = useState(0);
+
+  useEffect(() => {
+    const controller = new AbortController();
+    setState({ status: 'loading' });
+
+    fetchPublicWordPressPosts(controller.signal)
+      .then(posts => setState({ status: 'loaded', posts }))
+      .catch(error => {
+        if (controller.signal.aborted) return;
+        if (error instanceof WordPressSitePendingError) {
+          setState({ status: 'pending' });
+          return;
+        }
+        setState({
+          status: 'error',
+          message: error instanceof Error ? error.message : 'Feed WordPress tidak dapat dimuat.',
+        });
+      });
+
+    return () => controller.abort();
+  }, [reloadKey]);
+
+  const normalizedSearch = search.trim().toLowerCase();
+  const matchingPosts = state.status === 'loaded'
+    ? state.posts.filter(post => `${post.title} ${post.excerpt}`.toLowerCase().includes(normalizedSearch))
+    : [];
+
+  const formatDate = (date: string) => new Intl.DateTimeFormat('id-ID', {
+    dateStyle: 'medium',
+    timeZone: 'Asia/Jakarta',
+  }).format(new Date(date));
+
+  return <section className="border-b border-white/[.08] bg-[#101920] py-9 md:py-12" data-testid="section-wordpress-feed">
+    <div className="container-wide">
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <div className="eyebrow !text-[#8bdcff]">WORDPRESS.COM · FEED PUBLIK</div>
+          <h2 className="display-font mt-3 text-[clamp(1.8rem,3vw,2.6rem)] font-semibold leading-none">Artikel dari CMS</h2>
+          <p className="mt-3 max-w-[620px] text-[12px] leading-6 text-[#a8b6c0]">Mode baca-saja untuk artikel yang sudah dipublikasikan di situs WordPress KontraktorAI. Feed ini tidak membuat atau menerbitkan konten.</p>
+        </div>
+        <span className="inline-flex w-fit items-center border border-[#8bdcff]/25 bg-[#8bdcff]/[.06] px-3 py-2 font-mono text-[9px] tracking-[.08em] text-[#a6e4fa]">REST API · BACA SAJA</span>
+      </div>
+
+      {state.status === 'loading' && <div className="mt-5 border border-white/10 bg-white/[.025] px-4 py-5 text-[12px] text-[#c2cdd2]" role="status" data-testid="wordpress-feed-loading">Memeriksa feed publik WordPress…</div>}
+      {state.status === 'pending' && <div className="mt-5 border border-amber-200/20 bg-amber-200/[.04] px-4 py-5" role="status" data-testid="wordpress-feed-pending">
+        <div className="font-mono text-[9px] tracking-[.1em] text-amber-100">SITUS WORDPRESS BELUM AKTIF</div>
+        <p className="mt-2 text-[12px] leading-6 text-[#c2cdd2]">URL <span className="font-mono text-[#e1eaed]">kontraktorai.wordpress.com</span> sudah dikonfirmasi, tetapi WordPress belum menyediakan feed publiknya. Artikel contoh di bawah tetap ditandai sebagai demo.</p>
+      </div>}
+      {state.status === 'error' && <div className="mt-5 border border-rose-200/20 bg-rose-200/[.04] px-4 py-5" role="alert" data-testid="wordpress-feed-error">
+        <div className="font-mono text-[9px] tracking-[.1em] text-rose-100">FEED BELUM DAPAT DIMUAT</div>
+        <p className="mt-2 text-[12px] leading-6 text-[#e4c7c7]">{state.message}</p>
+        <button type="button" onClick={() => setReloadKey(value => value + 1)} className="mt-3 border border-white/20 px-3 py-2 text-[10px] font-semibold text-[#edf3f5] hover:bg-white/[.06]" data-testid="button-retry-wordpress-feed">Coba lagi</button>
+      </div>}
+      {state.status === 'loaded' && (matchingPosts.length > 0
+        ? <div className="mt-5 grid gap-3 sm:grid-cols-2 xl:grid-cols-3" data-testid="wordpress-feed-posts">
+          {matchingPosts.map(post => <article key={post.id} className="flex min-h-[190px] flex-col border border-white/10 bg-[#151f26] p-5 transition hover:border-[#8bdcff]/35" data-testid={`wordpress-post-${post.id}`}>
+            <time dateTime={post.date} className="font-mono text-[9px] text-[#91a0a8]">{formatDate(post.date)}</time>
+            <h3 className="mt-4 text-[16px] font-semibold leading-[1.35] text-[#e1eaed]">{post.title}</h3>
+            <p className="mt-2 flex-1 text-[11px] leading-6 text-[#a8b6c0]">{post.excerpt || 'Buka artikel di situs WordPress untuk membaca selengkapnya.'}</p>
+            <a href={post.url} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-1.5 border-t border-white/10 pt-3 text-[10px] font-semibold text-[#8bdcff] hover:text-white" data-testid={`link-wordpress-post-${post.id}`}>Baca di WordPress <ArrowUpRight size={13} /></a>
+          </article>)}
+        </div>
+        : <div className="mt-5 border border-white/10 bg-white/[.025] px-4 py-5 text-[12px] text-[#c2cdd2]" data-testid="wordpress-feed-empty">
+          {normalizedSearch ? 'Tidak ada artikel WordPress publik yang cocok dengan pencarian.' : 'Situs aktif, tetapi belum ada artikel publik.'}
+        </div>)}
+    </div>
+  </section>;
+}
+
 export function NewsLanding() {
   const [search, setSearch] = useState('');
   const [activeChannel, setActiveChannel] = useState('Semua kanal');
   usePageMetadata(
     'News & Intelijen Industri | KontraktorAI by Gustafta',
-    'Contoh format editorial untuk portal industri KontraktorAI, brand vertikal Gustafta. Materi demo, bukan berita terkini atau terverifikasi.',
+    'News industri KontraktorAI by Gustafta. Feed publik WordPress dan contoh editorial demo yang dibedakan dengan jelas.',
   );
   const filtered = useMemo(() => editorials.filter(item => {
     const matchesChannel = activeChannel === 'Semua kanal' || item.channel === activeChannel;
@@ -247,12 +330,13 @@ export function NewsLanding() {
           <p className="mt-6 max-w-[580px] text-[15px] leading-7 text-[#a8b6c0]">KontraktorAI adalah portal solusi digital dan AI Gustafta untuk UMKM kontraktor dan profesional industri. Cakupan lima sektor berkembang bertahap: konstruksi; energi dan ketenagalistrikan; lalu pertambangan dan lingkungan.</p>
         </div>
         <div className="border border-white/10 bg-[#151f26] p-5 md:mb-1" data-testid="panel-news-editorial-status">
-          <div className="flex items-center justify-between"><span className="eyebrow !text-[9px]">STATUS MODUL</span><span className="font-mono text-[10px] text-[#f0c77e]">PRATINJAU</span></div>
-          <p className="mt-4 text-[13px] leading-6 text-[#c2cdd2]">Belum ada API berita, CMS, atau integrasi sumber langsung. Seluruh kartu di bawah adalah materi demo yang dirancang sebagai kerangka editorial.</p>
-          <div className="mt-4 border-t border-white/10 pt-3 font-mono text-[9px] tracking-[.1em] text-[#7e919b]">8 KANAL · CONTOH EDITORIAL</div>
+          <div className="flex items-center justify-between"><span className="eyebrow !text-[9px]">STATUS MODUL</span><span className="font-mono text-[10px] text-[#f0c77e]">PRATINJAU · SITUS MENUNGGU</span></div>
+          <p className="mt-4 text-[13px] leading-6 text-[#c2cdd2]">Feed baca-saja WordPress sudah disiapkan. Situs belum aktif, jadi feed belum menampilkan artikel; kartu editorial di bagian demo bukan berita aktual.</p>
+          <div className="mt-4 border-t border-white/10 pt-3 font-mono text-[9px] tracking-[.1em] text-[#7e919b]">WORDPRESS READ-ONLY · 8 KANAL DEMO</div>
         </div>
       </div>
     </section>
+    <WordPressPublicFeed search={search} />
     <section className="border-b border-white/[.08] bg-[#121c23] py-7">
       <div className="container-wide">
         <div className="mb-4 flex items-center justify-between"><h2 className="eyebrow">JELAJAHI DELAPAN KANAL</h2><span className="font-mono text-[10px] text-[#72838c]">01 — 08</span></div>

@@ -887,9 +887,10 @@ AI, kontrol editorial manusia, dan jalur menuju prospek layanan Gustafta.
   khusus ditambahkan bertahap. Sebelum implementasi, konfirmasi akun/site,
   ketentuan paket dan biaya aktual, plugin yang dibutuhkan, lisensi, ekspor data,
   keamanan, serta integrasi yang sesuai.
-- Gunakan REST API WordPress untuk portal React/Vite. Akses yang memerlukan
-  autentikasi harus melalui jalur server-side yang aman; jangan menaruh token
-  WordPress pada browser atau repository.
+- Gunakan REST API WordPress untuk portal React/Vite. Feed artikel yang memang
+  publik dapat dibaca langsung tanpa kredensial; seluruh akses terautentikasi
+  harus melalui jalur server-side yang aman. Jangan menaruh token WordPress pada
+  browser atau repository.
 - Dashboard editorial, editor artikel, pengelolaan sumber, kategori/sektor,
   tag, media, profil penulis, workflow, SEO, analytics, pengguna, peran, dan
   pengaturan.
@@ -958,11 +959,15 @@ AI, kontrol editorial manusia, dan jalur menuju prospek layanan Gustafta.
   menunggu baseline. Estimasi sumber sebesar 3–5 artikel berkualitas dan 1–2
   materi analisis/knowledge per minggu tetap hipotesis, bukan KPI yang disetujui;
   tinjau lagi terhadap waktu founder dan beban verifikasi.
-- Tracker awal berisi 38 pekerjaan dan dimulai pada **0/38 terverifikasi**.
+- Tracker awal berisi 38 pekerjaan dan tetap pada **0/38 terverifikasi**.
   Halaman News publik yang sudah ada adalah contoh editorial/demo; audit
   kesesuaiannya terhadap persyaratan MVP sebelum menghitungnya sebagai pekerjaan
-  CMS selesai. WordPress.com Business sudah dipilih sebagai target, tetapi belum
-  dibeli atau dihubungkan.
+  CMS selesai. WordPress.com Business sudah dipilih sebagai target dan pengguna
+  mengonfirmasi domain `kontraktorai.wordpress.com`, tetapi situs belum aktif.
+  REST API publik saat ini mengembalikan `invalid_site` 404. Adapter baca-saja
+  telah disiapkan tanpa konektor Replit dan tanpa kredensial, tetapi belum dapat
+  diverifikasi dengan artikel live; belum ada API tulis atau publikasi otomatis.
+  Pemilihan paket bukan pembelian langganan.
 
 ### Checklist implementasi MVP — 0/38
 

@@ -450,7 +450,7 @@ function BusinessModel() {
     { number: '06', title: 'Monetisasi awal', detail: 'Utamakan prospek berkualitas untuk layanan Gustafta; bukan iklan sebagai pendapatan utama.' },
   ];
   const newsMvpPhases = [
-    { period: 'MINGGU 1–2', title: 'Fondasi & setup WordPress', detail: 'Finalisasi sitemap, model data, peran, akun/platform, dan akses API setelah koneksi disetujui.' },
+    { period: 'MINGGU 1–2', title: 'Fondasi & setup WordPress', detail: 'Finalisasi sitemap, model data, peran, aktivasi situs, dan uji feed publik baca-saja.' },
     { period: 'MINGGU 3–4', title: 'Website & CMS inti', detail: 'Template News, kategori, artikel, Article Manager, media, SEO, dan peran.' },
     { period: 'MINGGU 5–6', title: 'Workflow & AI editorial', detail: 'Source Manager, persetujuan, RSS/sumber yang diizinkan, ringkasan, dan draf AI.' },
     { period: 'MINGGU 7–8', title: 'Integrasi, QA & peluncuran', detail: 'Analytics, prospek, distribusi awal, keamanan, backup, dan pengujian.' },
@@ -985,13 +985,13 @@ function BusinessModel() {
             <p className="mt-2 text-[10px] leading-5 text-[#c1d0d6]">Temukan dan verifikasi sumber → AI membantu ringkasan/draf/SEO → editor memeriksa fakta, konteks, kualitas, dan hak cipta → jadwalkan atau terbitkan setelah review. AI tidak memiliki kewenangan publikasi; konten sensitif memerlukan persetujuan khusus.</p>
           </article>
           <article className="border border-white/[.1] bg-white/[.025] p-4" data-testid="news-cms-implementation-boundary">
-            <div className="eyebrow">WORDPRESS.COM BUSINESS DIPILIH · BELUM TERHUBUNG</div>
-            <p className="mt-2 text-[10px] leading-5 text-[#a5b3ba]">WordPress.com Business menjadi platform target; akun, langganan, situs, dan API belum dihubungkan. Artikel yang disetujui disesuaikan untuk website/SEO, sosial, WhatsApp, lalu newsletter dan CRM. Monetisasi awal berfokus pada prospek layanan Gustafta.</p>
+            <div className="eyebrow">WORDPRESS.COM BUSINESS DIPILIH · SITUS MENUNGGU AKTIVASI</div>
+            <p className="mt-2 text-[10px] leading-5 text-[#a5b3ba]">Domain kontraktorai.wordpress.com sudah dikonfirmasi, tetapi situs belum aktif. Adapter feed publik baca-saja disiapkan tanpa konektor Replit atau kredensial; belum dapat diverifikasi dengan artikel live. Artikel yang disetujui tetap mengikuti review manusia sebelum distribusi dan monetisasi prospek layanan Gustafta.</p>
           </article>
         </div>
         <div className="mt-8 border-t border-white/10 pt-7" data-testid="news-cms-implementation-spec">
           <div className="flex flex-col justify-between gap-3 sm:flex-row sm:items-end">
-            <div><div className="eyebrow">SPESIFIKASI AWAL · IMPLEMENTASI BELUM DIMULAI</div><h4 className="display-font mt-2 text-2xl font-semibold text-[#e6eef1]">Siapkan sistem editorial sebelum otomasi.</h4></div>
+            <div><div className="eyebrow">SPESIFIKASI AWAL · ADAPTER PUBLIK READ-ONLY DISIAPKAN</div><h4 className="display-font mt-2 text-2xl font-semibold text-[#e6eef1]">Siapkan sistem editorial sebelum otomasi.</h4></div>
             <div className="border border-amber-200/20 bg-amber-200/[.04] px-3 py-2 font-mono text-[9px] text-amber-100" data-testid="news-cms-mvp-status">CHECKLIST MVP · 0/38 TERVERIFIKASI</div>
           </div>
           <div className="mt-4 grid gap-2 sm:grid-cols-2 xl:grid-cols-3">
@@ -1032,7 +1032,7 @@ function BusinessModel() {
             </article>)}
           </div>
           <p className="mt-3 text-[9px] leading-5 text-[#758792]" data-testid="news-cms-metric-boundary">North Star yang diusulkan: qualified leads dari KontraktorAI News. Volume artikel, trafik, dan pendapatan belum menjadi target; estimasi kapasitas konten menunggu baseline dan review beban kerja.</p>
-          <p className="mt-2 text-[9px] leading-5 text-[#758792]">Angka 0/38 mengikuti checklist spesifikasi awal. Halaman News publik yang sudah ada berupa contoh editorial; statusnya akan diaudit sebelum ada item yang ditandai selesai untuk CMS. Pemilihan platform tidak berarti langganan dibeli atau situs dihubungkan.</p>
+          <p className="mt-2 text-[9px] leading-5 text-[#758792]">Angka 0/38 menghitung kriteria MVP yang terverifikasi. Adapter baca-saja belum dihitung karena situs belum aktif dan respons artikel live belum diuji. Contoh editorial tetap demo; pemilihan platform tidak berarti langganan dibeli atau API tulis dihubungkan.</p>
         </div>
       </div>
       <p className="mt-5 flex items-start gap-2 text-[10px] leading-5 text-[#778991]" data-testid="text-business-model-caveat"><Check size={13} className="mt-0.5 shrink-0 text-[#70bfdc]" />Enam unit bisnis dan tiga level penawaran adalah kerangka strategis, bukan katalog atau klaim ketersediaan. Harga, margin, dan proyeksi tetap perlu divalidasi.</p>
