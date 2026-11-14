@@ -716,6 +716,73 @@ function BusinessModel() {
         </div>
         <p className="mt-5 border-l border-[#8bdcff]/50 pl-3 text-[9px] leading-5 text-[#758792]" data-testid="part07-validation-note">Gate rilis: validasi masalah dan kesediaan membayar → prototype/MVP → pilot 3–5 pengguna sebagai sasaran uji → standardisasi, dokumentasi, keamanan, biaya, dan dukungan. Angka pilot adalah target rencana, bukan pengguna yang sudah ada.</p>
       </div>
+      <div id="ai-concierge" className="mt-14 border-t border-white/10 pt-10" data-testid="ai-concierge-strategy">
+        <div className="grid gap-5 md:grid-cols-[.78fr_1.22fr] md:items-end">
+          <div>
+            <div className="eyebrow">AI CONCIERGE · PRODUK EKOSISTEM GUSTAFTA</div>
+            <h3 className="display-font mt-3 max-w-[520px] text-3xl font-semibold leading-tight text-[#e6eef1] md:text-4xl">Satu gerbang cerdas.<br /><span className="text-[#8bdcff]">Knowledge hingga kolaborasi.</span></h3>
+          </div>
+          <div>
+            <span className="inline-flex items-center gap-2 border border-[#8bdcff]/25 bg-[#8bdcff]/[.06] px-3 py-1.5 font-mono text-[9px] tracking-[.1em] text-[#9eddf2]">KEPUTUSAN STRATEGIS FINAL · AI GATEWAY GUSTAFTA</span>
+            <p className="mt-3 max-w-[630px] text-[12px] leading-6 text-[#a7b5bc]">AI Concierge menjadi lapisan interaksi untuk membantu pengunjung, UMKM, profesional, dan pelaku industri menemukan informasi, pengetahuan, solusi, produk, serta jalur konsultasi atau kolaborasi. Ini adalah keputusan produk; pengembangan dan deployment belum dilaksanakan.</p>
+          </div>
+        </div>
+        <div className="mt-6 grid gap-px border border-white/[.09] bg-white/[.09] sm:grid-cols-2 xl:grid-cols-3" data-testid="ai-concierge-decisions">
+          <article className="min-h-[145px] bg-[#121e26] p-4" data-testid="ai-concierge-modules">
+            <span className="font-mono text-[9px] tracking-[.1em] text-[#8bdcff]">CAKUPAN MVP</span>
+            <h4 className="mt-2 text-[12px] font-semibold text-[#e5edf0]">Enam modul inti</h4>
+            <p className="mt-1.5 text-[10px] leading-5 text-[#91a0a8]">Asisten umum, pencarian knowledge, pencari solusi, lead dan konsultasi, gerbang kolaborasi, serta akun dasar.</p>
+          </article>
+          <article className="min-h-[145px] bg-[#121e26] p-4" data-testid="ai-concierge-access">
+            <span className="font-mono text-[9px] tracking-[.1em] text-[#8bdcff]">MODEL AKSES</span>
+            <h4 className="mt-2 text-[12px] font-semibold text-[#e5edf0]">Gratis untuk pengunjung</h4>
+            <p className="mt-1.5 text-[10px] leading-5 text-[#91a0a8]">Informasi dan knowledge publik tidak mensyaratkan akun. Akun terdaftar mendapat fitur lanjutan bertahap; registrasi bukan penghalang untuk bertanya.</p>
+          </article>
+          <article className="min-h-[145px] bg-[#121e26] p-4" data-testid="ai-concierge-rag">
+            <span className="font-mono text-[9px] tracking-[.1em] text-[#8bdcff]">KNOWLEDGE · HYBRID RAG</span>
+            <h4 className="mt-2 text-[12px] font-semibold text-[#e5edf0]">Jawaban berbasis sumber</h4>
+            <p className="mt-1.5 text-[10px] leading-5 text-[#91a0a8]">Gabungkan CMS, dokumen, katalog/database, dan referensi eksternal terpilih dengan metadata, status verifikasi, hak akses, tanggal pembaruan, serta sitasi.</p>
+          </article>
+          <article className="min-h-[145px] bg-[#121e26] p-4" data-testid="ai-concierge-build-buy-integrate">
+            <span className="font-mono text-[9px] tracking-[.1em] text-[#8bdcff]">BUILD · BUY · INTEGRATE</span>
+            <h4 className="mt-2 text-[12px] font-semibold text-[#e5edf0]">Hybrid sesuai kebutuhan</h4>
+            <p className="mt-1.5 text-[10px] leading-5 text-[#91a0a8]">Gunakan layanan AI dan infrastruktur terkelola; integrasikan CMS, CRM, dan otomasi; bangun backend, orkestrasi knowledge, serta aturan bisnis khusus Gustafta.</p>
+          </article>
+          <article className="min-h-[145px] bg-[#121e26] p-4" data-testid="ai-concierge-human-handoff">
+            <span className="font-mono text-[9px] tracking-[.1em] text-[#8bdcff]">LEAD · KOLABORASI · HUMAN HANDOFF</span>
+            <h4 className="mt-2 text-[12px] font-semibold text-[#e5edf0]">AI mengarahkan, manusia menindaklanjuti</h4>
+            <p className="mt-1.5 text-[10px] leading-5 text-[#91a0a8]">Tawarkan solusi terverifikasi, minta persetujuan sebelum mengumpulkan data minimum prospek, lalu arahkan pertanyaan yang tidak terjawab atau sensitif kepada manusia.</p>
+          </article>
+          <article className="min-h-[145px] bg-[#121e26] p-4" data-testid="ai-concierge-monetization">
+            <span className="font-mono text-[9px] tracking-[.1em] text-[#8bdcff]">MONETISASI BERTAHAP</span>
+            <h4 className="mt-2 text-[12px] font-semibold text-[#e5edf0]">Gateway gratis lebih dahulu</h4>
+            <p className="mt-1.5 text-[10px] leading-5 text-[#91a0a8]">Mulai untuk akuisisi audiens dan lead; jasa implementasi dan solusi enterprise menyusul setelah validasi. SaaS bukan sasaran monetisasi awal.</p>
+          </article>
+        </div>
+        <div className="mt-6 grid gap-4 lg:grid-cols-[1.1fr_.9fr]">
+          <div className="border border-[#8bdcff]/20 bg-[#8bdcff]/[.04] p-4" data-testid="ai-concierge-industry-taxonomy">
+            <div className="eyebrow">CAKUPAN INDUSTRI · TAKSONOMI TETAP USULAN</div>
+            <p className="mt-2 text-[10px] leading-5 text-[#a5b3ba]">AI Concierge dirancang agar dapat mengelompokkan pertanyaan ke delapan kategori yang diusulkan Gustafta: Construction, Energy, Electricity, Mining, Environment, Manufacturing, Logistics, serta Business & Digital Transformation. Lima sektor pertama tetap fokus inti KontraktorAI; kategori ekspansi dan lintas industri belum menjadi keputusan taksonomi final.</p>
+          </div>
+          <div className="border border-white/[.1] bg-white/[.025] p-4" data-testid="ai-concierge-guardrails">
+            <div className="eyebrow">BATAS MVP · PRIVASI · KEAMANAN</div>
+            <p className="mt-2 text-[10px] leading-5 text-[#a5b3ba]">Tidak melakukan transaksi, pembayaran, atau pengelolaan proyek otomatis. Jangan mengarang informasi, mengekspos dokumen internal, atau mengklaim tindakan eksternal berhasil. Terapkan persetujuan, akses minimum, retensi jelas, pemantauan biaya, dan eskalasi manusia.</p>
+          </div>
+        </div>
+        <div className="mt-6 border border-white/[.1] bg-white/[.025] p-4" data-testid="ai-concierge-roadmap">
+          <div className="flex flex-wrap items-end justify-between gap-3">
+            <div><div className="eyebrow">RENCANA MVP · ESTIMASI 8 MINGGU</div><h4 className="display-font mt-2 text-xl font-semibold text-[#e6eef1]">Rancang, bangun, uji, lalu pilot.</h4></div>
+            <span className="font-mono text-[9px] tracking-[.08em] text-[#8bdcff]">CHECKLIST · 0/37 DIVERIFIKASI</span>
+          </div>
+          <div className="mt-4 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+            <div className="border-l border-[#8bdcff]/40 pl-3"><span className="font-mono text-[9px] text-[#8bdcff]">MINGGU 1–2</span><p className="mt-1 text-[10px] leading-5 text-[#a5b3ba]">PRD, user journey, alur percakapan, dan desain UI.</p></div>
+            <div className="border-l border-[#8bdcff]/40 pl-3"><span className="font-mono text-[9px] text-[#8bdcff]">MINGGU 3–4</span><p className="mt-1 text-[10px] leading-5 text-[#a5b3ba]">Backend, LLM, ingestion knowledge, retrieval, dan sitasi.</p></div>
+            <div className="border-l border-[#8bdcff]/40 pl-3"><span className="font-mono text-[9px] text-[#8bdcff]">MINGGU 5–6</span><p className="mt-1 text-[10px] leading-5 text-[#a5b3ba]">Solution finder, lead capture, akses pengguna, dan integrasi dasar.</p></div>
+            <div className="border-l border-[#8bdcff]/40 pl-3"><span className="font-mono text-[9px] text-[#8bdcff]">MINGGU 7–8</span><p className="mt-1 text-[10px] leading-5 text-[#a5b3ba]">Evaluasi jawaban, keamanan, uji pilot, dan persiapan peluncuran.</p></div>
+          </div>
+          <p className="mt-4 border-t border-white/10 pt-3 text-[9px] leading-5 text-[#8798a1]">Estimasi bukan jaminan jadwal. Pemilihan vendor/platform AI dan CRM belum ditetapkan; WordPress.com Business hanya target CMS News dan situsnya belum aktif. Checklist adalah backlog rencana, bukan pekerjaan yang telah selesai.</p>
+        </div>
+      </div>
       <div id="bagian-08" className="mt-14 border-t border-white/10 pt-10" data-testid="consulting-collaboration-marketplace">
         <div className="grid gap-5 md:grid-cols-[.78fr_1.22fr] md:items-end">
           <div><div className="eyebrow">BAGIAN 08 · CONSULTING, COLLABORATION & MARKETPLACE</div><h3 className="display-font mt-3 max-w-[520px] text-3xl font-semibold leading-tight text-[#e6eef1] md:text-4xl">Jaringan dahulu.<br /><span className="text-[#8bdcff]">Marketplace bertahap.</span></h3></div>

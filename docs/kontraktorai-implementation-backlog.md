@@ -643,20 +643,69 @@ pengetahuan serta solusi.
 
 ### 06 — AI Concierge dan Knowledge Intelligence
 
-**Tujuan:** membantu pengguna menyampaikan kebutuhan dengan bahasa alami lalu
-menemukan langkah dan layanan yang relevan.
+**Keputusan produk final:** AI Concierge adalah AI Gateway untuk seluruh
+ekosistem Gustafta, bukan chatbot yang berdiri sendiri. Sasaran awal mencakup
+pengunjung, UMKM, profesional, dan pelaku industri. Akses informasi publik gratis;
+fitur akun berkembang bertahap. MVP mencakup knowledge discovery, solution
+finder, lead/konsultasi, dan collaboration routing. Strategi knowledge adalah
+Hybrid RAG; pengembangan menggunakan pendekatan build–buy–integrate dengan
+backend khusus Gustafta.
 
 **Hasil kerja**
-- Spesifikasi percakapan dan klasifikasi kebutuhan/sektor.
-- Arsitektur basis pengetahuan dan sumber yang disetujui.
-- Rancangan pencarian semantik/RAG, sitasi, rekomendasi produk, dan eskalasi ahli.
-- Aturan batas kewenangan untuk legalitas, sertifikasi, keselamatan, dan teknik.
+- Enam modul: general assistant, knowledge discovery, solution finder,
+  lead/consultation, collaboration gateway, dan user experience dasar.
+- Guest access tanpa akun untuk informasi dan knowledge publik; akun terdaftar
+  mendapat fitur tambahan bertahap. Riwayat, preferensi, simpanan artikel, serta
+  dashboard konsultasi lanjutan menjadi P1 setelah MVP stabil.
+- Hybrid RAG dari CMS, dokumen terkurasi, database produk/layanan/industri,
+  sumber eksternal terpilih, dan konteks pengguna hanya bila diizinkan.
+- Metadata knowledge minimal: ID/jenis sumber, judul, lokasi, industri/kategori,
+  tanggal publikasi/pembaruan, status verifikasi, hak akses, dan status aktif.
+- Pipeline ingestion dan normalisasi → indeks keyword/vector + metadata →
+  retrieval/ranking → jawaban dengan sitasi; mekanisme sinkronisasi dan evaluasi.
+- Workflows utama: knowledge ber-sumber; identifikasi kebutuhan dan rekomendasi
+  solusi; lead dengan persetujuan; kolaborasi; human handoff.
+- Entitas awal: users, sessions, conversations, messages, knowledge sources,
+  documents/chunks, industries, solutions, products, leads/activities, feedback,
+  konfigurasi AI, dan audit logs.
+- Build–buy–integrate: layanan AI/infra dan komponen RAG terkelola; backend,
+  orkestrasi knowledge, business logic, dan integrasi pembeda dibangun khusus.
+  Jangan membangun foundation model sendiri untuk MVP.
+- Delapan kategori industri dapat dikenali sebagai klasifikasi usulan, tetapi
+  status taksonomi Gustafta tetap rekomendasi: lima sektor inti KontraktorAI
+  disetujui; dua ekspansi dan satu lintas industri belum final.
+- Monetisasi berurutan: free ecosystem gateway untuk audiens/leads, lalu jasa
+  implementasi, custom enterprise assistant, dan SaaS setelah validasi.
+- North Star: qualified leads yang dihasilkan dan dapat ditindaklanjuti. KPI
+  penggunaan, kualitas knowledge, pengalaman, konversi, biaya, latency, error,
+  dan uptime diukur tanpa target angka sebelum baseline tersedia.
+- Checklist MVP berisi 37 pekerjaan: Product/UX (5), Core AI Backend (6),
+  Knowledge/RAG (7), Business Features (6), User/Security (6), QA/Launch (7).
+  Status awal **0/37 terverifikasi**; roadmap delapan minggu adalah estimasi,
+  bukan jaminan tanggal atau hasil.
+- Status saat ini: strategi final, cakupan ditetapkan, arsitektur dirancang,
+  backlog disusun; vendor/platform AI dan CRM belum dipilih; development dan
+  deployment belum dilaksanakan. WordPress.com Business hanya target CMS News
+  dan situs WordPress belum aktif.
 
 **Kriteria penerimaan**
-- Jawaban yang merujuk pengetahuan menampilkan sumber yang dapat ditelusuri.
-- Sistem mengakui saat sumber atau konteks tidak cukup dan tidak mengarang.
-- Pertanyaan berisiko diarahkan ke profesional kompeten.
-- Rekomendasi menautkan hanya ke produk atau layanan yang sudah diverifikasi.
+- Pengunjung dapat menggunakan knowledge publik tanpa akun; fitur akun tidak
+  menjadi prasyarat bagi pengalaman dasar.
+- Jawaban Gustafta memakai sumber yang disetujui, menampilkan referensi, dan
+  menjelaskan ketidakpastian/fallback saat sumber tidak cukup.
+- Dokumen internal tidak muncul ke pengguna publik; sumber memiliki status,
+  tanggal, dan hak akses yang dapat diperiksa.
+- Klasifikasi delapan kategori memakai taksonomi berstatus usulan; implementasi
+  tidak mengubahnya menjadi keputusan final untuk Gustafta.
+- Rekomendasi hanya menautkan layanan/produk terverifikasi; lead dikumpulkan
+  bertahap setelah persetujuan dan dapat diteruskan ke sistem pengelolaan prospek.
+- Pertanyaan sensitif/tidak terjawab diarahkan ke manusia; AI tidak melakukan
+  transaksi, pembayaran, atau pengelolaan proyek otomatis.
+- API dan secret berada di server; sesi, akses data, retensi, privasi, monitoring,
+  backup, biaya, dan latency diuji sebelum pilot.
+- Tidak ada klaim produk telah siap atau terhubung sebelum 37 pekerjaan MVP
+  benar-benar diperiksa; evaluasi mencakup relevansi, ketepatan sitasi, akses,
+  keamanan, dan pilot.
 
 ### 07 — Produk Digital, SaaS, dan Integrasi
 

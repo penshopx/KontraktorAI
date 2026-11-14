@@ -150,9 +150,30 @@ For Part 13, the user finalized the KontraktorAI News and CMS strategy:
   but said it is not active yet. Its public REST API currently returns
   `invalid_site` 404; treat the feed as unverified until the site becomes public.
 
+The user also approved the final AI Concierge product direction:
+
+- Position AI Concierge as the AI Gateway for the whole Gustafta ecosystem,
+  covering knowledge, solution discovery, lead/consultation, and collaboration.
+- Keep basic public access free; registered-user features can be added in stages.
+- Use Hybrid RAG over approved CMS content, documents, product/service data, and
+  selected external sources, with source metadata, citations, access controls,
+  consent, and human handoff.
+- Use a build–buy–integrate approach: managed AI/infrastructure, selected
+  integrations, and Gustafta-specific backend/orchestration. AI model/vendor,
+  CRM, development, and deployment remain unselected or unimplemented.
+- The proposed eight-industry taxonomy remains provisional for Gustafta even
+  though Concierge should be designed to classify against it. The five initial
+  KontraktorAI sectors remain approved; expansion and cross-industry categories
+  are not final.
+- Do not give the MVP authority to transact, take payments, or manage projects
+  autonomously. Treat the 0/37 checklist and eight-week roadmap as plans until
+  implementation and acceptance checks are verified.
+
 **Why:** the user confirmed the Part 02–11 business choices and the Part 03
 endorsed-brand architecture and market approach, then confirmed the Part 13
-News/CMS strategy and selected WordPress.com Business as its MVP target.
+News/CMS strategy and selected WordPress.com Business as its MVP target. The
+user also approved the AI Concierge strategy while explicitly keeping the
+eight-industry taxonomy as a recommendation.
 
 **How to apply:** use these priorities in Gustafta and KontraktorAI business
 planning, portal messaging, and future product decisions. Choose implementation
@@ -182,3 +203,7 @@ Apply Part 13 without implying a CMS or integration is live; preserve human
 review, staged distribution, and service-lead monetization. WordPress.com
 Business is the selected target, but do not claim an account, subscription, site,
 or API connection exists until it is explicitly set up.
+Apply the AI Concierge decisions as product scope, not proof of implementation:
+do not imply an AI provider, CRM, deployment, or RAG pipeline is selected or live.
+Keep the eight-industry taxonomy provisional, require approved sources and
+citations, and preserve consent, access boundaries, and human handoff.
