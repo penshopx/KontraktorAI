@@ -954,24 +954,35 @@ function BusinessModel() {
               <p className="mt-2 text-[10px] leading-5 text-[#a5b3ba]">Hybrid integration; CRM eksternal + database internal Gustafta; otomasi hybrid melalui konektor, otomasi terkelola, dan workflow khusus; mulai dari konektor/no-code lalu bertahap menuju API-first. Pilihan CRM, LLM, dan vendor lain belum dikunci.</p>
             </div>
           </div>
-          <div className="mt-4 grid gap-px border border-white/[.09] bg-white/[.09] md:grid-cols-3" data-testid="integration-priorities">
+          <div className="mt-4 grid gap-px border border-white/[.09] bg-white/[.09] sm:grid-cols-2 xl:grid-cols-4" data-testid="integration-priorities">
             <article className="bg-[#111c23] p-3" data-testid="integration-priority-p0">
               <span className="font-mono text-[9px] tracking-[.1em] text-[#8bdcff]">P0 · MVP</span>
-              <h5 className="mt-2 text-[11px] font-semibold text-[#e5edf0]">Sumber nilai dan operasi inti</h5>
-              <p className="mt-1.5 text-[10px] leading-5 text-[#91a0a8]">AI/LLM, CMS, database, RAG/search, document storage, basic authentication (bukan SSO), CRM/lead management, workflow automation, serta email/notifikasi.</p>
+              <h5 className="mt-2 text-[11px] font-semibold text-[#e5edf0]">Fondasi dan perolehan lead</h5>
+              <p className="mt-1.5 text-[10px] leading-5 text-[#91a0a8]">AI/LLM, CMS dan knowledge, database, RAG/search, basic login, CRM, serta lead capture. Wajib siap sebelum MVP diluncurkan.</p>
             </article>
             <article className="bg-[#111c23] p-3" data-testid="integration-priority-p1">
-              <span className="font-mono text-[9px] tracking-[.1em] text-[#8bdcff]">P1 · SETELAH MVP</span>
-              <h5 className="mt-2 text-[11px] font-semibold text-[#e5edf0]">Komersial dan koordinasi</h5>
-              <p className="mt-1.5 text-[10px] leading-5 text-[#91a0a8]">Payment gateway, subscription, analytics, project management, WhatsApp Business, e-signature, LMS, dan koneksi API tambahan.</p>
+              <span className="font-mono text-[9px] tracking-[.1em] text-[#8bdcff]">P1 · INTEGRASI BISNIS</span>
+              <h5 className="mt-2 text-[11px] font-semibold text-[#e5edf0]">Otomasi dan koordinasi</h5>
+              <p className="mt-1.5 text-[10px] leading-5 text-[#91a0a8]">n8n sebagai salah satu orchestration tool, workflow, collaboration, email/notifikasi, serta dashboard admin/analytics.</p>
             </article>
             <article className="bg-[#111c23] p-3" data-testid="integration-priority-p2">
-              <span className="font-mono text-[9px] tracking-[.1em] text-[#8bdcff]">P2 · EKSPANSI EKOSISTEM</span>
-              <h5 className="mt-2 text-[11px] font-semibold text-[#e5edf0]">SSO dan integrasi lanjutan</h5>
-              <p className="mt-1.5 text-[10px] leading-5 text-[#91a0a8]">SSO lintas produk, voice AI, advanced agents, ERP, procurement/tender, GIS, IoT, industry data APIs, dan koneksi mitra.</p>
+              <span className="font-mono text-[9px] tracking-[.1em] text-[#8bdcff]">P2 · KOMERSIAL</span>
+              <h5 className="mt-2 text-[11px] font-semibold text-[#e5edf0]">Pembayaran dan perluasan kanal</h5>
+              <p className="mt-1.5 text-[10px] leading-5 text-[#91a0a8]">Payment gateway, subscription, WhatsApp, partner API, dan SSO lintas produk setelah MVP.</p>
+            </article>
+            <article className="bg-[#111c23] p-3" data-testid="integration-priority-p3">
+              <span className="font-mono text-[9px] tracking-[.1em] text-[#8bdcff]">P3 · EKSPANSI EKOSISTEM</span>
+              <h5 className="mt-2 text-[11px] font-semibold text-[#e5edf0]">Integrasi tingkat lanjut</h5>
+              <p className="mt-1.5 text-[10px] leading-5 text-[#91a0a8]">API Gateway lanjutan, AI Agents, ERP, IoT, dan data industri.</p>
             </article>
           </div>
-          <p className="mt-3 border-l border-[#8bdcff]/50 pl-3 text-[9px] leading-5 text-[#8798a1]" data-testid="integration-vendor-note">Basic login dan pengelolaan identitas berada di P0 sesuai spesifikasi akun; SSO lintas produk tetap P2. Pembayaran tidak masuk MVP. Nama teknologi/vendor dalam blueprint—termasuk CRM, AI, dan automation—adalah kandidat evaluasi, bukan pembelian atau integrasi aktif.</p>
+          <div className="mt-4 grid gap-3 sm:grid-cols-2 xl:grid-cols-4" data-testid="integration-roadmap">
+            <div className="border-l border-[#8bdcff]/40 pl-3"><span className="font-mono text-[9px] text-[#8bdcff]">BULAN 1–2 · CORE</span><p className="mt-1 text-[9px] leading-4 text-[#91a0a8]">Database, login dasar, AI/RAG, CMS, dan lead capture.</p></div>
+            <div className="border-l border-[#8bdcff]/40 pl-3"><span className="font-mono text-[9px] text-[#8bdcff]">BULAN 3–4 · BISNIS</span><p className="mt-1 text-[9px] leading-4 text-[#91a0a8]">CRM, n8n/workflow, notifikasi, kolaborasi, dan admin.</p></div>
+            <div className="border-l border-[#8bdcff]/40 pl-3"><span className="font-mono text-[9px] text-[#8bdcff]">BULAN 5–8 · KOMERSIAL</span><p className="mt-1 text-[9px] leading-4 text-[#91a0a8]">Payment, subscription, WhatsApp, analytics, dan mitra.</p></div>
+            <div className="border-l border-[#8bdcff]/40 pl-3"><span className="font-mono text-[9px] text-[#8bdcff]">BULAN 9–12 · EKOSISTEM</span><p className="mt-1 text-[9px] leading-4 text-[#91a0a8]">API Gateway, AI Agents, data industri, dan ERP/IoT.</p></div>
+          </div>
+          <p className="mt-3 border-l border-[#8bdcff]/50 pl-3 text-[9px] leading-5 text-[#8798a1]" data-testid="integration-vendor-note">Basic login dan pengelolaan identitas P0; SSO lintas produk P2. Dashboard pengguna My Gustafta tetap P0, sedangkan dashboard admin/analytics P1. n8n menjadi salah satu tool target, belum di-host atau dihubungkan. Vendor lain belum dipilih; roadmap adalah rencana relatif, bukan janji tanggal.</p>
         </div>
         <div className="mt-8 grid gap-5 lg:grid-cols-[.66fr_1.34fr]">
           <div><div className="eyebrow">DATA GOVERNANCE & SECURITY BY DESIGN</div><h4 className="display-font mt-2 text-2xl font-semibold text-[#e6eef1]">Lindungi data sebelum memperluas penggunaannya.</h4><p className="mt-2 text-[10px] leading-5 text-[#8798a1]">Kontrol diterapkan sebanding dengan klasifikasi data dan tingkat kritikalitas aplikasi. Kepemilikan, tujuan penggunaan, dan hak akses harus jelas—terutama untuk data pelanggan, pembayaran, administrasi, dan AI.</p></div>

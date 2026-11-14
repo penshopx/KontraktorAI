@@ -328,8 +328,14 @@ metodologi, dan nama portal yang digunakan adalah **KontraktorAI**.
   kesiapan teknis mendukung.
 - Prioritas identitas: basic authentication, profil, sesi, dan role berada di
   P0; **SSO lintas produk tetap P2**, selaras dengan keputusan Gustafta Account.
-- Prioritas komersial: payment gateway dan subscription masuk P1 setelah MVP;
-  transaksi/pembayaran bukan kewenangan AI Concierge MVP.
+- Prioritas integrasi terbaru: **P0** AI/LLM, CMS, database, RAG, basic login,
+  CRM, dan lead capture; **P1** automation, collaboration, email, dan dashboard
+  admin; **P2** payment, subscription, WhatsApp, dan partner API; **P3** advanced
+  API, AI Agents, ERP, IoT, dan industry data.
+- Prioritas dashboard: My Gustafta sebagai dashboard pengguna tetap P0 sesuai
+  keputusan pengguna; dashboard admin/analytics tetap P1 sesuai roadmap 10.X.
+- Payment gateway dan subscription berada di **P2**, setelah MVP; transaksi dan
+  pembayaran bukan kewenangan AI Concierge MVP.
 - Keamanan: **risk-based** menurut klasifikasi data dan kritikalitas layanan;
   akun admin, pembayaran, data pelanggan, dan layanan inti mendapat prioritas.
 - Data & AI: **Data Governance First**—kualitas, kepemilikan, klasifikasi, dan
@@ -344,9 +350,10 @@ metodologi, dan nama portal yang digunakan adalah **KontraktorAI**.
 - Kandidat stack dalam blueprint bukan pilihan vendor atau komitmen pembelian.
   Data pelanggan tidak otomatis boleh dipakai untuk AI, analitik lintas
   pelanggan, publikasi, atau pemasaran.
-- Model CRM eksternal + database internal telah diputuskan; nama penyedia CRM
-  belum dipilih. Automation memakai model hybrid, tetapi n8n hanya contoh
-  teknologi—belum ada vendor, kontrak, atau koneksi yang dikonfirmasi.
+- Model CRM eksternal + database internal telah diputuskan. **n8n ditetapkan
+  sebagai salah satu orchestration tool** dalam strategi automation; belum
+  di-host, dibeli, atau dihubungkan. Nama penyedia CRM, AI, dan komponen lain
+  tetap belum dipilih.
 - Rincian kontrol dan kepatuhan ditetapkan berdasarkan klasifikasi risiko,
   karakteristik layanan, kewajiban hukum yang berlaku, serta kemampuan operasional;
   roadmap tidak menyatakan bahwa kontrol tersebut sudah diimplementasikan.
@@ -946,34 +953,40 @@ dan transaksi yang sesuai.
   Gustafta. Database internal menjadi sumber data Gustafta sesuai domain;
   pemilihan vendor CRM dan kontrak data masih terbuka.
 - **B — Automation:** hybrid antara automation tools/konektor dan workflow
-  custom. n8n adalah contoh dalam blueprint, bukan pilihan provider final.
+  custom. n8n ditetapkan sebagai salah satu orchestration tools target; hosting,
+  pembelian, dan koneksinya tetap belum dilakukan.
 - **B — API jangka panjang:** mulai dari konektor/no-code; tingkatkan bertahap ke
   API-first, webhook, dan integration layer ketika jumlah sistem dan kebutuhan
   membenarkannya.
 
 **Prioritas integrasi**
 - **P0:** AI/LLM provider (kategori, provider belum dipilih), CMS, database,
-  RAG/vector search, document storage, basic authentication/identity, CRM dan
-  lead management, workflow automation, email dan notifikasi.
-- **P1:** payment gateway, subscription management, analytics, project
-  management, WhatsApp Business, e-signature, LMS, dan API integrations tambahan.
-- **P2:** SSO lintas produk, voice AI, advanced agents, ERP, procurement/tender,
-  GIS, IoT, industry data API, dan integrasi sistem mitra.
+  RAG/search, basic authentication/identity, CRM, dan lead management. Document
+  storage termasuk fondasi RAG bila sumber dokumen dipakai.
+- **P1:** automation (n8n sebagai salah satu orchestration tool target),
+  collaboration, email/notifikasi, serta dashboard admin/analytics.
+- **P2:** payment gateway, subscription, WhatsApp Business, partner API, dan
+  SSO lintas produk.
+- **P3:** API Gateway lanjutan, advanced AI Agents, ERP, IoT, industry data, dan
+  integrasi industri tingkat lanjut.
+- **Pemisahan prioritas dashboard:** dashboard My Gustafta untuk pengguna tetap
+  P0 sesuai persetujuan pengguna; “dashboard” P1 pada roadmap ini merujuk ke
+  analytics/admin, bukan workspace pengguna.
 - **SSO:** SSO lintas produk tetap **P2**, bukan bagian P0. P0 mencakup autentikasi
   dasar, profil, sesi, dan kontrol peran; pertahankan akses guest untuk fitur
-  publik. Keputusan ini mengesampingkan rekomendasi SSO-P0 pada tabel blueprint.
-- Pembayaran dan subscription tidak boleh dianggap aktif di MVP atau dilakukan
-  AI secara otonom; evaluasi setelah kesiapan produk, kontrol, dan kebutuhan bisnis.
+  publik.
+- Payment/subscription P2 bukan bagian MVP dan tidak boleh diaktifkan sebagai
+  transaksi AI otonom.
 
 **Tahapan rencana, bukan jadwal terikat**
-- Tahap 1 (rencana bulan 1–2): database/auth dasar, CMS/knowledge, AI/RAG,
-  document storage, lead capture.
-- Tahap 2 (bulan 3–4): CRM, email/notifikasi, automation, News, collaboration,
-  dan admin dasar.
-- Tahap 3 (bulan 5–8): payment/subscription, WhatsApp, project management,
-  analytics, dan integrasi mitra.
-- Tahap 4 (bulan 9–12): API layer lebih matang, industry data, SaaS, ERP, dan
-  automation/AI tingkat lanjut.
+- Tahap 1 — Core Foundation (rencana bulan 1–2): database/auth dasar,
+  CMS/knowledge, AI/RAG, AI Concierge, document storage, dan lead capture.
+- Tahap 2 — Business Integration (bulan 3–4): CRM, n8n/workflow,
+  email/notifikasi, News, collaboration, dan admin dashboard.
+- Tahap 3 — Commercial Integration (bulan 5–8): payment/subscription, WhatsApp,
+  project management, analytics, dan integrasi mitra.
+- Tahap 4 — Ecosystem Expansion (bulan 9–12): API Gateway, advanced AI Agents,
+  integrasi industri, SaaS, ERP, dan IoT.
 - Bulan dihitung sebagai estimasi relatif, bukan tanggal peluncuran atau janji
   delivery. Revenue-first berarti CRM, lead, knowledge, Concierge, dan kolaborasi
   didahulukan daripada monetisasi transaksi.
@@ -987,10 +1000,10 @@ dan transaksi yang sesuai.
   human oversight dipertahankan untuk keputusan bisnis penting.
 - Data tidak boleh digunakan lintas aplikasi, untuk AI, analytics, atau marketing
   tanpa tujuan, hak akses, dan persetujuan yang sesuai.
-- Daftar WordPress, PostgreSQL/Supabase, OpenAI, Qdrant, n8n, HubSpot, Midtrans,
-  Xendit, dan vendor lain adalah contoh untuk dievaluasi—bukan pemilihan final.
-  WordPress.com Business tetap target khusus News CMS; itu bukan pilihan provider
-  AI, CRM, atau identity.
+- n8n menjadi satu orchestration tool dalam arah automation final, tetapi belum
+  di-host atau diintegrasikan. Daftar WordPress, PostgreSQL/Supabase, OpenAI,
+  Qdrant, HubSpot, Midtrans, Xendit, dan vendor lain tetap kandidat evaluasi.
+  WordPress.com Business hanya target News CMS, bukan pilihan AI/CRM/identity.
 
 ### 11 — Marketing, Growth, dan Partnership
 

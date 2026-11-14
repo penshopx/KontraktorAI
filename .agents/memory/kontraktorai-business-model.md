@@ -188,9 +188,14 @@ Concierge:
 - For Part 10.X, the user finalized C-B-B-B: hybrid application integration,
   external CRM plus Gustafta's internal database, hybrid automation, and a phased
   path from connectors/no-code toward API-first.
-- Basic authentication, profile, sessions, and role controls remain P0; cross-
-  product SSO remains P2. CRM/AI/automation vendors and integrations are not yet
-  selected. Payments and subscriptions remain post-MVP P1.
+- The latest final integration roadmap sets AI/CMS/database/RAG/basic login/CRM/
+  leads at P0; automation/collaboration/email/admin analytics at P1; payments,
+  subscriptions, WhatsApp/partner API, and cross-product SSO at P2; advanced API,
+  AI agents, ERP, IoT, and industry data at P3.
+- Basic user authentication stays P0, while cross-product SSO stays P2. The
+  My Gustafta user dashboard remains P0; admin/analytics dashboards are P1.
+- n8n is designated as one target orchestration tool, but is not hosted or
+  integrated. Other CRM/AI/technology vendors remain unselected.
 - Dashboard cards and counts must use real account activity or clear empty states;
   hide unsupported navigation modules until their services exist. The AI Concierge
   0/37 checklist remains separate from the dashboard's added P0 scope.
@@ -209,7 +214,8 @@ Account specification. The user then selected the complete basic My Gustafta
 dashboard scope for P0, moving conversation history, saved knowledge, and basic
 requests into the MVP while keeping advanced personalization and ecosystem
 modules phased. The user finalized Part 10.X as C-B-B-B and explicitly kept
-cross-product SSO at P2.
+cross-product SSO at P2, then adopted the latest 10.X priority roadmap and n8n as
+one orchestration tool in the target design.
 
 **How to apply:** use these priorities in Gustafta and KontraktorAI business
 planning, portal messaging, and future product decisions. Choose implementation
@@ -247,7 +253,8 @@ Gustafta Account as a staged identity specification: preserve guest access,
 separate internal roles, and do not imply authentication or cross-product SSO is
 already live. For P0, include the basic My Gustafta dashboard and responsive
 navigation, but show only supported modules and never use placeholder metrics as
-real user activity. Keep basic auth in P0 and cross-product SSO in P2. Apply
-Part 10.X C-B-B-B without implying vendors or integrations are selected; keep
-payments out of the MVP. Keep the 0/37 AI Concierge core tracker separate from
-the dashboard backlog.
+real user activity. Keep basic auth in P0 and cross-product SSO in P2. Apply the
+latest Part 10.X roadmap: automation P1; payment/subscription and partner APIs
+P2; advanced APIs, agents, ERP, IoT, and industry data P3. Treat n8n as a target
+orchestration tool, not a deployed connection; keep other vendor choices open.
+Keep the 0/37 AI Concierge core tracker separate from the dashboard backlog.
