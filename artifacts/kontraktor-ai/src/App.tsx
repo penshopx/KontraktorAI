@@ -1431,7 +1431,34 @@ function BusinessModel() {
             <p className="mt-2 text-[10px] leading-5 text-[#a5b3ba]">Jangan kirim isi percakapan, dokumen, kredensial, atau detail proyek privat lewat email/WhatsApp. Ukur delivery, gagal/retry, latency, biaya kanal, unsubscribe, dan interaksi tanpa menyimpan isi pesan lebih lama dari kebutuhan.</p>
           </article>
         </div>
-        <p className="mt-4 text-[9px] leading-5 text-[#758792]" data-testid="notification-provider-boundary">n8n tetap kandidat orchestrator P1; Resend masih kandidat email dari perbandingan vendor sebelumnya. Provider WhatsApp dan platform notifikasi belum dipilih. Newsletter/kampanye marketing memerlukan spesifikasi serta consent terpisah; vendor, biaya, retensi, dan target KPI menunggu keputusan.</p>
+        <p className="mt-4 text-[9px] leading-5 text-[#758792]" data-testid="notification-provider-boundary">n8n tetap kandidat orchestrator P1, bukan jalur wajib untuk pengiriman langsung. Provider WhatsApp dan platform notifikasi belum dipilih. Newsletter/kampanye marketing tetap memiliki consent dan alur terpisah.</p>
+        <div className="mt-3 grid gap-3 lg:grid-cols-2" data-testid="notification-email-vendor-review">
+          <article className="border border-[#8bdcff]/30 bg-[#8bdcff]/[.055] p-4" data-testid="notification-email-recommendation">
+            <div className="eyebrow">EMAIL TRANSAKSIONAL · REKOMENDASI UTAMA P1</div>
+            <h4 className="mt-2 text-[13px] font-semibold text-[#e5edf0]">Resend · mulai dari paket gratis</h4>
+            <p className="mt-1.5 text-[10px] leading-5 text-[#a5b3ba]">Harga resmi yang diperiksa 14 Nov 2026: US$0 untuk 3.000 email/bulan dengan batas 100/hari; Pro US$20/bulan untuk 50.000/bulan. Cocok untuk pilot bootstrap yang hanya mengirim email transaksional.</p>
+            <p className="mt-2 text-[9px] leading-4 text-[#758792]">Rekomendasi, belum dipilih/diaktifkan. Validasi ulang harga, domain pengirim, DNS, dan retensi sebelum pilot.</p>
+            <a className="mt-2 inline-block text-[9px] text-[#8bdcff] underline" href="https://resend.com/pricing" target="_blank" rel="noreferrer">Harga Resend</a>
+          </article>
+          <article className="border border-white/[.1] bg-white/[.025] p-4" data-testid="notification-email-alternatives">
+            <div className="eyebrow">ALTERNATIF UNTUK DIBANDINGKAN</div>
+            <p className="mt-2 text-[10px] leading-5 text-[#a5b3ba]"><strong className="text-[#dce5e8]">Postmark:</strong> free trial 100 email/bulan; Basic US$15/bulan untuk 10.000, berfokus pada transaksi.</p>
+            <p className="mt-2 text-[10px] leading-5 text-[#a5b3ba]"><strong className="text-[#dce5e8]">Brevo:</strong> free sampai 300 email/hari; Starter US$9/bulan untuk 5.000/bulan dan mencakup marketing serta transactional, tetapi tetap harus memisahkan consent dan alur.</p>
+            <p className="mt-2 text-[9px] leading-4 text-[#758792]">Harga daftar vendor, sebelum pajak/kurs dan dapat berubah; cek ulang sebelum membeli.</p>
+            <div className="mt-2 flex gap-4 text-[9px]"><a className="text-[#8bdcff] underline" href="https://postmarkapp.com/pricing" target="_blank" rel="noreferrer">Postmark</a><a className="text-[#8bdcff] underline" href="https://www.brevo.com/pricing/" target="_blank" rel="noreferrer">Brevo</a></div>
+          </article>
+        </div>
+        <div className="mt-3 border border-white/[.1] bg-white/[.025] p-4" data-testid="notification-p1-implementation-plan">
+          <div className="eyebrow">RENCANA IMPLEMENTASI P1 · BERTAHAP</div>
+          <div className="mt-3 grid gap-3 sm:grid-cols-2 xl:grid-cols-5">
+            <div><span className="font-mono text-[9px] text-[#8bdcff]">00 · GATE</span><p className="mt-1 text-[9px] leading-4 text-[#91a0a8]">Selesaikan P0 auth/database, pilih domain pengirim, provider, consent, dan retensi.</p></div>
+            <div><span className="font-mono text-[9px] text-[#8bdcff]">01 · DATA</span><p className="mt-1 text-[9px] leading-4 text-[#91a0a8]">Event, inbox, preferensi, template, delivery log, akses per pengguna.</p></div>
+            <div><span className="font-mono text-[9px] text-[#8bdcff]">02 · IN-APP</span><p className="mt-1 text-[9px] leading-4 text-[#91a0a8]">Daftar, unread/read, tautan aman, dan pengaturan kategori/kanal.</p></div>
+            <div><span className="font-mono text-[9px] text-[#8bdcff]">03 · EMAIL</span><p className="mt-1 text-[9px] leading-4 text-[#91a0a8]">Adapter Resend, template tersaring, domain terautentikasi, webhook bertanda tangan.</p></div>
+            <div><span className="font-mono text-[9px] text-[#8bdcff]">04 · PILOT</span><p className="mt-1 text-[9px] leading-4 text-[#91a0a8]">Uji internal, retry/deduplikasi, audit, alarm bounce/complaint, lalu evaluasi sebelum pengguna nyata.</p></div>
+          </div>
+          <p className="mt-3 text-[9px] leading-4 text-[#758792]">Status saat ini: rencana saja. API masih scaffold health-check, skema database kosong, dan belum ada auth operasional; tidak ada email yang dikirim. Simpan API key melalui Secrets, jangan di kode atau chat.</p>
+        </div>
       </div>
     </div>
   </section>;
