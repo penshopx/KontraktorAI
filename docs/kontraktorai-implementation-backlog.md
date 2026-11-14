@@ -922,6 +922,102 @@ AI, kontrol editorial manusia, dan jalur menuju prospek layanan Gustafta.
 - Rekomendasi tahap MVP, roadmap bulan 1–12, jumlah artikel, trafik, dan KPI
   diperlakukan sebagai usulan, bukan komitmen atau hasil terukur.
 
+### Rencana implementasi awal
+
+- Spesifikasi arsitektur dan sitemap memakai portal utama Gustafta dengan kanal
+  `/news/`; rute sektor/topik, proyek, teknologi, regulasi, analisis, knowledge,
+  pencarian, newsletter, tentang, dan kontak ditetapkan saat audit sitemap.
+  Subdomain khusus tidak diperlukan untuk MVP kecuali ada alasan teknis atau
+  bisnis yang teruji.
+- Rencana 8 minggu kerja dari dokumen final adalah estimasi awal, bukan tenggat
+  yang dikunci. Urutan dapat berubah setelah audit portal, pemilihan CMS,
+  keamanan, biaya, ketersediaan konten, dan kapasitas founder.
+
+| Periode | Fokus | Hasil rencana |
+| --- | --- | --- |
+| Minggu 1 | Kebutuhan, sitemap, evaluasi CMS | Spesifikasi dan pilihan platform |
+| Minggu 2 | Hosting, CMS, domain, basis data | Infrastruktur awal |
+| Minggu 3 | Beranda, kanal/kategori, artikel | Situs News dasar |
+| Minggu 4 | Artikel, media, SEO, peran | CMS inti |
+| Minggu 5 | Workflow editorial dan sumber | Proses editorial |
+| Minggu 6 | Kurasi dan drafting berbantuan AI | Bantuan editorial MVP |
+| Minggu 7 | Analytics, formulir, CRM, distribusi awal | Integrasi bisnis awal |
+| Minggu 8 | QA, keamanan, pengujian, peluncuran | Kandidat MVP setelah kriteria terpenuhi |
+
+- Pengelolaan awal founder-led: founder menjadi Super Admin dan Editor-in-Chief;
+  AI hanya asisten. Peran editor/penulis/kontributor/analis/viewer dapat
+  ditambahkan sesuai kebutuhan nyata.
+- North Star yang diusulkan adalah qualified leads yang berasal dari
+  KontraktorAI News. Target trafik, subscriber, pendapatan, dan volume artikel
+  menunggu baseline. Estimasi sumber sebesar 3–5 artikel berkualitas dan 1–2
+  materi analisis/knowledge per minggu tetap hipotesis, bukan KPI yang disetujui;
+  tinjau lagi terhadap waktu founder dan beban verifikasi.
+- Tracker awal berisi 38 pekerjaan dan dimulai pada **0/38 terverifikasi**.
+  Halaman News publik yang sudah ada adalah contoh editorial/demo; audit
+  kesesuaiannya terhadap persyaratan MVP sebelum menghitungnya sebagai pekerjaan
+  CMS selesai.
+
+### Checklist implementasi MVP — 0/38
+
+#### A. Fondasi
+
+- [ ] Menetapkan sitemap dan struktur URL News di portal utama.
+- [ ] Membandingkan CMS/hosting berdasarkan biaya, workflow, integrasi,
+  keamanan, ekspor, dan kemudahan perawatan; vendor belum dipilih.
+- [ ] Menetapkan desain UI/UX untuk situs publik dan dashboard admin.
+- [ ] Menyiapkan lima sektor dan taksonomi kategori editorial.
+- [ ] Menetapkan model data, backup, dan cara uji pemulihan.
+
+#### B. Website
+
+- [ ] Membangun/menyesuaikan homepage News.
+- [ ] Menyediakan halaman sektor dan kategori.
+- [ ] Menyediakan template artikel dengan sumber, tanggal, dan CTA relevan.
+- [ ] Menyediakan pencarian.
+- [ ] Menyediakan halaman tentang dan kontak.
+- [ ] Memastikan responsive design, aksesibilitas dasar, dan SEO teknis.
+
+#### C. CMS
+
+- [ ] Menyediakan Article Manager untuk draf dan artikel.
+- [ ] Menyediakan Media Library dengan validasi file.
+- [ ] Menyediakan Source Manager untuk sumber, URL, dan catatan kredibilitas.
+- [ ] Menyediakan profil penulis dan pengaturan role.
+- [ ] Menyediakan workflow editorial dan persetujuan sensitif.
+- [ ] Menyediakan metadata SEO, slug, dan canonical URL.
+- [ ] Mencatat audit log untuk perubahan editorial dan akses penting.
+
+#### D. Editorial berbantuan AI
+
+- [ ] Menghubungkan RSS/API atau sumber lain yang diizinkan.
+- [ ] Menyediakan alur News Discovery dan pemeriksaan sumber.
+- [ ] Mendeteksi artikel atau sumber yang berpotensi duplikat.
+- [ ] Membantu membuat ringkasan dan mengekstrak fakta dengan referensi.
+- [ ] Membantu menyusun draf artikel, tanpa publikasi otomatis.
+- [ ] Menyarankan kategori, sektor, dan tag.
+- [ ] Menyediakan checklist pemeriksaan editorial dan konten sensitif.
+
+#### E. Bisnis dan distribusi
+
+- [ ] Menyediakan CTA layanan Gustafta yang relevan dengan artikel.
+- [ ] Menyediakan formulir prospek dengan data minimum, pemberitahuan privasi,
+  dan persetujuan tindak lanjut.
+- [ ] Mengintegrasikan CRM setelah pemilihan platform dan alur data.
+- [ ] Menyiapkan WhatsApp sesuai kebutuhan dan persetujuan pengguna.
+- [ ] Menyiapkan newsletter dengan mekanisme persetujuan berlangganan.
+- [ ] Menyiapkan distribusi media sosial dari konten yang telah disetujui.
+
+#### F. Peluncuran dan QA
+
+- [ ] Menyiapkan konten awal sesuai standar editorial dan hak penggunaan.
+- [ ] Memeriksa sumber, tanggal, konteks, akurasi, dan atribusi.
+- [ ] Menguji alur draf, review, persetujuan, penjadwalan, dan publikasi.
+- [ ] Menguji tampilan dan navigasi desktop maupun mobile.
+- [ ] Memeriksa metadata SEO dan indexing.
+- [ ] Menguji backup/pemulihan, role, akses admin, keamanan API, dan proteksi
+  unggahan.
+- [ ] Meluncurkan MVP setelah seluruh kriteria penerimaan dan QA terpenuhi.
+
 ## Tahap MVP yang disarankan
 
 1. **Fondasi:** selesaikan keputusan brand, segmen, prioritas produk, dan

@@ -449,6 +449,12 @@ function BusinessModel() {
     { number: '05', title: 'Distribusi bertahap', detail: 'Website dan SEO, lalu kanal sosial/WhatsApp serta newsletter dan CRM.' },
     { number: '06', title: 'Monetisasi awal', detail: 'Utamakan prospek berkualitas untuk layanan Gustafta; bukan iklan sebagai pendapatan utama.' },
   ];
+  const newsMvpPhases = [
+    { period: 'MINGGU 1–2', title: 'Fondasi & pemilihan CMS', detail: 'Kebutuhan, sitemap, evaluasi platform, lalu setup awal sesuai pilihan dan kapasitas.' },
+    { period: 'MINGGU 3–4', title: 'Website & CMS inti', detail: 'Template News, kategori, artikel, Article Manager, media, SEO, dan peran.' },
+    { period: 'MINGGU 5–6', title: 'Workflow & AI editorial', detail: 'Source Manager, persetujuan, RSS/sumber yang diizinkan, ringkasan, dan draf AI.' },
+    { period: 'MINGGU 7–8', title: 'Integrasi, QA & peluncuran', detail: 'Analytics, prospek, distribusi awal, keamanan, backup, dan pengujian.' },
+  ];
   return <section id="model-bisnis" className="relative overflow-hidden border-y border-white/[.08] bg-[#111c23] py-20 md:py-28">
     <div className="absolute right-[-180px] top-[-180px] h-[500px] w-[500px] rounded-full border border-[#8bdcff]/[.08]" />
     <div className="container-wide relative">
@@ -982,6 +988,51 @@ function BusinessModel() {
             <div className="eyebrow">IMPLEMENTASI BERTAHAP · VENDOR BELUM DIPILIH</div>
             <p className="mt-2 text-[10px] leading-5 text-[#a5b3ba]">Satu artikel yang disetujui disesuaikan untuk website/SEO, sosial, WhatsApp, lalu newsletter dan CRM. CMS dan distribusi masih menjadi pekerjaan backlog; monetisasi awal berfokus pada prospek layanan Gustafta.</p>
           </article>
+        </div>
+        <div className="mt-8 border-t border-white/10 pt-7" data-testid="news-cms-implementation-spec">
+          <div className="flex flex-col justify-between gap-3 sm:flex-row sm:items-end">
+            <div><div className="eyebrow">SPESIFIKASI AWAL · IMPLEMENTASI BELUM DIMULAI</div><h4 className="display-font mt-2 text-2xl font-semibold text-[#e6eef1]">Siapkan sistem editorial sebelum otomasi.</h4></div>
+            <div className="border border-amber-200/20 bg-amber-200/[.04] px-3 py-2 font-mono text-[9px] text-amber-100" data-testid="news-cms-mvp-status">CHECKLIST MVP · 0/38 TERVERIFIKASI</div>
+          </div>
+          <div className="mt-4 grid gap-2 sm:grid-cols-2 xl:grid-cols-3">
+            <article className="border border-white/[.1] bg-white/[.025] p-3" data-testid="news-cms-sitemap">
+              <h5 className="text-[10px] font-semibold text-[#e5edf0]">Sitemap dalam portal utama</h5>
+              <p className="mt-1 text-[9px] leading-5 text-[#91a0a8]">News dan kanal sektor/topik, proyek, teknologi, regulasi, analisis, knowledge, pencarian, newsletter, tentang, dan kontak. Struktur rute perlu diselaraskan dengan portal yang ada.</p>
+            </article>
+            <article className="border border-white/[.1] bg-white/[.025] p-3" data-testid="news-cms-core-modules">
+              <h5 className="text-[10px] font-semibold text-[#e5edf0]">Modul CMS inti</h5>
+              <p className="mt-1 text-[9px] leading-5 text-[#91a0a8]">Dashboard, artikel, sumber, sektor/kategori/tag, media, penulis, workflow, SEO, analytics, pengguna/peran, dan pengaturan.</p>
+            </article>
+            <article className="border border-white/[.1] bg-white/[.025] p-3" data-testid="news-cms-data-lifecycle">
+              <h5 className="text-[10px] font-semibold text-[#e5edf0]">Data dan status editorial</h5>
+              <p className="mt-1 text-[9px] leading-5 text-[#91a0a8]">Artikel menyimpan sumber, tanggal, sektor, kategori, penulis/editor, media, SEO, sensitivitas, jadwal, dan riwayat status dari Inbox sampai Published/Needs Update.</p>
+            </article>
+            <article className="border border-white/[.1] bg-white/[.025] p-3" data-testid="news-cms-ai-controls">
+              <h5 className="text-[10px] font-semibold text-[#e5edf0]">Batas AI dan verifikasi</h5>
+              <p className="mt-1 text-[9px] leading-5 text-[#91a0a8]">Kelola sumber primer, sekunder, dan pendukung; periksa duplikasi, fakta, tanggal kejadian/publikasi, atribusi, hak cipta, serta konten sensitif.</p>
+            </article>
+            <article className="border border-white/[.1] bg-white/[.025] p-3" data-testid="news-cms-lead-funnel">
+              <h5 className="text-[10px] font-semibold text-[#e5edf0]">Jalur konten ke prospek</h5>
+              <p className="mt-1 text-[9px] leading-5 text-[#91a0a8]">Artikel → CTA solusi → formulir/WhatsApp → kualifikasi CRM → tindak lanjut founder. Kumpulkan data seperlunya dengan pemberitahuan privasi dan persetujuan.</p>
+            </article>
+            <article className="border border-white/[.1] bg-white/[.025] p-3" data-testid="news-cms-security">
+              <h5 className="text-[10px] font-semibold text-[#e5edf0]">Keamanan minimum</h5>
+              <p className="mt-1 text-[9px] leading-5 text-[#91a0a8]">Akses berbasis peran, audit log, backup dan pemulihan, validasi file, proteksi admin, serta pemisahan konten publik dari data prospek.</p>
+            </article>
+          </div>
+          <div className="mt-6 flex flex-col justify-between gap-3 sm:flex-row sm:items-end">
+            <div><div className="eyebrow">RENCANA AWAL · 8 MINGGU KERJA · DAPAT BERGESER</div><h5 className="display-font mt-2 text-xl font-semibold text-[#e6eef1]">Tahap MVP yang diusulkan.</h5></div>
+            <p className="max-w-[460px] text-[9px] leading-5 text-[#8798a1]">Bukan komitmen tanggal. Jadwal bergantung pada audit portal, pemilihan CMS, biaya, keamanan, ketersediaan konten, dan kapasitas founder.</p>
+          </div>
+          <div className="mt-3 grid gap-2 sm:grid-cols-2 xl:grid-cols-4" data-testid="news-cms-mvp-phases">
+            {newsMvpPhases.map((phase, index) => <article key={phase.period} className="border border-white/[.1] bg-white/[.025] p-3" data-testid={`news-cms-mvp-phase-${index + 1}`}>
+              <span className="font-mono text-[9px] text-[#8bdcff]">{phase.period}</span>
+              <h6 className="mt-2 text-[10px] font-semibold text-[#e5edf0]">{phase.title}</h6>
+              <p className="mt-1 text-[9px] leading-5 text-[#91a0a8]">{phase.detail}</p>
+            </article>)}
+          </div>
+          <p className="mt-3 text-[9px] leading-5 text-[#758792]" data-testid="news-cms-metric-boundary">North Star yang diusulkan: qualified leads dari KontraktorAI News. Volume artikel, trafik, dan pendapatan belum menjadi target; estimasi kapasitas konten menunggu baseline dan review beban kerja.</p>
+          <p className="mt-2 text-[9px] leading-5 text-[#758792]">Angka 0/38 mengikuti checklist spesifikasi awal. Halaman News publik yang sudah ada berupa contoh editorial; statusnya akan diaudit sebelum ada item yang ditandai selesai untuk CMS.</p>
         </div>
       </div>
       <p className="mt-5 flex items-start gap-2 text-[10px] leading-5 text-[#778991]" data-testid="text-business-model-caveat"><Check size={13} className="mt-0.5 shrink-0 text-[#70bfdc]" />Enam unit bisnis dan tiga level penawaran adalah kerangka strategis, bukan katalog atau klaim ketersediaan. Harga, margin, dan proyeksi tetap perlu divalidasi.</p>
