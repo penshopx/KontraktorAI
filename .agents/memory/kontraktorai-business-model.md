@@ -133,8 +133,9 @@ For Part 11, the user finalized a hybrid marketing and growth ecosystem:
 For Part 13, the user finalized the KontraktorAI News and CMS strategy:
 
 - Use hybrid news curation across RSS/API, AI assistance, and manual input.
-- Use a ready-to-use CMS with custom modules added gradually; no CMS vendor is
-  selected and a fully custom CMS is not the initial goal.
+- Use a ready-to-use CMS with custom modules added gradually; WordPress.com
+  Business is the selected target for the MVP, not yet purchased or connected.
+  A fully custom CMS is not the initial goal.
 - Human review is required before publication. Routine stories may be scheduled
   after review; sensitive content needs explicit approval. AI has no independent
   publishing authority.
@@ -148,7 +149,7 @@ For Part 13, the user finalized the KontraktorAI News and CMS strategy:
 
 **Why:** the user confirmed the Part 02–11 business choices and the Part 03
 endorsed-brand architecture and market approach, then confirmed the Part 13
-News/CMS strategy.
+News/CMS strategy and selected WordPress.com Business as its MVP target.
 
 **How to apply:** use these priorities in Gustafta and KontraktorAI business
 planning, portal messaging, and future product decisions. Choose implementation
@@ -175,5 +176,6 @@ compliance against actual data, risk, cost, and operational needs.
 Apply Part 11 as a revenue-first channel strategy; do not turn draft budget
 allocations or KPI quantities into commitments without an agreed baseline.
 Apply Part 13 without implying a CMS or integration is live; preserve human
-review, staged distribution, and service-lead monetization while vendors and
-implementation details remain unselected.
+review, staged distribution, and service-lead monetization. WordPress.com
+Business is the selected target, but do not claim an account, subscription, site,
+or API connection exists until it is explicitly set up.

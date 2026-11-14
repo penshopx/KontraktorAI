@@ -385,8 +385,9 @@ metodologi, dan nama portal yang digunakan adalah **KontraktorAI**.
 - Model berita: hybrid automation—RSS/API, bantuan AI, dan input manual
   terintegrasi.
 - Model CMS: hybrid bertahap—gunakan CMS siap pakai lebih dahulu, lalu tambahkan
-  modul khusus bila kebutuhan berulang membenarkannya. Belum ada vendor yang
-  dipilih dan custom CMS penuh tidak menjadi sasaran tahap awal.
+  modul khusus bila kebutuhan berulang membenarkannya. **WordPress.com Business
+  dipilih sebagai platform target MVP**; custom CMS penuh tidak menjadi sasaran
+  tahap awal. Pemilihan ini bukan persetujuan pembelian langganan.
 - Kebijakan publikasi: artikel rutin boleh dijadwalkan setelah pemeriksaan editor;
   konten sensitif memerlukan persetujuan khusus. AI tidak boleh menerbitkan
   sendiri atau mengubah informasi yang belum diverifikasi menjadi fakta.
@@ -399,8 +400,9 @@ metodologi, dan nama portal yang digunakan adalah **KontraktorAI**.
   Gustafta. Iklan, sponsor, listing, dan produk konten berbayar bukan sumber
   pendapatan utama pada tahap awal.
 - Keputusan strategi tidak menyatakan CMS, RSS/API, AI editorial, analytics,
-  distribusi, atau monetisasi telah tersedia. Jadwal, KPI, vendor, dan biaya
-  implementasi masih harus ditetapkan melalui backlog dan validasi.
+  distribusi, atau monetisasi telah tersedia. Akun, situs WordPress, langganan,
+  dan API belum dihubungkan. Harga saat checkout, biaya implementasi, jadwal,
+  serta KPI tetap harus divalidasi sebelum pelaksanaan.
 
 ## Prioritas pelaksanaan
 
@@ -881,9 +883,13 @@ AI, kontrol editorial manusia, dan jalur menuju prospek layanan Gustafta.
 **Hasil kerja**
 - Sitemap teknis KontraktorAI News, beranda, halaman kanal, daftar artikel,
   detail artikel, pencarian, dan struktur kategori/sektor.
-- Evaluasi dan pemilihan CMS hybrid yang siap pakai; tambah modul khusus secara
-  bertahap. Vendor dan platform memerlukan evaluasi biaya, keamanan, lisensi,
-  portabilitas, serta kebutuhan operasional sebelum dipilih.
+- WordPress.com Business menjadi CMS hybrid siap pakai untuk target MVP; modul
+  khusus ditambahkan bertahap. Sebelum implementasi, konfirmasi akun/site,
+  ketentuan paket dan biaya aktual, plugin yang dibutuhkan, lisensi, ekspor data,
+  keamanan, serta integrasi yang sesuai.
+- Gunakan REST API WordPress untuk portal React/Vite. Akses yang memerlukan
+  autentikasi harus melalui jalur server-side yang aman; jangan menaruh token
+  WordPress pada browser atau repository.
 - Dashboard editorial, editor artikel, pengelolaan sumber, kategori/sektor,
   tag, media, profil penulis, workflow, SEO, analytics, pengguna, peran, dan
   pengaturan.
@@ -935,8 +941,8 @@ AI, kontrol editorial manusia, dan jalur menuju prospek layanan Gustafta.
 
 | Periode | Fokus | Hasil rencana |
 | --- | --- | --- |
-| Minggu 1 | Kebutuhan, sitemap, evaluasi CMS | Spesifikasi dan pilihan platform |
-| Minggu 2 | Hosting, CMS, domain, basis data | Infrastruktur awal |
+| Minggu 1 | Kebutuhan, sitemap, model data, peran | Spesifikasi teknis dan rencana setup |
+| Minggu 2 | Setup WordPress.com Business, site/domain, API | Infrastruktur awal setelah akun dan akses tersedia |
 | Minggu 3 | Beranda, kanal/kategori, artikel | Situs News dasar |
 | Minggu 4 | Artikel, media, SEO, peran | CMS inti |
 | Minggu 5 | Workflow editorial dan sumber | Proses editorial |
@@ -955,15 +961,17 @@ AI, kontrol editorial manusia, dan jalur menuju prospek layanan Gustafta.
 - Tracker awal berisi 38 pekerjaan dan dimulai pada **0/38 terverifikasi**.
   Halaman News publik yang sudah ada adalah contoh editorial/demo; audit
   kesesuaiannya terhadap persyaratan MVP sebelum menghitungnya sebagai pekerjaan
-  CMS selesai.
+  CMS selesai. WordPress.com Business sudah dipilih sebagai target, tetapi belum
+  dibeli atau dihubungkan.
 
 ### Checklist implementasi MVP — 0/38
 
 #### A. Fondasi
 
 - [ ] Menetapkan sitemap dan struktur URL News di portal utama.
-- [ ] Membandingkan CMS/hosting berdasarkan biaya, workflow, integrasi,
-  keamanan, ekspor, dan kemudahan perawatan; vendor belum dipilih.
+- [ ] Memvalidasi paket WordPress.com Business, akun/site, biaya checkout,
+  REST API, plugin, keamanan, ekspor, dan kemudahan perawatan; belum ada
+  langganan atau koneksi yang disetujui.
 - [ ] Menetapkan desain UI/UX untuk situs publik dan dashboard admin.
 - [ ] Menyiapkan lima sektor dan taksonomi kategori editorial.
 - [ ] Menetapkan model data, backup, dan cara uji pemulihan.
