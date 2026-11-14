@@ -1,10 +1,15 @@
-import { useMemo, useState } from 'react';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import { QueryClient, QueryClientProvider, useQueryClient } from '@tanstack/react-query';
+import { ClerkProvider, SignIn, SignUp, useAuth, useClerk } from '@clerk/react';
+import { publishableKeyFromHost } from '@clerk/react/internal';
+import { shadcn } from '@clerk/themes';
+import { idID } from '@clerk/localizations';
 import { ErrorBoundary } from '@/components/error-boundary';
 import { Toaster } from '@/components/ui/toaster';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import NotFound from '@/pages/not-found';
 import { NewsArticle, NewsLanding } from '@/pages/news';
+import MyGustaftaPage from '@/pages/my-gustafta';
 import {
   ArrowDown, ArrowRight, ArrowUpRight, BookOpen, Check, ClipboardCheck,
   Compass, HardHat, Leaf, Menu, MessagesSquare, Search, ShieldCheck, Sparkles, X,
@@ -12,9 +17,64 @@ import {
   Layers3, PackageOpen, Workflow, Code2, PlugZap, Route as RouteIcon, CircleDollarSign, Blocks,
   UserRound, Bot, CalendarDays, ClipboardList,
 } from 'lucide-react';
-import { Link, Route, Switch, useLocation, Router as WouterRouter } from 'wouter';
+import { Link, Redirect, Route, Switch, useLocation, Router as WouterRouter } from 'wouter';
 
 const queryClient = new QueryClient();
+const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
+const clerkPubKey = publishableKeyFromHost(
+  window.location.hostname,
+  import.meta.env.VITE_CLERK_PUBLISHABLE_KEY,
+);
+const clerkProxyUrl = import.meta.env.VITE_CLERK_PROXY_URL;
+
+const clerkAppearance = {
+  theme: shadcn,
+  cssLayerName: 'clerk',
+  options: {
+    logoPlacement: 'inside' as const,
+    logoLinkUrl: basePath || '/',
+    logoImageUrl: `${window.location.origin}${basePath}/logo.svg`,
+  },
+  variables: {
+    colorPrimary: '#8bdcff',
+    colorForeground: '#edf3f5',
+    colorMutedForeground: '#a7b5bc',
+    colorDanger: '#f87171',
+    colorBackground: '#111a20',
+    colorInput: '#0d151b',
+    colorInputForeground: '#edf3f5',
+    colorNeutral: '#edf3f5',
+    fontFamily: 'DM Sans, sans-serif',
+    borderRadius: '0.75rem',
+  },
+  elements: {
+    rootBox: 'w-full flex justify-center px-2',
+    cardBox: 'bg-[#111a20] border border-[#31404a] rounded-2xl w-[440px] max-w-full overflow-hidden shadow-2xl',
+    card: '!shadow-none !border-0 !bg-transparent !rounded-none',
+    footer: '!shadow-none !border-0 !bg-transparent !rounded-none',
+    headerTitle: 'text-[#edf3f5] font-semibold tracking-tight',
+    headerSubtitle: 'text-[#a7b5bc]',
+    socialButtonsBlockButtonText: 'text-[#edf3f5] font-medium',
+    formFieldLabel: 'text-[#dce5e9] font-medium',
+    footerActionLink: 'text-[#8bdcff] hover:text-white',
+    footerActionText: 'text-[#a7b5bc]',
+    dividerText: 'text-[#a7b5bc]',
+    identityPreviewEditButton: 'text-[#8bdcff]',
+    formFieldSuccessText: 'text-emerald-300',
+    alertText: 'text-[#edf3f5]',
+    logoBox: 'h-10',
+    logoImage: 'max-h-10 w-auto',
+    socialButtonsBlockButton: 'bg-[#18242c] border border-[#394953] hover:bg-[#202d36]',
+    formButtonPrimary: 'bg-[#8bdcff] text-[#0b151c] hover:bg-[#b1eaff] font-semibold',
+    formFieldInput: 'bg-[#0d151b] border border-[#394953] text-[#edf3f5] focus:border-[#8bdcff]',
+    footerAction: 'border-t border-white/10',
+    dividerLine: 'bg-[#394953]',
+    alert: 'border border-rose-300/30 bg-rose-950/30',
+    otpCodeFieldInput: 'bg-[#0d151b] border-[#394953] text-[#edf3f5]',
+    formFieldRow: 'text-[#dce5e9]',
+    main: 'text-[#edf3f5]',
+  },
+};
 
 type Solution = {
   title: string;
@@ -59,6 +119,8 @@ function Header() {
         {links.map(([label, href]) => href === '/news' ? <Link key={label} href={href} className="nav-link text-[13px]" data-testid="link-nav-news">{label}</Link> : <a key={label} href={href} className="nav-link text-[13px]" data-testid={`link-nav-${label.toLowerCase().replaceAll(' ', '-')}`}>{label}</a>)}
       </nav>
       <div className="hidden items-center gap-3 md:flex">
+        <Link href="/sign-in" className="nav-link px-3 py-2 text-[13px]" data-testid="link-sign-in">Masuk</Link>
+        <Link href="/sign-up" className="btn-outline rounded-md px-3 py-2 text-[13px]" data-testid="link-sign-up">Daftar</Link>
         <a href="#solusi" className="nav-link px-3 py-2 text-[13px]" data-testid="link-nav-jelajahi">Jelajahi</a>
         <a href="#mulai" className="btn-primary inline-flex items-center gap-2 rounded-md px-4 py-2.5 text-[13px] font-semibold" data-testid="link-nav-mulai">Temukan arah <ArrowRight size={15} /></a>
       </div>
@@ -68,6 +130,10 @@ function Header() {
     </div>
     {menuOpen && <nav className="border-t border-white/10 bg-[#101820] px-5 py-4 md:hidden" aria-label="Navigasi seluler">
       {links.map(([label, href]) => <a key={label} href={href} onClick={() => setMenuOpen(false)} className="block border-b border-white/[.07] py-3 text-sm text-slate-200" data-testid={`link-mobile-${label.toLowerCase().replaceAll(' ', '-')}`}>{label}</a>)}
+      <div className="mt-3 flex gap-3">
+        <Link href="/sign-in" onClick={() => setMenuOpen(false)} className="flex-1 rounded-md border border-white/15 px-4 py-3 text-center text-sm text-slate-100" data-testid="link-mobile-sign-in">Masuk</Link>
+        <Link href="/sign-up" onClick={() => setMenuOpen(false)} className="flex-1 rounded-md bg-[#8bdcff] px-4 py-3 text-center text-sm font-semibold text-[#09151d]" data-testid="link-mobile-sign-up">Daftar</Link>
+      </div>
       <a href="#mulai" onClick={() => setMenuOpen(false)} className="btn-primary mt-4 flex items-center justify-center gap-2 rounded-md px-4 py-3 text-sm font-semibold" data-testid="link-mobile-mulai">Temukan arah <ArrowRight size={15} /></a>
     </nav>}
   </header>;
@@ -1638,13 +1704,118 @@ function Home() {
   </main>;
 }
 
+function HomeRedirect() {
+  const { isLoaded, isSignedIn } = useAuth();
+  if (isLoaded && isSignedIn) return <Redirect to="/my-gustafta" />;
+  return <Home />;
+}
+
+function AuthLoadingScreen() {
+  return <main className="grid min-h-[100dvh] place-items-center bg-[#101820] px-5 text-[#edf3f5]"><p className="text-sm text-[#a7b5bc]" role="status">Memeriksa sesi akun…</p></main>;
+}
+
+function MyGustaftaRoute() {
+  const { isLoaded, isSignedIn } = useAuth();
+  if (!isLoaded) return <AuthLoadingScreen />;
+  if (!isSignedIn) return <Redirect to="/" />;
+  return <MyGustaftaPage />;
+}
+
+function SignInPage() {
+  return <main className="min-h-[100dvh] bg-[#101820] px-4 py-10 text-[#edf3f5]">
+    <div className="mx-auto mb-8 flex max-w-[440px] items-center justify-between">
+      <Link href="/" className="text-sm text-[#a7b5bc] hover:text-white" data-testid="link-auth-home">← Kembali ke portal</Link>
+      <Link href="/sign-up" className="text-sm text-[#8bdcff] hover:text-white" data-testid="link-auth-sign-up">Buat akun</Link>
+    </div>
+    <SignIn routing="path" path={`${basePath}/sign-in`} signUpUrl={`${basePath}/sign-up`} />
+  </main>;
+}
+
+function SignUpPage() {
+  return <main className="min-h-[100dvh] bg-[#101820] px-4 py-10 text-[#edf3f5]">
+    <div className="mx-auto mb-8 flex max-w-[440px] items-center justify-between">
+      <Link href="/" className="text-sm text-[#a7b5bc] hover:text-white" data-testid="link-auth-home">← Kembali ke portal</Link>
+      <Link href="/sign-in" className="text-sm text-[#8bdcff] hover:text-white" data-testid="link-auth-sign-in">Sudah punya akun?</Link>
+    </div>
+    <SignUp routing="path" path={`${basePath}/sign-up`} signInUrl={`${basePath}/sign-in`} />
+  </main>;
+}
+
+function ClerkQueryClientCacheInvalidator() {
+  const { addListener } = useClerk();
+  const client = useQueryClient();
+  const previousUserId = useRef<string | null | undefined>(undefined);
+
+  useEffect(() => {
+    const unsubscribe = addListener(({ user }) => {
+      const userId = user?.id ?? null;
+      if (previousUserId.current !== undefined && previousUserId.current !== userId) {
+        client.clear();
+      }
+      previousUserId.current = userId;
+    });
+    return unsubscribe;
+  }, [addListener, client]);
+
+  return null;
+}
+
 function Router() {
-  const [location] = useLocation();
-  return <ErrorBoundary resetKey={location}><Switch><Route path="/" component={Home} /><Route path="/news" component={NewsLanding} /><Route path="/news/:slug" component={NewsArticle} /><Route component={NotFound} /></Switch></ErrorBoundary>;
+  const [location, setLocation] = useLocation();
+  const stripBase = (path: string) =>
+    basePath && path.startsWith(basePath) ? path.slice(basePath.length) || "/" : path;
+
+  return <ClerkProvider
+    publishableKey={clerkPubKey}
+    proxyUrl={clerkProxyUrl}
+    appearance={clerkAppearance}
+    signInUrl={`${basePath}/sign-in`}
+    signUpUrl={`${basePath}/sign-up`}
+    localization={{
+      ...idID,
+      formFieldInputPlaceholder__emailAddress: "Masukkan alamat email",
+      formFieldInputPlaceholder__password: "Masukkan kata sandi",
+      formFieldInputPlaceholder__signUpPassword: "Buat kata sandi",
+      signIn: {
+        ...idID.signIn,
+        start: {
+          ...idID.signIn?.start,
+          title: "Masuk ke KontraktorAI",
+          subtitle: "Selamat datang kembali. Masuk untuk melanjutkan.",
+        },
+      },
+      signUp: {
+        ...idID.signUp,
+        start: {
+          ...idID.signUp?.start,
+          title: "Buat akun KontraktorAI",
+          subtitle: "Isi data untuk mulai menggunakan portal.",
+        },
+      },
+    }}
+    routerPush={(to) => setLocation(stripBase(to))}
+    routerReplace={(to) => setLocation(stripBase(to), { replace: true })}
+  >
+    <ClerkQueryClientCacheInvalidator />
+    <ErrorBoundary resetKey={location}>
+      <Switch>
+        <Route path="/" component={HomeRedirect} />
+        <Route path="/sign-in/*?" component={SignInPage} />
+        <Route path="/sign-up/*?" component={SignUpPage} />
+        <Route path="/my-gustafta" component={MyGustaftaRoute} />
+        <Route path="/news" component={NewsLanding} />
+        <Route path="/news/:slug" component={NewsArticle} />
+        <Route component={NotFound} />
+      </Switch>
+    </ErrorBoundary>
+  </ClerkProvider>;
 }
 
 function App() {
-  return <QueryClientProvider client={queryClient}><TooltipProvider><WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, '')}><Router /></WouterRouter><Toaster /></TooltipProvider></QueryClientProvider>;
+  if (!clerkPubKey) {
+    throw new Error("Clerk is not configured. Reconnect the managed Clerk app.");
+  }
+  return <QueryClientProvider client={queryClient}><TooltipProvider><WouterRouter base={basePath}><Router /></WouterRouter><Toaster /></TooltipProvider></QueryClientProvider>;
 }
 
 export default App;

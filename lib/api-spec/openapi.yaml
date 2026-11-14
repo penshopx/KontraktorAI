@@ -10,6 +10,8 @@ servers:
 tags:
   - name: health
     description: Health operations
+  - name: users
+    description: Authenticated user profile operations
 paths:
   /healthz:
     get:
@@ -24,7 +26,33 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/HealthStatus"
+  /users/me:
+    get:
+      operationId: getCurrentUser
+      tags: [users]
+      summary: Get the current application user
+      description: Returns the signed-in user's local application profile and role.
+      security:
+        - clerkSession: []
+      responses:
+        "200":
+          description: Current user profile
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CurrentUser"
+        "401":
+          description: Authentication required
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiError"
 components:
+  securitySchemes:
+    clerkSession:
+      type: apiKey
+      in: cookie
+      name: __session
   schemas:
     HealthStatus:
       type: object
@@ -33,4 +61,22 @@ components:
           type: string
       required:
         - status
+    CurrentUser:
+      type: object
+      properties:
+        userId:
+          type: string
+        role:
+          type: string
+          enum: [member, admin]
+        createdAt:
+          type: string
+          format: date-time
+      required: [userId, role, createdAt]
+    ApiError:
+      type: object
+      properties:
+        error:
+          type: string
+      required: [error]
 

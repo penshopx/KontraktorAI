@@ -214,8 +214,12 @@ Concierge:
 - Keep profile, conversation, lead, consent, and session data purpose-limited and
   access-controlled. Do not permanently store conversational inferences as
   profile facts without appropriate basis and consent.
-- Treat login/security requirements as a specification only; no authentication
-  provider, service, or deployment has been selected or implemented.
+- Replit-managed Clerk is the selected account-authentication provider and has
+  been wired into the portal. Store application roles separately in the local
+  database; public sign-up always receives the default member role, never admin.
+- The Clerk-backed identity foundation is not the complete P0 account product:
+  profile editing, consent controls, session/security settings, and the full
+  My Gustafta dashboard remain separate work.
 
 **Why:** the user confirmed the Part 02–11 business choices and the Part 03
 endorsed-brand architecture and market approach, then confirmed the Part 13
@@ -264,14 +268,14 @@ do not imply an AI provider, CRM, deployment, or RAG pipeline is selected or liv
 Keep the eight-industry taxonomy provisional, require approved sources and
 citations, and preserve consent, access boundaries, and human handoff. Apply
 Gustafta Account as a staged identity specification: preserve guest access,
-separate internal roles, and do not imply authentication or cross-product SSO is
-already live. For P0, include the basic My Gustafta dashboard and responsive
-navigation, but show only supported modules and never use placeholder metrics as
-real user activity. Keep basic auth in P0 and cross-product SSO in P2. Apply the
-latest Part 10.X roadmap: automation P1; payment/subscription and partner APIs
-P2; advanced APIs, agents, ERP, IoT, and industry data P3. Treat n8n as a target
-orchestration tool, not a deployed connection. Resend is the selected P1
-transactional email vendor, but do not imply its account, subscription, domain,
-or integration is active; reconfirm current pricing before purchase. Keep other
-vendor choices open.
+separate internal roles, and keep cross-product SSO in P2. Use Clerk-managed
+identity with app roles enforced by the API/database; never grant admin during
+public signup, and do not call the broader account scope complete until its
+profile, consent, security, and dashboard features exist. Apply the latest Part
+10.X roadmap: automation P1; payment/subscription and partner APIs P2; advanced
+APIs, agents, ERP, IoT, and industry data P3. Treat n8n as a target orchestration
+tool, not a deployed connection. Resend is the selected P1 transactional email
+vendor, but do not imply its account, subscription, domain, or integration is
+active; reconfirm current pricing before purchase. Keep other vendor choices
+open.
 Keep the 0/37 AI Concierge core tracker separate from the dashboard backlog.

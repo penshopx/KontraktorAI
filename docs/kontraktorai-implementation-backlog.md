@@ -1142,6 +1142,32 @@ pengelolaan terpisah.
 - [Postmark pricing](https://postmarkapp.com/pricing)
 - [Brevo pricing](https://www.brevo.com/pricing/)
 
+### P0 — fondasi identitas dan database
+
+**Status:** fondasi identitas sudah dipasang di environment development; cakupan
+P0 Account & My Gustafta secara keseluruhan belum selesai dan belum diverifikasi
+di production.
+
+- Clerk terkelola Replit menjadi provider autentikasi. Portal menyediakan route
+  masuk/daftar berbahasa Indonesia, mempertahankan landing page publik, dan
+  mengarahkan sesi yang sudah masuk ke `/my-gustafta`.
+- API memvalidasi sesi Clerk melalui cookie, bukan token bearer di browser.
+  `GET /api/users/me` memakai user ID tepercaya dari Clerk untuk membuat catatan
+  lokal secara idempotent; tidak menerima identitas/peran dari body pengguna.
+- Development PostgreSQL memiliki `app_users` dengan peran terbatas `member` /
+  `admin`; signup publik selalu mendapat `member`. Belum ada admin atau akun
+  pengguna yang dibuat/di-seed.
+- Skema development dibuat dengan Drizzle. Jangan jalankan migrasi production
+  secara manual; skema production mengikuti alur Publish Replit.
+- Pemeriksaan: seluruh workspace typecheck dan API/web build lulus; `/api/healthz`
+  memberi 200 dan `/api/users/me` tanpa sesi memberi 401. Form sign-in terlihat
+  di preview; alur pengguna setelah benar-benar masuk, verifikasi email, dan
+  reset kata sandi belum diuji dengan akun.
+- Pekerjaan Account P0 selanjutnya tetap mencakup edit profil, consent/persetujuan,
+  pengaturan sesi/keamanan, dashboard penuh (riwayat Concierge, tersimpan, My
+  Requests), empty states, dan uji akses per pengguna. Jangan tampilkan modul
+  yang belum memiliki data atau layanan nyata.
+
 ### 11 — Marketing, Growth, dan Partnership
 
 **Tujuan:** mendatangkan pengunjung yang relevan dan mengubah keterlibatan menjadi
