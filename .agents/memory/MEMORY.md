@@ -1,2 +1,2 @@
 - [KontraktorAI brand and focus](kontraktorai-brand-name.md) — KontraktorAI is Gustafta's endorsed industry brand, with five sectors entered in phases.
-- [KontraktorAI business model](kontraktorai-business-model.md) — Hybrid revenue-first; AI Concierge is the ecosystem gateway, identity is staged, and the eight-industry taxonomy remains provisional.
+- [KontraktorAI business model](kontraktorai-business-model.md) — Hybrid revenue-first; AI Concierge is the gateway, while Expert Connect remains a recommendation and the industry taxonomy provisional.

@@ -845,6 +845,50 @@ function BusinessModel() {
             <p className="mt-1.5 text-[10px] leading-5 text-[#91a0a8]">{pillar.detail}</p>
           </article>)}
         </div>
+        <div className="mt-8 border border-[#8bdcff]/20 bg-[#8bdcff]/[.035] p-4" data-testid="expert-connect-recommendation">
+          <div className="grid gap-4 md:grid-cols-[.72fr_1.28fr] md:items-end">
+            <div>
+              <div className="eyebrow">CONSULTATION & EXPERT CONNECT</div>
+              <h4 className="display-font mt-2 text-2xl font-semibold text-[#e6eef1]">Temukan keahlian.<br /><span className="text-[#8bdcff]">Cocokkan dengan kebutuhan.</span></h4>
+            </div>
+            <div>
+              <span className="inline-flex items-center gap-2 border border-[#8bdcff]/25 bg-[#8bdcff]/[.06] px-3 py-1.5 font-mono text-[9px] tracking-[.1em] text-[#9eddf2]">REKOMENDASI · C-B-B-C · BELUM FINAL</span>
+              <p className="mt-2 text-[10px] leading-5 text-[#a5b3ba]">Usulan satu modul yang menghubungkan formulir konsultasi, direktori ahli, AI Concierge, dan pengelolaan permintaan oleh admin. Ini rancangan produk; ahli, layanan, ketersediaan, tarif, dan transaksi nyata belum dikonfirmasi.</p>
+            </div>
+          </div>
+          <div className="mt-4 grid gap-px border border-white/[.09] bg-white/[.09] md:grid-cols-3" data-testid="expert-connect-recommendation-pillars">
+            <article className="bg-[#111c23] p-3" data-testid="expert-connect-hybrid-service">
+              <span className="font-mono text-[9px] tracking-[.1em] text-[#8bdcff]">C · MODEL LAYANAN</span>
+              <h5 className="mt-2 text-[11px] font-semibold text-[#e5edf0]">Konsultasi dan direktori ahli</h5>
+              <p className="mt-1.5 text-[10px] leading-5 text-[#91a0a8]">Permintaan konsultasi serta pencarian ahli berada dalam satu alur, bukan marketplace terpisah.</p>
+            </article>
+            <article className="bg-[#111c23] p-3" data-testid="expert-connect-matching">
+              <span className="font-mono text-[9px] tracking-[.1em] text-[#8bdcff]">B · MATCHING</span>
+              <h5 className="mt-2 text-[11px] font-semibold text-[#e5edf0]">AI membantu, admin memvalidasi</h5>
+              <p className="mt-1.5 text-[10px] leading-5 text-[#91a0a8]">Rekomendasi memakai keahlian dan ketersediaan yang tercatat; penugasan tetap dikendalikan manusia.</p>
+            </article>
+            <article className="bg-[#111c23] p-3" data-testid="expert-connect-verification">
+              <span className="font-mono text-[9px] tracking-[.1em] text-[#8bdcff]">B · VERIFIKASI</span>
+              <h5 className="mt-2 text-[11px] font-semibold text-[#e5edf0]">Periksa identitas dan kredensial</h5>
+              <p className="mt-1.5 text-[10px] leading-5 text-[#91a0a8]">Bukti kompetensi diperiksa sebelum profil atau klaim ahli dipublikasikan; jangan mengarang profil, sertifikasi, atau pengalaman.</p>
+            </article>
+          </div>
+          <div className="mt-4 grid gap-3 lg:grid-cols-[1.1fr_.9fr]">
+            <div className="border border-white/[.08] p-3" data-testid="expert-connect-consultation-form">
+              <div className="eyebrow">FORMULIR KONSULTASI · USULAN P0</div>
+              <p className="mt-2 text-[10px] leading-5 text-[#a5b3ba]">Kontak minimum; tipe pengguna; sektor/subsektor; jenis konsultasi; judul dan uraian kebutuhan; lokasi; anggaran dan waktu opsional; dokumen pendukung bila perlu. Pisahkan persetujuan pemrosesan data, tindak lanjut Gustafta, dan berbagi data dengan ahli.</p>
+            </div>
+            <div className="border border-white/[.08] p-3" data-testid="expert-connect-commercial-model">
+              <div className="eyebrow">C · MONETISASI BERTAHAP</div>
+              <p className="mt-2 text-[10px] leading-5 text-[#a5b3ba]">Permintaan gratis dapat menghasilkan lead; konsultasi berbayar dan advisory perusahaan menjadi jalur layanan. Komisi proyek menunggu proses dan kebutuhan tervalidasi. Payment gateway tetap P2, bukan fitur transaksi MVP.</p>
+            </div>
+          </div>
+          <div className="mt-4 border-l border-[#8bdcff]/50 pl-3" data-testid="expert-connect-status-flow">
+            <div className="eyebrow">ANTREAN MANUAL · DIKELOLA FOUNDER</div>
+            <p className="mt-1.5 text-[10px] leading-5 text-[#a5b3ba]">New Request → Under Review → Expert Matching → Expert Assigned → Scheduled → In Progress → Completed / Closed. Antrean konsultasi sederhana dapat menjadi P0; notifikasi otomatis, jadwal, pembayaran, rating, dan marketplace lengkap bertahap.</p>
+          </div>
+          <p className="mt-3 text-[9px] leading-5 text-[#8798a1]" data-testid="expert-connect-scope-note">Cakupan awal mengikuti lima sektor prioritas yang disetujui. Daftar delapan kategori Gustafta tetap rekomendasi, dan seluruh profil ahli pada portal tetap ilustrasi sampai ada bukti serta persetujuan publikasi.</p>
+        </div>
         <div className="mt-8">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div><div className="eyebrow">ROADMAP PLATFORM</div><h4 className="display-font mt-2 text-2xl font-semibold text-[#e6eef1]">Manual → digital → intelligent.</h4></div>

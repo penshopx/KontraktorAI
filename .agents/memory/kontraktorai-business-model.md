@@ -91,6 +91,17 @@ For Part 08, the user finalized:
   payment providers rather than holding third-party funds without authority.
 - Prices and network/KPI quantities in the blueprint remain hypotheses and
   planning targets, not public prices or achieved results.
+- The user chose to record the Gustafta Expert Connect C-B-B-C proposal as a
+  recommendation, not a final product decision: consultation + expert directory,
+  AI-assisted matching with admin validation, identity/competency/credential
+  checks, and staged hybrid monetization.
+- Keep the initial expert scope to the five approved KontraktorAI sectors. The
+  eight-sector Gustafta taxonomy remains provisional. Do not present sample
+  experts, credentials, availability, ratings, or prices as real.
+- Consultation intake and a simple founder/admin queue may be P0; AI matching
+  never assigns without human review. Payment gateway remains P2; paid services
+  and commissions must follow the existing staged, evidence-based marketplace
+  model.
 
 For Part 09, the user finalized Gustafta Academy as a hybrid learning and
 professional competency ecosystem:
@@ -215,7 +226,8 @@ dashboard scope for P0, moving conversation history, saved knowledge, and basic
 requests into the MVP while keeping advanced personalization and ecosystem
 modules phased. The user finalized Part 10.X as C-B-B-B and explicitly kept
 cross-product SSO at P2, then adopted the latest 10.X priority roadmap and n8n as
-one orchestration tool in the target design.
+one orchestration tool in the target design. The user chose to record Expert
+Connect C-B-B-C as a recommendation, not a final decision.
 
 **How to apply:** use these priorities in Gustafta and KontraktorAI business
 planning, portal messaging, and future product decisions. Choose implementation

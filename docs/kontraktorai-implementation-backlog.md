@@ -853,8 +853,52 @@ dan transaksi yang sesuai.
 - Tata kelola proyek/tender, profil publik, dokumen privat, konflik kepentingan,
   kontrak, pembayaran, dan pembagian komisi.
 
+#### Gustafta Expert Connect — rekomendasi, belum final
+
+**Status:** pengguna memilih mencatat usulan C-B-B-C sebagai rekomendasi; belum
+menjadi keputusan produk final atau implementasi.
+
+- **C — Model layanan:** gabungkan formulir konsultasi, direktori ahli, dan
+  kolaborasi profesional dalam satu alur Expert Connect.
+- **B — Matching:** AI menyarankan ahli berdasarkan kebutuhan, kompetensi, dan
+  ketersediaan yang tercatat; admin memeriksa dan menyetujui rekomendasi.
+- **B — Verifikasi:** periksa identitas, kompetensi, dan kredensial dengan bukti.
+  Profil tidak dipublikasikan sebagai aktif sebelum pemeriksaan admin selesai.
+- **C — Monetisasi bertahap:** permintaan gratis dapat menghasilkan lead;
+  konsultasi berbayar/corporate advisory menjadi jalur layanan, sedangkan komisi
+  proyek berjalan setelah proses dan volume tervalidasi.
+- **Batas prioritas:** formulir, data permintaan, antrean admin sederhana,
+  direktori dasar, matching manual dengan bantuan AI, dan lead/CRM ditargetkan
+  P0; otomasi/notifikasi bisnis P1. Payment gateway tetap P2 sesuai keputusan
+  Bagian 10.X, sehingga pembayaran di aplikasi tidak termasuk MVP.
+- Formulir meminta data minimum: nama dan satu kanal kontak, tipe pengguna,
+  bidang/subbidang, jenis konsultasi, judul/deskripsi, lokasi, serta anggaran,
+  waktu, dan dokumen hanya bila relevan. Persetujuan untuk pemrosesan data,
+  tindak lanjut, dan berbagi data dengan ahli dicatat secara terpisah.
+- Status permintaan: New Request → Under Review → Expert Matching → Expert
+  Assigned → Scheduled → In Progress → Completed / Closed / Cancelled.
+- Daftar ahli awal mengikuti lima sektor prioritas KontraktorAI; taksonomi delapan
+  kategori Gustafta tetap rekomendasi dan tidak dikunci lewat Expert Connect.
+- Entitas usulan meliputi consultation requests, expert profiles/skills/
+  credentials/portfolio/availability, assignments, sessions, reviews, pricing,
+  dan payments. Data pribadi, dokumen, kredensial, lead, dan pembayaran
+  memerlukan batas akses sesuai peran serta tujuan.
+- Direktori, layanan, tarif, profil ahli, jadwal, rating, dan transaksi hanya
+  dapat ditampilkan setelah tersedia dan diverifikasi. Contoh profil dalam
+  dokumen bukan ahli sungguhan atau bukti ketersediaan.
+
 **Kriteria penerimaan**
 - Profil dan listing memiliki mekanisme verifikasi serta pelaporan.
+- Formulir Expert Connect memiliki pemberitahuan dan persetujuan terpisah untuk
+  pemrosesan, tindak lanjut, dan berbagi informasi dengan ahli.
+- Matching berbasis AI hanya memberi rekomendasi; admin memvalidasi ahli dan
+  cakupan sebelum penugasan. Tidak ada klaim kredensial, tarif, slot, rating, atau
+  layanan tanpa data dan bukti yang disetujui.
+- Permintaan memiliki status yang dapat ditelusuri; pengguna hanya melihat
+  permintaan miliknya, sedangkan dokumen dan catatan ahli dibatasi berdasarkan
+  role serta kebutuhan.
+- P0 dapat dijalankan sebagai antrean founder/admin dan tidak membutuhkan
+  marketplace otomatis atau payment gateway.
 - Biaya, komisi, peran, dan tanggung jawab pihak yang terlibat transparan.
 - Transaksi tidak diaktifkan sebelum kebijakan, dukungan, dan pemrosesan pembayaran
   siap.
