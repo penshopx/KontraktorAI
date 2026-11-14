@@ -1020,9 +1020,35 @@ function BusinessModel() {
               <p className="mt-1 text-[9px] leading-5 text-[#91a0a8]">Akses berbasis peran, audit log, backup dan pemulihan, validasi file, proteksi admin, serta pemisahan konten publik dari data prospek.</p>
             </article>
           </div>
+          <div className="mt-2 grid gap-2 sm:grid-cols-2 xl:grid-cols-3" data-testid="news-cms-editorial-details">
+            <article className="border border-white/[.1] bg-white/[.025] p-3" data-testid="news-cms-lifecycle">
+              <h5 className="text-[10px] font-semibold text-[#e5edf0]">Siklus status artikel</h5>
+              <p className="mt-1 text-[9px] leading-5 text-[#91a0a8]">Inbox → Researching → AI Draft → Human Editing → Pending Approval → Approved → Scheduled → Published → Archived/Needs Update. Catat perubahan, pelaku, dan waktunya.</p>
+            </article>
+            <article className="border border-white/[.1] bg-white/[.025] p-3" data-testid="news-cms-taxonomy">
+              <h5 className="text-[10px] font-semibold text-[#e5edf0]">Sektor dan kategori terpisah</h5>
+              <p className="mt-1 text-[9px] leading-5 text-[#91a0a8]">Lima sektor: konstruksi, energi, ketenagalistrikan, pertambangan, lingkungan. Kategori lintas sektor: News, Projects, Business, Technology, Regulation, Market Intelligence, Research, Career, Education, Opinion.</p>
+            </article>
+            <article className="border border-white/[.1] bg-white/[.025] p-3" data-testid="news-cms-source-tiers">
+              <h5 className="text-[10px] font-semibold text-[#e5edf0]">Tingkat sumber dan fakta</h5>
+              <p className="mt-1 text-[9px] leading-5 text-[#91a0a8]">Sumber primer diprioritaskan; media profesional diverifikasi silang; blog, forum, dan media sosial hanya petunjuk awal. Catat tautan, tanggal, atribusi, dan kredibilitas.</p>
+            </article>
+            <article className="border border-white/[.1] bg-white/[.025] p-3" data-testid="news-cms-ai-output">
+              <h5 className="text-[10px] font-semibold text-[#e5edf0]">Output bantuan AI</h5>
+              <p className="mt-1 text-[9px] leading-5 text-[#91a0a8]">Draf, ringkasan, fakta, pihak/lokasi, angka yang bersumber, saran sektor/tag, dan tautan referensi. Pisahkan tanggal kejadian dari pengumuman dan publikasi; tandai informasi yang belum terverifikasi.</p>
+            </article>
+            <article className="border border-white/[.1] bg-white/[.025] p-3" data-testid="news-cms-sensitive-review">
+              <h5 className="text-[10px] font-semibold text-[#e5edf0]">Persetujuan khusus</h5>
+              <p className="mt-1 text-[9px] leading-5 text-[#91a0a8]">Editor-in-Chief menyetujui isu hukum/sengketa, kecelakaan, tuduhan, informasi belum terkonfirmasi, kebijakan kontroversial, angka investasi, rahasia, dan data pribadi.</p>
+            </article>
+            <article className="border border-white/[.1] bg-white/[.025] p-3" data-testid="news-cms-lead-form">
+              <h5 className="text-[10px] font-semibold text-[#e5edf0]">Data prospek minimum</h5>
+              <p className="mt-1 text-[9px] leading-5 text-[#91a0a8]">Nama, email atau WhatsApp, industri, kebutuhan, dan persetujuan privasi/tindak lanjut; perusahaan opsional. Kumpulkan data seperlunya lalu kualifikasi sebelum ditindaklanjuti founder.</p>
+            </article>
+          </div>
           <div className="mt-6 flex flex-col justify-between gap-3 sm:flex-row sm:items-end">
             <div><div className="eyebrow">RENCANA AWAL · 8 MINGGU KERJA · DAPAT BERGESER</div><h5 className="display-font mt-2 text-xl font-semibold text-[#e6eef1]">Tahap MVP yang diusulkan.</h5></div>
-            <p className="max-w-[460px] text-[9px] leading-5 text-[#8798a1]">Bukan komitmen tanggal. Jadwal bergantung pada audit portal, pemilihan CMS, biaya, keamanan, ketersediaan konten, dan kapasitas founder.</p>
+            <p className="max-w-[460px] text-[9px] leading-5 text-[#8798a1]">Bukan komitmen tanggal. Jadwal bergantung pada audit portal, aktivasi situs, validasi biaya dan keamanan, ketersediaan konten, serta kapasitas founder.</p>
           </div>
           <div className="mt-3 grid gap-2 sm:grid-cols-2 xl:grid-cols-4" data-testid="news-cms-mvp-phases">
             {newsMvpPhases.map((phase, index) => <article key={phase.period} className="border border-white/[.1] bg-white/[.025] p-3" data-testid={`news-cms-mvp-phase-${index + 1}`}>

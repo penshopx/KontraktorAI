@@ -400,9 +400,14 @@ metodologi, dan nama portal yang digunakan adalah **KontraktorAI**.
   Gustafta. Iklan, sponsor, listing, dan produk konten berbayar bukan sumber
   pendapatan utama pada tahap awal.
 - Keputusan strategi tidak menyatakan CMS, RSS/API, AI editorial, analytics,
-  distribusi, atau monetisasi telah tersedia. Akun, situs WordPress, langganan,
-  dan API belum dihubungkan. Harga saat checkout, biaya implementasi, jadwal,
-  serta KPI tetap harus divalidasi sebelum pelaksanaan.
+  distribusi, atau monetisasi telah tersedia. Domain WordPress sudah
+  dikonfirmasi, tetapi situs belum aktif dan REST API publik masih mengembalikan
+  `invalid_site` 404. Adapter baca-saja sudah disiapkan; akses terautentikasi dan
+  publikasi belum dikonfigurasi. Harga checkout, biaya, jadwal, dan KPI tetap
+  harus divalidasi.
+- Dokumen final terlampir masih mencatat vendor CMS belum ditentukan. Keputusan
+  terbaru dalam proyek ini menetapkan WordPress.com Business sebagai target MVP;
+  ini mempertahankan arah hybrid dan bukan persetujuan pembelian.
 
 ## Prioritas pelaksanaan
 
@@ -901,9 +906,28 @@ AI, kontrol editorial manusia, dan jalur menuju prospek layanan Gustafta.
   → bantuan AI untuk ringkasan dan draf → tinjauan fakta, mutu, hak cipta, dan
   risiko oleh manusia → SEO/format → jadwal atau persetujuan khusus → distribusi
   dan analitik.
+- Pisahkan lima sektor (konstruksi, energi, ketenagalistrikan, pertambangan,
+  lingkungan) dari kategori lintas sektor: News, Projects, Business, Technology,
+  Regulation, Market Intelligence, Research, Career, Education, dan Opinion.
+  Satu artikel dapat memiliki sektor utama dan kategori editorial.
+- Gunakan siklus artikel Inbox → Researching → AI Draft → Human Editing →
+  Pending Approval → Approved → Scheduled → Published → Archived/Needs Update.
+  Catat perubahan status, aktor, dan waktu.
 - Fitur AI editorial bertahap: pencarian/kurasi, ringkasan, draf, variasi judul,
   bantuan SEO, saran tag/kategori, terjemahan, repurposing, pemeriksaan struktur,
   dan deteksi duplikasi. AI tidak menjadi pengguna dengan hak publikasi.
+- Output AI menandai judul alternatif, ringkasan, fakta dan pihak terkait,
+  lokasi/angka bila disebut sumber, saran sektor/tag, tautan referensi, serta
+  informasi yang belum terverifikasi. Pisahkan tanggal kejadian, pengumuman, dan
+  publikasi sumber.
+- Kelola sumber berjenjang: primer (regulator, pemerintah, pemilik proyek,
+  perusahaan/asosiasi), sekunder (media dan publikasi profesional), dan
+  pendukung (blog, forum, media sosial; petunjuk awal, bukan dasar tunggal).
+  Editor harus dapat mengaktifkan, menonaktifkan, dan menilai sumber tanpa
+  perubahan kode.
+- Persetujuan khusus Editor-in-Chief wajib untuk isu hukum/sengketa, kecelakaan
+  dan keselamatan, tuduhan, informasi belum terkonfirmasi, kebijakan kontroversial,
+  angka investasi belum pasti, informasi rahasia, serta data pribadi.
 - Peran awal founder sebagai Super Admin dan Editor-in-Chief; hak Editor,
   Author, Contributor, Analyst, dan Viewer disiapkan sesuai kebutuhan, bukan
   sebagai bukti bahwa tim redaksi telah terbentuk.
@@ -912,6 +936,12 @@ AI, kontrol editorial manusia, dan jalur menuju prospek layanan Gustafta.
   disesuaikan dan konten tidak disalin penuh ke semua kanal.
 - Jalur monetisasi awal dari artikel ke prospek konsultasi dan layanan Gustafta.
   Target trafik, penerbitan, dan pendapatan belum ditetapkan.
+- Formulir prospek meminta data minimum: nama, email atau WhatsApp, industri,
+  kebutuhan utama, dan persetujuan privasi/tindak lanjut; perusahaan opsional.
+  Pisahkan data prospek dari konten publik.
+- Kontrol minimum mencakup HTTPS, MFA bila tersedia, hak akses berbasis peran,
+  audit log, backup dan uji pemulihan, proteksi spam/brute-force, validasi media,
+  pengelolaan rahasia, serta aturan retensi dan penghapusan data.
 
 **Kriteria penerimaan**
 - Tidak ada berita atau konten AI yang terbit tanpa review manusia; konten
@@ -937,8 +967,8 @@ AI, kontrol editorial manusia, dan jalur menuju prospek layanan Gustafta.
   Subdomain khusus tidak diperlukan untuk MVP kecuali ada alasan teknis atau
   bisnis yang teruji.
 - Rencana 8 minggu kerja dari dokumen final adalah estimasi awal, bukan tenggat
-  yang dikunci. Urutan dapat berubah setelah audit portal, pemilihan CMS,
-  keamanan, biaya, ketersediaan konten, dan kapasitas founder.
+  yang dikunci. Urutan dapat berubah setelah audit portal, aktivasi situs,
+  validasi keamanan/biaya, ketersediaan konten, dan kapasitas founder.
 
 | Periode | Fokus | Hasil rencana |
 | --- | --- | --- |
