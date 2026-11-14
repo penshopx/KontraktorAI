@@ -1382,3 +1382,95 @@ AI, kontrol editorial manusia, dan jalur menuju prospek layanan Gustafta.
 Dokumen ini adalah backlog strategis awal, bukan klaim bahwa seluruh layanan,
 berita, integrasi, atau aplikasi sudah tersedia. Estimasi waktu, biaya, pemilik,
 dan target KPI perlu disepakati setelah audit repositori dan kapasitas tim.
+
+### Gustafta Analytics & Usage Measurement — keputusan final
+
+**Status:** kapabilitas strategis lintas produk dengan positioning *Turning Data
+into Intelligence, Insights into Action.* Keputusan final pengguna adalah
+**C-C-B-B**: cakupan comprehensive, teknologi hybrid, dashboard hybrid, dan
+AI analytics komprehensif. Arsitektur/roadmap disetujui; vendor, target angka,
+dan implementasi belum dipilih atau dijalankan.
+
+**Enam domain resmi**
+- **User:** akun, pengguna aktif/baru/kembali, pertumbuhan, segmentasi, journey,
+  dan retensi. Definisi DAU/WAU/MAU serta periode harus konsisten.
+- **Product:** page views, engagement, feature adoption, aktivasi, dan penggunaan
+  Portal, AI Concierge, KontraktorAI News, Expert Connect, Knowledge Services,
+  Collaboration Gateway, serta aplikasi SaaS.
+- **AI:** usage, kualitas/akurasi/grounding/feedback, latency/uptime/error,
+  token dan biaya per model/per percakapan, eskalasi, resolusi, serta dampak pada
+  leads, konsultasi, dan revenue.
+- **Marketing:** traffic/sumber, performa kampanye, organic search, leads,
+  conversion rate, dan cost per lead.
+- **Business:** total/qualified leads, konversi pelanggan, revenue per produk,
+  average transaction value, recurring revenue, CAC/LTV, dan peluang proyek.
+- **Operations:** jumlah permintaan, waktu respons/penyelesaian, keberhasilan
+  workflow, error integrasi, biaya infrastruktur/AI, dan penggunaan resources.
+
+**Keputusan produk dan dashboard**
+- Cakupan **C — Comprehensive Analytics** meliputi keenam domain di atas secara
+  bertahap, bukan hanya statistik traffic.
+- Teknologi **C — Hybrid Analytics Architecture:** open-source, managed
+  services, dan custom analytics dipilih sesuai biaya, privasi, kebutuhan, dan
+  kemampuan operasi.
+- Dashboard **B — Hybrid Dashboard System:** Executive Dashboard serta
+  Product/Functional Dashboard. Pada tahap founder-led, mulai dari satu platform
+  BI dengan beberapa halaman/tab dan role-based access; pisahkan dashboard
+  sesuai kebutuhan saat organisasi tumbuh.
+- AI Analytics **B — Comprehensive:** Usage, Quality, Performance, Cost, dan
+  Business Impact. AI resolution rate harus memakai kriteria evaluasi; jumlah
+  jawaban saja bukan bukti keberhasilan.
+- Target numerik, tren, dan angka dashboard contoh baru ditentukan/diganti
+  setelah baseline penggunaan serta transaksi tersedia. Data contoh pada dokumen
+  bukan data operasional Gustafta.
+
+**Prioritas dan rekonsiliasi Bagian 10.X**
+- **P0:** basic event tracking, user analytics, dan portal analytics. Ini berarti
+  pengukuran dasar/privacy-safe, bukan dashboard admin/BI penuh.
+- **P1:** product, AI, dan CRM analytics serta integrasi dashboard
+  admin/analytics; tetap sejalan dengan keputusan Bagian 10.X bahwa dashboard
+  admin/analytics berada di P1.
+- **P2:** Business Intelligence dan revenue analytics.
+- **P3:** advanced analytics, predictive insights, dan AI-assisted insights.
+- Roadmap bulan 1–2, 3–4, 5–8, dan 9–12 adalah urutan target relatif; dapat
+  disesuaikan dengan kesiapan produk, cashflow, keamanan, dan kapasitas founder.
+
+**Arsitektur data, event, dan batas privasi**
+- Alur yang direkomendasikan: aplikasi → SDK/API/webhook/server logs → validasi,
+  deduplikasi, dan privacy filtering → analytics/warehouse → KPI/reporting →
+  dashboard dengan akses sesuai peran.
+- Standarkan `event_id`, event name, timestamp, anonymous/user ID, session ID,
+  product ID, source, properties yang diizinkan, dan consent status.
+- Contoh event yang direncanakan: `user_registered`, `user_login`,
+  `page_viewed`, `feature_used`, `ai_conversation_started`,
+  `ai_response_generated`, `ai_feedback_submitted`, `consultation_submitted`,
+  `expert_matched`, `lead_created`, `payment_completed`, dan `project_created`.
+- Pisahkan database operasional dari penyimpanan analitik. Data analitik
+  diminimalkan; identitas dipseudonimkan bila memungkinkan. Jangan mengirim isi
+  percakapan AI/konsultasi, kredensial, password, dokumen pribadi, atau data
+  sensitif ke analytics umum tanpa dasar pemrosesan dan kontrol yang sesuai.
+- Wajib menerapkan Privacy by Design, data minimization, consent management,
+  RBAC, anonimisasi/pseudonimisasi, audit trail, retention/deletion, enkripsi,
+  serta kontrol khusus untuk akses data AI dan leads.
+
+**Kandidat teknologi (bukan penetapan vendor)**
+- PostHog — product analytics; Google Analytics 4 — website acquisition bila
+  diperlukan; Metabase — business intelligence; PostgreSQL atau BigQuery —
+  warehouse; n8n/API — integrasi; OpenTelemetry + evaluasi khusus — observability
+  AI; Sentry — error monitoring.
+- Evaluasi harga, lokasi data, privasi, sampling, consent, role/akses, retensi,
+  ekspor/portabilitas, dan kemampuan integrasi sebelum keputusan vendor.
+- Operasi awal founder-led dengan bantuan AI; belum diperlukan tim data khusus.
+
+**Kriteria penerimaan**
+- Definisi event dan KPI konsisten lintas produk, serta dashboard memisahkan
+  angka aktual, estimasi, dan simulasi.
+- Tidak ada metrik dashboard yang dibuat dari placeholder lalu ditampilkan
+  sebagai data pengguna atau bisnis nyata.
+- Data sensitif tidak masuk ke analytics umum; consent, role, retensi, audit, dan
+  tujuan pemrosesan dapat ditelusuri.
+- P0 tidak menunggu data warehouse atau dashboard admin khusus; P1 tetap
+  menyelesaikan integrasi analytics admin sesuai Bagian 10.X.
+- Kualitas AI dinilai dengan kriteria evaluasi, sitasi/grounding, feedback,
+  latency, errors, biaya, eskalasi, dan dampak bisnis yang dapat diatribusikan.
+- Angka target baru ditetapkan setelah baseline dan kapasitas operasional diukur.

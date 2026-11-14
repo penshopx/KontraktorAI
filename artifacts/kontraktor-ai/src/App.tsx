@@ -1314,6 +1314,74 @@ function BusinessModel() {
         </div>
       </div>
       <p className="mt-5 flex items-start gap-2 text-[10px] leading-5 text-[#778991]" data-testid="text-business-model-caveat"><Check size={13} className="mt-0.5 shrink-0 text-[#70bfdc]" />Enam unit bisnis dan tiga level penawaran adalah kerangka strategis, bukan katalog atau klaim ketersediaan. Harga, margin, dan proyeksi tetap perlu divalidasi.</p>
+      <div id="gustafta-analytics" className="mt-14 border-t border-white/10 pt-10" data-testid="gustafta-analytics">
+        <div className="grid gap-5 md:grid-cols-[.78fr_1.22fr] md:items-end">
+          <div>
+            <div className="eyebrow">KAPABILITAS LINTAS PRODUK · GUSTAFTA ANALYTICS</div>
+            <h3 className="display-font mt-3 max-w-[540px] text-3xl font-semibold leading-tight text-[#e6eef1] md:text-4xl">Ubah penggunaan menjadi<br /><span className="text-[#8bdcff]">insight yang dapat ditindaklanjuti.</span></h3>
+          </div>
+          <div>
+            <span className="inline-flex items-center gap-2 border border-[#8bdcff]/25 bg-[#8bdcff]/[.06] px-3 py-1.5 font-mono text-[9px] tracking-[.1em] text-[#9eddf2]">KEPUTUSAN FINAL · C-C-B-B</span>
+            <p className="mt-3 max-w-[630px] text-[12px] leading-6 text-[#a7b5bc]">Gustafta Analytics &amp; Usage Measurement menjadi kapabilitas lintas produk. Cakupannya comprehensive, arsitekturnya hybrid, dashboard-nya executive + product/functional, dan AI diukur dari penggunaan hingga dampak bisnis.</p>
+          </div>
+        </div>
+        <div className="mt-6 grid gap-px border border-white/[.09] bg-white/[.09] sm:grid-cols-2 xl:grid-cols-4" data-testid="analytics-final-decisions">
+          <article className="bg-[#121e26] p-3" data-testid="analytics-decision-scope">
+            <span className="font-mono text-[9px] text-[#8bdcff]">C · CAKUPAN</span>
+            <h4 className="mt-2 text-[11px] font-semibold text-[#e5edf0]">Comprehensive Analytics</h4>
+            <p className="mt-1.5 text-[10px] leading-5 text-[#91a0a8]">User, product, AI, marketing, business, dan operations analytics.</p>
+          </article>
+          <article className="bg-[#121e26] p-3" data-testid="analytics-decision-technology">
+            <span className="font-mono text-[9px] text-[#8bdcff]">C · TEKNOLOGI</span>
+            <h4 className="mt-2 text-[11px] font-semibold text-[#e5edf0]">Open-source + managed + custom</h4>
+            <p className="mt-1.5 text-[10px] leading-5 text-[#91a0a8]">Pilih kombinasi bertahap sesuai biaya, kebutuhan, dan kesiapan operasi.</p>
+          </article>
+          <article className="bg-[#121e26] p-3" data-testid="analytics-decision-dashboards">
+            <span className="font-mono text-[9px] text-[#8bdcff]">B · DASHBOARD</span>
+            <h4 className="mt-2 text-[11px] font-semibold text-[#e5edf0]">Executive + product/function</h4>
+            <p className="mt-1.5 text-[10px] leading-5 text-[#91a0a8]">Mulai dari satu platform dengan halaman dan akses berbasis peran.</p>
+          </article>
+          <article className="bg-[#121e26] p-3" data-testid="analytics-decision-ai">
+            <span className="font-mono text-[9px] text-[#8bdcff]">B · AI ANALYTICS</span>
+            <h4 className="mt-2 text-[11px] font-semibold text-[#e5edf0]">Ukur nilai, bukan volume saja</h4>
+            <p className="mt-1.5 text-[10px] leading-5 text-[#91a0a8]">Usage, quality, performance, cost, dan business impact.</p>
+          </article>
+        </div>
+        <div className="mt-6">
+          <div className="eyebrow">ENAM DOMAIN PENGUKURAN RESMI</div>
+          <div className="mt-3 grid gap-2 sm:grid-cols-2 xl:grid-cols-3" data-testid="analytics-domains">
+            <article className="border border-white/[.1] bg-white/[.025] p-3" data-testid="analytics-domain-user"><h4 className="text-[11px] font-semibold text-[#e5edf0]">User</h4><p className="mt-1 text-[10px] leading-5 text-[#91a0a8]">Pengguna aktif, pertumbuhan, perjalanan, segmentasi, dan retensi.</p></article>
+            <article className="border border-white/[.1] bg-white/[.025] p-3" data-testid="analytics-domain-product"><h4 className="text-[11px] font-semibold text-[#e5edf0]">Product</h4><p className="mt-1 text-[10px] leading-5 text-[#91a0a8]">Adopsi fitur dan penggunaan Portal, AI Concierge, KontraktorAI News, Expert Connect, serta layanan lain.</p></article>
+            <article className="border border-white/[.1] bg-white/[.025] p-3" data-testid="analytics-domain-ai"><h4 className="text-[11px] font-semibold text-[#e5edf0]">AI</h4><p className="mt-1 text-[10px] leading-5 text-[#91a0a8]">Kualitas, grounding, feedback, penyelesaian, eskalasi, latency, token, dan biaya.</p></article>
+            <article className="border border-white/[.1] bg-white/[.025] p-3" data-testid="analytics-domain-marketing"><h4 className="text-[11px] font-semibold text-[#e5edf0]">Marketing</h4><p className="mt-1 text-[10px] leading-5 text-[#91a0a8]">Traffic, sumber, kampanye, organic search, leads, dan konversi.</p></article>
+            <article className="border border-white/[.1] bg-white/[.025] p-3" data-testid="analytics-domain-business"><h4 className="text-[11px] font-semibold text-[#e5edf0]">Business</h4><p className="mt-1 text-[10px] leading-5 text-[#91a0a8]">Qualified leads, pelanggan, revenue, recurring revenue, dan atribusi produk.</p></article>
+            <article className="border border-white/[.1] bg-white/[.025] p-3" data-testid="analytics-domain-operations"><h4 className="text-[11px] font-semibold text-[#e5edf0]">Operations</h4><p className="mt-1 text-[10px] leading-5 text-[#91a0a8]">Waktu respons/penyelesaian, keberhasilan workflow, error integrasi, dan biaya teknologi.</p></article>
+          </div>
+        </div>
+        <div className="mt-7">
+          <div className="flex flex-wrap items-end justify-between gap-3">
+            <div><div className="eyebrow">ROADMAP BERTAHAP · TARGET RELATIF</div><h4 className="display-font mt-2 text-2xl font-semibold text-[#e6eef1]">Mulai dari baseline, lalu perluas.</h4></div>
+            <p className="max-w-[470px] text-[10px] leading-5 text-[#8798a1]">Prioritas P0 tracking dasar bukan dashboard admin penuh. P1 dashboard admin/analytics dan integrasi bisnis tetap selaras dengan keputusan Bagian 10.X.</p>
+          </div>
+          <div className="mt-4 grid gap-2 md:grid-cols-2 xl:grid-cols-4" data-testid="analytics-roadmap">
+            <article className="border border-white/[.1] bg-white/[.025] p-3" data-testid="analytics-roadmap-p0"><span className="font-mono text-[9px] text-[#8bdcff]">P0 · FONDASI</span><p className="mt-2 text-[10px] leading-5 text-[#a5b3ba]">Basic event tracking, user analytics, dan portal analytics.</p></article>
+            <article className="border border-white/[.1] bg-white/[.025] p-3" data-testid="analytics-roadmap-p1"><span className="font-mono text-[9px] text-[#8bdcff]">P1 · PRODUK & AI</span><p className="mt-2 text-[10px] leading-5 text-[#a5b3ba]">Product, AI, dan CRM analytics; dashboard admin/analytics sesuai prioritas 10.X.</p></article>
+            <article className="border border-white/[.1] bg-white/[.025] p-3" data-testid="analytics-roadmap-p2"><span className="font-mono text-[9px] text-[#8bdcff]">P2 · BI & REVENUE</span><p className="mt-2 text-[10px] leading-5 text-[#a5b3ba]">Business intelligence dan revenue analytics dalam dashboard berakses terkontrol.</p></article>
+            <article className="border border-white/[.1] bg-white/[.025] p-3" data-testid="analytics-roadmap-p3"><span className="font-mono text-[9px] text-[#8bdcff]">P3 · LANJUTAN</span><p className="mt-2 text-[10px] leading-5 text-[#a5b3ba]">Advanced analytics, predictive insights, dan AI-assisted insights.</p></article>
+          </div>
+        </div>
+        <div className="mt-6 grid gap-3 lg:grid-cols-2">
+          <article className="border border-white/[.1] bg-white/[.025] p-4" data-testid="analytics-candidate-stack">
+            <div className="eyebrow">KANDIDAT TEKNOLOGI · BELUM DIPILIH</div>
+            <p className="mt-2 text-[10px] leading-5 text-[#a5b3ba]">PostHog untuk product analytics; Google Analytics 4 untuk acquisition bila diperlukan; Metabase untuk BI; PostgreSQL atau BigQuery untuk warehouse; n8n/API untuk integrasi; OpenTelemetry + evaluasi khusus untuk AI; Sentry untuk error monitoring. Vendor tetap perlu dibandingkan dari biaya, privasi, lokasi data, akses, dan kemampuan ekspor.</p>
+          </article>
+          <article className="border border-[#8bdcff]/20 bg-[#8bdcff]/[.035] p-4" data-testid="analytics-governance">
+            <div className="eyebrow">PRIVACY &amp; SECURITY BY DESIGN</div>
+            <p className="mt-2 text-[10px] leading-5 text-[#a5b3ba]">Pisahkan data transaksi dan analitik; gunakan consent, minimisasi, pseudonimisasi, RBAC, audit, retensi, dan enkripsi. Jangan kirim isi percakapan AI/konsultasi, kredensial, password, atau dokumen pribadi ke analytics umum. Ukur dengan metadata tersaring atau agregat. Target angka ditetapkan setelah baseline; angka contoh di dokumen bukan data aktual.</p>
+          </article>
+        </div>
+        <p className="mt-4 text-[9px] leading-5 text-[#758792]" data-testid="analytics-implementation-boundary">Keputusan dan roadmap ini telah ditetapkan, tetapi belum berarti event tracking, warehouse, dashboard, integrasi vendor, atau pengumpulan data sudah berjalan. Operasi awal founder-led dengan bantuan AI; vendor dan target numerik tetap menunggu evaluasi dan baseline.</p>
+      </div>
     </div>
   </section>;
 }
